@@ -1,0 +1,20 @@
+% This file was created with JabRef 2.10.
+% Encoding: UTF-8
+
+
+@Article{,
+  Title                    = {Sentiment analysis algorithms and applications: A survey},
+  Author                   = {Walaa Medhat, Ahmed Hassan, Hoda Korashy},
+  Journal                  = {Ain Shams Engineering Journal},
+  Year                     = {2014},
+
+  Month                    = {December},
+  Number                   = {Issue 4},
+  Pages                    = {1093-1113},
+  Volume                   = {Volume 5},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.01.22},
+  Url                      = {https://ac.els-cdn.com/S2090447914000550/1-s2.0-S2090447914000550-main.pdf?_tid=77d36d1a-ff80-11e7-956d-00000aacb362&acdnat=1516631469_c14e5bc49162e2b9a4232c2931592298}
+}
+
