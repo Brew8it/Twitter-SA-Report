@@ -2,6 +2,29 @@
 % Encoding: UTF-8
 
 
+@Article{Giachanou:2016:LST:2966278.2938640,
+  Title                    = {Like It or Not: A Survey of Twitter Sentiment Analysis Methods},
+  Author                   = {Giachanou, Anastasia and Crestani, Fabio},
+  Journal                  = {ACM Comput. Surv.},
+  Year                     = {2016},
+
+  Month                    = jun,
+  Number                   = {2},
+  Pages                    = {28:1--28:41},
+  Volume                   = {49},
+
+  Acmid                    = {2938640},
+  Address                  = {New York, NY, USA},
+  Articleno                = {28},
+  Doi                      = {10.1145/2938640},
+  ISSN                     = {0360-0300},
+  Issue_date               = {November 2016},
+  Keywords                 = {Sentiment analysis, microblogs, opinion mining, twitter},
+  Numpages                 = {41},
+  Publisher                = {ACM},
+  Url                      = {http://doi.acm.org/10.1145/2938640}
+}
+
 @Article{,
   Title                    = {Sentiment analysis algorithms and applications: A survey},
   Author                   = {Walaa Medhat, Ahmed Hassan, Hoda Korashy},
@@ -16,5 +39,17 @@
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.01.22},
   Url                      = {https://ac.els-cdn.com/S2090447914000550/1-s2.0-S2090447914000550-main.pdf?_tid=77d36d1a-ff80-11e7-956d-00000aacb362&acdnat=1516631469_c14e5bc49162e2b9a4232c2931592298}
+}
+
+@InProceedings{7382029,
+  Title                    = {Short Text Classification based on feature extension using The N-Gram model},
+  Author                   = {Xinwei Zhang and Bin Wu},
+  Booktitle                = {2015 12th International Conference on Fuzzy Systems and Knowledge Discovery (FSKD)},
+  Year                     = {2015},
+  Month                    = {Aug},
+  Pages                    = {710-716},
+
+  Doi                      = {10.1109/FSKD.2015.7382029},
+  Keywords                 = {Bayes methods;Internet;Web sites;feature extraction;natural language processing;pattern classification;probability;text analysis;F1-Score;N-Gram model;Naive Bayes algorithm;Sina Weibo;Tianya;Twitter;Web 2.0;Weibo;continuous word sequences;feature extending method;feature extension;feature extension mode library;forums;n-gram extraction;precision;recall;short text classification;social media websites;Classification algorithms;Computational modeling;Feature extraction;Internet;Libraries;Semantics;Text categorization;Classification;Feature Extension;Na??ve Bayes;Short Text;The N-Gram Model}
 }
 
