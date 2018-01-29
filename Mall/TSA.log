@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  29 JAN 2018 08:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  29 JAN 2018 13:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -957,24 +957,19 @@ Kapitel 1.
 
 ]
 Kapitel 2.
-
-Overfull \hbox (5.24141pt too wide) in paragraph at lines 99--99
-[]\T1/cmr/bx/n/20.74 Hur jäm-för vi mo-del-ler-na? ac-cu-ra-cy, F-Score,
- []
-
 [2
 
-]
+] [3]
 Kapitel 3.
-[3
-
-]
-Kapitel 4.
 [4
 
 ]
-Kapitel 5.
+Kapitel 4.
 [5
+
+]
+Kapitel 5.
+[6
 
 ] (./TSA.aux)
 
@@ -989,16 +984,16 @@ Here is how much of TeX's memory you used:
  17076 multiletter control sequences out of 15000+600000
  14102 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,6n,58p,459b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,6n,58p,571b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/
 fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/f
 onts/type1/public/cm-super/sfrm1200.pfb>
-Output written on TSA.pdf (13 pages, 98975 bytes).
+Output written on TSA.pdf (14 pages, 102737 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -93,10 +93,19 @@ Internet of Things är ett begrepp för att beskriva ett samhälle där alla obj
 
 \chapter{Bakgrund}
 \section{Intro - syfte Varför vi gör denna studie}
+Syftet med projektet är att utvärdera olika etablerade klassificeringsmodeller och deras olika funktioner genom att träna dom mot olika typer av träningsdata. Utvärderingen ska ge svar på vilken klassificeringsmodell som ger bäst träffsäkerhet beroende på dess träningsdata för Twitter sentiment analysis (TSA).
 \section{Förklara machine learning och övergripande sentiment analys}
+Sentimentanalys (SA) används för att studera människors åsikter, attityder och känslor mot andra entiteter. En entitet kan vara vara ett ämne,  en händelse eller en individ. Målet med SA är att identifiera känslan som är uttryckt i en text för att därefter analysera den. Processen delas upp i tre steg: att hitta åsikter, identifiera känslan för de åsikterna och slutligen klassificera motsatsförhållandet dem emellan. Klassificeringen inom SA är uppdelad i olika nivåer. 
+De tre huvudsakliga nivåerna är: dokument-, menings- och aspektnivå. SA på dokumentnivå klassificerar om ett helt dokument uttrycker en positiv eller negativ åsikt, ett exempel på det kan vara en filmrecension. 
+På meningsnivå analyseras och klassificeras varje mening i ett dokument. Meningen kontrolleras först för att definiera om meningen är objektiv eller subjektiv. Om meningen definieras som subjektiv klassificeras meningen som positiv eller negativ. 
+Ett dokument/mening kan behandla olika aspekter av en entitet, en aspekt kan beskrivas som positiv medan en annan kan beskrivas som negativ. Analyser av det här slaget sägs göras nere på aspektnivå.
 \subsection{Twitter Sentiment analys}
+Inget änsålänge
 \section{Vilka modeller}
-\section{Hur jämför vi modellerna? accuracy, F-Score, Precision}
+Inom maskininlärning använder man sig av klassificeringsmodeller för så kallad övervakad inlärning. Vi kommer först att fokusera på två utav dom mest etablerade modellerna i vårt arbete men om tid finns kommer antalet modeller att öka. Dom två modellerna vi kommer att använda oss av är Naive Bayes(NB) och Support Vector Machines (SVM). 
+
+\section{Hur jämför vi modellerna?}
+TSA kan kallas ett typiskt binärt klassificeringsproblem där målet är att utläsa om ett tweet är positivt eller negativt. I figur/tabel X ser vi en såkallad “Confusion Matrix”(CM) som utvärderar en klassificeringsmodell från testdata där “positivt” eller “negativt” är förbestämt. Matrisen visar antalet sann positiva(SP), sann negativ(SN), falsk positiv(FP) och falsk negativ(FN). Med dessa värden kan jämföra och analysera modellerna m.h.a följande utvärderingsmetoder: noggrannhet, precision, återkallelse och F-poäng. 
 \section{Summering}
 
 \newpage
