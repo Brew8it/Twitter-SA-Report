@@ -2,7 +2,7 @@
 % Encoding: UTF-8
 
 
-@Misc{Wiki:002,
+@Misc{wiki:002,
   Title                    = {Precision and recall --- {W}ikipedia{,} The Free Encyclopedia},
 
   Author                   = {Wikipedia contributors},
@@ -22,6 +22,18 @@
   Year                     = {2014},
 
   Url                      = {https://en.wikipedia.org/wiki/F1_score}
+}
+
+@Misc{wiki:003,
+  Title                    = {Confusion matrix --- {W}ikipedia{,} The Free Encyclopedia},
+
+  Author                   = {Wikipedia contributors},
+  Note                     = {[Online; accessed 29-January 2018]},
+  Year                     = {2014},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.01.29},
+  Url                      = {https://en.wikipedia.org/wiki/Confusion_matrix}
 }
 
 @Article{Giachanou:2016:LST:2966278.2938640,
@@ -88,5 +100,10 @@
 
   Doi                      = {10.1109/FSKD.2015.7382029},
   Keywords                 = {Bayes methods;Internet;Web sites;feature extraction;natural language processing;pattern classification;probability;text analysis;F1-Score;N-Gram model;Naive Bayes algorithm;Sina Weibo;Tianya;Twitter;Web 2.0;Weibo;continuous word sequences;feature extending method;feature extension;feature extension mode library;forums;n-gram extraction;precision;recall;short text classification;social media websites;Classification algorithms;Computational modeling;Feature extraction;Internet;Libraries;Semantics;Text categorization;Classification;Feature Extension;Na??ve Bayes;Short Text;The N-Gram Model}
+}
+
+@Article{,
+  Owner                    = {johan-u},
+  Timestamp                = {2018.01.30}
 }
 
