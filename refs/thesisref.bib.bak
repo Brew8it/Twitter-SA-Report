@@ -80,6 +80,18 @@
   Keywords                 = {pattern classification;sentiment analysis;social networking (online);Twitter datasets;Twitter sentiment analysis;Twitter text preprocessing;data preprocessing;feature representation;feature selection;sentiment polarity classification;Classification algorithms;Filtering algorithms;Machine learning algorithms;Sentiment analysis;Standards;Support vector machines;Twitter;Attribute selection;Learning machines;N-grams;Preprocessing;Sentiment Analysis;Twitter}
 }
 
+@InProceedings{7434400,
+  Title                    = {Twitter Sentiment Analysis -- A More Enhanced Way of Classification and Scoring},
+  Author                   = {S. Sahu and S. K. Rout and D. Mohanty},
+  Booktitle                = {2015 IEEE International Symposium on Nanoelectronic and Information Systems},
+  Year                     = {2015},
+  Month                    = {Dec},
+  Pages                    = {67-72},
+
+  Doi                      = {10.1109/iNIS.2015.40},
+  Keywords                 = {learning (artificial intelligence);pattern classification;sentiment analysis;social networking (online);support vector machines;Twitter sentiment analysis;data preprocessing;machine learning algorithms;maximum entropy;sentiment classification;sentiment scoring mechanism;spell checking algorithm;support vector machines;tweet lexicon features;Algorithm design and analysis;Classification algorithms;Dictionaries;Entropy;Support vector machines;Training;Twitter;Twitter;machine learning;sentiment classification}
+}
+
 @Article{SINGH2016549,
   Title                    = {Role of Text Pre-processing in Twitter Sentiment Analysis},
   Author                   = {Tajinder Singh and Madhu Kumari},
