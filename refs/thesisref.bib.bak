@@ -59,6 +59,27 @@
   Url                      = {http://doi.acm.org/10.1145/2938640}
 }
 
+@Article{go2009twitter,
+  Title                    = {Twitter sentiment classification using distant supervision},
+  Author                   = {Go, Alec and Bhayani, Richa and Huang, Lei},
+  Journal                  = {CS224N Project Report, Stanford},
+  Year                     = {2009},
+  Number                   = {12},
+  Volume                   = {1}
+}
+
+@InProceedings{7785373,
+  Title                    = {The effect of preprocessing techniques on Twitter sentiment analysis},
+  Author                   = {A. Krouska and C. Troussas and M. Virvou},
+  Booktitle                = {2016 7th International Conference on Information, Intelligence, Systems Applications (IISA)},
+  Year                     = {2016},
+  Month                    = {July},
+  Pages                    = {1-5},
+
+  Doi                      = {10.1109/IISA.2016.7785373},
+  Keywords                 = {pattern classification;sentiment analysis;social networking (online);Twitter datasets;Twitter sentiment analysis;Twitter text preprocessing;data preprocessing;feature representation;feature selection;sentiment polarity classification;Classification algorithms;Filtering algorithms;Machine learning algorithms;Sentiment analysis;Standards;Support vector machines;Twitter;Attribute selection;Learning machines;N-grams;Preprocessing;Sentiment Analysis;Twitter}
+}
+
 @Article{SINGH2016549,
   Title                    = {Role of Text Pre-processing in Twitter Sentiment Analysis},
   Author                   = {Tajinder Singh and Madhu Kumari},
@@ -100,10 +121,5 @@
 
   Doi                      = {10.1109/FSKD.2015.7382029},
   Keywords                 = {Bayes methods;Internet;Web sites;feature extraction;natural language processing;pattern classification;probability;text analysis;F1-Score;N-Gram model;Naive Bayes algorithm;Sina Weibo;Tianya;Twitter;Web 2.0;Weibo;continuous word sequences;feature extending method;feature extension;feature extension mode library;forums;n-gram extraction;precision;recall;short text classification;social media websites;Classification algorithms;Computational modeling;Feature extraction;Internet;Libraries;Semantics;Text categorization;Classification;Feature Extension;Na??ve Bayes;Short Text;The N-Gram Model}
-}
-
-@Article{,
-  Owner                    = {johan-u},
-  Timestamp                = {2018.01.30}
 }
 
