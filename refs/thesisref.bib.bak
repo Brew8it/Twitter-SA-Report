@@ -36,6 +36,18 @@
   Url                      = {https://en.wikipedia.org/wiki/Confusion_matrix}
 }
 
+@InProceedings{7784960,
+  Title                    = {Twitter sentiment analysis using various classification algorithms},
+  Author                   = {A. Deshwal and S. K. Sharma},
+  Booktitle                = {2016 5th International Conference on Reliability, Infocom Technologies and Optimization (Trends and Future Directions) (ICRITO)},
+  Year                     = {2016},
+  Month                    = {Sept},
+  Pages                    = {251-257},
+
+  Doi                      = {10.1109/ICRITO.2016.7784960},
+  Keywords                 = {data mining;feature extraction;pattern classification;sentiment analysis;social networking (online);Twitter sentiment analysis;classification algorithm;feature extraction;opinion mining;Classification algorithms;Computer languages;Data mining;Feature extraction;Machine learning algorithms;Sentiment analysis;Twitter;Opinion Mining;Sentiment Analysis;Twitter}
+}
+
 @Article{Giachanou:2016:LST:2966278.2938640,
   Title                    = {Like It or Not: A Survey of Twitter Sentiment Analysis Methods},
   Author                   = {Giachanou, Anastasia and Crestani, Fabio},
@@ -133,10 +145,5 @@
 
   Doi                      = {10.1109/FSKD.2015.7382029},
   Keywords                 = {Bayes methods;Internet;Web sites;feature extraction;natural language processing;pattern classification;probability;text analysis;F1-Score;N-Gram model;Naive Bayes algorithm;Sina Weibo;Tianya;Twitter;Web 2.0;Weibo;continuous word sequences;feature extending method;feature extension;feature extension mode library;forums;n-gram extraction;precision;recall;short text classification;social media websites;Classification algorithms;Computational modeling;Feature extraction;Internet;Libraries;Semantics;Text categorization;Classification;Feature Extension;Na??ve Bayes;Short Text;The N-Gram Model}
-}
-
-@InProceedings{,
-  Owner                    = {hpnotiqz},
-  Timestamp                = {2018.01.31}
 }
 
