@@ -1,0 +1,96 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Walaa~Medhat(2014)]{SAsurvey}
+Hoda~Korashy Walaa~Medhat, Ahmed~Hassan.
+\newblock Sentiment analysis algorithms and applications: A survey.
+\newblock \emph{Ain Shams Engineering Journal}, Volume 5\penalty0 (Issue
+  4):\penalty0 1093--1113, December 2014.
+\newblock URL
+  \url{https://ac.els-cdn.com/S2090447914000550/1-s2.0-S2090447914000550-main.pdf?\_tid=77d36d1a-ff80-11e7-956d-00000aacb362\&acdnat=1516631469\_c14e5bc49162e2b9a4232c2931592298}.
+
+\bibitem[contributors(2007)]{wiki:008}
+Wikipedia contributors.
+\newblock Twitter --- {W}ikipedia{,} the free encyclopedia, 2007.
+\newblock URL \url{https://en.wikipedia.org/wiki/Twitter}.
+\newblock [Online; accessed 5-Februari 2018].
+
+\bibitem[Giachanou and Crestani(2016)]{TSAsurvey}
+Anastasia Giachanou and Fabio Crestani.
+\newblock Like it or not: A survey of twitter sentiment analysis methods.
+\newblock \emph{ACM Comput. Surv.}, 49\penalty0 (2):\penalty0 28:1--28:41, June
+  2016.
+\newblock ISSN 0360-0300.
+\newblock \doi{10.1145/2938640}.
+\newblock URL \url{http://doi.acm.org/10.1145/2938640}.
+
+\bibitem[Mnih et~al.(2015)Mnih, Kavukcuoglu, Silver, Rusu, Veness, Bellemare,
+  Graves, Riedmiller, Fidjeland, Ostrovski, et~al.]{DMatari00}
+Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Andrei~A Rusu, Joel Veness,
+  Marc~G Bellemare, Alex Graves, Martin Riedmiller, Andreas~K Fidjeland, Georg
+  Ostrovski, et~al.
+\newblock Human-level control through deep reinforcement learning.
+\newblock \emph{Nature}, 518\penalty0 (7540):\penalty0 529, 2015.
+
+\bibitem[contributors(2016{\natexlab{a}})]{wiki:004}
+Wikipedia contributors.
+\newblock Atari games --- {W}ikipedia{,} the free encyclopedia,
+  2016{\natexlab{a}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Atari\_Games}.
+\newblock [Online; accessed 5-Februari 2018].
+
+\bibitem[Silver et~al.(2016)Silver, Huang, Maddison, Guez, Sifre, Van
+  Den~Driessche, Schrittwieser, Antonoglou, Panneershelvam, Lanctot,
+  et~al.]{DMgo}
+David Silver, Aja Huang, Chris~J Maddison, Arthur Guez, Laurent Sifre, George
+  Van Den~Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda
+  Panneershelvam, Marc Lanctot, et~al.
+\newblock Mastering the game of go with deep neural networks and tree search.
+\newblock \emph{nature}, 529\penalty0 (7587):\penalty0 484--489, 2016.
+
+\bibitem[contributors(2016{\natexlab{b}})]{wiki:005}
+Wikipedia contributors.
+\newblock Lee sedol --- {W}ikipedia{,} the free encyclopedia,
+  2016{\natexlab{b}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Lee\_Sedol}.
+\newblock [Online; accessed 5-Februari 2018].
+
+\bibitem[contributors(2016{\natexlab{c}})]{wiki:006}
+Wikipedia contributors.
+\newblock Go(game) --- {W}ikipedia{,} the free encyclopedia,
+  2016{\natexlab{c}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Go\_(game)}.
+\newblock [Online; accessed 5-Februari 2018].
+
+\bibitem[Brownlee(2016)]{learning:001}
+Jason Brownlee.
+\newblock Supervised and unsupervised machine learning algorithms, 2016.
+\newblock URL
+  \url{https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/}.
+
+\bibitem[contributors(2014{\natexlab{a}})]{wiki:003}
+Wikipedia contributors.
+\newblock Confusion matrix --- {W}ikipedia{,} the free encyclopedia,
+  2014{\natexlab{a}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Confusion\_matrix}.
+\newblock [Online; accessed 29-January 2018].
+
+\bibitem[contributors(2016{\natexlab{d}})]{wiki:002}
+Wikipedia contributors.
+\newblock Precision and recall --- {W}ikipedia{,} the free encyclopedia,
+  2016{\natexlab{d}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Precision\_and\_recall}.
+\newblock [Online; accessed 29-January 2018].
+
+\bibitem[contributors(2014{\natexlab{b}})]{wiki:001}
+Wikipedia contributors.
+\newblock F1 score --- {W}ikipedia{,} the free encyclopedia,
+  2014{\natexlab{b}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/F1\_score}.
+\newblock [Online; accessed 29-January 2018].
+
+\end{thebibliography}
