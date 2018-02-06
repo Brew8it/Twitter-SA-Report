@@ -176,7 +176,7 @@
   Keywords                 = {pattern classification;sentiment analysis;social networking (online);Twitter datasets;Twitter sentiment analysis;Twitter text preprocessing;data preprocessing;feature representation;feature selection;sentiment polarity classification;Classification algorithms;Filtering algorithms;Machine learning algorithms;Sentiment analysis;Standards;Support vector machines;Twitter;Attribute selection;Learning machines;N-grams;Preprocessing;Sentiment Analysis;Twitter}
 }
 
-@Article{DMatari,
+@Article{DMatari00,
   Title                    = {Human-level control through deep reinforcement learning},
   Author                   = {Mnih, Volodymyr and Kavukcuoglu, Koray and Silver, David and Rusu, Andrei A and Veness, Joel and Bellemare, Marc G and Graves, Alex and Riedmiller, Martin and Fidjeland, Andreas K and Ostrovski, Georg and others},
   Journal                  = {Nature},
@@ -206,7 +206,7 @@
   Year                     = {2013}
 }
 
-@Article{silver2016mastering,
+@Article{DMgo,
   Title                    = {Mastering the game of Go with deep neural networks and tree search},
   Author                   = {Silver, David and Huang, Aja and Maddison, Chris J and Guez, Arthur and Sifre, Laurent and Van Den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and others},
   Journal                  = {nature},
