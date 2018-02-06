@@ -14,6 +14,54 @@
   Url                      = {https://en.wikipedia.org/wiki/Precision_and_recall}
 }
 
+@Misc{wiki:004,
+  Title                    = {Atari games --- {W}ikipedia{,} The Free Encyclopedia},
+
+  Author                   = {Wikipedia contributors},
+  Note                     = {[Online; accessed 5-Februari 2018]},
+  Year                     = {2016},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.02.05},
+  Url                      = {https://en.wikipedia.org/wiki/Atari_Games}
+}
+
+@Misc{wiki:005,
+  Title                    = {Lee Sedol --- {W}ikipedia{,} The Free Encyclopedia},
+
+  Author                   = {Wikipedia contributors},
+  Note                     = {[Online; accessed 5-Februari 2018]},
+  Year                     = {2016},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.02.05},
+  Url                      = {https://en.wikipedia.org/wiki/Lee_Sedol}
+}
+
+@Misc{wiki:006,
+  Title                    = {Go(game) --- {W}ikipedia{,} The Free Encyclopedia},
+
+  Author                   = {Wikipedia contributors},
+  Note                     = {[Online; accessed 5-Februari 2018]},
+  Year                     = {2016},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.02.05},
+  Url                      = {https://en.wikipedia.org/wiki/Go_(game)}
+}
+
+@Misc{wiki:007,
+  Title                    = {Unsupervised learning --- {W}ikipedia{,} The Free Encyclopedia},
+
+  Author                   = {Wikipedia contributors},
+  Note                     = {[Online; accessed 5-Februari 2018]},
+  Year                     = {2016},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.02.05},
+  Url                      = {https://en.wikipedia.org/wiki/Unsupervised_learning}
+}
+
 @Misc{wiki:001,
   Title                    = {F1 score --- {W}ikipedia{,} The Free Encyclopedia},
 
@@ -34,6 +82,30 @@
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.01.29},
   Url                      = {https://en.wikipedia.org/wiki/Confusion_matrix}
+}
+
+@Misc{wiki:008,
+  Title                    = {Twitter --- {W}ikipedia{,} The Free Encyclopedia},
+
+  Author                   = {Wikipedia contributors},
+  Note                     = {[Online; accessed 5-Februari 2018]},
+  Year                     = {2007},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.02.05},
+  Url                      = {https://en.wikipedia.org/wiki/Twitter}
+}
+
+@Misc{learning:001,
+  Title                    = {Supervised and Unsupervised Machine Learning Algorithms},
+
+  Author                   = {Jason Brownlee},
+  Year                     = {2016},
+
+  Comment                  = {Last checked 2017-02-05},
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.02.05},
+  Url                      = {https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/}
 }
 
 @InProceedings{7813707,
@@ -60,7 +132,7 @@
   Keywords                 = {data mining;feature extraction;pattern classification;sentiment analysis;social networking (online);Twitter sentiment analysis;classification algorithm;feature extraction;opinion mining;Classification algorithms;Computer languages;Data mining;Feature extraction;Machine learning algorithms;Sentiment analysis;Twitter;Opinion Mining;Sentiment Analysis;Twitter}
 }
 
-@Article{Giachanou:2016:LST:2966278.2938640,
+@Article{TSAsurvey,
   Title                    = {Like It or Not: A Survey of Twitter Sentiment Analysis Methods},
   Author                   = {Giachanou, Anastasia and Crestani, Fabio},
   Journal                  = {ACM Comput. Surv.},
@@ -104,6 +176,18 @@
   Keywords                 = {pattern classification;sentiment analysis;social networking (online);Twitter datasets;Twitter sentiment analysis;Twitter text preprocessing;data preprocessing;feature representation;feature selection;sentiment polarity classification;Classification algorithms;Filtering algorithms;Machine learning algorithms;Sentiment analysis;Standards;Support vector machines;Twitter;Attribute selection;Learning machines;N-grams;Preprocessing;Sentiment Analysis;Twitter}
 }
 
+@Article{DMatari,
+  Title                    = {Human-level control through deep reinforcement learning},
+  Author                   = {Mnih, Volodymyr and Kavukcuoglu, Koray and Silver, David and Rusu, Andrei A and Veness, Joel and Bellemare, Marc G and Graves, Alex and Riedmiller, Martin and Fidjeland, Andreas K and Ostrovski, Georg and others},
+  Journal                  = {Nature},
+  Year                     = {2015},
+  Number                   = {7540},
+  Pages                    = {529},
+  Volume                   = {518},
+
+  Publisher                = {Nature Publishing Group}
+}
+
 @InProceedings{7434400,
   Title                    = {Twitter Sentiment Analysis -- A More Enhanced Way of Classification and Scoring},
   Author                   = {S. Sahu and S. K. Rout and D. Mohanty},
@@ -120,6 +204,18 @@
   Title                    = {Evaluation datasets for Twitter sentiment analysis: a survey and a new dataset, the STS-Gold},
   Author                   = {Saif, Hassan and Fernandez, Miriam and He, Yulan and Alani, Harith},
   Year                     = {2013}
+}
+
+@Article{silver2016mastering,
+  Title                    = {Mastering the game of Go with deep neural networks and tree search},
+  Author                   = {Silver, David and Huang, Aja and Maddison, Chris J and Guez, Arthur and Sifre, Laurent and Van Den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and others},
+  Journal                  = {nature},
+  Year                     = {2016},
+  Number                   = {7587},
+  Pages                    = {484--489},
+  Volume                   = {529},
+
+  Publisher                = {Nature Research}
 }
 
 @Article{SINGH2016549,

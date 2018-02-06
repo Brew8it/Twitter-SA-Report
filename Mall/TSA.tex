@@ -35,6 +35,11 @@
 \usepackage{titletoc}
 \usepackage{geometry}
 
+
+\usepackage{graphicx}
+\graphicspath{{../figures/background/}}
+\usepackage[numbers]{natbib}
+
 \renewcommand{\baselinestretch}{1.5} 
 
 
@@ -91,20 +96,97 @@
 
 
 \chapter{Bakgrund}
-\section{Intro - syfte Varför vi gör denna studie}
-Syftet med projektet är att utvärdera olika etablerade klassificeringsmodeller och deras olika funktioner genom att träna dom mot olika typer av träningsdata. Utvärderingen ska ge svar på vilken klassificeringsmodell som ger bäst träffsäkerhet beroende på dess träningsdata för Twitter sentiment analysis (TSA).
-\section{Förklara machine learning och övergripande sentiment analys}
+\section{Introduktion}
+Syftet med denna studien är att utvärdera (x) stycken maskininlärnings algoritmer och hur förbehandlingen av inlärnings data har för påverkan på algoritmens prestandard. De (x) algoritmerna är XXXX, YYYY och ZZZZZ. 
+
+Resultatet utav denna studie har våran uppdragsgivare, CGI ett intresse utav, för de ser att sentimentanalys som en viktig pusselbit inom framtida lösningar dom vill erbjuda sina kunder. Dessa lösningar skulle kunna vara framtida chatbotar där sentimentanalys används så att chatboten kan ändra sitt språk utefter hur svaren från en slutanvändare ser ut. Eller att det kan användas för trendanalys där ett företag vill veta vad allmänheten tycker före och efter att dom har släppt en ny produkt eller efter att kvartalsrapporten har släppts. 
+
+
+I avsnitt 2.2 ges en introduktion till maskininlärning, (Förklara vidare alla sektioner och sub sektioner när dom börjar bli klara)
+
+\section{Sentimentanalys}
 Sentimentanalys (SA) används för att studera människors åsikter, attityder och känslor mot andra entiteter. En entitet kan vara vara ett ämne,  en händelse eller en individ. Målet med SA är att identifiera känslan som är uttryckt i en text för att därefter analysera den. Processen delas upp i tre steg: att hitta åsikter, identifiera känslan för de åsikterna och slutligen klassificera motsatsförhållandet dem emellan. Klassificeringen inom SA är uppdelad i olika nivåer. 
+
 De tre huvudsakliga nivåerna är: dokument-, menings- och aspektnivå. SA på dokumentnivå klassificerar om ett helt dokument uttrycker en positiv eller negativ åsikt, ett exempel på det kan vara en filmrecension. 
+
 På meningsnivå analyseras och klassificeras varje mening i ett dokument. Meningen kontrolleras först för att definiera om meningen är objektiv eller subjektiv. Om meningen definieras som subjektiv klassificeras meningen som positiv eller negativ. 
 Ett dokument/mening kan behandla olika aspekter av en entitet, en aspekt kan beskrivas som positiv medan en annan kan beskrivas som negativ. Analyser av det här slaget sägs göras nere på aspektnivå.
-\subsection{Twitter Sentiment analys}
-Inget änsålänge
-\section{Vilka modeller}
-Inom maskininlärning använder man sig av klassificeringsmodeller för så kallad övervakad inlärning. Vi kommer först att fokusera på två utav dom mest etablerade modellerna i vårt arbete men om tid finns kommer antalet modeller att öka. Dom två modellerna vi kommer att använda oss av är Naive Bayes(NB) och Support Vector Machines (SVM). 
+
+Det är idag vanligt att användare och köpare av produkter söker sig till recensionssidor innan de beslutar sig för att betala för en produkt. På recensionssidor kan användare läsa om andra användares upplevelser av en produkt. Exempel på recensionssidor är IMDB och SweClockers. Den förstnämnda förser användarna med recensioner på filmer medan den andra recenserar hårdvara för datorer. Den här typen av produktrecensioner är den vanligaste typen av data som används för SA. Företag har stor användning av att använda SA på produktrecensioner då de kan få svar på vad användarna har för åsikter om deras produkter. Resultaten de får från SA kan de använda som underlag för viktiga affärsbeslut. SA har även visat sig användbart för att analysera aktiemarknaden, nyhetsartiklar och politiska debatter\cite{SAsurvey}.
+
+\subsection{Twittersentimentanalys}
+TSA är en del av SA om specifikt handlar om att analysera inlägg som användare gör på Twitter och vad de inläggen uttrycker för sentiment. Twitter är en av de populäraste mikrobloggarna där användare kan skriva och  med varandra genom twitterinlägg. 2013  var de en av de tio mest besökta sidorna på internet och 2016 uppmättes antalet aktiva användare per månad till 319 miljoner. Det är definierat som en mikroblogg på grund av det låga antalet tecken som är tillåtet för ett inlägg. I November 2017 fördubblades antalet tillåtna tecken från de tidigare 140 tillåtna tecken till 280\cite{wiki:008}. 
+
+Det finns en rad olika begrepp som kännetecknar Twitter och som är viktiga att känna till. En “tweet” är vad som tidigare benämnts som ett twitterinlägg. Det är ett inlägg från en användare som är begränsat till 280 tecken, där användaren exempelvis kan delge sina åsikter i olika ämnen eller dela med sig av personliga upplevelser. En “tweet” behöver inte enbart innehålla ren text utan de kan även innehålla länkar, bilder och videor. I fortsättningen av rapporten kommer en “tweet” att benämnas som ett twitterinlägg.
+
+När ett twitterinlägg innehåller “mentions” betyder det att andra användare nämns i inlägget. Det kan vara användbart för att exempelvis delge åsikter om andra användare eller för att öppet starta en diskussion med en nämnd användare. För att nämna en användare i ett twitterinlägg skrivs symbolen @ före användarnamnet. 
+
+På Twitter har användare möjligheten att följa andra användare. Det betyder att användare kan följa andra användares aktivitet i deras egna twitterflöde och dela med sig av sin egen aktivitet till sina följares twitterflöden. En användare som följer en annan benämns på twitter som en “follower”. Att följa andra är det primära tillvägagångssättet för att skapa kontakter med andra användare på Twitter.  
+
+Användare har möjlighet att kategorisera twitterinlägg och det är vad “hashtags” används för. Genom att använda “hashtags” kan användare märka sina twitterinlägg med etiketter för att knyta inlägget till ett specifikt ämne. Användandet av hashtags gör det enkelt för användare att följa ett ämne. De behöver enbart söka på en specifik “hashtag” för att få fram alla twitterinlägg i ämnet. För att skapa en “hashtag” skrivs symbolen \# före namnet på etiketten.
+
+Det är även möjligt att dela andra användares twitterinlägg till ens egna följare. Den funktionen kallas för “retweet” och ett sådant twitterinlägg startar vanligtvis med förkortningen RT följt av en “mention” av den ursprungliga författaren av twitterinlägget. Det kan exempelvis vara användbart för att sprida information till följare eller för att skapa en diskussion om innehållet i twitterinlägget med sina egna följare. 
+
+När användare svarar på andras twitterinlägg benämns det som “replies” och det är till för att det ska gå att skapa konversationer, där det ska gå att urskilja vanliga twitterinlägg från svar på twitterinlägg. En användare svarar på ett twitterinlägg genom att göra en referens till den ursprungliga författaren av inlägget följt av svaret på inlägget.
+
+Användare behöver inte göra alla sina inlägg offentliga för alla användare, de kan begränsa synligheten för deras twitterinlägg att enbart synas för deras egna följare\cite{TSAsurvey}.
+
+\begin{figure}[h]
+\includegraphics[width=12cm]{tweet}
+\centering
+\caption{Twitter inlägg innehållande hashtag, mention, retweet}
+
+\end{figure}
+
+Det är just restriktionen av antalet tillåtna tecken som utgör den stora skillnaden mellan TSA och SA. Att analysera sentiment på en text i ett twitterinlägg skiljer sig markant från att göra det på vanlig text som återfinns i produktrecensioner och nyhetsartiklar. Det gör att TSA ställs inför en rad andra utmaningar än vad SA ställs inför. Restriktionen av antal tecken och att det är en informell typ av medium utgör en av de största utmaningarna med TSA. Det gör att twitterinlägg ofta innehåller felaktigt språkbruk, där förkortningar och slang är vanligt förekommande. Dessutom är innehållet på Twitter ständigt under utveckling vilket också är en utmaning som måste hanteras vid TSA.
+På grund av restriktionen på antal tecken i en tweet innehåller majoriteten av twitterinlägg enbart en mening. Därför är det ingen skillnad på dokument- och meningsnivå inom TSA. Istället används det inom TSA två klassificeringsnivåer: meddelandenivå/meningsnivå och aspektnivå\cite{TSAsurvey}.
+
+\section{Maskininlärning}
+Maskininlärning är ett delområde inom artificiell intelligens(AI), där målet är att göra det möjligt för datorer att lära sig på egen hand. Maskineninlärnings algoritmen gör det möjligt att identifiera olika mönster från observerad data, bygga upp en generell modell som kan förutsäga saker utav att ha blivit förprogrammerade med explicita regler för hur den ska lösa ett problem.
+
+Under dom senaste åren så har stora framsteg inom maskininlärning gjorts tex under 2015 så utvecklade DeepMind\cite{DMatari00} en agent som mästrade 49 st Atari\cite{wiki:004} spel. Där deras klassificeringsmodell bara fick pixlar och spelpoäng som input. 
+
+Under 2016 utvecklade DeepMind sin AlphaGo\cite{DMgo} agent som besegrade en utav världens bästa Go spelare, Lee Sedol\cite{wiki:005} med (4-1) i matcher. Detta var ett oerhört genomslag för AI eftersom Go är ett oerhört komplext Kinesiskt krigsstrategispel med $2 * 10^{170}$\cite{wiki:006} möjliga drag.
+\section{Övervakad och oövervakad inlärning}
+Oövervakad inlärning är när träningssetet bara består av indata och inget förväntat resultat. Målet med oövervakad inlärning är att algoritmen själv lär sig att modulera den underliggande strukturen så att den kan lära sig mer om datan och själv kan komma fram till ett resultat. [wikipedia ref: oövervakad inlärning.]
+
+Övervakad inlärning går ut på att man har ett träningsset bestående utav indata variabler(x) och dess förväntade utdata resultat(y), som ges till en algoritm vars mål är att skapa en kartläggningfunktion så att den kan förutse utdata variabeln (y) från ny indata (x).
+                        y = f(x)
+Övervakad inlärning kan man tänka sig som att en lärare överser programmets inlärningsprocess, eftersom det är vi som programmerare som ger algoritmen träningssetet. Övervakad inlärning kan brytas ner till antingen klassificerings och regressions problem\cite{learning:001}.
+
+\section{Maskininlärnings algoritmer}
+Inom maskininlärning finns det många olika typer av problem man vill undersöka. Eftersom TSA kan kallas ett typiskt binärt klassificeringsproblem[ref: survey SA], kommer våran studie att använda sig utav algoritmer lämpade för sådan problem. I figur X kan vi se några utav dessa algoritmer. Utifrån dessa algoritmer har vi valt att använda Naive Bayes(NB), Support Vector machine(SVM) och xxx eftersom enligt \cite{TSAsurvey} är dessa algoritmer mest lämpade för vårt problem.
+\subsection{Naive Bayes}
+\subsection{Support Vector Machine}
+\subsection{XXX}
+
 
 \section{Hur jämför vi modellerna?}
-TSA kan kallas ett typiskt binärt klassificeringsproblem där målet är att utläsa om ett tweet är positivt eller negativt. I figur/tabel X ser vi en såkallad “Confusion Matrix”(CM) som utvärderar en klassificeringsmodell från testdata där “positivt” eller “negativt” är förbestämt. Matrisen visar antalet sann positiva(SP), sann negativ(SN), falsk positiv(FP) och falsk negativ(FN). Med dessa värden kan jämföra och analysera modellerna m.h.a följande utvärderingsmetoder: noggrannhet, precision, återkallelse och F-poäng. 
+I figur/tabel X ser vi en såkallad “Confusion Matrix”(CM)\cite{wiki:003} som utvärderar en klassificeringsmodell från testdata där “positivt” eller “negativt” är förbestämt. Matrisen visar antalet sann positiva(SP), sann negativ(SN), falsk positiv(FP) och falsk negativ(FN). Med dessa värden kan vi jämföra och analysera modellerna m.h.a följande utvärderingsmetoder: noggrannhet(n)[ref wiki], precision(p)\cite{wiki:002}, återkallelse(å)\cite{wiki:002} och F-Score\cite{wiki:001}.  
+
+
+Noggrannhet: Är modellens förmåga att kunna märka ett tweet korrekt som antingen positivt eller negativt. Detta görs genom att ta summan av sann märkta tweets delat på summa av alla märkningar.
+\begin{equation}
+n = \frac{SP + SN}{SP + FP + SN + FN}
+\end{equation}
+
+Precision: Är förmågan att modellen inte märker ett tweet som positivt när det negativt. Detta görs genom att ta antalet sann positiva delat på totalt antal positivt märkta tweets. 
+\begin{equation}
+p = \frac{SP}{SP + FP}
+\end{equation}
+
+Återkallelse: Är förmågan att modellen märka positiva tweets korrekt.???. Detta görs genom att ta antalet sann positiva delat på summan av antalet sann positiva och falsk negativa.
+
+\begin{equation}
+r = \frac{SP}{SP + FN}
+\end{equation}
+
+F-Score(Fs): Även kallat det harmoniska medelvärdet mellan precision och återkallelse används då inte alltid precision och återkallelse räcker till för att göra en helhetsbedömning. F-score räknas ut:
+\begin{equation}
+Fs = \frac{p * r}{p + r}
+\end{equation}
+
+
 \section{Summering}
 
 \newpage
@@ -140,6 +222,12 @@ TSA kan kallas ett typiskt binärt klassificeringsproblem där målet är att ut
 \section{Begränsningar}
 \section{Vidare utveckling}
 \section{Slutord}
+
+
+
+\bibliographystyle{unsrtnat} 
+\bibliography{../refs/thesisref}
+
 
 \restoregeometry%
 
