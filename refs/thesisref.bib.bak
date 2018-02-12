@@ -96,6 +96,18 @@
   Url                      = {https://en.wikipedia.org/wiki/Twitter}
 }
 
+@InProceedings{7394379,
+  Title                    = {Effect of training set size on SVM and Naive Bayes for Twitter sentiment analysis},
+  Author                   = {O. Abdelwahab and M. Bahgat and C. J. Lowrance and A. Elmaghraby},
+  Booktitle                = {2015 IEEE International Symposium on Signal Processing and Information Technology (ISSPIT)},
+  Year                     = {2015},
+  Month                    = {Dec},
+  Pages                    = {46-51},
+
+  Doi                      = {10.1109/ISSPIT.2015.7394379},
+  Keywords                 = {social networking (online);support vector machines;AND-type fusion;F-score;Naïve Bayes classifiers;OR-type fusion;SVM;Twitter sentiment analysis;decision fusion technique;sentiment classification;training set size;Companies;Libraries;Sentiment analysis;Size measurement;Support vector machines;Training;Training data;Ensemble;Ensemble fusion;Training Set Size;Twitter Sentiment Analysis}
+}
+
 @Misc{learning:001,
   Title                    = {Supervised and Unsupervised Machine Learning Algorithms},
 
@@ -177,6 +189,38 @@
   ISSN                     = {1877-0509},
   Keywords                 = {Sentiment Analysis, Text Pre-processing, Feature Selection, Chi Squared, SVM},
   Url                      = {http://www.sciencedirect.com/science/article/pii/S1877050913001385}
+}
+
+@InProceedings{7463812,
+  Title                    = {Pre-processing Boosting Twitter Sentiment Analysis?},
+  Author                   = {Z. Jianqiang},
+  Booktitle                = {2015 IEEE International Conference on Smart City/SocialCom/SustainCom (SmartCity)},
+  Year                     = {2015},
+  Month                    = {Dec},
+  Pages                    = {748-753},
+
+  Doi                      = {10.1109/SmartCity.2015.158},
+  Keywords                 = {feature extraction;feature selection;pattern classification;sentiment analysis;social networking (online);Twitter sentiment analysis boosting preprocessing;acronym;feature selection;negation;public feeling monitoring;removal URL;removal numbers;removal stopword;repeated letters;sentiment classification performance;sentiment feature extracttion;Niobium;Radio frequency;Sentiment analysis;Support vector machines;Terminology;Twitter;Uniform resource locators;Twitter;pre-processing;sentiment analysis}
+}
+
+@Article{7862202,
+  Title                    = {Comparison Research on Text Pre-processing Methods on Twitter Sentiment Analysis},
+  Author                   = {Z. Jianqiang and G. Xiaolin},
+  Journal                  = {IEEE Access},
+  Year                     = {2017},
+  Pages                    = {2870-2879},
+  Volume                   = {5},
+
+  Doi                      = {10.1109/ACCESS.2017.2672677},
+  ISSN                     = {2169-3536},
+  Keywords                 = {Bayes methods;feature extraction;logistics;pattern classification;regression analysis;sentiment analysis;social networking (online);support vector machines;Twitter;URL;feature extraction;logistic regression;naive Bayes classifiers;public feeling;random forest classifiers;sentiment analysis;sentiment classification;support vector machine;text preprocessing;Analytical models;Organizations;Sentiment analysis;Support vector machines;Terminology;Twitter;Uniform resource locators;Twitter;sentiment analysis;text pre-processing}
+}
+
+@Article{kolchyna2015twitter,
+  Title                    = {Twitter sentiment analysis: Lexicon method, machine learning method and their combination},
+  Author                   = {Kolchyna, Olga and Souza, Tharsis TP and Treleaven, Philip and Aste, Tomaso},
+  Journal                  = {arXiv preprint arXiv:1507.00955},
+  Year                     = {2015}
 }
 
 @InProceedings{7785373,
@@ -262,6 +306,18 @@
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.01.22},
   Url                      = {https://ac.els-cdn.com/S2090447914000550/1-s2.0-S2090447914000550-main.pdf?\_tid=77d36d1a-ff80-11e7-956d-00000aacb362\&acdnat=1516631469\_c14e5bc49162e2b9a4232c2931592298}
+}
+
+@InProceedings{7966145,
+  Title                    = {A character-based convolutional neural network for language-agnostic Twitter sentiment analysis},
+  Author                   = {J. Wehrmann and W. Becker and H. E. L. Cagnini and R. C. Barros},
+  Booktitle                = {2017 International Joint Conference on Neural Networks (IJCNN)},
+  Year                     = {2017},
+  Month                    = {May},
+  Pages                    = {2384-2391},
+
+  Doi                      = {10.1109/IJCNN.2017.7966145},
+  Keywords                 = {data visualisation;feature extraction;feedforward neural nets;language translation;learning (artificial intelligence);sentiment analysis;social networking (online);character-based convolutional neural network;character-level embeddings;cross-language sentiment analysis;deep convolutional neural networks;knowledge visualization;language-agnostic Twitter sentiment analysis;language-agnostic translation-free method;latent feature learning;machine learning strategies;machine translation;monolingual sentiment analysis;translation quality;tweet corpora;tweet sentiment analysis;Analytical models;Context;Neural networks;Sentiment analysis;Training;Twitter;Vocabulary;Character-based Embedding;Convolutional Neural Networks;Deep Learning;Sentiment Analysis;Twitter}
 }
 
 @InProceedings{7382029,
