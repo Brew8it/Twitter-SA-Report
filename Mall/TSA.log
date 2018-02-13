@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  6 FEB 2018 12:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  13 FEB 2018 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -757,10 +757,26 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrextend.sty
+Package: scrextend 2015/10/03 v3.19a KOMA-Script package (extend other classes 
+with features of KOMA-Script classes)
+LaTeX Info: Redefining \textsubscript on input line 1277.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip48
+\f@ncyO@elh=\skip49
+\f@ncyO@erh=\skip50
+\f@ncyO@olh=\skip51
+\f@ncyO@orh=\skip52
+\f@ncyO@elf=\skip53
+\f@ncyO@erf=\skip54
+\f@ncyO@olf=\skip55
+\f@ncyO@orf=\skip56
+)
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip48
-\bibsep=\skip49
+\bibhang=\skip57
+\bibsep=\skip58
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count113
 )
@@ -770,18 +786,18 @@ les
 ) (./TSA.aux)
 \openout1 = `TSA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
 
 ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -879,7 +895,7 @@ Runaway argument?
 ! Paragraph ended before \PackageWarning was complete.
 <to be read again> 
                    \par 
-l.79 
+l.89 
      
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -890,26 +906,31 @@ My plan is to forget the whole thing and hope for the best.
 
 
 
+
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [4
+
 
 
 ] [5
 
 
+
 ] [6
+
 
 
 ] [7] [8
 
 
+
 ]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 92.
+(Font)              size <24.88> substituted on input line 102.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 92.
+(Font)              size <24.88> substituted on input line 102.
 
 (./TSA.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -922,44 +943,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 
+
 ])
 \tf@toc=\write4
 \openout4 = `TSA.toc'.
 
  [10]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside asymmetric 
-* h-part:(L,W,R)=(62.59605pt, 472.31583pt, 62.59605pt)
-* v-part:(T,H,B)=(56.9055pt, 731.23593pt, 56.9055pt)
-* \paperwidth=597.50793pt
-* \paperheight=845.04694pt
-* \textwidth=472.31583pt
-* \textheight=731.23593pt
-* \oddsidemargin=-9.67393pt
-* \evensidemargin=-9.67393pt
-* \topmargin=-48.36449pt
-* \headheight=15.0pt
-* \headsep=18.0pt
-* \topskip=10.0pt
-* \footskip=42.0pt
-* \marginparwidth=74.68849pt
-* \marginparsep=12.8401pt
-* \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
 Kapitel 1.
 [1
 
@@ -968,74 +957,219 @@ Kapitel 1.
 
 ]
 Kapitel 2.
-[2
+<../figures/background/oversiktsfigur.png, id=38, 633.36626pt x 201.75375pt>
+File: ../figures/background/oversiktsfigur.png Graphic file (type png)
 
-] [3] <../figures/background/tweet.png, id=45, 723.70375pt x 155.58125pt>
-File: ../figures/background/tweet.png Graphic file (type png)
+<use ../figures/background/oversiktsfigur.png>
+Package pdftex.def Info: ../figures/background/oversiktsfigur.png used on input
+ line 120.
+(pdftex.def)             Requested size: 341.43306pt x 108.76376pt.
+ [2
 
-<use ../figures/background/tweet.png>
-Package pdftex.def Info: ../figures/background/tweet.png used on input line 139
-.
-(pdftex.def)             Requested size: 341.43306pt x 73.40094pt.
- [4 <../figures/background/tweet.png>]
-[5] [6]
+ <../figures/background/oversiktsfigur.png>] [3] [4]
+<../figures/background/ml.png, id=52, 688.5725pt x 591.20876pt>
+File: ../figures/background/ml.png Graphic file (type png)
+
+<use ../figures/background/ml.png>
+Package pdftex.def Info: ../figures/background/ml.png used on input line 154.
+(pdftex.def)             Requested size: 341.43306pt x 293.1499pt.
+ [5 <../figures/background/ml.png>]
+<../figures/background/klassmodell.png, id=61, 573.14125pt x 350.30875pt>
+File: ../figures/background/klassmodell.png Graphic file (type png)
+
+<use ../figures/background/klassmodell.png>
+Package pdftex.def Info: ../figures/background/klassmodell.png used on input li
+ne 165.
+(pdftex.def)             Requested size: 341.43306pt x 208.69019pt.
+ [6 <../figures/background/klassmodell.png>]
+Overfull \hbox (34.78406pt too wide) in paragraph at lines 179--180
+\T1/cmr/m/n/12 SVM är en över-va-kad ma-ski-nin-lär-nings-al-go-ritm som kan an
+-vän-das till bå-de klassifikations-
+ []
+
+[7] [8] [9]
+<../figures/background/exempeltweet.png, id=75, 745.78625pt x 61.22874pt>
+File: ../figures/background/exempeltweet.png Graphic file (type png)
+
+<use ../figures/background/exempeltweet.png>
+Package pdftex.def Info: ../figures/background/exempeltweet.png used on input l
+ine 213.
+(pdftex.def)             Requested size: 341.43306pt x 28.031pt.
+ [10 <../figures/background/exempeltweet.png>] <../figures/background/fm.png, i
+d=80, 432.61626pt x 111.41624pt>
+File: ../figures/background/fm.png Graphic file (type png)
+
+<use ../figures/background/fm.png>
+Package pdftex.def Info: ../figures/background/fm.png used on input line 241.
+(pdftex.def)             Requested size: 341.43306pt x 87.93626pt.
+ [11]
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 249.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [12 <../figures/background/fm.png>]
+<../figures/background/utvardering.png, id=90, 382.42876pt x 382.42876pt>
+File: ../figures/background/utvardering.png Graphic file (type png)
+
+<use ../figures/background/utvardering.png>
+Package pdftex.def Info: ../figures/background/utvardering.png used on input li
+ne 259.
+(pdftex.def)             Requested size: 284.52756pt x 284.53922pt.
+ [13 <../figures/background/utvardering.png>] [14]
 Kapitel 3.
-[7
+[15
 
 ]
+Overfull \vbox (73.41275pt too high) has occurred while \output is active []
+
+
+[16]
 Kapitel 4.
-[8
+
+Overfull \hbox (1.19798pt too wide) in paragraph at lines 292--292
+[]\T1/cmr/bx/n/20.74 Implementations mäs-sigt vil-ken mo-dell
+ []
+
+
+Overfull \hbox (14.16211pt too wide) in paragraph at lines 293--293
+[]\T1/cmr/bx/n/20.74 implementations jäm-fö-rel-se (re-sul-tat VS
+ []
+
+[17
 
 ]
+Overfull \vbox (119.14807pt too high) has occurred while \output is active []
+
+
+[18]
 Kapitel 5.
-(./TSA.bbl [9
+(./TSA.bbl [19
 
 ]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 14.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 1635) in paragraph at lines 9--15
+Underfull \hbox (badness 4441) in paragraph at lines 9--15
 []\T1/cmr/m/n/12 Hoda Ko-ras-hy Wa-laa Med-hat, Ah-med Has-san.  Sen-ti-ment an
-a-ly-sis al-go-rithms
+a-ly-
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 9--15
-\T1/cmr/m/n/12 1093--1113, De-cem-ber 2014.  URL $\T1/cmtt/m/n/12 https : / / a
-c\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 els -[] cdn\OML/cmm/m/it/12 :\T1/cmtt/m/n/12
- com / S2090447914000550 /
+Underfull \hbox (badness 2310) in paragraph at lines 9--15
+\T1/cmr/m/n/12 sis al-go-rithms and ap-pli-ca-tions: A sur-vey.  \T1/cmr/m/it/1
+2 Ain Shams Engi-ne-e-ring
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 9--15
+\T1/cmr/m/it/12 Jour-nal\T1/cmr/m/n/12 , Vo-lu-me 5(Issue 4):1093--1113, De-cem
+-ber 2014.  URL $\T1/cmtt/m/n/12 https :
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--15
-\T1/cmtt/m/n/12 1 -[] s2\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 0 -[] S20904479140005
-50 -[] main\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 pdf?\OMS/cmsy/m/n/12 n[]\T1/cmtt/m
-/n/12 tid = 77d36d1a -[] ff80 -[] 11e7 -[] 956d -[]
+\T1/cmtt/m/n/12 / / ac\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 els -[] cdn\OML/cmm/m/i
+t/12 :\T1/cmtt/m/n/12 com / S2090447914000550 / 1 -[] s2\OML/cmm/m/it/12 :\T1/c
+mtt/m/n/12 0 -[] S2090447914000550 -[]
  []
 
 
-Underfull \hbox (badness 3792) in paragraph at lines 70--74
-[]\T1/cmr/m/n/12 Jason Brown-lee.  Su-per-vi-sed and unsu-per-vi-sed machi-ne l
-e-ar-ning al-go-rithms,
+Underfull \hbox (badness 10000) in paragraph at lines 9--15
+\T1/cmtt/m/n/12 main\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 pdf?\OMS/cmsy/m/n/12 n[]\
+T1/cmtt/m/n/12 tid = 77d36d1a -[] ff80 -[] 11e7 -[] 956d -[] 00000aacb362\OMS/c
+msy/m/n/12 n\T1/cmtt/m/n/12 &acdnat =
  []
 
-[10
+[20
 
-]) [11] (./TSA.aux)
+]
+Underfull \hbox (badness 5119) in paragraph at lines 64--69
+[]\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Unsu-per-vi-sed le-ar-ning --- Wi-
+ki-pe-dia, the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
+\T1/cmr/m/n/12 free en-cyclo-pe-dia, 2016.  URL $\T1/cmtt/m/n/12 https : / / en
+\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
+g / wiki /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--122
+\T1/cmr/m/n/12 URL $\T1/cmtt/m/n/12 https : / / www\OML/cmm/m/it/12 :\T1/cmtt/m
+/n/12 kdnuggets\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 com / 2016 / 07 / support -[] 
+vector -[] machines -[]
+ []
+
+[21]
+Underfull \hbox (badness 2213) in paragraph at lines 124--129
+[]\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Sup-port vector machi-ne --- Wi-ki
+-pe-dia, the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--129
+\T1/cmr/m/n/12 free en-cyclo-pe-dia, 2002.  URL $\T1/cmtt/m/n/12 https : / / en
+\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
+g / wiki /
+ []
+
+
+Underfull \hbox (badness 6001) in paragraph at lines 141--144
+[]\T1/cmr/m/n/12 Sentiment ana-ly-sis in twit-ter, 2016.  URL $\T1/cmtt/m/n/12 
+http : / / alt\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 qcri\OML/cmm/m/it/12 :\T1/cmtt/
+m/n/12 org /
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 158--162
+[]\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Twit-ter --- Wi-ki-pe-dia, the fre
+e en-cyclo-pe-dia,
+ []
+
+
+Underfull \hbox (badness 2717) in paragraph at lines 171--176
+[]\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Ac-cu-ra-cy and pre-ci-sion --- Wi
+-ki-pe-dia, the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--176
+\T1/cmr/m/n/12 free en-cyclo-pe-dia, 2002.  URL $\T1/cmtt/m/n/12 https : / / en
+\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
+g / wiki /
+ []
+
+
+Underfull \hbox (badness 6675) in paragraph at lines 178--183
+[]\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Pre-ci-sion and recall --- Wi-ki-p
+e-dia, the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--183
+\T1/cmr/m/n/12 free en-cyclo-pe-dia, 2016.  URL $\T1/cmtt/m/n/12 https : / / en
+\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
+g / wiki /
+ []
+
+[22]) [23] (./TSA.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.88pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 14308 strings out of 493029
- 271756 string characters out of 6136234
- 345864 words of memory out of 5000000
- 17539 multiletter control sequences out of 15000+600000
- 15099 words of font info for 35 fonts, out of 8000000 for 9000
+ 14730 strings out of 493029
+ 278868 string characters out of 6136234
+ 356867 words of memory out of 5000000
+ 17945 multiletter control sequences out of 15000+600000
+ 15869 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,6n,58p,878b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,11n,58p,991b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
@@ -1044,12 +1178,14 @@ pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/
 share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/
-sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/s
-hare/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on TSA.pdf (19 pages, 246602 bytes).
+sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+ftt1200.pfb>
+Output written on TSA.pdf (31 pages, 319232 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 174 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

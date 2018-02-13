@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,12 +12,6 @@ Hoda~Korashy Walaa~Medhat, Ahmed~Hassan.
   4):\penalty0 1093--1113, December 2014.
 \newblock URL
   \url{https://ac.els-cdn.com/S2090447914000550/1-s2.0-S2090447914000550-main.pdf?\_tid=77d36d1a-ff80-11e7-956d-00000aacb362\&acdnat=1516631469\_c14e5bc49162e2b9a4232c2931592298}.
-
-\bibitem[contributors(2007)]{wiki:008}
-Wikipedia contributors.
-\newblock Twitter --- {W}ikipedia{,} the free encyclopedia, 2007.
-\newblock URL \url{https://en.wikipedia.org/wiki/Twitter}.
-\newblock [Online; accessed 5-Februari 2018].
 
 \bibitem[Giachanou and Crestani(2016)]{TSAsurvey}
 Anastasia Giachanou and Fabio Crestani.
@@ -66,30 +60,131 @@ Wikipedia contributors.
 \newblock URL \url{https://en.wikipedia.org/wiki/Go\_(game)}.
 \newblock [Online; accessed 5-Februari 2018].
 
+\bibitem[contributors(2016{\natexlab{d}})]{wiki:007}
+Wikipedia contributors.
+\newblock Unsupervised learning --- {W}ikipedia{,} the free encyclopedia,
+  2016{\natexlab{d}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Unsupervised\_learning}.
+\newblock [Online; accessed 5-Februari 2018].
+
 \bibitem[Brownlee(2016)]{learning:001}
 Jason Brownlee.
 \newblock Supervised and unsupervised machine learning algorithms, 2016.
 \newblock URL
   \url{https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/}.
 
-\bibitem[contributors(2014{\natexlab{a}})]{wiki:003}
+\bibitem[contributors(2002{\natexlab{a}})]{wiki:009}
+Wikipedia contributors.
+\newblock Bayes' theorem --- {W}ikipedia{,} the free encyclopedia,
+  2002{\natexlab{a}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Bayes%27_theorem}.
+\newblock [Online; accessed 12-February 2018].
+
+\bibitem[Ray(2015)]{nb:001}
+Sunil Ray.
+\newblock 6 easy steps to learn naive bayes algorithm (with codes in python and
+  r), 2015.
+\newblock URL
+  \url{https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/}.
+\newblock [Online; accessed 12-February 2018].
+
+\bibitem[Saxena(2017)]{nb:002}
+Rahul Saxena.
+\newblock How the naive bayes classifier works in machine learning, 2017.
+\newblock URL
+  \url{http://dataaspirant.com/2017/02/06/naive-bayes-classifier-machine-learning/}.
+\newblock [Online; accessed 12-February 2018].
+
+\bibitem[Stephanie(2017)]{nb:004}
+Stephanie.
+\newblock Bernoulli distribution: Definition and examples, 2017.
+\newblock URL \url{http://www.statisticshowto.com/bernoulli-distribution/}.
+\newblock [Online; accessed 12-February 2018].
+
+\bibitem[scikitlearn documentation(2017)]{nb:003}
+scikitlearn documentation.
+\newblock 1.9 naive bayes -- scikitlearn documentation, 2017.
+\newblock URL \url{http://scikit-learn.org/stable/modules/naive_bayes.html}.
+\newblock [Online; accessed 12-February 2018].
+
+\bibitem[Weisstein(n.d)]{svm:001}
+Eric~W. Weisstein.
+\newblock "hyperplane." from mathworld--a wolfram web resource, n.d.
+\newblock URL \url{http://mathworld.wolfram.com/Hyperplane.html}.
+\newblock [Online; accessed 12-February 2018].
+
+\bibitem[Bambrick(n.d)]{svm:003}
+Noel Bambrick.
+\newblock Support vector machines: A simple explanation, n.d.
+\newblock URL
+  \url{https://www.kdnuggets.com/2016/07/support-vector-machines-simple-explanation.html}.
+\newblock [Online; accessed 12-February 2018].
+
+\bibitem[contributors(2002{\natexlab{b}})]{svm:002}
+Wikipedia contributors.
+\newblock Support vector machine --- {W}ikipedia{,} the free encyclopedia,
+  2002{\natexlab{b}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Support_vector_machine}.
+\newblock [Online; accessed 12-February 2018].
+
+\bibitem[Go et~al.(2009)Go, Bhayani, and Huang]{sts:001}
+Alec Go, Richa Bhayani, and Lei Huang.
+\newblock Twitter sentiment classification using distant supervision.
+\newblock \emph{CS224N Project Report, Stanford}, 1\penalty0 (12), 2009.
+
+\bibitem[Sem(2016{\natexlab{a}})]{SemEval:001}
+International workshop on semantic evaluation 2017, 2016{\natexlab{a}}.
+\newblock URL \url{http://alt.qcri.org/semeval2017/}.
+\newblock [Online; accessed 12-February 2018].
+
+\bibitem[Sem(2016{\natexlab{b}})]{SemEval:002}
+Sentiment analysis in twitter, 2016{\natexlab{b}}.
+\newblock URL \url{http://alt.qcri.org/semeval2017/task4/}.
+\newblock [Online; accessed 12-February 2018].
+
+\bibitem[Amazon(n.d)]{SemEval:003}
+Amazon.
+\newblock Amazon mechanical turk, n.d.
+\newblock URL \url{https://www.mturk.com/product-details}.
+\newblock [Online; accessed 12-February 2018].
+
+\bibitem[contributors(2014{\natexlab{a}})]{wiki:010}
+Wikipedia contributors.
+\newblock Emoji --- {W}ikipedia{,} the free encyclopedia, 2014{\natexlab{a}}.
+\newblock URL \url{https://sv.wikipedia.org/wiki/Emoji}.
+\newblock [Online; accessed 5-Februari 2018].
+
+\bibitem[contributors(2007)]{wiki:008}
+Wikipedia contributors.
+\newblock Twitter --- {W}ikipedia{,} the free encyclopedia, 2007.
+\newblock URL \url{https://en.wikipedia.org/wiki/Twitter}.
+\newblock [Online; accessed 5-Februari 2018].
+
+\bibitem[contributors(2014{\natexlab{b}})]{wiki:003}
 Wikipedia contributors.
 \newblock Confusion matrix --- {W}ikipedia{,} the free encyclopedia,
-  2014{\natexlab{a}}.
+  2014{\natexlab{b}}.
 \newblock URL \url{https://en.wikipedia.org/wiki/Confusion\_matrix}.
 \newblock [Online; accessed 29-January 2018].
 
-\bibitem[contributors(2016{\natexlab{d}})]{wiki:002}
+\bibitem[contributors(2002{\natexlab{c}})]{wiki:011}
+Wikipedia contributors.
+\newblock Accuracy and precision --- {W}ikipedia{,} the free encyclopedia,
+  2002{\natexlab{c}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Accuracy_and_precision}.
+\newblock [Online; accessed 5-Februari 2018].
+
+\bibitem[contributors(2016{\natexlab{e}})]{wiki:002}
 Wikipedia contributors.
 \newblock Precision and recall --- {W}ikipedia{,} the free encyclopedia,
-  2016{\natexlab{d}}.
+  2016{\natexlab{e}}.
 \newblock URL \url{https://en.wikipedia.org/wiki/Precision\_and\_recall}.
 \newblock [Online; accessed 29-January 2018].
 
-\bibitem[contributors(2014{\natexlab{b}})]{wiki:001}
+\bibitem[contributors(2014{\natexlab{c}})]{wiki:001}
 Wikipedia contributors.
 \newblock F1 score --- {W}ikipedia{,} the free encyclopedia,
-  2014{\natexlab{b}}.
+  2014{\natexlab{c}}.
 \newblock URL \url{https://en.wikipedia.org/wiki/F1\_score}.
 \newblock [Online; accessed 29-January 2018].
 

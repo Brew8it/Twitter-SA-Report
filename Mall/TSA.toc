@@ -3,38 +3,43 @@
 \contentsline {chapter}{\numberline {1}Introduktion}{1}
 \contentsline {chapter}{\numberline {2}Bakgrund}{2}
 \contentsline {section}{\numberline {2.1}Introduktion}{2}
-\contentsline {section}{\numberline {2.2}Sentimentanalys}{2}
-\contentsline {subsection}{\numberline {2.2.1}Twittersentimentanalys}{3}
+\contentsline {section}{\numberline {2.2}Sentimentanalys}{3}
+\contentsline {subsection}{\numberline {2.2.1}Klassificeringstekniker}{4}
 \contentsline {section}{\numberline {2.3}Maskininl\IeC {\"a}rning}{4}
 \contentsline {section}{\numberline {2.4}\IeC {\"O}vervakad och o\IeC {\"o}vervakad inl\IeC {\"a}rning}{5}
-\contentsline {section}{\numberline {2.5}Maskininl\IeC {\"a}rnings algoritmer}{5}
-\contentsline {subsection}{\numberline {2.5.1}Naive Bayes}{6}
-\contentsline {subsection}{\numberline {2.5.2}Support Vector Machine}{6}
-\contentsline {subsection}{\numberline {2.5.3}XXX}{6}
-\contentsline {section}{\numberline {2.6}Hur j\IeC {\"a}mf\IeC {\"o}r vi modellerna?}{6}
-\contentsline {section}{\numberline {2.7}Summering}{6}
-\contentsline {chapter}{\numberline {3}Experiment}{7}
-\contentsline {section}{\numberline {3.1}Intro}{7}
-\contentsline {section}{\numberline {3.2}Feature selection}{7}
-\contentsline {section}{\numberline {3.3}Modell 1}{7}
-\contentsline {section}{\numberline {3.4}Modell N}{7}
-\contentsline {section}{\numberline {3.5}Design}{7}
-\contentsline {section}{\numberline {3.6}Implementation av modellerna}{7}
-\contentsline {subsection}{\numberline {3.6.1}* ev GUI implementation om tid finns *}{7}
-\contentsline {section}{\numberline {3.7}Summering}{7}
-\contentsline {chapter}{\numberline {4}Resultat}{8}
-\contentsline {section}{\numberline {4.1}Intro}{8}
-\contentsline {section}{\numberline {4.2}Resultatet mellan modellerna}{8}
-\contentsline {subsection}{\numberline {4.2.1}Dataset 1 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{8}
-\contentsline {subsection}{\numberline {4.2.2}Dataset 2 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{8}
-\contentsline {subsection}{\numberline {4.2.3}Dataset 3 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{8}
-\contentsline {section}{\numberline {4.3}Implementations m\IeC {\"a}ssigt vilken modell \IeC {\"a}r l\IeC {\"a}ttast?}{8}
-\contentsline {section}{\numberline {4.4}implementations j\IeC {\"a}mf\IeC {\"o}relse (resultat VS f\IeC {\"o}rv\IeC {\"a}ntat)}{8}
-\contentsline {section}{\numberline {4.5}Summering}{8}
-\contentsline {chapter}{\numberline {5}Slutsats}{9}
-\contentsline {section}{\numberline {5.1}Sammanfattning}{9}
-\contentsline {section}{\numberline {5.2}Problem}{9}
-\contentsline {section}{\numberline {5.3}Begr\IeC {\"a}nsningar}{9}
-\contentsline {section}{\numberline {5.4}Vidare utveckling}{9}
-\contentsline {section}{\numberline {5.5}Slutord}{9}
+\contentsline {subsection}{\numberline {2.4.1}Naive Bayes}{7}
+\contentsline {subsection}{\numberline {2.4.2}Support Vector Machine}{7}
+\contentsline {subsection}{\numberline {2.4.3}XXX}{7}
+\contentsline {section}{\numberline {2.5}Datam\IeC {\"a}ngd}{7}
+\contentsline {subsection}{\numberline {2.5.1}SemEval}{8}
+\contentsline {subsection}{\numberline {2.5.2}Stanford Twitter Senitment}{8}
+\contentsline {section}{\numberline {2.6}Twittersentimentanalys}{8}
+\contentsline {subsection}{\numberline {2.6.1}Utmaningar}{10}
+\contentsline {subsection}{\numberline {2.6.2}Problem}{12}
+\contentsline {section}{\numberline {2.7}Utv\IeC {\"a}rdering}{12}
+\contentsline {section}{\numberline {2.8}Sammanfattning}{14}
+\contentsline {chapter}{\numberline {3}Experiment}{15}
+\contentsline {section}{\numberline {3.1}Intro}{16}
+\contentsline {section}{\numberline {3.2}Feature selection}{16}
+\contentsline {section}{\numberline {3.3}Modell 1}{16}
+\contentsline {section}{\numberline {3.4}Modell N}{16}
+\contentsline {section}{\numberline {3.5}Design}{16}
+\contentsline {section}{\numberline {3.6}Implementation av modellerna}{16}
+\contentsline {subsection}{\numberline {3.6.1}* ev GUI implementation om tid finns *}{16}
+\contentsline {section}{\numberline {3.7}Summering}{16}
+\contentsline {chapter}{\numberline {4}Resultat}{17}
+\contentsline {section}{\numberline {4.1}Intro}{18}
+\contentsline {section}{\numberline {4.2}Resultatet mellan modellerna}{18}
+\contentsline {subsection}{\numberline {4.2.1}Dataset 1 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{18}
+\contentsline {subsection}{\numberline {4.2.2}Dataset 2 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{18}
+\contentsline {subsection}{\numberline {4.2.3}Dataset 3 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{18}
+\contentsline {section}{\numberline {4.3}Implementations m\IeC {\"a}ssigt vilken modell \IeC {\"a}r l\IeC {\"a}ttast?}{18}
+\contentsline {section}{\numberline {4.4}implementations j\IeC {\"a}mf\IeC {\"o}relse (resultat VS f\IeC {\"o}rv\IeC {\"a}ntat)}{18}
+\contentsline {section}{\numberline {4.5}Summering}{18}
+\contentsline {chapter}{\numberline {5}Slutsats}{19}
+\contentsline {section}{\numberline {5.1}Sammanfattning}{19}
+\contentsline {section}{\numberline {5.2}Problem}{19}
+\contentsline {section}{\numberline {5.3}Begr\IeC {\"a}nsningar}{19}
+\contentsline {section}{\numberline {5.4}Vidare utveckling}{19}
+\contentsline {section}{\numberline {5.5}Slutord}{19}
 \contentsfinish 
