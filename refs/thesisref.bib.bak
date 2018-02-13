@@ -109,7 +109,7 @@
 }
 
 @Misc{svm:002,
-  Title                    = {Precision and recall --- {W}ikipedia{,} The Free Encyclopedia},
+  Title                    = {Support Vector Machine --- {W}ikipedia{,} The Free Encyclopedia},
 
   Author                   = {Wikipedia contributors},
   Note                     = {[Online; accessed 12-February 2018]},
@@ -130,6 +130,18 @@
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.02.12},
   Url                      = {https://en.wikipedia.org/wiki/Bayes%27_theorem}
+}
+
+@Misc{wiki:011,
+  Title                    = {Accuracy and precision --- {W}ikipedia{,} The Free Encyclopedia},
+
+  Author                   = {Wikipedia contributors},
+  Note                     = {[Online; accessed 5-Februari 2018]},
+  Year                     = {2002},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.02.05},
+  Url                      = {https://en.wikipedia.org/wiki/Accuracy_and_precision}
 }
 
 @InProceedings{7394379,
