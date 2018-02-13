@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  13 FEB 2018 16:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  13 FEB 2018 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -948,73 +948,80 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `TSA.toc'.
 
- [10]
-Kapitel 1.
-[1
+ [10] (./TSA.lof)
+\tf@lof=\write5
+\openout5 = `TSA.lof'.
 
+ [11
+
+] [12
 
 
 
 ]
+Kapitel 1.
+[1
+
+]
 Kapitel 2.
-<../figures/background/oversiktsfigur.png, id=38, 633.36626pt x 201.75375pt>
+<../figures/background/oversiktsfigur.png, id=44, 633.36626pt x 201.75375pt>
 File: ../figures/background/oversiktsfigur.png Graphic file (type png)
 
 <use ../figures/background/oversiktsfigur.png>
 Package pdftex.def Info: ../figures/background/oversiktsfigur.png used on input
- line 120.
+ line 121.
 (pdftex.def)             Requested size: 341.43306pt x 108.76376pt.
  [2
 
  <../figures/background/oversiktsfigur.png>] [3] [4]
-<../figures/background/ml.png, id=52, 688.5725pt x 591.20876pt>
+<../figures/background/ml.png, id=59, 688.5725pt x 591.20876pt>
 File: ../figures/background/ml.png Graphic file (type png)
 
 <use ../figures/background/ml.png>
-Package pdftex.def Info: ../figures/background/ml.png used on input line 154.
+Package pdftex.def Info: ../figures/background/ml.png used on input line 155.
 (pdftex.def)             Requested size: 341.43306pt x 293.1499pt.
  [5 <../figures/background/ml.png>]
-<../figures/background/klassmodell.png, id=61, 573.14125pt x 350.30875pt>
+<../figures/background/klassmodell.png, id=67, 573.14125pt x 350.30875pt>
 File: ../figures/background/klassmodell.png Graphic file (type png)
 
 <use ../figures/background/klassmodell.png>
 Package pdftex.def Info: ../figures/background/klassmodell.png used on input li
-ne 165.
+ne 166.
 (pdftex.def)             Requested size: 341.43306pt x 208.69019pt.
  [6 <../figures/background/klassmodell.png>]
-Overfull \hbox (34.78406pt too wide) in paragraph at lines 179--180
+Overfull \hbox (34.78406pt too wide) in paragraph at lines 180--181
 \T1/cmr/m/n/12 SVM är en över-va-kad ma-ski-nin-lär-nings-al-go-ritm som kan an
 -vän-das till bå-de klassifikations-
  []
 
 [7] [8] [9]
-<../figures/background/exempeltweet.png, id=75, 745.78625pt x 61.22874pt>
+<../figures/background/exempeltweet.png, id=82, 745.78625pt x 61.22874pt>
 File: ../figures/background/exempeltweet.png Graphic file (type png)
 
 <use ../figures/background/exempeltweet.png>
 Package pdftex.def Info: ../figures/background/exempeltweet.png used on input l
-ine 213.
+ine 214.
 (pdftex.def)             Requested size: 341.43306pt x 28.031pt.
  [10 <../figures/background/exempeltweet.png>] <../figures/background/fm.png, i
-d=80, 432.61626pt x 111.41624pt>
+d=87, 432.61626pt x 111.41624pt>
 File: ../figures/background/fm.png Graphic file (type png)
 
 <use ../figures/background/fm.png>
-Package pdftex.def Info: ../figures/background/fm.png used on input line 241.
+Package pdftex.def Info: ../figures/background/fm.png used on input line 242.
 (pdftex.def)             Requested size: 341.43306pt x 87.93626pt.
  [11]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 249.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 250.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [12 <../figures/background/fm.png>]
-<../figures/background/utvardering.png, id=90, 382.42876pt x 382.42876pt>
+<../figures/background/utvardering.png, id=96, 382.42876pt x 382.42876pt>
 File: ../figures/background/utvardering.png Graphic file (type png)
 
 <use ../figures/background/utvardering.png>
 Package pdftex.def Info: ../figures/background/utvardering.png used on input li
-ne 259.
+ne 260.
 (pdftex.def)             Requested size: 284.52756pt x 284.53922pt.
  [13 <../figures/background/utvardering.png>] [14]
 Kapitel 3.
@@ -1027,12 +1034,12 @@ Overfull \vbox (73.41275pt too high) has occurred while \output is active []
 [16]
 Kapitel 4.
 
-Overfull \hbox (1.19798pt too wide) in paragraph at lines 292--292
+Overfull \hbox (1.19798pt too wide) in paragraph at lines 293--293
 []\T1/cmr/bx/n/20.74 Implementations mäs-sigt vil-ken mo-dell
  []
 
 
-Overfull \hbox (14.16211pt too wide) in paragraph at lines 293--293
+Overfull \hbox (14.16211pt too wide) in paragraph at lines 294--294
 []\T1/cmr/bx/n/20.74 implementations jäm-fö-rel-se (re-sul-tat VS
  []
 
@@ -1163,8 +1170,8 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 14730 strings out of 493029
- 278868 string characters out of 6136234
+ 14733 strings out of 493029
+ 278888 string characters out of 6136234
  356867 words of memory out of 5000000
  17945 multiletter control sequences out of 15000+600000
  15869 words of font info for 36 fonts, out of 8000000 for 9000
@@ -1182,10 +1189,10 @@ sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/s
 hare/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/typ
 e1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
 ftt1200.pfb>
-Output written on TSA.pdf (31 pages, 319232 bytes).
+Output written on TSA.pdf (33 pages, 322934 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
+ 180 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
