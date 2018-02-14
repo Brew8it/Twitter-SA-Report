@@ -34,6 +34,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{titletoc}
 \usepackage{geometry}
+\usepackage{booktabs}
 
 %% break long URLs in references.
 \usepackage{url}
@@ -101,7 +102,7 @@
 
 \tableofcontents{}
 \listoffigures
-%\listoftables
+\listoftables
 \mainmatter
 % för att fucka med marginaler
 %\newgeometry{top=20mm, bottom=20mm, right=30mm, left=30mm}
@@ -116,22 +117,23 @@
 
 \chapter{Bakgrund}
 \section{Introduktion}
-Syftet med studien är att utvärdera (x) stycken maskininlärningsalgoritmer och hur bearbetningen samt märkningen av en datamängd påverkar algoritmens prestanda. De (x) algoritmerna är Naive Bayes, Support Vector Machine och ZZZZZ. Figur \ref{fig:overfig} visar en förenklad överblick hur processen för att utvärdera algoritmerna kommer se ut. 
+Syftet med studien är att utvärdera (x) stycken klassificeringsmodeller inom maskininlärning och hur bearbetningen samt märkningen av en datamängd påverkar en klassificeringsmodells prestanda. Maskininlärningsalgoritmerna som kommer användas för att fram klassiciferingsmodellerna är Naive Bayes, Support Vector Machine och ZZZZZ. Figur \ref{fig:overfig} visar en förenklad överblick hur processen för att utvärdera klassificeringsmodellerna kommer se ut. Datamängden består utav en mängd indata som är märkt med förväntad utdata, som går igenom en bearbetningsprocess där t.ex. data som inte tillför något värde tas bort och där mängden av data delas upp i tränings- och valideringsdata.  Bearbetningsprocessen diskuteras mer ingående i \ref{exp:pre}. På den bearbetade datan utförs ett särdragsurval, där dataspecifika särdrag plockas ut…MER .. som diskuteras vidare i \ref{exp:feat}. Träningsmängden används av maskininlärningsalgoritmen för att skapa klassiciferingsmodellen. När klassificeringsmodellen är framtagen används valideringmängden för att utvärdera prestandan av modellen.
 
 \begin{figure}[h]
 \includegraphics[width=12cm]{oversiktsfigur}
 \centering
-\caption{Utvärderingsprocessen av maskininlärningsalgoritmer}
+\caption{Utvärderingsprocessen av maskininlärningsmodeller}
 \label{fig:overfig}
 \end{figure}
 
-Studien är av intresse för vår uppdragsgivare, CGI, för de betraktar sentimentanalys som en viktig pusselbit för framtida lösningar dem vill erbjuda sina kunder. Lösningar skulle kunna vara chatbotar där sentimentanalys används så att chatboten ändrar sitt språk utefter svaren från slutanvändare. Eller att det kan användas för trendanalys där ett företag vill veta vad allmänheten tycker före och efter att man har släppt en ny produkt eller efter att kvartalsrapporten har släppts. 
+Studien kommer använda maskininlärning för att utföra sentimentanalys (SA) d.v.s utläsa huruvida en text uttrycker någonting positivt eller negativt. Uppdragsgivaren, CGI, betraktar sentimentanalys  som en viktig pusselbit för framtida lösningar dem vill erbjuda sina kunder. Lösningar skulle kunna vara chatbotar där sentimentanalys används så att chatboten ändrar sitt språk utefter svaren från slutanvändare. Eller att det kan användas för trendanalys där ett företag vill veta vad allmänheten tycker före och efter att man har släppt en ny produkt eller efter att kvartalsrapporten har släppts.
 
-I avsnitt \ref{SA} förklaras vad sentimentanalys är och under \ref{SAkt} beskrivs dem olika klassificeringsteknikerna inom SA.
+I avsnitt \ref{SA} förklaras vad SA är och under \ref{SAkt} beskrivs dem olika klassificeringsteknikerna inom SA.
 I avsnitt \ref{ML} ges en kort introduktion till maskininlärning och framstegen som gjort under den senaste tiden. I avsnitt \ref{MLvised} beskrivs hur inlärningprocessen kan utföras och avsnitt \ref{MLsvm} och \ref{MLnb} förklarar kort hur NB, SVM och XXX fungerar. I avsnitt \ref{DS} ges en överblick hur en datamängd ser ut och vilka märkningsmetoder som används för twittersentimentanalys (TSA), medans i avsnitt \ref{DSse} och \ref{DSsts} beskrivs de valda datamängderna. I avsnitt \ref{TSA} ges en introduktion till TSA. Medan i avsnitten \ref{TSAchall} och \ref{TSAprob} beskrivs utmaningar och problem med TSA. Sluligen i avsnitt \ref{TSAev} förklaras vilka hjälpmedel som kommer användas för att utvärdera algoritmernas prestanda.
 
+
 \section{Sentimentanalys} \label{SA}
-Sentimentanalys (SA) används för att studera människors åsikter, attityder och känslor mot andra entiteter. En entitet kan vara ett ämne, en händelse eller en individ. Målet med SA är att identifiera känslan som är uttryckt i en text för att därefter analysera den. Processen delas upp i tre steg: att hitta åsikter, identifiera känslan för de åsikterna och slutligen klassificera motsatsförhållandet dem emellan \cite{SAsurvey}.
+SA används för att studera människors åsikter, attityder och känslor mot andra entiteter. En entitet kan vara ett ämne, en händelse eller en individ. Målet med SA är att identifiera känslan som är uttryckt i en text för att därefter analysera den. Processen delas upp i tre steg: att hitta åsikter, identifiera känslan för de åsikterna och slutligen klassificera motsatsförhållandet dem emellan \cite{SAsurvey}.
 
 Inom SA appliceras klassificeringen på 3 olika nivåer: dokument-, menings- och aspektnivå \cite{SAsurvey}. SA på dokumentnivå klassificerar om ett helt dokument uttrycker en positiv eller negativ åsikt, exempel på dokument kan vara produktrecensioner eller nyhetsartiklar. Medan på meningsnivå klassificeras varje mening i ett dokument. Slutligen nere på aspektnivå analyseras de möjliga aspekterna av en entitet. En mening kan behandla olika aspekter av en entitet. Både positiva och negativa åsikter kan delges om en entitets olika aspekter. Ett exempel på det är meningen “Ölen var väldigt god, men tyvärr alldeles för dyr”, som innehåller både en positiv och en negativ åsikt om en entitet som i det här fallet är ölen.
 \subsection{Klassificeringstekniker} \label{SAkt}
@@ -147,11 +149,12 @@ Hybrida metoder kombinerar lexikonbaserade metoder med maskininlärningsmetoder 
 Experimentet som presenteras i studien fokuserar enbart på maskininlärningsmetoder.
 
 \section{Maskininlärning} \label{ML}
-Maskininlärning är ett delområde inom artificiell intelligens (AI), där målet är att göra det möjligt för datorer att lära sig på egen hand. Maskininlärningsalgoritmer gör det möjligt att identifiera olika mönster från observerad data, bygga upp en generell modell som kan förutsäga saker utan att ha blivit förprogrammerade med explicita regler för hur den ska lösa ett problem. Under de senaste åren har stora framsteg inom maskininlärning gjorts exempelvis utvecklade DeepMind \cite{DMatari00} 2015 en agent som mästrade 49 st Atari-spel \cite{wiki:004}. Med en klassificeringsmodell med endast pixlar och spelpoäng som indata. Under 2016 utvecklade DeepMind sin AlphaGo \cite{DMgo} agent som besegrade en av världens bästa Go spelare, Lee Sedol \cite{wiki:005} med (4-1) i matcher. Detta var ett oerhört genomslag för AI eftersom Go är ett oerhört komplext kinesiskt krigsstrategispel med $2 * 10^{170}$ möjliga drag \cite{wiki:006}.
+Maskininlärning är ett delområde inom artificiell intelligens (AI), där målet är att göra det möjligt för datorer att lära sig på egen hand. Maskininlärningsalgoritmer gör det möjligt att identifiera olika mönster från observerad data, bygga upp en generell modell som kan förutsäga saker utan att ha blivit förprogrammerade med explicita regler för hur den ska lösa ett problem. Under de senaste åren har stora framsteg inom maskininlärning gjorts. Exempelvis utvecklade DeepMind \cite{DMatari00} 2015 en agent som mästrade 49 st Atari-spel \cite{wiki:004}, med en klassificeringsmodell med endast pixlar och spelpoäng som indata. Under 2016 utvecklade DeepMind sin AlphaGo \cite{DMgo} agent som besegrade en av världens bästa Go spelare, Lee Sedol \cite{wiki:005} med 4-1 i matcher. Detta var ett framsteg för AI eftersom Go är ett komplext spel med $2 * 10^{170}$ möjliga drag \cite{wiki:006}.
 
-\section{Övervakad och oövervakad inlärning} \label{MLvised}
+** förklara bredare tillämpningar **
+
+%\section{Övervakad och oövervakad inlärning} \label{MLvised}
 Figur \ref{fig:ml} illustrerar att maskininlärning delas upp i två typer av inlärningsprocesser dvs. i övervakad eller oövervakad inlärning och deras underliggande algoritmer.
-
 \begin{figure}[h]
 \includegraphics[width=12cm]{ml}
 \centering
@@ -160,7 +163,7 @@ Figur \ref{fig:ml} illustrerar att maskininlärning delas upp i två typer av in
 \end{figure}
 
 Oövervakad inlärning används när datamängden bara består av indata och inget förväntat resultat. Målet med oövervakad inlärning är att algoritmen själv lär sig att modellera den komplexa underliggande strukturen så att den kan lära sig mer om datan och själv komma fram till ett resultat \cite{wiki:007}. Exempelvis kan en övervakad klusteralgoritm användas för att hitta likheter i bilder och gruppera dem följaktligen.
-Övervakad inlärning används när datamängden består av både indata och dess förväntade utdata. Den övervakade algoritmen använder datamängden för att lära sig hur indata beror på utdata genom att skapa en klassificeringsmodell som används för att förutse utdata från ny indata som illustreras i figur \ref{fig:kl}. 
+Övervakad inlärning används när datamängden består av både indata och dess förväntade utdata. Den övervakade algoritmen använder datamängden för att lära sig hur utdata beror på indata genom att skapa en klassificeringsmodell som används för att förutse utdata från ny indata som illustreras i figur \ref{fig:kl}. 
 Övervakad inlärning kan man tänka sig som att en lärare övervakar programmets inlärningsprocess. Under inlärningsprocessen försöker algoritmen iterativt förutse utdata från datamängden och blir rättad av läraren vid fel förutsägelse \cite{learning:001}.
 
 \begin{figure}[h]
@@ -170,13 +173,12 @@ Oövervakad inlärning används när datamängden bara består av indata och ing
 \label{fig:kl}
 \end{figure}
 
-Övervakad inlärning kan brytas ner till klassificerings- och regressionsproblem och eftersom TSA kan kallas ett typiskt klassificeringsproblem \cite{SAsurvey}, kommer vår studie att använd algoritmer lämpade för sådana problem. I figur \ref{fig:ml} kan vi se några utav dessa klassificeringsalgoritmer och enligt \cite{TSAsurvey} är speciellt Naive Bayes (NB) och Support Vector Machine (SVM) algoritmerna bäst lämpade för TSA.
+Övervakad inlärning kan brytas ner till klassificerings- och regressionsproblem och eftersom TSA kan kallas ett typiskt klassificeringsproblem \cite{SAsurvey}, kommer studien att använda algoritmer lämpade för klassificeringsproblem. I figur \ref{fig:ml} kan vi se några utav dessa klassificeringsalgoritmer och enligt \cite{TSAsurvey} är speciellt Naive Bayes (NB) och Support Vector Machine (SVM) algoritmerna bäst lämpade för TSA.
 
 \subsection{Naive Bayes} \label{MLnb}
 NB är en klassificeringsalgoritm som är baserad på Bayes theorem \cite{wiki:009} med starka (“naive”) oberoende antaganden mellan särdragen d.v.s NB förutsätter att närvaron av ett visst särdrag i en klass inte relaterar till närvaron av ett annat särdrag. 
 Exempelvis kan en frukt anses vara ett äpple om det är grönt, runt och är 10 cm i diameter. Även om särdragen grönt, runt och diameter beror på varandra eller på att dom existerar så bidrar alla särdragen självständigt till sannolikheten att frukten är ett äpple, det är därför algoritmen kallas (“naive”) \cite{nb:001}.
 
-Det finns tre varianter utav Naive Bayes nämligen Gaussian, Multinomial och Bernoulli. Gaussian används när attributen är kontinuerligt fördelade och då antas det att attributen förknippade med varje klass fördelas enligt Gaussian d.v.s normalfördelning \cite{nb:002}. Bernoulli användas när attributen är fördelade enligt multivariat Bernoulli \cite{nb:004} och Multinomial NB används när attributen är multinomial fördelat. Enligt \cite{nb:003} används Multinomial NB för klassificering av text och detta gör att Multinomial NB passar perfekt för TSA.
 \subsection{Support Vector Machine} \label{MLsvm}
 SVM är en övervakad maskininlärningsalgoritm som kan användas till både klassifikations- och regressionsproblem, för det mesta används SVM för klassifikationsproblem. SVM är baserat på iden att hitta ett hyperplan \cite{svm:001} som bäst delar upp datamängden till två klasser \cite{svm:003}. Givet en träningsmängd där förväntad utdata är markerad till en av två kategorier bygger SVM algoritmen upp en klassificeringsmodell som kan användas för att förutse vilken kategori ny indata ger \cite{svm:002}. 
 
@@ -214,7 +216,7 @@ I figur \ref{fig:tweet} presenteras ett exempel på hur ett twitterinlägg kan s
 \begin{figure}[h]
 \includegraphics[width=12cm]{exempeltweet}
 \centering
-\caption{Twitter inlägg innehållande "hashtag", "mention", "retweet".}
+\caption{Twitterinlägg innehållande "hashtag", "mention", "retweet".}
 \label{fig:tweet}
 \end{figure}
 
@@ -238,15 +240,22 @@ Vid TSA filtreras vanligtvis stoppord bort för att öka prestandan. Stoppord ä
 Twitterinlägg behöver inte enbart innehålla text utan de kan även innehålla bilder och videor. Bilder och videor kan ge värdefull information om vad för sentiment som uttrycks i ett twitterinlägg. Det kan exempelvis ge information om vem som uttrycker en åsikt eller om vem en åsikt riktas mot. Den här studien kommer inte att ta hänsyn till mediaobjekt utan kommer enbart att analysera text. Främst på grund av att det i dagsläget är ett outforskat område.
 
 \subsection{Problem} \label{TSAprob}
-I \cite{TSAsurvey} listar författarna de problem med TSA som de anser bör utforskas ytterligare. Ett av de viktigaste problemen med TSA anser de vara bristen på datamängder som kan användas som riktmärken vid utvärdering av olika klassificeringsmodeller. Forskning som bedrivs i ämnet använder sig av olika datamängder. Dessutom är det vanligt att forskare själva samlar in och skapar egna datamängder som inte publiceras. Olika datamängder kan generera olika resultat. Därför är det svårt att jämföra olika klassificeringstekniker när det används flertalet olika datamängder. I experimentet, som presenteras i den här studien, har problemet adresseras genom att utvärderingen görs mot två kända och publika datamängder. Delvis för att kunna jämföra hur de olika klassificeringsmodellerna presterar mot olika typer av datamängder, men även för att kunna jämföra resultatet mot andra liknande utvärderingar. 
-\begin{figure}[h]
-\includegraphics[width=12cm]{fm}
+I \cite{TSAsurvey} listar författarna de problem med TSA som de anser bör utforskas ytterligare. Ett av de viktigaste problemen med TSA anser de vara bristen på datamängder som kan användas som riktmärken vid utvärdering av olika klassificeringsmodeller. Forskning som bedrivs i ämnet använder sig av olika datamängder. Dessutom är det vanligt att forskare själva samlar in och skapar egna datamängder som inte publiceras. Olika datamängder kan generera olika resultat. Därför är det svårt att jämföra olika klassificeringstekniker när det används flertalet olika datamängder. I experimentet, som presenteras i den här studien, har problemet adresseras genom att utvärderingen görs mot två kända och publika datamängder. Delvis för att kunna jämföra hur de olika klassificeringsmodellerna presterar mot olika typer av datamängder, men även för att kunna jämföra resultatet mot andra liknande utvärderingar.
+\begin{table}
 \centering
-\caption{Förvirringsmatris för utvärdering av klassificeringsmodeller.}
-\label{fig:fm}
-\end{figure}
-\section{Utvärdering} \label{TSAev}
-I figur \ref{fig:fm} ser vi en så kallad förvirringsmatris (FM) som utvärderar en klassificeringsmodell från datamängden där “positivt” eller “negativt” är förbestämt. Matrisen visar antalet sann positiva (SP), sann negativ (SN), falsk positiv (FP) och falsk negativ(FN) \cite{wiki:003}. Med dessa värden kan vi jämföra och analysera modellerna m.h.a följande utvärderingsmetoder: noggrannhet (n) \cite{wiki:011}, precision (p),  återkallelse (å) \cite{wiki:002} och F-Score \cite{wiki:001}.
+\caption{Förvirringsmatris}
+\label{tab:fm}
+	\begin{tabular}{ccc}
+	\toprule
+	 & \textbf{Förustspådd positiv} & \textbf{Förutspådd negativ} \\
+	\midrule
+	\textbf{Positiv} & Sann positiv & Falsk negativ \\
+	\textbf{Negativ} & Falsk positv & Sann negativ \\
+	\bottomrule
+\end{tabular}
+\end{table}
+ 
+I tabell \ref{tab:fm} ser vi en så kallad förvirringsmatris (FM) som utvärderar en klassificeringsmodell från datamängden där “positivt” eller “negativt” är förbestämt. Matrisen visar antalet sann positiva (SP), sann negativ (SN), falsk positiv (FP) och falsk negativ(FN) \cite{wiki:003}. Med dessa värden kan vi jämföra och analysera modellerna m.h.a följande utvärderingsmetoder: noggrannhet (n) \cite{wiki:011}, precision (p),  återkallelse (å) \cite{wiki:002} och F-Score \cite{wiki:001}.
 
 \begin{labeling}{metrics}
 \item [Noggrannhet] Är modellens förmåga att kunna märka ett tweet korrekt som antingen positivt eller negativt. Detta görs genom att ta summan av sann märkta tweets delat på summa av alla märkningar.  
@@ -270,20 +279,20 @@ I detta kapitel har bakgrunden till projektet diskuterats där nyttan av SA och 
 
 Detta kapitel ger även en överblick vad maskininlärning är och hur maskininlärnings viktigaste komponenterna hänger ihop samt hur maskininlärning kan appliceras på SA och TSA. Dessutom beskrivs de problem och utmaningar som existerar inom TSA. 
 
-\newpage
-
 \chapter{Experiment}
 \section{Intro}
-\section{Feature selection}
-\section{Modell 1}
-\section{Modell N}
-\section{Design}
-\section{Implementation av modellerna}
-\subsection{* ev GUI implementation om tid finns *}
-\section{Summering}
-
-
+\section{Bearbetning av datamängd} \label{exp:pre}
+\section{Särdragsurval} \label{exp:feat}
+\section{Algoritmer}
+\subsection{Naive Bayes}
+\subsection{Support Vector Machine}
 \newpage
+\section{Implementation}
+\subsection{Naive Bayes}
+\subsection{Support Vector Machine}
+\subsection{Prediction program.}
+\subsection{* ev GUI implementation om tid finns *}
+\section{Sammanfattning}
 
 \chapter{Resultat}
 \section{Intro}
@@ -291,16 +300,16 @@ Detta kapitel ger även en överblick vad maskininlärning är och hur maskininl
 \subsection{Dataset 1 -> jämför resultat mellan modellerna}
 \subsection{Dataset 2 -> jämför resultat mellan modellerna}
 \subsection{Dataset 3 -> jämför resultat mellan modellerna}
+\newpage
 \section{Implementations mässigt vilken modell är lättast?}
 \section{implementations jämförelse (resultat VS förväntat)}
 \section{Summering}
-
-\newpage
 
 \chapter{Slutsats}
 \section{Sammanfattning}
 \section{Problem}
 \section{Begränsningar}
+\newpage
 \section{Vidare utveckling}
 \section{Slutord}
 
