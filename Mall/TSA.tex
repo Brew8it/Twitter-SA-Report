@@ -28,6 +28,7 @@
 %% 
 %% kauthesis.dtx
 %% Copyright (c) 2011-2015 Stefan Berthold <stefan.berthold@kau.se>
+
 \documentclass{kaumasters} % available class options: garamond
 \usepackage[swedish]{babel}
 \usepackage[T1]{fontenc}
@@ -35,6 +36,9 @@
 \usepackage{titletoc}
 \usepackage{geometry}
 \usepackage{booktabs}
+
+
+
 
 %% break long URLs in references.
 \usepackage{url}
@@ -48,6 +52,8 @@
 \usepackage{graphicx}
 \graphicspath{{../figures/background/}}
 \usepackage[numbers]{natbib}
+
+% clickable
 
 \renewcommand{\baselinestretch}{1.5} 
 
@@ -87,6 +93,7 @@
 \begin{document}
 
 \maketitle
+
 
 
 
@@ -281,6 +288,7 @@ Detta kapitel ger även en överblick vad maskininlärning är och hur maskininl
 
 \chapter{Experiment}
 \section{Intro}
+I kapitlet kommer experimentet för studien att presenteras, hur det har utförts och hur de olika delarna har implementeras för att utföra experimentet. Såsom bearbetning av datamängderna, vilka särdragsurval som kommer utföras och en fördjupning i hur maskininlärningsalgoritmerna fungerar. Implementationen kommer ske i två steg där först en basklassificeringsmodell tas fram för varje algoritm med respektive datamängd. För att sedan testa och justera algoritmernas parametrar för att uppnå en förbättrad klassificeringsmodell jämfört med basklassificeringsmodellen. De slutgiltliga klassificeringsmodellerna kommer att diskuteras och jämföras i avsnitt \ref{res}.
 \section{Bearbetning av datamängd} \label{exp:pre}
 \section{Särdragsurval} \label{exp:feat}
 \section{Algoritmer}
@@ -294,7 +302,7 @@ Detta kapitel ger även en överblick vad maskininlärning är och hur maskininl
 \subsection{* ev GUI implementation om tid finns *}
 \section{Sammanfattning}
 
-\chapter{Resultat}
+\chapter{Resultat} \label{res}
 \section{Intro}
 \section{Resultatet mellan modellerna}
 \subsection{Dataset 1 -> jämför resultat mellan modellerna}
