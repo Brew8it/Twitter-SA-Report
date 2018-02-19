@@ -128,8 +128,7 @@ Syftet med studien är att utvärdera (x) stycken klassificeringsmodeller inom m
 
 Studien kommer använda maskininlärning för att utföra sentimentanalys (SA) d.v.s utläsa huruvida en text uttrycker någonting positivt eller negativt. Uppdragsgivaren, CGI, betraktar sentimentanalys  som en viktig pusselbit för framtida lösningar dem vill erbjuda sina kunder. Lösningar skulle kunna vara chatbotar där sentimentanalys används så att chatboten ändrar sitt språk utefter svaren från slutanvändare. Eller att det kan användas för trendanalys där ett företag vill veta vad allmänheten tycker före och efter att man har släppt en ny produkt eller efter att kvartalsrapporten har släppts.
 
-I avsnitt \ref{SA} förklaras vad SA är och under \ref{SAkt} beskrivs dem olika klassificeringsteknikerna inom SA.
-I avsnitt \ref{ML} ges en kort introduktion till maskininlärning och framstegen som gjort under den senaste tiden. I avsnitt \ref{MLvised} beskrivs hur inlärningprocessen kan utföras och avsnitt \ref{MLsvm} och \ref{MLnb} förklarar kort hur NB, SVM och XXX fungerar. I avsnitt \ref{DS} ges en överblick hur en datamängd ser ut och vilka märkningsmetoder som används för twittersentimentanalys (TSA), medans i avsnitt \ref{DSse} och \ref{DSsts} beskrivs de valda datamängderna. I avsnitt \ref{TSA} ges en introduktion till TSA. Medan i avsnitten \ref{TSAchall} och \ref{TSAprob} beskrivs utmaningar och problem med TSA. Sluligen i avsnitt \ref{TSAev} förklaras vilka hjälpmedel som kommer användas för att utvärdera algoritmernas prestanda.
+I avsnitt \ref{SA} förklaras vad SA är och de olika klassificeringstekniker inom SA berskrivs kortfattat. I avsnitt \ref{ML} ges en kort introduktion till maskininlärning och framstegen som gjorts under den senaste tiden. Dessutom beskrivs NB och SVM samt hur inlärningsprocessen ser ut. I avsnitt \ref{DS} ges en överblick hur en datamängd ser ut och vilka märkningsmetoder som används för twittersentimentanalys (TSA). Avsnittet beskriver även de valda datamängderna. I avsnitt \ref{TSA} ges en introduktion till TSA och vilka utmaning samt problem TSA har. Sluligen i avsnitt \ref{TSAev} förklaras vilka hjälpmedel som kommer användas för att utvärdera algoritmernas prestanda.
 
 
 \section{Sentimentanalys} \label{SA}
@@ -185,7 +184,7 @@ SVM är en övervakad maskininlärningsalgoritm som kan användas till både kla
 \subsection{XXX}
 
 \section{Datamängd} \label{DS}
-En datamängd för övervakad inlärning består utav en mängd in- och utdata som diskuteras i sektion \ref{MLvised}. Processen för hur rätt udata (positivt/negativ) markeras till varje indata kan utföras på två olika sätt, antingen genom så kallad mänsklig märkning där människor markerar indata som positivt/negativ eller genom “distant supervision” där en dator märker indata som positivt/negativt utefter någon parameter. Den stora skillnaden mellan mänsklig märkning och “distant supervision” är att “distant supervision” kan generera en mycket större datamängd än mänsklig märkning men risken är större att märkningen blir felaktigt \cite{TSAsurvey}. 
+En datamängd för övervakad inlärning består utav en mängd in- och utdata som diskuteras i sektion \ref{ML}. Processen för hur rätt udata (positivt/negativ) markeras till varje indata kan utföras på två olika sätt, antingen genom så kallad mänsklig märkning där människor markerar indata som positivt/negativ eller genom “distant supervision” där en dator märker indata som positivt/negativt utefter någon parameter. Den stora skillnaden mellan mänsklig märkning och “distant supervision” är att “distant supervision” kan generera en mycket större datamängd än mänsklig märkning men risken är större att märkningen blir felaktigt \cite{TSAsurvey}. 
 Beskrivet i sektion 2.1 är delsyftet att utvärdera hur de olika märkningsmodellerna påverkar maskininlärningsalgoritmerna precision, det finns ett urval med publika twitterdatamängder där både mänsklig märkning och “distant supervison” används \cite{TSAsurvey}. Vi har valt att använda Stanford Twitter Sentiment (STS) \cite{sts:001} och SemEval \cite{SemEval:001} datamängderna eftersom de är dem största publika datamängderna inom respektive markeringsmodell.
 
 \subsection{SemEval} \label{DSse}
@@ -254,7 +253,8 @@ I \cite{TSAsurvey} listar författarna de problem med TSA som de anser bör utfo
 	\bottomrule
 \end{tabular}
 \end{table}
- 
+
+\section{Utvärdering} \label{TSAev}
 I tabell \ref{tab:fm} ser vi en så kallad förvirringsmatris (FM) som utvärderar en klassificeringsmodell från datamängden där “positivt” eller “negativt” är förbestämt. Matrisen visar antalet sann positiva (SP), sann negativ (SN), falsk positiv (FP) och falsk negativ(FN) \cite{wiki:003}. Med dessa värden kan vi jämföra och analysera modellerna m.h.a följande utvärderingsmetoder: noggrannhet (n) \cite{wiki:011}, precision (p),  återkallelse (å) \cite{wiki:002} och F-Score \cite{wiki:001}.
 
 \begin{labeling}{metrics}

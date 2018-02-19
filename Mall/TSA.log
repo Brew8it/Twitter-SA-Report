@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  14 FEB 2018 16:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  19 FEB 2018 09:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1002,19 +1002,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2
 
-]
-
-LaTeX Warning: Reference `MLvised' on page 3 undefined on input line 132.
-
-
-LaTeX Warning: Reference `TSAev' on page 3 undefined on input line 132.
-
-[3 <../figures/background/oversiktsfigur.png>] [4]
+] [3 <../figures/background/oversiktsfigur.png>] [4]
 <../figures/background/ml.png, id=59, 688.5725pt x 591.20876pt>
 File: ../figures/background/ml.png Graphic file (type png)
 
 <use ../figures/background/ml.png>
-Package pdftex.def Info: ../figures/background/ml.png used on input line 159.
+Package pdftex.def Info: ../figures/background/ml.png used on input line 158.
 (pdftex.def)             Requested size: 341.43306pt x 293.1499pt.
 
 
@@ -1025,28 +1018,26 @@ File: ../figures/background/klassmodell.png Graphic file (type png)
 
 <use ../figures/background/klassmodell.png>
 Package pdftex.def Info: ../figures/background/klassmodell.png used on input li
-ne 170.
+ne 169.
 (pdftex.def)             Requested size: 341.43306pt x 208.69019pt.
- [5]
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6 <../figures/background/ml.png>]
-Overfull \hbox (34.78406pt too wide) in paragraph at lines 183--184
+[5]
+Overfull \hbox (34.78406pt too wide) in paragraph at lines 182--183
 \T1/cmr/m/n/12 SVM är en över-va-kad ma-ski-nin-lär-nings-al-go-ritm som kan an
 -vän-das till bå-de klassifikations-
  []
 
-
-LaTeX Warning: Reference `MLvised' on page 7 undefined on input line 188.
-
-[7 <../figures/background/klassmodell.png>] [8] [9]
+[6 <../figures/background/ml.png>] [7 <../figures/background/klassmodell.png>]
+[8] [9]
 <../figures/background/exempeltweet.png, id=82, 745.78625pt x 61.22874pt>
 File: ../figures/background/exempeltweet.png Graphic file (type png)
 
 <use ../figures/background/exempeltweet.png>
 Package pdftex.def Info: ../figures/background/exempeltweet.png used on input l
-ine 217.
+ine 216.
 (pdftex.def)             Requested size: 341.43306pt x 28.031pt.
  [10 <../figures/background/exempeltweet.png>] [11]
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 260.
@@ -1198,15 +1189,12 @@ g / wiki /
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.88pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 14796 strings out of 493029
- 279667 string characters out of 6136234
- 358620 words of memory out of 5000000
- 18002 multiletter control sequences out of 15000+600000
+ 14795 strings out of 493029
+ 279658 string characters out of 6136234
+ 358631 words of memory out of 5000000
+ 18001 multiletter control sequences out of 15000+600000
  15869 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,12n,58p,1162b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1222,7 +1210,7 @@ sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/s
 hare/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/typ
 e1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
 ftt1200.pfb>
-Output written on TSA.pdf (34 pages, 316579 bytes).
+Output written on TSA.pdf (34 pages, 316545 bytes).
 PDF statistics:
  181 PDF objects out of 1000 (max. 8388607)
  120 compressed objects within 2 object streams
