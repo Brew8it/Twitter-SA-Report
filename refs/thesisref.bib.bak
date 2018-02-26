@@ -349,6 +349,14 @@
   Publisher                = {Nature Publishing Group}
 }
 
+@InProceedings{nakov2016semeval,
+  Title                    = {SemEval-2016 task 4: Sentiment analysis in Twitter},
+  Author                   = {Nakov, Preslav and Ritter, Alan and Rosenthal, Sara and Sebastiani, Fabrizio and Stoyanov, Veselin},
+  Booktitle                = {Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016)},
+  Year                     = {2016},
+  Pages                    = {1--18}
+}
+
 @Misc{nb:001,
   Title                    = {6 Easy Steps to Learn Naive Bayes Algorithm (with codes in Python and R)},
 
