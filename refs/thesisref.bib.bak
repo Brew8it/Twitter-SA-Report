@@ -228,6 +228,13 @@
   Keywords                 = {data mining;feature extraction;pattern classification;sentiment analysis;social networking (online);Twitter sentiment analysis;classification algorithm;feature extraction;opinion mining;Classification algorithms;Computer languages;Data mining;Feature extraction;Machine learning algorithms;Sentiment analysis;Twitter;Opinion Mining;Sentiment Analysis;Twitter}
 }
 
+@Article{duda1995pattern,
+  Title                    = {Pattern classification and scene analysis 2nd ed},
+  Author                   = {Duda, Richard O and Hart, Peter E and Stork, David G},
+  Journal                  = {ed: Wiley Interscience},
+  Year                     = {1995}
+}
+
 @InProceedings{effrosynidis2017comparison,
   Title                    = {A Comparison of Pre-processing Techniques for Twitter Sentiment Analysis},
   Author                   = {Effrosynidis, Dimitrios and Symeonidis, Symeon and Arampatzis, Avi},
@@ -349,7 +356,7 @@
   Publisher                = {Nature Publishing Group}
 }
 
-@InProceedings{nakov2016semeval,
+@InProceedings{SemEval:004,
   Title                    = {SemEval-2016 task 4: Sentiment analysis in Twitter},
   Author                   = {Nakov, Preslav and Ritter, Alan and Rosenthal, Sara and Sebastiani, Fabrizio and Stoyanov, Veselin},
   Booktitle                = {Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016)},
