@@ -96,6 +96,18 @@
   Url                      = {https://sv.wikipedia.org/wiki/Emoji}
 }
 
+@Misc{wiki:013,
+  Title                    = {Additive smoothing --- {W}ikipedia{,} The Free Encyclopedia},
+
+  Author                   = {Wikipedia contributors},
+  Note                     = {[Online; accessed 26-Februari 2018]},
+  Year                     = {2008},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.02.05},
+  Url                      = {https://en.wikipedia.org/wiki/Additive_smoothing#Pseudocount}
+}
+
 @Misc{wiki:008,
   Title                    = {Twitter --- {W}ikipedia{,} The Free Encyclopedia},
 
@@ -106,6 +118,18 @@
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.02.05},
   Url                      = {https://en.wikipedia.org/wiki/Twitter}
+}
+
+@Misc{wiki:012,
+  Title                    = {Dirichlet distribution --- {W}ikipedia{,} The Free Encyclopedia},
+
+  Author                   = {Wikipedia contributors},
+  Note                     = {[Online; accessed 26-Februari 2018]},
+  Year                     = {2004},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.02.05},
+  Url                      = {https://en.wikipedia.org/wiki/Dirichlet_distribution}
 }
 
 @Misc{svm:002,
@@ -228,7 +252,7 @@
   Keywords                 = {data mining;feature extraction;pattern classification;sentiment analysis;social networking (online);Twitter sentiment analysis;classification algorithm;feature extraction;opinion mining;Classification algorithms;Computer languages;Data mining;Feature extraction;Machine learning algorithms;Sentiment analysis;Twitter;Opinion Mining;Sentiment Analysis;Twitter}
 }
 
-@Article{duda1995pattern,
+@Article{nb:005,
   Title                    = {Pattern classification and scene analysis 2nd ed},
   Author                   = {Duda, Richard O and Hart, Peter E and Stork, David G},
   Journal                  = {ed: Wiley Interscience},
@@ -242,6 +266,15 @@
   Year                     = {2017},
   Organization             = {Springer},
   Pages                    = {394--406}
+}
+
+@Article{nb:006,
+  Title                    = {Prior distribution},
+  Author                   = {Gelman, Andrew},
+  Journal                  = {Encyclopedia of environmetrics},
+  Year                     = {2002},
+
+  Publisher                = {Wiley Online Library}
 }
 
 @Article{TSAsurvey,
@@ -298,6 +331,15 @@
   ISSN                     = {1877-0509},
   Keywords                 = {Sentiment Analysis, Text Pre-processing, Feature Selection, Chi Squared, SVM},
   Url                      = {http://www.sciencedirect.com/science/article/pii/S1877050913001385}
+}
+
+@InCollection{nb:007,
+  Title                    = {A tutorial on learning with Bayesian networks},
+  Author                   = {Heckerman, David},
+  Booktitle                = {Learning in graphical models},
+  Publisher                = {Springer},
+  Year                     = {1998},
+  Pages                    = {301--354}
 }
 
 @InProceedings{7463812,
@@ -374,6 +416,14 @@
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.02.12},
   Url                      = {https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/}
+}
+
+@InProceedings{rennie2003tackling,
+  Title                    = {Tackling the poor assumptions of naive bayes text classifiers},
+  Author                   = {Rennie, Jason D and Shih, Lawrence and Teevan, Jaime and Karger, David R},
+  Booktitle                = {Proceedings of the 20th international conference on machine learning (ICML-03)},
+  Year                     = {2003},
+  Pages                    = {616--623}
 }
 
 @InProceedings{7434400,
