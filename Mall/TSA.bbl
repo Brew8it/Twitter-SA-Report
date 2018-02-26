@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -88,25 +88,6 @@ Sunil Ray.
   \url{https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/}.
 \newblock [Online; accessed 12-February 2018].
 
-\bibitem[Saxena(2017)]{nb:002}
-Rahul Saxena.
-\newblock How the naive bayes classifier works in machine learning, 2017.
-\newblock URL
-  \url{http://dataaspirant.com/2017/02/06/naive-bayes-classifier-machine-learning/}.
-\newblock [Online; accessed 12-February 2018].
-
-\bibitem[Stephanie(2017)]{nb:004}
-Stephanie.
-\newblock Bernoulli distribution: Definition and examples, 2017.
-\newblock URL \url{http://www.statisticshowto.com/bernoulli-distribution/}.
-\newblock [Online; accessed 12-February 2018].
-
-\bibitem[scikitlearn documentation(2017)]{nb:003}
-scikitlearn documentation.
-\newblock 1.9 naive bayes -- scikitlearn documentation, 2017.
-\newblock URL \url{http://scikit-learn.org/stable/modules/naive_bayes.html}.
-\newblock [Online; accessed 12-February 2018].
-
 \bibitem[Weisstein(n.d)]{svm:001}
 Eric~W. Weisstein.
 \newblock "hyperplane." from mathworld--a wolfram web resource, n.d.
@@ -147,6 +128,14 @@ Amazon.
 \newblock Amazon mechanical turk, n.d.
 \newblock URL \url{https://www.mturk.com/product-details}.
 \newblock [Online; accessed 12-February 2018].
+
+\bibitem[Nakov et~al.(2016)Nakov, Ritter, Rosenthal, Sebastiani, and
+  Stoyanov]{SemEval:004}
+Preslav Nakov, Alan Ritter, Sara Rosenthal, Fabrizio Sebastiani, and Veselin
+  Stoyanov.
+\newblock Semeval-2016 task 4: Sentiment analysis in twitter.
+\newblock In \emph{Proceedings of the 10th International Workshop on Semantic
+  Evaluation (SemEval-2016)}, pages 1--18, 2016.
 
 \bibitem[contributors(2014{\natexlab{a}})]{wiki:010}
 Wikipedia contributors.

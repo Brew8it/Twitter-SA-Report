@@ -197,6 +197,8 @@ Beskrivet i sektion 2.1 är delsyftet att utvärdera hur de olika märkningsmode
 \subsection{SemEval} \label{DSse}
 SemEval-datamängden består av 20633 tweets och är framtagen till en årlig TSA tävling som har gått sedan 2013 \cite{SemEval:002}. Datamängden är märkt med hjälp av mänsklig märkning där fem personer manuellt märker varje tweet via Amazon Mechanical Turk \cite{SemEval:003}.
 
+I \cite{SemEval:004} beskrivs metoden för hur märkningen utförs, varje person markerar varje tweet antingen som mycket positivt, positivt, neutralt, negativ eller mycket negativt. Efter att alla tweets är märkta kartläggs alla tweets till kategorierna positivt, neutral eller negativt utefter tre kriterier. Antingen att alla personer har märkt ett tweet samma, en majoritet har märkt samma eller genom att ta ut ett medelvärde. Medelvärdet räknas ut genom att kartlägga de fem kategorierna till heltal mellan 2 och -2, medelvärdet räknas sedan ut och kartläggs till den närmsta kategorin. SemEval datamängden är fördelad utefter de ovanstående kriterierna där 2760 tweets är där alla personer märkt ett tweet samma, 9944 tweets är där majoritet har märkt samma och resterande 7928 tweets har medelvärdet räknats ut. 
+
 \subsection{Stanford Twitter Sentiment} \label{DSsts}
 STS-datamängden är framtagen mellan April 2009 och Juni 2009 av Alec Go, Richa Bhayani och Lei Huang. STS-datamängden är märkt med hjälp av “distant supervision” där märkningen bestäms av vilken typ av emoji \cite{wiki:010} ett twitterinlägg innehåller, exempelvis märks ett twitterinlägg positivt om det innehåller “:), :-),: ), :D, =)” och negativt om det innehåller “:(, :-(, : (“ \cite{sts:001}. 
 
