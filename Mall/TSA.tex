@@ -290,11 +290,48 @@ Detta kapitel ger även en överblick av vad maskininlärning är och hur maskin
 
 \chapter{Experiment}
 \section{Intro}
-I kapitlet kommer experimentet för studien att presenteras, hur det har utförts och hur de olika delarna har implementeras för att utföra experimentet. Såsom bearbetning av datamängderna, vilka särdragsurval som kommer utföras och en fördjupning i hur maskininlärningsalgoritmerna fungerar. Implementationen kommer ske i två steg där först en basklassificeringsmodell tas fram för varje algoritm med respektive datamängd. För att sedan testa och justera algoritmernas parametrar för att uppnå en förbättrad klassificeringsmodell jämfört med basklassificeringsmodellen. De slutgiltliga klassificeringsmodellerna kommer att diskuteras och jämföras i avsnitt \ref{res}.
+I kapitlet kommer experimentet för studien att presenteras, hur det har utförts och hur de olika delarna har implementeras för att utföra experimentet. Såsom bearbetning av datamängderna, vilka särdragsurval som kommer utföras och en fördjupning i hur maskininlärningsalgoritmerna fungerar. Implementationen kommer ske i tre steg där först en lexikonbaseradmodell kommer tas fram för att ge ett basfall för respektive datamängd. För att sedan implementera algoritmerna med standardparametrar och slutligen testa och justera algoritmernas parametrar för att eventuellt uppnå en förbättrad klassificeringsmodell för respektive datamängd. De slutgiltliga klassificeringsmodellerna kommer att diskuteras och jämföras i avsnitt \ref{res}
 \section{Bearbetning av datamängd} \label{exp:pre}
 \section{Särdragsurval} \label{exp:feat}
 \section{Algoritmer}
+** Skall det skrivas något kort intro här?***
 \subsection{Naive Bayes}
+Det finns tre varianter utav NB nämligen Gaussian, Multinomial och Bernoulli. Gaussian används när attributen är kontinuerligt fördelade och då antas det att attributen förknippade med varje klass fördelas enligt Gaussian d.v.s normalfördelning \cite{nb:002}. Bernoulli användas när attributen är fördelade enligt multivariat Bernoulli \cite{nb:004} och Multinomial NB (MNB) används när attributen är multinomial fördelat. I \cite{nb:003} diskuteras det att MNB är väl lämpad för text klassificering vilket gör att studien kommer använda MNB.
+
+I \cite{nb:008} diskuteras MNB där text behandlas som en sekvens av ord där det antas att varje ords position är oberoende från varandra. För klassificering antas det finnas ett fast antal klasser, $ c \in \{1, 2, ..., m\}$, där var och en har en fast uppsättning av multinomiala parametrar. För varje klass finns en parametervektor, $\vec{\theta_{c}} = \{\theta_{c1}, \theta_{c2}, ..., \theta_{cn}\}$, där $n$ är storleken på ordlistan, $\sum_{i}\theta_{ci} = 1$ och $\theta_{ci}$ är sannolikheten att ordet $i$ förekommer i klassen. Sannolikheten för en text är produkten av ordens parametrar som återfinns i texten, där $f_{i}$ är antalet förekomster av ordet $i$ inuti texten $t$.
+
+\begin{equation}
+p(t|\vec{\theta_{c}}) = \frac{(\sum_{i}f_{i})}{\prod_{i}f_{i}!}\prod_{i}(\theta_{ci})^{f_{i}}
+\end{equation}
+
+Genom tilldelning av en priorfördelning \cite{nb:006}, $p(\vec{\theta_{c}})$ , kan vi härleda en minimiklassificeringsregeln \cite{nb:005} som väljer klassen med störst sannolikhet, där $b_{c}$ är tröskelvärdet och $w_{ci}$ är klassens vikt för ord $i$.
+
+\begin{equation}\label{eq3.2}
+l(t) = argmax_{c}[log(\vec{\theta_{c}}) + \sum_{i} f_{i} log\theta_{ci}]
+\end{equation}
+
+\begin{equation}
+= argmax_{c}[(b_{c} + \sum_{i} f_{i} w_{ci}]
+\end{equation}
+
+För binär klassificerings är detta enklare eftersom gränsen sätts genom att sätta skillnaderna mellan de positiva och negativa klass parametrarna till noll.
+
+$$(b_{+} - b_{-}) + \sum_{i}f_{i} (w_{+i} - w_{-i}) = 0$$
+
+Eftersom klasser och märkningen av klasserna är bestämda av datamängden måste klassernas parametrar estimeras på något sätt. Detta utförs genom en Dirichlet prior \cite{wiki:012}\cite{nb:007} som tar de förväntade parametrarna med avseende på den bakre fördelningen. Dirichlet prior ger oss en enkel form för att uppskatta våra multinomiala parametrar, vilket består av antal gånger ordet [matte i] förekommer i texterna för den förväntade klassen($N_{ci}$), delat med det totala antalet ord i klassen ($N_{c}$). För ord $i$ adderas en så kallad additiv utjämning \cite{wiki:013}, $\alpha_{i}$, som även kallas Laplace utjämning och $\alpha$ betecknar summan av $\alpha_{i}$.
+
+\begin{equation}
+\hat{\theta_{ci}} = \frac{N_{ci} + \alpha_{i}}{N_{c} + \alpha}
+\end{equation}
+
+Genom att substituera $\theta_{ci}$ från \ref{eq3.2} med det framräknade $\hat{\theta_{ci}}$ får vi den slutgiltliga MNB algoritm.
+
+$$l_{MNB}(t) = argmax_{c}[log(\vec{\theta_{c}}) + \sum_{i} f_{i} log\hat{\theta_{ci}} = \frac{N_{ci} + \alpha_{i}}{N_{c} + \alpha}]$$
+
+
+
+
+
 \subsection{Support Vector Machine}
 \newpage
 \section{Implementation}
