@@ -6,17 +6,17 @@
 \contentsline {section}{\numberline {2.2}Sentimentanalys}{3}
 \contentsline {subsection}{\numberline {2.2.1}Klassificeringstekniker}{4}
 \contentsline {section}{\numberline {2.3}Maskininl\IeC {\"a}rning}{5}
-\contentsline {subsection}{\numberline {2.3.1}Naive Bayes}{6}
+\contentsline {subsection}{\numberline {2.3.1}Naive Bayes}{7}
 \contentsline {subsection}{\numberline {2.3.2}Support Vector Machine}{7}
-\contentsline {subsection}{\numberline {2.3.3}XXX}{7}
-\contentsline {section}{\numberline {2.4}Datam\IeC {\"a}ngd}{7}
+\contentsline {subsection}{\numberline {2.3.3}XXX}{8}
+\contentsline {section}{\numberline {2.4}Datam\IeC {\"a}ngd}{8}
 \contentsline {subsection}{\numberline {2.4.1}SemEval}{8}
-\contentsline {subsection}{\numberline {2.4.2}Stanford Twitter Sentiment}{8}
+\contentsline {subsection}{\numberline {2.4.2}Stanford Twitter Sentiment}{9}
 \contentsline {section}{\numberline {2.5}Twittersentimentanalys}{9}
-\contentsline {subsection}{\numberline {2.5.1}Utmaningar}{10}
+\contentsline {subsection}{\numberline {2.5.1}Utmaningar}{11}
 \contentsline {subsection}{\numberline {2.5.2}Problem}{12}
 \contentsline {section}{\numberline {2.6}Utv\IeC {\"a}rdering}{13}
-\contentsline {section}{\numberline {2.7}Sammanfattning}{13}
+\contentsline {section}{\numberline {2.7}Sammanfattning}{14}
 \contentsline {chapter}{\numberline {3}Experiment}{15}
 \contentsline {section}{\numberline {3.1}Intro}{15}
 \contentsline {section}{\numberline {3.2}Bearbetning av datam\IeC {\"a}ngd}{16}

@@ -330,6 +330,18 @@
   Volume                   = {1}
 }
 
+@Misc{google,
+  Title                    = {Google Assistant - Your own personal Google},
+
+  Author                   = {Google},
+  Note                     = {[Online; accessed 5-March 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.05},
+  Url                      = {https://assistant.google.com/}
+}
+
 @Article{HADDI201326,
   Title                    = {The Role of Text Pre-processing in Sentiment Analysis},
   Author                   = {Emma Haddi and Xiaohui Liu and Yong Shi},
@@ -517,6 +529,23 @@
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.02.12},
   Url                      = {http://www.statisticshowto.com/bernoulli-distribution/}
+}
+
+@InProceedings{facebook:001,
+  Title                    = {Deepface: Closing the gap to human-level performance in face verification},
+  Author                   = {Taigman, Yaniv and Yang, Ming and Ranzato, Marc'Aurelio and Wolf, Lior},
+  Booktitle                = {Proceedings of the IEEE conference on computer vision and pattern recognition},
+  Year                     = {2014},
+  Pages                    = {1701--1708}
+}
+
+@InProceedings{facebook:002,
+  Title                    = {Balanced label propagation for partitioning massive graphs},
+  Author                   = {Ugander, Johan and Backstrom, Lars},
+  Booktitle                = {Proceedings of the sixth ACM international conference on Web search and data mining},
+  Year                     = {2013},
+  Organization             = {ACM},
+  Pages                    = {507--516}
 }
 
 @Article{SAsurvey,
