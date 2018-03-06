@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  6 MAR 2018 11:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  6 MAR 2018 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1068,20 +1068,20 @@ Kapitel 3.
 File: ../figures/background/dataset.png Graphic file (type png)
 
 <use ../figures/background/dataset.png>
-Package pdftex.def Info: ../figures/background/dataset.png used on input line 2
-99.
+Package pdftex.def Info: ../figures/background/dataset.png used on input line 3
+00.
 (pdftex.def)             Requested size: 341.43306pt x 407.21497pt.
  [16 <../figures/background/dataset.png>] [17] [18] [19] [20] [21]
 Kapitel 4.
 [22
 
 ]
-Overfull \hbox (1.19798pt too wide) in paragraph at lines 373--373
+Overfull \hbox (1.19798pt too wide) in paragraph at lines 374--374
 []\T1/cmr/bx/n/20.74 Implementations mäs-sigt vil-ken mo-dell
  []
 
 
-Overfull \hbox (14.16211pt too wide) in paragraph at lines 374--374
+Overfull \hbox (14.16211pt too wide) in paragraph at lines 375--375
 []\T1/cmr/bx/n/20.74 implementations jäm-fö-rel-se (re-sul-tat VS
  []
 
@@ -1120,9 +1120,8 @@ mtt/m/n/12 0 -[] S2090447914000550 -[]
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--15
-\T1/cmtt/m/n/12 main\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 pdf?\OMS/cmsy/m/n/12 n[]\
-T1/cmtt/m/n/12 tid = 77d36d1a -[] ff80 -[] 11e7 -[] 956d -[] 00000aacb362\OMS/c
-msy/m/n/12 n\T1/cmtt/m/n/12 &acdnat =
+\T1/cmtt/m/n/12 main\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 pdf?[]tid = 77d36d1a -[] 
+ff80 -[] 11e7 -[] 956d -[] 00000aacb362&acdnat =
  []
 
 [26
@@ -1186,19 +1185,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--190
 g / wiki /
  []
 
-
-Underfull \hbox (badness 6675) in paragraph at lines 192--197
-[]\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Pre-ci-sion and recall --- Wi-ki-p
-e-dia, the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 192--197
-\T1/cmr/m/n/12 free en-cyclo-pe-dia, 2016.  URL $\T1/cmtt/m/n/12 https : / / en
-\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
-g / wiki /
- []
-
 [29]
 Underfull \hbox (badness 6708) in paragraph at lines 257--262
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Di-richlet dis-tri-bu-tion --- Wi-
@@ -1232,10 +1218,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 14846 strings out of 494333
- 280531 string characters out of 6163939
+ 14841 strings out of 494333
+ 280496 string characters out of 6163939
  354924 words of memory out of 5000000
- 17843 multiletter control sequences out of 15000+600000
+ 17838 multiletter control sequences out of 15000+600000
  15869 words of font info for 36 fonts, out of 8000000 for 9000
  372 hyphenation exceptions out of 8191
  69i,12n,58p,1180b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1255,9 +1241,9 @@ dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy8.pfb>
-Output written on TSA.pdf (40 pages, 349974 bytes).
+Output written on TSA.pdf (40 pages, 349469 bytes).
 PDF statistics:
- 640 PDF objects out of 1000 (max. 8388607)
+ 639 PDF objects out of 1000 (max. 8388607)
  155 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
