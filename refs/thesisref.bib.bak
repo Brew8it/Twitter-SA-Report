@@ -192,6 +192,15 @@
   Keywords                 = {social networking (online);support vector machines;AND-type fusion;F-score;Naïve Bayes classifiers;OR-type fusion;SVM;Twitter sentiment analysis;decision fusion technique;sentiment classification;training set size;Companies;Libraries;Sentiment analysis;Size measurement;Support vector machines;Training;Training data;Ensemble;Ensemble fusion;Training Set Size;Twitter Sentiment Analysis}
 }
 
+@InProceedings{feature:002,
+  Title                    = {Sentiment analysis of twitter data},
+  Author                   = {Agarwal, Apoorv and Xie, Boyi and Vovsha, Ilia and Rambow, Owen and Passonneau, Rebecca},
+  Booktitle                = {Proceedings of the workshop on languages in social media},
+  Year                     = {2011},
+  Organization             = {Association for Computational Linguistics},
+  Pages                    = {30--38}
+}
+
 @Misc{SemEval:003,
   Title                    = {Amazon Mechanical Turk},
 
@@ -410,7 +419,7 @@
   Year                     = {2015}
 }
 
-@Article{kouloumpis2011twitter,
+@Article{feature:001,
   Title                    = {Twitter sentiment analysis: The good the bad and the omg!},
   Author                   = {Kouloumpis, Efthymios and Wilson, Theresa and Moore, Johanna D},
   Journal                  = {Icwsm},
@@ -500,6 +509,18 @@
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.02.12},
   Url                      = {http://dataaspirant.com/2017/02/06/naive-bayes-classifier-machine-learning/}
+}
+
+@Misc{scikit:001,
+  Title                    = {Working With Text Data},
+
+  Author                   = {scikitlearn documentation},
+  Note                     = {[Online; accessed 12-Mars 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.12},
+  Url                      = {http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html}
 }
 
 @Misc{nb:003,
