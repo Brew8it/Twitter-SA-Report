@@ -319,29 +319,50 @@ Resultaten visar att ersättning av negationer och expandering av förkortningar
 \section{Algoritmer}
 ** Skall det skrivas något kort intro här?***
 \subsection{Naive Bayes}
-I \ref{bak:NB} beskrivs det att Naive Bayes algoritmen är baserad på Bayes theorem  \cite{ref:wiki:009} vilket för TSA betyder att räkna ut sannolikheten om ett twitterinlägg $B$ är positivt $A$ eller negativt $!A$. 
+I \ref{MLnb} beskrivs det att Naive Bayes algoritmen är baserad på Bayes theorem  \cite{wiki:009} vilket för TSA betyder att räkna ut sannolikheten om ett twitterinlägg $B$ är positivt $A$ eller negativt $\neg A$. 
 \begin{equation}\label{eq:btpos}
 p(A|B) = \frac{p(B|A) * p(A)}{P(B)}
 \end{equation}
 \begin{equation}\label{eq:bt}
-p(!A|B) = \frac{p(B|!A) * p(!A)}{P(B)}
-\end{equation}\label{eq:btneg}
-
-Som nämns ovan är TSA ett binärt klassificeringsproblem d.v.s om  $B$ är $A \lor !A$ . Därför delas ekvation \ref{eq:btpos} med ekvation \ref{eq:btneg} vilket ger oss $\hat{P} > 1 = A$ och om $\hat{P} < 1 = !A$
-
-\begin{equation}
-\hat{P} = \frac{p(A|B) = p(B|A) * p(A)}{p(!A|B) = p(B|!A) * p(!A)}
+p(!A|B) = \frac{p(B|\neg A) * p(!A)}{P(B)}
 \end{equation}
 
-För att ekvation \ref{eq:phat} skall vara “Naive” antar vi att varje ord $b_w$ i $B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar på $B$ utan på $b_w$, $P(B) = P(b_{i1}) * P(b_{i2}) * … * P(b_{in})$ där $n$ är antal order i $B$.
+Som nämns ovan är TSA ett binärt klassificeringsproblem d.v.s om  $B$ är $A$ eller $\neg A$ . Därför delas ekvation \ref{eq:btpos} med ekvation \ref{eq:bt} vilket ger oss $\hat{P} > 1 = A$ och om $\hat{P} < 1 = \neg A$.  
 
+\begin{equation}\label{eq:phat}
+\hat{P} = \frac{p(B|A) * p(A)}{p(B|\neg A) * p(\neg A)}
+\end{equation}
+
+För att ekvation \ref{eq:phat} skall vara “Naive” antar vi att varje ord $b_w$ i $B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar $B$ utan $b_w$, $P(B) = P(b_{w1}) * P(b_{w2}) * … * P(b_{wn})$ där $n$ är antalet ord i $B$.
+
+För att beräkna sannolikheten att $b_w$ är $A$ eller $\neg A$ används en Dirichlet prior \cite{wiki:012}\cite{nb:007} som ger oss en enkel formel för att räkna ut sannolikheten. Där $N_{ci}$ är antalet gånger ordet $w_b$ förekommer i $A's$ eller $\neg A's$ datamängd, delat med antalet ord i $A$ eller $\neg A$ $(N_c)$. Ett problem som uppstår är när $N_{ci} = 0$ d.v.s när ordet $w_b$ saknas i datamängden. För att motverka detta används så kallad additiv utjämning \cite{wiki:013}, där $\alpha_i$ sätts till 1 och $\alpha$ betecknar antal ord i datamängden. 
+
+\begin{equation}
+P(A | w_b)= \frac{N_{ci} + \alpha_i}{N_c + \alpha}
+\end{equation}
+
+
+*** Exemple där vi visar att ett tweet är positivt med uträkningar ***
 
 
 
 
 
 \subsection{Support Vector Machine}
-\newpage
+SVM algoritmen skapar en modell utifrån en given mängd märkt träningsdata \cite{svm:002}. 
+Modellen som skapas har sedan förmågan att kategorisera ny indata i en av de två kategorierna. 
+
+Den skapade SVM-modellen representerar träningsdata som punkter i ett koordinatsystem. I koordinatsystemet kartläggs data så att de två kategorierna är tydligt separerade med ett så stort mellanrum som möjligt. När modellen kategoriserar ny indata kartläggs den datan till samma koordinatsystem, för att sedan kategoriseras utefter vilken sida av mellanrummet den hamnar på.  
+
+För att separera kategorierna konstruerar SVM ett hyperplan. I (Figur X.X) representeras hyperplanet av linjen mellan kategorierna. Datapunkterna som ligger närmast hyperplanet för respektive kategori kallas för stödvektorer och de är utefter de punkterna som hyperplanet positioneras \cite{svm:003}. Det kan finnas flera möjliga hyperplan som kan kategorisera datan. Idén bakom SVM är att hitta hyperplanet som bäst delar upp datamängden i två kategorier. Ju större marginal mellan kategorierna desto mindre känslig blir modellen för generaliseringsfel \cite{svm:002}. Därför anses hyperplanet som har störst marginal till de närmaste stödvektorerna från respektive kategori ge en bra separation av data.
+
+Figur X.X visar ett exempel på två kategorier av data som inte går att separera linjärt. I fall som dessa ritas datapunkterna om i en högre dimension för att en separation ska bli möjlig \cite{svm:003}, vilket illustreras i figur X.X. Processen upprepas tills dess att ett hyperplan kan separera datan. Metoden SVM använder för att utföra detta effektivt kallas “kernel trick” \cite{svm:004}.  
+
+Eftersom att antalet särdrag som genereras vid klassificering av text är så pass högt, resulterar det i att en icke-linjär klassificerare överanpassar data \cite{svm:005}. Därför har en linjär klassificerare valts att användas vid den här studien.
+(*** linjär vs. icke-linjär??? ***)
+
+
+
 \section{Implementation}
 \subsection{Naive Bayes}
 \subsection{Support Vector Machine}

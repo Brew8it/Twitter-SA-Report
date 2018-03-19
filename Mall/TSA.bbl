@@ -1,4 +1,4 @@
-\begin{thebibliography}{40}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -218,41 +218,6 @@ Z.~Jianqiang and G.~Xiaolin.
 \newblock ISSN 2169-3536.
 \newblock \doi{10.1109/ACCESS.2017.2672677}.
 
-\bibitem[Saxena(2017)]{nb:002}
-Rahul Saxena.
-\newblock How the naive bayes classifier works in machine learning, 2017.
-\newblock URL
-  \url{http://dataaspirant.com/2017/02/06/naive-bayes-classifier-machine-learning/}.
-\newblock [Online; accessed 12-February 2018].
-
-\bibitem[Stephanie(2017)]{nb:004}
-Stephanie.
-\newblock Bernoulli distribution: Definition and examples, 2017.
-\newblock URL \url{http://www.statisticshowto.com/bernoulli-distribution/}.
-\newblock [Online; accessed 12-February 2018].
-
-\bibitem[scikitlearn documentation(2017)]{nb:003}
-scikitlearn documentation.
-\newblock 1.9 naive bayes -- scikitlearn documentation, 2017.
-\newblock URL \url{http://scikit-learn.org/stable/modules/naive_bayes.html}.
-\newblock [Online; accessed 12-February 2018].
-
-\bibitem[Rennie et~al.(2003)Rennie, Shih, Teevan, and Karger]{nb:008}
-Jason~D Rennie, Lawrence Shih, Jaime Teevan, and David~R Karger.
-\newblock Tackling the poor assumptions of naive bayes text classifiers.
-\newblock In \emph{Proceedings of the 20th international conference on machine
-  learning (ICML-03)}, pages 616--623, 2003.
-
-\bibitem[Gelman(2002)]{nb:006}
-Andrew Gelman.
-\newblock Prior distribution.
-\newblock \emph{Encyclopedia of environmetrics}, 2002.
-
-\bibitem[Duda et~al.(1995)Duda, Hart, and Stork]{nb:005}
-Richard~O Duda, Peter~E Hart, and David~G Stork.
-\newblock Pattern classification and scene analysis 2nd ed.
-\newblock \emph{ed: Wiley Interscience}, 1995.
-
 \bibitem[contributors(2004)]{wiki:012}
 Wikipedia contributors.
 \newblock Dirichlet distribution --- {W}ikipedia{,} the free encyclopedia,
@@ -272,5 +237,11 @@ Wikipedia contributors.
 \newblock URL
   \url{https://en.wikipedia.org/wiki/Additive_smoothing#Pseudocount}.
 \newblock [Online; accessed 26-Februari 2018].
+
+\bibitem[contributors(2005)]{svm:004}
+Wikipedia contributors.
+\newblock Kernel method --- {W}ikipedia{,} the free encyclopedia, 2005.
+\newblock URL \url{https://en.wikipedia.org/wiki/Kernel_method}.
+\newblock [Online; accessed 19-Mars 2018].
 
 \end{thebibliography}
