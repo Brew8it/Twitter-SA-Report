@@ -37,6 +37,8 @@
 \usepackage{geometry}
 \usepackage{booktabs}
 
+\usepackage{float}
+
 
 
 
@@ -294,28 +296,88 @@ Detta kapitel ger även en överblick av vad maskininlärning är och hur maskin
 I kapitlet kommer experimentet för studien att presenteras, hur det har utförts och hur de olika delarna har implementeras. Delarna utgörs av bearbetning av datamängderna, vilka särdragsurval som kommer utföras och en fördjupning i hur maskininlärningsalgoritmerna fungerar. Implementationen kommer ske i tre steg där först en lexikonbaserad modell kommer tas fram för att ge ett basfall för respektive datamängd. För att sedan implementera algoritmerna med standardparametrar och slutligen testa och justera algoritmernas parametrar. Detta för att eventuellt uppnå en förbättrad klassificeringsmodell för respektive datamängd. 
 De slutgiltliga klassificeringsmodellerna kommer att diskuteras och jämföras i avsnitt \ref{res}.
 \section{Bearbetning av datamängd} \label{exp:pre}
-En viktig del inom SA är bearbetningen av den data som ska analyseras. Som nämndes i \ref{TSAchall}, innehåller twitterinlägg stora mängder brus på grund av det informella språket som används på Twitter, dvs data som inte är användbar för analysprocessen. Kvaliteten på datan som ska analyseras är avgörande för vilka resultat som kan uppnås vid maskininlärningen \cite{effrosynidis2017comparison}. Därför behöver data som ska analyseras bearbetas innan maskininlärningen, vilket betyder att data normaliseras och rensas på brus. Exempelvis kan det bestå av att termer som inte är nödvändiga tas bort, ersätts eller slås samman med andra.
+En viktig del inom SA är bearbetningen av den data som ska analyseras. Som nämndes i \ref{TSAchall}, innehåller twitterinlägg stora mängder brus på grund av det informella språket som används på Twitter, dvs data som inte är användbar för analysprocessen. Kvaliteten på datan som ska analyseras är avgörande för vilka resultat som kan uppnås vid maskininlärningen \cite{effrosynidis2017comparison}. Därför behöver data som ska analyseras bearbetas innan maskininlärningen, vilket betyder att data normaliseras och rensas på brus. Exempelvis kan det bestå av att termer som inte är nödvändiga tas bort, ersätts eller slås samman med andra. 
 
-\begin{figure}[h]
+Det existerar flertalet olika tekniker som kan användas vid bearbetningen av data.  I \cite{effrosynidis2017comparison} utvärderas 15 av dessa bearbetningstekniker. Teknikerna utvärderas var för sig och testas mot två olika datamängder, där de för varje datamängd testas med tre olika maskininlärningsalgoritmer. Vid utvärderingen av bearbetningsteknikerna studeras noggrannheten vid sentimentklassificeringen samt antalet särdrag som genereras för varje bearbetningsteknik. Ur resultaten konstaterar författarna att det inte existerar någon direkt koppling mellan noggrannheten för klassificeringsmodellerna och antalet genererade särdrag. Författarna sammanställer resultaten från utvärderingen och kategoriserar de olika bearbetningsteknikerna i fem olika kategorier efter noggrannhet. Några bearbetningstekniker ger bättre noggrannhet för båda datamängderna, andra sämre och resultaten varierar för några. Resultaten varierar inte enbart mellan datamängderna utan de varierar även mellan klassificeringsmodellerna. 
+
+De bearbetningstekniker som resulterar i hög noggrannhet för alla klassificeringsmodeller och de båda datamängderna är: borttagning av nummer, omvandling av ord till deras ursprungliga form samt ersättning av upprepade skiljetecken. Hantering av negationer, lemmatisering samt ersättning av URL:er och “mentions” av användare påvisar också bra resultat för båda datamängderna men dock inte för alla klassificeringsmodeller. Det som saknas i \cite{effrosynidis2017comparison} är hur de olika förbehandlingsteknikerna presterar i kombination med varandra. 
+
+\cite{7862202} undersöker också effekten av bearbetningstekniker vid TSA. Men istället för att utvärdera varje teknik isolerat från varandra, utvärderas de istället utifrån hur de presterar i kombination med andra. Författarna har valt att fokusera på sex olika bearbetningstekniker: ersättning av negationer, expandering av förkortningar, avlägsning av nummer, avlägsning av stoppord, ersättning av förlängda ord och ersättning (borttagning) av URL:er. Bearbetningsteknikerna har utvärderats utefter hur de presterar på två olika klassificeringsuppgifter: binär och tre-vägs klassificering. Där teknikerna testas med fyra klassificeringsmodeller på fem olika datamängder. 
+
+Vid bedömningen av prestandan vid sentimentklassificeringen har ett basfall använts. Basfallet har använt samtliga sex bearbetningstekniker för bearbetningen av datan vid testningen. När en specifik teknik har utvärderats, har tekniken i fråga exkluderats från mängden av bearbetningstekniker. Därefter har testerna repeteras, med fem bearbetningstekniker istället för sex. Sedan har förändringen av resultatet gentemot basfallet använts för att bedöma hur tekniken påverkar prestandan vid sentimentklassificeringen. Vid utvärderingen av prestandan har noggrannhet och F-score använts som mätvärden. 
+
+Resultaten visar att ersättning av negationer och expandering av förkortningar kan ha positiv påverkan på noggrannheten vid klassificeringen. Avlägsning av URL:er, nummer och stoppord påverkar resultaten för klassificeringen minimalt, men är effektiva för att minska brus. 
+
+Utifrån resultaten som har presenterats i \cite{effrosynidis2017comparison} och \cite{7862202} har bearbetningsteknikerna för experimentet i den här studien valts. 
+Det svåra med att välja bearbetningstekniker, utifrån litteraturen, är att det kan existera flera olika varianter av en viss teknik. I \cite{effrosynidis2017comparison} hanterar de exempelvis URL:er genom att ersätta varje URL med etiketten “URL”, medan de avlägsnas i \cite{7862202}. Eftersom bearbetningsteknikerna uteslutande kommer att användas i kombination med varandra vid det här experimentet har störst vikt lagts på de tekniker som presenteras i \cite{7862202}.
+
+\begin{figure}[H]
 \includegraphics[width=12cm]{dataset}
 \centering
-\caption{Bearbetningsprocessens olika steg.}
-\label{fig:bearbetning}
-\end{figure} 
+\caption{Bearbetningstekniker som används för att bearbeta data vid experimentet.}
+\label{fig:dataset}
+\end{figure}
 
-Det existerar flertalet olika tekniker som kan användas vid bearbetningen av data.  I \cite{effrosynidis2017comparison} utvärderas 15 av dessa bearbetningstekniker. Teknikerna utvärderas var för sig och testas mot två olika datamängder, där de för varje datamängd testas med tre olika maskininlärningsalgoritmer. Vid utvärderingen av bearbetningsteknikerna studeras noggrannheten vid sentimentklassificeringen samt antalet särdrag som genereras för varje bearbetningsteknik. Ur resultaten konstaterar författarna att det inte existerar någon direkt koppling mellan noggrannheten för klassificeringsmodellerna och antalet genererade särdrag. Författarna sammanställer resultaten från utvärderingen och kategoriserar de olika bearbetningsteknikerna i fem olika kategorier efter noggrannhet. Några bearbetningstekniker ger bättre noggrannhet för båda datamängderna, andra sämre och resultaten varierar för några. Resultaten varierar inte enbart mellan datamängderna utan de varierar även mellan klassificeringsmodellerna.
+Nedan presenteras och beskrivs de bearbetningstekniker som har valts att användas för experimentet.
 
-De bearbetningstekniker som resulterar i hög noggrannhet för alla klassificeringsmodeller och de båda datamängderna är: borttagning av nummer, omvandling av ord till deras ursprungliga form samt ersättning av upprepade skiljetecken. Hantering av negationer, lemmatisering samt ersättning av URL:er och “mentions” av användare påvisar också bra resultat för båda datamängderna men dock inte för alla klassificeringsmodeller. Det som saknas i \cite{effrosynidis2017comparison} är hur de olika förbehandlingsteknikerna presterar i kombination med varandra.((( Nämna att de pysslar med three point classification?? ))
-
-\cite{7862202} undersöker också effekten av bearbetningstekniker vid TSA. Men istället för att utvärdera varje teknik isolerat från varandra, utvärderas de istället utifrån hur de presterar i kombination med andra. Författarna har valt att fokusera på 6 olika bearbetningstekniker: ersättning av negationer, expandering av förkortningar, avlägsning av nummer, avlägsning av stoppord, ersättning av förlängda ord och avlägsning av URL:er. Bearbetningsteknikerna har utvärderats utefter hur de presterar på 2 olika klassificeringsuppgifter: binär och 3-vägs klassificering (kanske behövs förklaras vad 3-vägs klassificering?). Där teknikerna testas med 2 särdragsmodeller (hur ska vi hålla oss till begrepp som nämns i sektionen efter?) och 4 klassificeringsmodeller på 5 olika datamängder. 
-
-Vid bedömningen av prestandan vid sentimentklassificeringen har ett basfall använts. Basfallet har använt samtliga 6 bearbetningstekniker för bearbetningen av datan vid testningen. När en specifik teknik har utvärderats, har tekniken i fråga exkluderats från mängden av bearbetningstekniker. Därefter har testerna körts igen, med 5 bearbetningstekniker istället för 6. Sedan har förändringen av resultatet gentemot basfallet använts för att bedöma hur tekniken påverkar prestandan vid sentimentklassificeringen. Vid utvärderingen av prestandan har noggranhet och F-score använts som mätvärden. 
-
-Resultaten visar att ersättning av negationer och expandering av förkortningar kan ha positiv påverkan på noggranheten vid klassificeringen. Avlägsning av URL:er, nummer och stoppord påverkar resultaten för klassificeringen minimalt, men är effektiva för att minska brus. 
-
-(Figur 3.1 kommer att nämnas och beskrivas i nästa stycke som inte är klart ännu)
+\begin{labeling}{preproc}
+\item [Avlägsna siffror] 
+Siffror tas bort från ett twitterinläggen.
+\item [Avlägsna stoppord] 
+Stoppord, som beskrevs i \ref{TSAchall}, tas bort från inläggen genom att twitterinläggen söks igenom på stoppord från en fördefinierad lista. 
+\item[Avlägsna URL:er]
+URL:er tas bort från twitterinlägg.
+\item[Ersätta negationer]
+I \ref{TSAchall} diskuterades vikten av att kunna tolka och identifiera negationer för att SA ska bli korrekt. I engelskan är sammandragsförkortningar vanligt förekommande. Termen “don’t” är exempel på en sammandragsförkortningen för “do not” . För experimentet har sammandragsförkortningarna “n’t”, “can’t” och “won’t” omvandlas till “not”, “can not” och “will not”, utefter hur metoden beskrevs i \cite{7862202}.
+\item[Omvandla versaler till gemener]
+Alla versaler omvandlas till gemener, dvs texterna som analyseras består enbart av gemener. Det gör att ord som är skrivna på flera olika sätt slås samman till ett \cite{effrosynidis2017comparison}. Vokabuläret blir då mindre, vilket gör att storleken på problemet minskas.  
+\item[Avlägsna skiljetecken]
+Skiljetecken tas bort från twitterinlägg.
+\item[Avlägsna “hashtags”]
+“Hashtags” tas bort från inläggen som ska analyseras.
+\item[Avlägsna “mentions”]
+“Mentions” av twitteranvändare tas bort.
+\item[Avlägsna repeterande mellanslag]
+Om två eller fler mellanslag förekommer efter varandra omvandlas de till ett mellanslag.
+\item[Avlägsna accenter]
+Accenter tas bort från bokstäver. 
+\item[Avlägsna HTML-kod]
+Om HTML-kod förekommer i ett inlägg tas det bort.
+\end{labeling}
 
 \section{Särdragsurval} \label{exp:feat}
+Inom maskininlärning definieras ett särdrag som en individuell mätbar egenskap eller kännetecken på ett fenomen som har observerats, begreppet särdrag kommer från variabler som används inom statistik. Att välja korrekt, informativa och oberoende särdrag är ett kritiskt moment för att maskininlärningsalgoritmen ska kunna uppnå sin fulla potential och undvika fel klassificeringar \cite{wiki:014}. 
+I \cite{TSAsurvey} presenteras det fyra olika särdrags klasser inom TSA: semantisk, syntaktisk, stilistisk och twitter-specifika särdrag.
+
+\begin{figure}[H]
+\includegraphics[width=9cm]{grams}
+\centering
+\caption{Illustrerar n-grams på en mening.}
+\label{fig:grams}
+\end{figure}
+
+\begin{labeling}{preproc}
+\item [Semantisk särdrag]
+Används mestadels för att ta ut  åsikts ord, sentiment ord och negationer. Åsikts ord är ord eller meningar som kan innehålla någon typ av åsikt medans sentiment ord är ord som innehåller något positivt eller negativt. Negationer är viktigt koncept eftersom en mening som innehåller någon typ av negation kan skifta om twitterinlägget är positivt eller negativt. Studien kommer använda sentiment ord i lexikon implementationen \ref{impl:lex} och negationer som även diskuterats i \ref{exp:pre} kommer implementeras i \ref{impl:pre}.
+
+\item [Syntaktisk särdrag]
+Används för att utforska påverkan av olika termer i SA och TSA, syntaktiska särdrag bryts ner till unigram, bigram, trigrams, n-grams, termfrekvens och “Part of Speech” (POS). Där n-grams är ett samlingsord för uni-, bi- och trigram, i figur \ref{fig:grams} illustreras hur n-grams modellen fungerar på en enkel mening och hur meningens ord grupperas på olika sätta till ett ord eller fras. **ta upp något om varför det används?**
+
+Termfrekvens används i kombination med n-grams eftersom längre twitterinlägg kan ha ett genomsnittligt högre antal förekomster av ett ord än ett kortare twitterinlägg. Genom att dela antalet förekomster av ett ord i ett twitterinlägg med alla ord som finns i twitterinlägget kan detta undvikas \cite{scikit:001}.
+
+POS utförs genom att man räknar hur många substantiv, verb och adjektiv som existerar i ett twitterinlägg. POS kan t.ex användas för att ta redan på åsikter i ett twitterinlägg där antalet adjektiv kan relateras till vilken åsikt ett twitterinlägget har.
+
+Studien kommer implementera n-grams och termfrekvens för varje klassificeringsalgoritm i \ref{impl}. POS kommer inte implementeras i studien då \cite{go2009twitter}, \cite{feature:001} rapporterar försämrad precision. Däremot rapporterar \cite{feature:002} små förbättringar vid användning av POS.
+\item [Stilistisk särdrag]
+Är särdrag som kommer från det informella skrivsättet som används på Twitter där t.ex emojis, förkortningar, slang och skiljetecken används. Enligt \cite{feature:002} kan emojis ha en stor betydelse för TSA. Men eftersom STS datamängden har avlägsnat emojis, då “distant supervision” \cite{sts:001} har använts, kommer inte studiens modeller ta hänsyn till emojis. Därför har även emojis från SemEval datamängden filtreras bort i \ref{exp:pre}. Studien kommer inte hantera slang eftersom inget större slanglexikon var öppet för användning. 
+Förkortningar och skiljetecken kommer hanteras i denna studien och har diskuterats i \ref{exp:pre} och implementeras i \ref{impl:pre}
+\item [Twitter-specifika särdrag] 
+Är särdrag som är specifika för Twitters domän som t.ex “hashtags” och “mentions” vilket diskuteras i \ref{TSA} och \ref{exp:pre}.
+\end{labeling}
+
+
+
+
 \section{Algoritmer}
 ** Skall det skrivas något kort intro här?***
 \subsection{Naive Bayes}
@@ -341,31 +403,42 @@ För att beräkna sannolikheten att $b_w$ är $A$ eller $\neg A$ används en Dir
 P(A | w_b)= \frac{N_{ci} + \alpha_i}{N_c + \alpha}
 \end{equation}
 
-
 *** Exemple där vi visar att ett tweet är positivt med uträkningar ***
-
-
-
-
 
 \subsection{Support Vector Machine}
 SVM algoritmen skapar en modell utifrån en given mängd märkt träningsdata \cite{svm:002}. 
 Modellen som skapas har sedan förmågan att kategorisera ny indata i en av de två kategorierna. 
 
-Den skapade SVM-modellen representerar träningsdata som punkter i ett koordinatsystem. I koordinatsystemet kartläggs data så att de två kategorierna är tydligt separerade med ett så stort mellanrum som möjligt. När modellen kategoriserar ny indata kartläggs den datan till samma koordinatsystem, för att sedan kategoriseras utefter vilken sida av mellanrummet den hamnar på.  
+Den skapade SVM-modellen representerar träningsdata som punkter i ett koordinatsystem. I koordinatsystemet kartläggs data så att de två kategorierna är tydligt separerade med ett så stort mellanrum som möjligt. När modellen kategoriserar ny indata kartläggs den datan till samma koordinatsystem, för att sedan kategoriseras utefter vilken sida av mellanrummet den hamnar på.
 
-För att separera kategorierna konstruerar SVM ett hyperplan. I (Figur X.X) representeras hyperplanet av linjen mellan kategorierna. Datapunkterna som ligger närmast hyperplanet för respektive kategori kallas för stödvektorer och de är utefter de punkterna som hyperplanet positioneras \cite{svm:003}. Det kan finnas flera möjliga hyperplan som kan kategorisera datan. Idén bakom SVM är att hitta hyperplanet som bäst delar upp datamängden i två kategorier. Ju större marginal mellan kategorierna desto mindre känslig blir modellen för generaliseringsfel \cite{svm:002}. Därför anses hyperplanet som har störst marginal till de närmaste stödvektorerna från respektive kategori ge en bra separation av data.
+\begin{figure}[H]
+\includegraphics[width=9cm]{linearsvm_hpwithmargins}
+\centering
+\caption{.}
+\label{fig:svmmarg}
+\end{figure}  
 
-Figur X.X visar ett exempel på två kategorier av data som inte går att separera linjärt. I fall som dessa ritas datapunkterna om i en högre dimension för att en separation ska bli möjlig \cite{svm:003}, vilket illustreras i figur X.X. Processen upprepas tills dess att ett hyperplan kan separera datan. Metoden SVM använder för att utföra detta effektivt kallas “kernel trick” \cite{svm:004}.  
+För att separera kategorierna konstruerar SVM ett hyperplan. I figur \ref{fig:svmmarg} representeras hyperplanet av linjen mellan kategorierna. Datapunkterna som ligger närmast hyperplanet för respektive kategori kallas för stödvektorer och de är utefter de punkterna som hyperplanet positioneras \cite{svm:003}. Det kan finnas flera möjliga hyperplan som kan kategorisera datan. Idén bakom SVM är att hitta hyperplanet som bäst delar upp datamängden i två kategorier. Ju större marginal mellan kategorierna desto mindre känslig blir modellen för generaliseringsfel \cite{svm:002}. Därför anses hyperplanet som har störst marginal till de närmaste stödvektorerna från respektive kategori ge en bra separation av data.
+
+\begin{figure}[H]
+\includegraphics[width=9cm]{nonlinearsvm}
+\centering
+\caption{.}
+\label{fig:svmnonl}
+\end{figure} 
+
+Figur \ref{fig:svmnonl} visar ett exempel på två kategorier av data som inte går att separera linjärt. I fall som dessa ritas datapunkterna om i en högre dimension för att en separation ska bli möjlig \cite{svm:003}, vilket illustreras i figur X.X. Processen upprepas tills dess att ett hyperplan kan separera datan. Metoden SVM använder för att utföra detta effektivt kallas “kernel trick” \cite{svm:004}.  
 
 Eftersom att antalet särdrag som genereras vid klassificering av text är så pass högt, resulterar det i att en icke-linjär klassificerare överanpassar data \cite{svm:005}. Därför har en linjär klassificerare valts att användas vid den här studien.
 (*** linjär vs. icke-linjär??? ***)
 
 
 
-\section{Implementation}
-\subsection{Naive Bayes}
-\subsection{Support Vector Machine}
+\section{Implementation}\label{impl}
+\section{Databearbetning}\label{impl:pre}
+\subsection{Lexikon}\label{impl:lex}
+\subsection{Naive Bayes}\label{impl:nb}
+\subsection{Support Vector Machine}\label{impl:svm}
 \subsection{Prediction program.}
 \subsection{* ev GUI implementation om tid finns *}
 \section{Sammanfattning}

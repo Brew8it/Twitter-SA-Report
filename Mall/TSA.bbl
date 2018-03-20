@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{41}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -133,10 +133,11 @@ Wikipedia contributors.
 \newblock URL \url{https://en.wikipedia.org/wiki/Support_vector_machine}.
 \newblock [Online; accessed 12-February 2018].
 
-\bibitem[Go et~al.(2009)Go, Bhayani, and Huang]{sts:001}
+\bibitem[Go et~al.(2009{\natexlab{a}})Go, Bhayani, and Huang]{sts:001}
 Alec Go, Richa Bhayani, and Lei Huang.
 \newblock Twitter sentiment classification using distant supervision.
-\newblock \emph{CS224N Project Report, Stanford}, 1\penalty0 (12), 2009.
+\newblock \emph{CS224N Project Report, Stanford}, 1\penalty0 (12),
+  2009{\natexlab{a}}.
 
 \bibitem[Sem(2016{\natexlab{a}})]{SemEval:001}
 International workshop on semantic evaluation 2017, 2016{\natexlab{a}}.
@@ -218,10 +219,42 @@ Z.~Jianqiang and G.~Xiaolin.
 \newblock ISSN 2169-3536.
 \newblock \doi{10.1109/ACCESS.2017.2672677}.
 
-\bibitem[contributors(2004)]{wiki:012}
+\bibitem[contributors(2004{\natexlab{a}})]{wiki:014}
+Wikipedia contributors.
+\newblock Feature (machine learning) --- {W}ikipedia{,} the free encyclopedia,
+  2004{\natexlab{a}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Feature_(machine_learning)}.
+\newblock [Online; accessed 12-Mars 2018].
+
+\bibitem[scikitlearn documentation(n.d)]{scikit:001}
+scikitlearn documentation.
+\newblock Working with text data, n.d.
+\newblock URL
+  \url{http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html}.
+\newblock [Online; accessed 12-Mars 2018].
+
+\bibitem[Go et~al.(2009{\natexlab{b}})Go, Bhayani, and Huang]{go2009twitter}
+Alec Go, Richa Bhayani, and Lei Huang.
+\newblock Twitter sentiment classification using distant supervision.
+\newblock \emph{CS224N Project Report, Stanford}, 1\penalty0 (12),
+  2009{\natexlab{b}}.
+
+\bibitem[Kouloumpis et~al.(2011)Kouloumpis, Wilson, and Moore]{feature:001}
+Efthymios Kouloumpis, Theresa Wilson, and Johanna~D Moore.
+\newblock Twitter sentiment analysis: The good the bad and the omg!
+\newblock \emph{Icwsm}, 11\penalty0 (538-541):\penalty0 164, 2011.
+
+\bibitem[Agarwal et~al.(2011)Agarwal, Xie, Vovsha, Rambow, and
+  Passonneau]{feature:002}
+Apoorv Agarwal, Boyi Xie, Ilia Vovsha, Owen Rambow, and Rebecca Passonneau.
+\newblock Sentiment analysis of twitter data.
+\newblock In \emph{Proceedings of the workshop on languages in social media},
+  pages 30--38. Association for Computational Linguistics, 2011.
+
+\bibitem[contributors(2004{\natexlab{b}})]{wiki:012}
 Wikipedia contributors.
 \newblock Dirichlet distribution --- {W}ikipedia{,} the free encyclopedia,
-  2004.
+  2004{\natexlab{b}}.
 \newblock URL \url{https://en.wikipedia.org/wiki/Dirichlet_distribution}.
 \newblock [Online; accessed 26-Februari 2018].
 
@@ -242,6 +275,13 @@ Wikipedia contributors.
 Wikipedia contributors.
 \newblock Kernel method --- {W}ikipedia{,} the free encyclopedia, 2005.
 \newblock URL \url{https://en.wikipedia.org/wiki/Kernel_method}.
+\newblock [Online; accessed 19-Mars 2018].
+
+\bibitem[Stecanella(2017)]{svm:005}
+Bruno Stecanella.
+\newblock An introduction to support vector machines (svm), 2017.
+\newblock URL
+  \url{https://monkeylearn.com/blog/introduction-to-support-vector-machines-svm/}.
 \newblock [Online; accessed 19-Mars 2018].
 
 \end{thebibliography}
