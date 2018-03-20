@@ -2,36 +2,34 @@
 \contentsline {paragraph}{Nyckelord:}{iii}
 \contentsline {chapter}{\numberline {1}Introduktion}{1}
 \contentsline {chapter}{\numberline {2}Bakgrund}{2}
-\contentsline {section}{\numberline {2.1}Introduktion}{2}
-\contentsline {section}{\numberline {2.2}Sentimentanalys}{3}
-\contentsline {subsection}{\numberline {2.2.1}Klassificeringstekniker}{4}
-\contentsline {section}{\numberline {2.3}Maskininl\IeC {\"a}rning}{5}
-\contentsline {subsection}{\numberline {2.3.1}Naive Bayes}{7}
-\contentsline {subsection}{\numberline {2.3.2}Support Vector Machine}{7}
-\contentsline {subsection}{\numberline {2.3.3}XXX}{8}
-\contentsline {section}{\numberline {2.4}Datam\IeC {\"a}ngd}{8}
-\contentsline {subsection}{\numberline {2.4.1}SemEval}{8}
-\contentsline {subsection}{\numberline {2.4.2}Stanford Twitter Sentiment}{9}
-\contentsline {section}{\numberline {2.5}Twittersentimentanalys}{9}
-\contentsline {subsection}{\numberline {2.5.1}Utmaningar}{11}
-\contentsline {subsection}{\numberline {2.5.2}Problem}{12}
-\contentsline {section}{\numberline {2.6}Utv\IeC {\"a}rdering}{13}
-\contentsline {section}{\numberline {2.7}Sammanfattning}{14}
+\contentsline {section}{\numberline {2.1}Sentimentanalys}{3}
+\contentsline {subsection}{\numberline {2.1.1}Klassificeringstekniker}{4}
+\contentsline {section}{\numberline {2.2}Maskininl\IeC {\"a}rning}{5}
+\contentsline {subsection}{\numberline {2.2.1}Naive Bayes}{6}
+\contentsline {subsection}{\numberline {2.2.2}Support Vector Machine}{7}
+\contentsline {subsection}{\numberline {2.2.3}XXX}{8}
+\contentsline {section}{\numberline {2.3}Datam\IeC {\"a}ngd}{8}
+\contentsline {subsection}{\numberline {2.3.1}SemEval}{8}
+\contentsline {subsection}{\numberline {2.3.2}Stanford Twitter Sentiment}{9}
+\contentsline {section}{\numberline {2.4}Twittersentimentanalys}{9}
+\contentsline {subsection}{\numberline {2.4.1}Utmaningar}{11}
+\contentsline {subsection}{\numberline {2.4.2}Problem}{12}
+\contentsline {section}{\numberline {2.5}Utv\IeC {\"a}rdering}{13}
+\contentsline {section}{\numberline {2.6}Sammanfattning}{14}
 \contentsline {chapter}{\numberline {3}Experiment}{15}
-\contentsline {section}{\numberline {3.1}Intro}{15}
-\contentsline {section}{\numberline {3.2}Bearbetning av datam\IeC {\"a}ngd}{15}
-\contentsline {section}{\numberline {3.3}S\IeC {\"a}rdragsurval}{19}
-\contentsline {section}{\numberline {3.4}Algoritmer}{21}
-\contentsline {subsection}{\numberline {3.4.1}Naive Bayes}{21}
-\contentsline {subsection}{\numberline {3.4.2}Support Vector Machine}{22}
-\contentsline {section}{\numberline {3.5}Implementation}{25}
-\contentsline {section}{\numberline {3.6}Databearbetning}{25}
-\contentsline {subsection}{\numberline {3.6.1}Lexikon}{25}
-\contentsline {subsection}{\numberline {3.6.2}Naive Bayes}{25}
-\contentsline {subsection}{\numberline {3.6.3}Support Vector Machine}{25}
-\contentsline {subsection}{\numberline {3.6.4}Prediction program.}{25}
-\contentsline {subsection}{\numberline {3.6.5}* ev GUI implementation om tid finns *}{25}
-\contentsline {section}{\numberline {3.7}Sammanfattning}{25}
+\contentsline {section}{\numberline {3.1}Bearbetning av datam\IeC {\"a}ngd}{15}
+\contentsline {section}{\numberline {3.2}S\IeC {\"a}rdragsurval}{19}
+\contentsline {section}{\numberline {3.3}Algoritmer}{21}
+\contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{21}
+\contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{22}
+\contentsline {section}{\numberline {3.4}Implementation}{25}
+\contentsline {section}{\numberline {3.5}Databearbetning}{25}
+\contentsline {subsection}{\numberline {3.5.1}Lexikon}{25}
+\contentsline {subsection}{\numberline {3.5.2}Naive Bayes}{25}
+\contentsline {subsection}{\numberline {3.5.3}Support Vector Machine}{25}
+\contentsline {subsection}{\numberline {3.5.4}Prediction program.}{25}
+\contentsline {subsection}{\numberline {3.5.5}* ev GUI implementation om tid finns *}{25}
+\contentsline {section}{\numberline {3.6}Sammanfattning}{25}
 \contentsline {chapter}{\numberline {4}Resultat}{26}
 \contentsline {section}{\numberline {4.1}Intro}{26}
 \contentsline {section}{\numberline {4.2}Resultatet mellan modellerna}{26}
