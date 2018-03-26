@@ -574,6 +574,18 @@
   Url                      = {http://www.sciencedirect.com/science/article/pii/S1877050916311607}
 }
 
+@Misc{svm:005,
+  Title                    = {An introduction to Support Vector Machines (SVM)},
+
+  Author                   = {Bruno Stecanella},
+  Note                     = {[Online; accessed 19-Mars 2018]},
+  Year                     = {2017},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.19},
+  Url                      = {https://monkeylearn.com/blog/introduction-to-support-vector-machines-svm/}
+}
+
 @Misc{nb:004,
   Title                    = {Bernoulli Distribution: Definition and Examples},
 
