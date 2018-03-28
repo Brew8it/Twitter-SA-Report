@@ -381,6 +381,9 @@ I \ref{MLnb} beskrivs det att Naive Bayes algoritmen är baserad på Bayes theor
 p(A|B) = \frac{p(B|A) * p(A)}{P(B)}.
 \end{equation}
 
+För att ekvation \ref{eq:phat} skall vara “Naive” antar vi att varje ord $b_w$ i $B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar $B$ utan $b_w$, $P(B) = P(b_{w1}) * P(b_{w2}) * … * P(b_{wn})$ där $n$ är antalet ord i $B$.
+
+
 
 \subsection{Support Vector Machine}
 SVM-algoritmen skapar en modell utifrån en given mängd märkt träningsdata \cite{svm:002}. 
