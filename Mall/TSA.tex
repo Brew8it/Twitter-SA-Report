@@ -40,6 +40,8 @@
 \usepackage{float}
 
 
+\usepackage{amsmath}
+
 
 
 %% break long URLs in references.
@@ -384,11 +386,40 @@ P(A|B) = \frac{P(B|A) * P(A)}{P(B)}.
 
 För att ekvation \ref{eq:bt} skall vara “Naive” antar vi att varje ord $b_w$ i $B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar $B$ utan $b_w$, $P(B|A) = P(b_{w1}|A) * P(b_{w2}|A) * … * P(b_{wn}|A)$ där $n$ är antalet ord i $B$.
 
-För att beräkna sannolikheten att $b_w$ är $A$ används en Dirichlet prior \cite{wiki:012, nb:007} där $N_{b_w}$ är hur många gånger $b_w$ förekommer i delmängden av data för $A$, $N_A$ är summan av alla ord i delmängden för $A$, $\alpha$ och $\alpha_n$ används för att utföra additiv utjämning \cite{wiki:013} där $\alpha = 1$ och $alpha_n$ är summan antal möjliga ord som existerar i hela datamängden, 
+För att beräkna sannolikheten att $b_w$ är $A$ används en Dirichlet prior \cite{wiki:012, nb:007} där $N_{b_w}$ är hur många gånger $b_w$ förekommer i delmängden av data för $A$, $N_A$ är summan av alla ord i delmängden för $A$, $\alpha$ och $\alpha_n$ används för att utföra additiv utjämning \cite{wiki:013} där $\alpha = 1$ och $\alpha_n$ är summan antal möjliga ord som existerar i hela datamängden, 
 
 \begin{equation}
 P(w_b|A)= \frac{N_{b_w} + \alpha}{N_A + \alpha_n}.
 \end{equation}
+
+I tabell \ref{tab:dataset} illustreras en datamängd med fyra twitterinlägg och dess märkning, denna datamängden kan användas för att beräkna om twitterinlägget “solen skiner alltid i karlstad” är positiv eller negativ. Genom att räkna ut sannolikheten $P(Positiv|solen skiner alltid i karlstad)$ och $P(Negativ|solen skiner alltid i karlstad)$ kan märkning bestämmas, detta görs genom att jämföra vilken sannolikhet som blir störst. Och eftersom vi ska jämföra uträkningarna mellan varandra kan divisionen med $P(B)$ strykas ur bägge uträkningarna och vi för följande ekvationer,
+
+\begin{equation}\label{eq:nbpos}
+P(Positiv|solen skiner alltid i karlstad) = P(solen|Positiv) * P(skiner|Positiv) * P(alltid|Positiv) * P(i|Positiv) *  P(karlstad|Positiv) * P(Positiv)
+\end{equation}
+
+\begin{equation}\label{eq:nbpos}
+P(Negativ|solen skiner alltid i karlstad) = P(solen|Negativ) * … * P(karlstad|Negativ) * P(Negativ)
+\end{equation}
+
+
+
+\begin{table}
+\centering
+\caption{sätt tabell text!!}
+\label{tab:dataset}
+    \begin{tabular}{ccc}
+    \toprule
+    \textbf{Twitterinlägg} & \textbf{Märkning} \\
+    \midrule
+    ser fram emot en dag i solen & Positiv \\
+    jävla skit väder & Negativ \\
+    vilken jävla kung du är linkan & Positv \\
+    fyfan vilken dålig match & Negativ \\
+    \bottomrule
+\end{tabular}
+\end{table}
+
 
 
 

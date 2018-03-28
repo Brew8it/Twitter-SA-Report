@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {3.2}S\IeC {\"a}rdragsurval}{19}
 \contentsline {section}{\numberline {3.3}Algoritmer}{21}
 \contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{21}
-\contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{22}
+\contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{23}
 \contentsline {section}{\numberline {3.4}Implementation}{25}
 \contentsline {section}{\numberline {3.5}Databearbetning}{25}
 \contentsline {subsection}{\numberline {3.5.1}Lexikon}{25}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  28 MAR 2018 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  28 MAR 2018 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -781,8 +781,66 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks31
 \@floatcapt=\box38
 )
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks32
+\ex@=\dimen174
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen175
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count118
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count119
+\leftroot@=\count120
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count121
+\DOTSCASE@=\count122
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box39
+\strutbox@=\box40
+\big@size=\dimen176
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count123
+\c@MaxMatrixCols=\count124
+\dotsspace@=\muskip10
+\c@parentequation=\count125
+\dspbrk@lvl=\count126
+\tag@help=\toks33
+\row@=\count127
+\column@=\count128
+\maxfields@=\count129
+\andhelp@=\toks34
+\eqnshift@=\dimen177
+\alignsep@=\dimen178
+\tagshift@=\dimen179
+\tagwidth@=\dimen180
+\totwidth@=\dimen181
+\lineht@=\dimen182
+\@envbody=\toks35
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks36
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip10
+\Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrextend.sty
@@ -791,56 +849,59 @@ with features of KOMA-Script classes)
 LaTeX Info: Redefining \textsubscript on input line 1277.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip48
-\f@ncyO@elh=\skip49
-\f@ncyO@erh=\skip50
-\f@ncyO@olh=\skip51
-\f@ncyO@orh=\skip52
-\f@ncyO@elf=\skip53
-\f@ncyO@erf=\skip54
-\f@ncyO@olf=\skip55
-\f@ncyO@orf=\skip56
+\fancy@headwidth=\skip51
+\f@ncyO@elh=\skip52
+\f@ncyO@erh=\skip53
+\f@ncyO@olh=\skip54
+\f@ncyO@orh=\skip55
+\f@ncyO@elf=\skip56
+\f@ncyO@erf=\skip57
+\f@ncyO@olf=\skip58
+\f@ncyO@orf=\skip59
 )
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip57
-\bibsep=\skip58
+\bibhang=\skip60
+\bibsep=\skip61
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count118
+\c@NAT@ctr=\count130
 )
 (/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
-) (./TSA.aux)
+) (./TSA.aux
+
+LaTeX Warning: Label `eq:nbpos' multiply defined.
+
+)
 \openout1 = `TSA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-
-ABD: EveryShipout initializing macros
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+ ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
-\scratchdimen=\dimen174
-\scratchbox=\box39
-\nofMPsegments=\count120
-\nofMParguments=\count121
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count122
-\MPscratchDim=\dimen175
-\MPnumerator=\count123
-\makeMPintoPDFobject=\count124
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count131
+\scratchdimen=\dimen183
+\scratchbox=\box41
+\nofMPsegments=\count132
+\nofMParguments=\count133
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count134
+\MPscratchDim=\dimen184
+\MPnumerator=\count135
+\makeMPintoPDFobject=\count136
+\everyMPtoPDFconversion=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -923,8 +984,8 @@ Runaway argument?
 ! Paragraph ended before \PackageWarning was complete.
 <to be read again> 
                    \par 
-l.98 
-     
+l.100 
+      
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
@@ -954,20 +1015,13 @@ My plan is to forget the whole thing and hope for the best.
 ]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 112.
+(Font)              size <24.88> substituted on input line 114.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 112.
+(Font)              size <24.88> substituted on input line 114.
 
-(./TSA.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 5.
- [9
+(./TSA.toc [9
 
 
 
@@ -1002,7 +1056,7 @@ File: ../figures/background/oversiktsfigur.png Graphic file (type png)
 
 <use ../figures/background/oversiktsfigur.png>
 Package pdftex.def Info: ../figures/background/oversiktsfigur.png used on input
- line 132.
+ line 134.
 (pdftex.def)             Requested size: 341.43306pt x 108.76376pt.
 
 
@@ -1015,7 +1069,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../figures/background/ml.png Graphic file (type png)
 
 <use ../figures/background/ml.png>
-Package pdftex.def Info: ../figures/background/ml.png used on input line 167.
+Package pdftex.def Info: ../figures/background/ml.png used on input line 169.
 (pdftex.def)             Requested size: 341.43306pt x 293.1499pt.
 
 
@@ -1026,20 +1080,20 @@ File: ../figures/background/klassmodell.png Graphic file (type png)
 
 <use ../figures/background/klassmodell.png>
 Package pdftex.def Info: ../figures/background/klassmodell.png used on input li
-ne 179.
+ne 181.
 (pdftex.def)             Requested size: 341.43306pt x 208.69019pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6 <../figures/background/ml.png>]
-Overfull \hbox (33.80516pt too wide) in paragraph at lines 192--193
+Overfull \hbox (33.80516pt too wide) in paragraph at lines 194--195
 \T1/cmr/m/n/12 SVM är en över-va-kad ma-ski-nin-lär-nings-al-go-ritm som kan an
 -vän-das till bå-de klassificerings-
  []
 
 
-LaTeX Warning: Reference `bac:intro' on page 7 undefined on input line 198.
+LaTeX Warning: Reference `bac:intro' on page 7 undefined on input line 200.
 
 [7 <../figures/background/klassmodell.png>] [8] [9]
 <../figures/background/exempeltweet.png, id=82, 745.78625pt x 61.22874pt>
@@ -1047,14 +1101,14 @@ File: ../figures/background/exempeltweet.png Graphic file (type png)
 
 <use ../figures/background/exempeltweet.png>
 Package pdftex.def Info: ../figures/background/exempeltweet.png used on input l
-ine 228.
+ine 230.
 (pdftex.def)             Requested size: 341.43306pt x 28.031pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [10] [11 <../figures/background/exempeltweet.png>] [12]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 272.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 274.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
@@ -1065,7 +1119,7 @@ File: ../figures/background/utvardering.png Graphic file (type png)
 
 <use ../figures/background/utvardering.png>
 Package pdftex.def Info: ../figures/background/utvardering.png used on input li
-ne 282.
+ne 284.
 (pdftex.def)             Requested size: 284.52756pt x 284.53922pt.
 
 
@@ -1081,10 +1135,10 @@ File: ../figures/background/dataset.png Graphic file (type png)
 
 <use ../figures/background/dataset.png>
 Package pdftex.def Info: ../figures/background/dataset.png used on input line 3
-14.
+16.
 (pdftex.def)             Requested size: 341.43306pt x 407.21497pt.
  [17] [18 <../figures/background/dataset.png>]
-Overfull \hbox (12.37566pt too wide) in paragraph at lines 340--341
+Overfull \hbox (12.37566pt too wide) in paragraph at lines 342--343
 []\T1/cmr/m/n/12 Om två el-ler fler mel-lanslag fö-re-kom-mer ef-ter varand-
  []
 
@@ -1092,42 +1146,79 @@ Overfull \hbox (12.37566pt too wide) in paragraph at lines 340--341
 File: ../figures/background/grams.png Graphic file (type png)
 
 <use ../figures/background/grams.png>
-Package pdftex.def Info: ../figures/background/grams.png used on input line 352
+Package pdftex.def Info: ../figures/background/grams.png used on input line 354
 .
 (pdftex.def)             Requested size: 256.0748pt x 183.22229pt.
  [19] [20 <../figures/background/grams.png>]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 385.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 387.
 
 [21]
-<../figures/background/linearsvm_hpwithmargins.png, id=130, 476.78125pt x 482.8
+Overfull \hbox (4.84645pt too wide) in paragraph at lines 395--396
+\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Positiv\OMS/cmsy/m/n/12 j\O
+ML/cmm/m/it/12 solenskineralltidikarlstad\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 och 
+$\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Negativ\OMS/cmsy/m/n/12 j\
+OML/cmm/m/it/12 solenskineralltidikarlstad\OT1/cmr/m/n/12 )$
+ []
+
+
+Overfull \hbox (322.72688pt too wide) detected at line 399
+\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Positiv\OMS/cmsy/m/n/12 j\O
+ML/cmm/m/it/12 solenskineralltidikarlstad\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 P
+\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 solen\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Posit
+iv\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^C \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OM
+L/cmm/m/it/12 skiner\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Positiv\OT1/cmr/m/n/12 )
+ \OMS/cmsy/m/n/12 ^^C \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 allti
+d\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Positiv\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^
+^C \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 i\OMS/cmsy/m/n/12 j\OML/
+cmm/m/it/12 Positiv\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^C \OML/cmm/m/it/12 P\OT
+1/cmr/m/n/12 (\OML/cmm/m/it/12 karlstad\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Posit
+iv\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^C \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OM
+L/cmm/m/it/12 Positiv\OT1/cmr/m/n/12 )
+ []
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 402.
+
+
+Overfull \hbox (94.6253pt too wide) detected at line 403
+\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Negativ\OMS/cmsy/m/n/12 j\O
+ML/cmm/m/it/12 solenskineralltidikarlstad\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 P
+\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 solen\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Negat
+iv\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^C \OML/cmm/m/it/12 ::: \OMS/cmsy/m/n/12 
+^^C \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 karlstad\OMS/cmsy/m/n/1
+2 j\OML/cmm/m/it/12 Negativ\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^C \OML/cmm/m/it
+/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Negativ\OT1/cmr/m/n/12 )
+ []
+
+[22]
+<../figures/background/linearsvm_hpwithmargins.png, id=135, 476.78125pt x 482.8
 0376pt>
 File: ../figures/background/linearsvm_hpwithmargins.png Graphic file (type png)
 
  <use ../figures/background/linearsvm_hpwithmargins.png>
 Package pdftex.def Info: ../figures/background/linearsvm_hpwithmargins.png used
- on input line 402.
+ on input line 433.
 (pdftex.def)             Requested size: 256.0748pt x 259.32515pt.
- [22]
-<../figures/background/nonlinearsvm.png, id=136, 467.7475pt x 482.80376pt>
+ [23 <../figures/background/linearsvm_hpwithmargins.png>]
+<../figures/background/nonlinearsvm.png, id=140, 467.7475pt x 482.80376pt>
 File: ../figures/background/nonlinearsvm.png Graphic file (type png)
 
 <use ../figures/background/nonlinearsvm.png>
 Package pdftex.def Info: ../figures/background/nonlinearsvm.png used on input l
-ine 411.
+ine 442.
 (pdftex.def)             Requested size: 256.0748pt x 264.32733pt.
- [23 <../figures/background/linearsvm_hpwithmargins.png>] [24 <../figures/backg
-round/nonlinearsvm.png>] [25]
+ [24 <../figures/background/nonlinearsvm.png>] [25]
 Kapitel 4.
 [26
 
 ]
-Overfull \hbox (1.19798pt too wide) in paragraph at lines 440--440
+Overfull \hbox (1.19798pt too wide) in paragraph at lines 471--471
 []\T1/cmr/bx/n/20.74 Implementations mäs-sigt vil-ken mo-dell
  []
 
 
-Overfull \hbox (14.16211pt too wide) in paragraph at lines 441--441
+Overfull \hbox (14.16211pt too wide) in paragraph at lines 472--472
 []\T1/cmr/bx/n/20.74 implementations jäm-fö-rel-se (re-sul-tat VS
  []
 
@@ -1193,7 +1284,7 @@ vector -[] machines -[]
  []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 130--135
+Underfull \hbox (badness 2205) in paragraph at lines 130--135
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Sup-port vector machi-ne --- Wi-ki
 -pe-dia, the
  []
@@ -1290,15 +1381,18 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 14932 strings out of 493029
- 282144 string characters out of 6136234
- 359825 words of memory out of 5000000
- 18130 multiletter control sequences out of 15000+600000
- 15869 words of font info for 36 fonts, out of 8000000 for 9000
+ 15567 strings out of 493029
+ 289516 string characters out of 6136234
+ 371358 words of memory out of 5000000
+ 18746 multiletter control sequences out of 15000+600000
+ 17169 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,11n,58p,1313b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,11n,58p,1313b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/
@@ -1312,7 +1406,7 @@ super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb><
 /usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fon
 ts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
 uper/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on TSA.pdf (44 pages, 466141 bytes).
+Output written on TSA.pdf (44 pages, 469698 bytes).
 PDF statistics:
  231 PDF objects out of 1000 (max. 8388607)
  150 compressed objects within 2 object streams
