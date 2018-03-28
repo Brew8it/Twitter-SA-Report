@@ -424,6 +424,22 @@
   Keywords                 = {Bayes methods;feature extraction;logistics;pattern classification;regression analysis;sentiment analysis;social networking (online);support vector machines;Twitter;URL;feature extraction;logistic regression;naive Bayes classifiers;public feeling;random forest classifiers;sentiment analysis;sentiment classification;support vector machine;text preprocessing;Analytical models;Organizations;Sentiment analysis;Support vector machines;Terminology;Twitter;Uniform resource locators;Twitter;sentiment analysis;text pre-processing}
 }
 
+@InProceedings{10.1007/BFb0026683,
+  Title                    = {Text categorization with Support Vector Machines: Learning with many relevant features},
+  Author                   = {Joachims, Thorsten},
+  Booktitle                = {Machine Learning: ECML-98},
+  Year                     = {1998},
+
+  Address                  = {Berlin, Heidelberg},
+  Editor                   = {N{\'e}dellec, Claire
+and Rouveirol, C{\'e}line},
+  Pages                    = {137--142},
+  Publisher                = {Springer Berlin Heidelberg},
+
+  Abstract                 = {This paper explores the use of Support Vector Machines (SVMs) for learning text classifiers from examples. It analyzes the particular properties of learning with text data and identifies why SVMs are appropriate for this task. Empirical results support the theoretical findings. SVMs achieve substantial improvements over the currently best performing methods and behave robustly over a variety of different learning tasks. Furthermore they are fully automatic, eliminating the need for manual parameter tuning.},
+  ISBN                     = {978-3-540-69781-7}
+}
+
 @Article{kolchyna2015twitter,
   Title                    = {Twitter sentiment analysis: Lexicon method, machine learning method and their combination},
   Author                   = {Kolchyna, Olga and Souza, Tharsis TP and Treleaven, Philip and Aste, Tomaso},

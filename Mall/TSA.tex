@@ -125,7 +125,8 @@
 
 
 \chapter{Bakgrund}
-Syftet med studien är att utvärdera (x) stycken klassificeringsmodeller inom maskininlärning och hur bearbetningen samt märkningen av en datamängd påverkar en klassificeringsmodells prestanda. Maskininlärningsalgoritmerna som kommer att användas för att få fram klassiciferingsmodellerna är Naive Bayes (NB), Support Vector Machine (SVM) och ZZZZZ. Figur \ref{fig:overfig} visar en förenklad bild av hur processen för att utvärdera klassificeringsmodellerna kommer att se ut. Datamängden består av en mängd indata som är märkt med förväntad utdata, som går igenom en bearbetningsprocess där t.ex. data som inte tillför något värde tas bort och där mängden av data delas upp i tränings- och valideringsdata.  Bearbetningsprocessen diskuteras mer ingående i \ref{exp:pre}. På den bearbetade datan utförs ett särdragsurval, där dataspecifika särdrag plockas ut…MER .. som diskuteras vidare i \ref{exp:feat}. Träningsmängden används av maskininlärningsalgoritmen för att skapa klassiciferingsmodellen. När klassificeringsmodellen är framtagen används valideringmängden för att utvärdera prestandan av modellen.
+Syftet med studien är att utvärdera tre stycken klassificeringsmodeller inom maskininlärning och hur bearbetningen samt märkningen av en datamängd påverkar en klassificeringsmodells prestanda. Maskininlärningsalgoritmerna som kommer att användas för att få fram klassiciferingsmodellerna är Naive Bayes (NB) och Support Vector Machine  (SVM). Den sista klassificeringsmodellen kommer att representeras av ett neuralt nätverk, mer specifickt ett Convolutional neural network (CNN). Figur \ref{fig:overfig} visar en förenklad bild av hur processen för att utvärdera klassificeringsmodellerna kommer att se ut. Datamängden består av en mängd indata som är märkt med förväntad utdata, som går igenom en bearbetningsprocess där t.ex. data som inte tillför något värde tas bort och där mängden av data delas upp i tränings- och valideringsdata.  Bearbetningsprocessen diskuteras mer ingående i \ref{exp:pre}. På den bearbetade datan utförs ett särdragsurval, där dataspecifika särdrag plockas ut…MER .. som diskuteras vidare i \ref{exp:feat}. Träningsmängden används av maskininlärningsalgoritmen för att skapa klassiciferingsmodellen. När klassificeringsmodellen är framtagen används valideringmängden för att utvärdera prestandan av modellen.
+
 
 \begin{figure}[h]
 \includegraphics[width=12cm]{oversiktsfigur}
@@ -376,14 +377,29 @@ Twitter-specifika särdrag är särdrag som är specifika för Twitters domän s
 \section{Algoritmer}
 ** Skall det skrivas något kort intro här?***
 \subsection{Naive Bayes}
-I \ref{MLnb} beskrivs det att Naive Bayes algoritmen är baserad på Bayes theorem  \cite{wiki:009} vilket för TSA betyder att räkna ut sannolikheten om ett twitterinlägg $B$ är positivt eller negativt $A$. Där $P(A | B)$ är en villkorlig sannolikhet för att $A$ inträffar givet att $B$ är sant, $P(B | A)$ är också en villkorlig sannolikhet för att $B$ inträffar givet att $A$ är sant. $P(A)$ och $P(B)$ är sannolikheten att observera $P(A)$ och $P(B)$ oberoende av varandra,
+I \ref{MLnb} beskrivs det att Naive Bayes algoritmen är baserad på Bayes theorem  \cite{wiki:009} vilket för TSA betyder att räkna ut sannolikheten om ett twitterinlägg $B$ är positivt $A$ eller negativt $\neg A$. 
+\begin{equation}\label{eq:btpos}
+p(A|B) = \frac{p(B|A) * p(A)}{P(B)}
+\end{equation}
 \begin{equation}\label{eq:bt}
-p(A|B) = \frac{p(B|A) * p(A)}{P(B)}.
+p(!A|B) = \frac{p(B|\neg A) * p(!A)}{P(B)}
+\end{equation}
+
+Som nämns ovan är TSA ett binärt klassificeringsproblem d.v.s om  $B$ är $A$ eller $\neg A$ . Därför delas ekvation \ref{eq:btpos} med ekvation \ref{eq:bt} vilket ger oss $\hat{P} > 1 = A$ och om $\hat{P} < 1 = \neg A$.  
+
+\begin{equation}\label{eq:phat}
+\hat{P} = \frac{p(B|A) * p(A)}{p(B|\neg A) * p(\neg A)}
 \end{equation}
 
 För att ekvation \ref{eq:phat} skall vara “Naive” antar vi att varje ord $b_w$ i $B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar $B$ utan $b_w$, $P(B) = P(b_{w1}) * P(b_{w2}) * … * P(b_{wn})$ där $n$ är antalet ord i $B$.
 
+För att beräkna sannolikheten att $b_w$ är $A$ eller $\neg A$ används en Dirichlet prior \cite{wiki:012}\cite{nb:007} som ger oss en enkel formel för att räkna ut sannolikheten. Där $N_{ci}$ är antalet gånger ordet $w_b$ förekommer i $A's$ eller $\neg A's$ datamängd, delat med antalet ord i $A$ eller $\neg A$ $(N_c)$. Ett problem som uppstår är när $N_{ci} = 0$ d.v.s när ordet $w_b$ saknas i datamängden. För att motverka detta används så kallad additiv utjämning \cite{wiki:013}, där $\alpha_i$ sätts till 1 och $\alpha$ betecknar antal ord i datamängden. 
 
+\begin{equation}
+P(A | w_b)= \frac{N_{ci} + \alpha_i}{N_c + \alpha}
+\end{equation}
+
+*** Exemple där vi visar att ett tweet är positivt med uträkningar ***
 
 \subsection{Support Vector Machine}
 SVM-algoritmen skapar en modell utifrån en given mängd märkt träningsdata \cite{svm:002}. 
