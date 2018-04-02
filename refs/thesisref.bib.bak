@@ -2,6 +2,16 @@
 % Encoding: UTF-8
 
 
+@Misc{wiki:015,
+  Title                    = {Artificial neural network --- Wikipedia{,} The Free Encyclopedia},
+
+  Author                   = {Wikipedia contributors},
+  Note                     = {[Online; accessed 28-March-2018]},
+  Year                     = {2018},
+
+  Url                      = {https://en.wikipedia.org/w/index.php?title=Artificial_neural_network&oldid=830851868}
+}
+
 @Misc{wiki:002,
   Title                    = {Precision and recall --- {W}ikipedia{,} The Free Encyclopedia},
 
@@ -211,6 +221,18 @@
   Year                     = {2011},
   Organization             = {Association for Computational Linguistics},
   Pages                    = {30--38}
+}
+
+@InProceedings{cnn:001,
+  Title                    = {Understanding of a convolutional neural network},
+  Author                   = {S. Albawi and T. A. Mohammed and S. Al-Zawi},
+  Booktitle                = {2017 International Conference on Engineering and Technology (ICET)},
+  Year                     = {2017},
+  Month                    = {Aug},
+  Pages                    = {1-6},
+
+  Doi                      = {10.1109/ICEngTechnol.2017.8308186},
+  Keywords                 = {Convolution;Convolutional neural networks;Feature extraction;Image edge detection;Neurons;Image recognition;artificial neural networks;computer vision;convolutional neural networks;deep learning;machine learning}
 }
 
 @Misc{SemEval:003,
@@ -693,6 +715,13 @@ and Rouveirol, C{\'e}line},
 
   Doi                      = {10.1109/FSKD.2015.7382029},
   Keywords                 = {Bayes methods;Internet;Web sites;feature extraction;natural language processing;pattern classification;probability;text analysis;F1-Score;N-Gram model;Naive Bayes algorithm;Sina Weibo;Tianya;Twitter;Web 2.0;Weibo;continuous word sequences;feature extending method;feature extension;feature extension mode library;forums;n-gram extraction;precision;recall;short text classification;social media websites;Classification algorithms;Computational modeling;Feature extraction;Internet;Libraries;Semantics;Text categorization;Classification;Feature Extension;Na??ve Bayes;Short Text;The N-Gram Model}
+}
+
+@Article{cnn:002,
+  Title                    = {A sensitivity analysis of (and practitioners' guide to) convolutional neural networks for sentence classification},
+  Author                   = {Zhang, Ye and Wallace, Byron},
+  Journal                  = {arXiv preprint arXiv:1510.03820},
+  Year                     = {2015}
 }
 
 @Misc{SemEval:001,
