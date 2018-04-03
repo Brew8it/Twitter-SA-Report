@@ -1,4 +1,4 @@
-\begin{thebibliography}{42}
+\begin{thebibliography}{46}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -132,6 +132,38 @@ Wikipedia contributors.
   2002{\natexlab{b}}.
 \newblock URL \url{https://en.wikipedia.org/wiki/Support_vector_machine}.
 \newblock [Online; accessed 12-February 2018].
+
+\bibitem[Albawi et~al.(2017)Albawi, Mohammed, and Al-Zawi]{cnn:001}
+S.~Albawi, T.~A. Mohammed, and S.~Al-Zawi.
+\newblock Understanding of a convolutional neural network.
+\newblock In \emph{2017 International Conference on Engineering and Technology
+  (ICET)}, pages 1--6, Aug 2017.
+\newblock \doi{10.1109/ICEngTechnol.2017.8308186}.
+
+\bibitem[contributors(2018)]{wiki:015}
+Wikipedia contributors.
+\newblock Artificial neural network --- wikipedia{,} the free encyclopedia,
+  2018.
+\newblock URL
+  \url{https://en.wikipedia.org/w/index.php?title=Artificial_neural_network&oldid=830851868}.
+\newblock [Online; accessed 28-March-2018].
+
+\bibitem[Kim(2014)]{cnn:003}
+Yoon Kim.
+\newblock Convolutional neural networks for sentence classification.
+\newblock \emph{arXiv preprint arXiv:1408.5882}, 2014.
+
+\bibitem[Liao et~al.(2017)Liao, Wang, Yu, Sato, and Cheng]{cnn:006}
+Shiyang Liao, Junbo Wang, Ruiyun Yu, Koichi Sato, and Zixue Cheng.
+\newblock Cnn for situations understanding based on sentiment analysis of
+  twitter data.
+\newblock \emph{Procedia Computer Science}, 111:\penalty0 376 -- 381, 2017.
+\newblock ISSN 1877-0509.
+\newblock \doi{https://doi.org/10.1016/j.procs.2017.06.037}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S1877050917312103}.
+\newblock The 8th International Conference on Advances in Information
+  Technology.
 
 \bibitem[Go et~al.(2009{\natexlab{a}})Go, Bhayani, and Huang]{sts:001}
 Alec Go, Richa Bhayani, and Lei Huang.
