@@ -22,27 +22,27 @@
 \contentsline {section}{\numberline {3.3}Algoritmer}{21}
 \contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{21}
 \contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{23}
-\contentsline {section}{\numberline {3.4}Implementation}{25}
-\contentsline {section}{\numberline {3.5}Databearbetning}{25}
-\contentsline {subsection}{\numberline {3.5.1}Lexikon}{25}
-\contentsline {subsection}{\numberline {3.5.2}Naive Bayes}{25}
-\contentsline {subsection}{\numberline {3.5.3}Support Vector Machine}{25}
-\contentsline {subsection}{\numberline {3.5.4}Prediction program.}{25}
-\contentsline {subsection}{\numberline {3.5.5}* ev GUI implementation om tid finns *}{25}
-\contentsline {section}{\numberline {3.6}Sammanfattning}{25}
-\contentsline {chapter}{\numberline {4}Resultat}{26}
-\contentsline {section}{\numberline {4.1}Intro}{26}
-\contentsline {section}{\numberline {4.2}Resultatet mellan modellerna}{26}
-\contentsline {subsection}{\numberline {4.2.1}Dataset 1 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{26}
-\contentsline {subsection}{\numberline {4.2.2}Dataset 2 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{26}
-\contentsline {subsection}{\numberline {4.2.3}Dataset 3 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{26}
-\contentsline {section}{\numberline {4.3}Implementations m\IeC {\"a}ssigt vilken modell \IeC {\"a}r l\IeC {\"a}ttast?}{27}
-\contentsline {section}{\numberline {4.4}implementations j\IeC {\"a}mf\IeC {\"o}relse (resultat VS f\IeC {\"o}rv\IeC {\"a}ntat)}{27}
-\contentsline {section}{\numberline {4.5}Summering}{27}
-\contentsline {chapter}{\numberline {5}Slutsats}{28}
-\contentsline {section}{\numberline {5.1}Sammanfattning}{28}
-\contentsline {section}{\numberline {5.2}Problem}{28}
-\contentsline {section}{\numberline {5.3}Begr\IeC {\"a}nsningar}{28}
-\contentsline {section}{\numberline {5.4}Vidare utveckling}{29}
-\contentsline {section}{\numberline {5.5}Slutord}{29}
+\contentsline {section}{\numberline {3.4}Implementation}{26}
+\contentsline {section}{\numberline {3.5}Databearbetning}{26}
+\contentsline {subsection}{\numberline {3.5.1}Lexikon}{26}
+\contentsline {subsection}{\numberline {3.5.2}Naive Bayes}{26}
+\contentsline {subsection}{\numberline {3.5.3}Support Vector Machine}{26}
+\contentsline {subsection}{\numberline {3.5.4}Prediction program.}{26}
+\contentsline {subsection}{\numberline {3.5.5}* ev GUI implementation om tid finns *}{26}
+\contentsline {section}{\numberline {3.6}Sammanfattning}{26}
+\contentsline {chapter}{\numberline {4}Resultat}{27}
+\contentsline {section}{\numberline {4.1}Intro}{27}
+\contentsline {section}{\numberline {4.2}Resultatet mellan modellerna}{27}
+\contentsline {subsection}{\numberline {4.2.1}Dataset 1 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{27}
+\contentsline {subsection}{\numberline {4.2.2}Dataset 2 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{27}
+\contentsline {subsection}{\numberline {4.2.3}Dataset 3 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{27}
+\contentsline {section}{\numberline {4.3}Implementations m\IeC {\"a}ssigt vilken modell \IeC {\"a}r l\IeC {\"a}ttast?}{28}
+\contentsline {section}{\numberline {4.4}implementations j\IeC {\"a}mf\IeC {\"o}relse (resultat VS f\IeC {\"o}rv\IeC {\"a}ntat)}{28}
+\contentsline {section}{\numberline {4.5}Summering}{28}
+\contentsline {chapter}{\numberline {5}Slutsats}{29}
+\contentsline {section}{\numberline {5.1}Sammanfattning}{29}
+\contentsline {section}{\numberline {5.2}Problem}{29}
+\contentsline {section}{\numberline {5.3}Begr\IeC {\"a}nsningar}{29}
+\contentsline {section}{\numberline {5.4}Vidare utveckling}{30}
+\contentsline {section}{\numberline {5.5}Slutord}{30}
 \contentsfinish 
