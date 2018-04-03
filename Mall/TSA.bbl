@@ -1,4 +1,4 @@
-\begin{thebibliography}{41}
+\begin{thebibliography}{42}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -211,6 +211,17 @@ Dimitrios Effrosynidis, Symeon Symeonidis, and Avi Arampatzis.
 \newblock In \emph{International Conference on Theory and Practice of Digital
   Libraries}, pages 394--406. Springer, 2017.
 
+\bibitem[Haddi et~al.(2013)Haddi, Liu, and Shi]{HADDI201326}
+Emma Haddi, Xiaohui Liu, and Yong Shi.
+\newblock The role of text pre-processing in sentiment analysis.
+\newblock \emph{Procedia Computer Science}, 17:\penalty0 26 -- 32, 2013.
+\newblock ISSN 1877-0509.
+\newblock \doi{https://doi.org/10.1016/j.procs.2013.05.005}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S1877050913001385}.
+\newblock First International Conference on Information Technology and
+  Quantitative Management.
+
 \bibitem[Jianqiang and Xiaolin(2017)]{7862202}
 Z.~Jianqiang and G.~Xiaolin.
 \newblock Comparison research on text pre-processing methods on twitter
@@ -277,11 +288,11 @@ Wikipedia contributors.
 \newblock URL \url{https://en.wikipedia.org/wiki/Kernel_method}.
 \newblock [Online; accessed 19-Mars 2018].
 
-\bibitem[Stecanella(2017)]{svm:005}
-Bruno Stecanella.
-\newblock An introduction to support vector machines (svm), 2017.
+\bibitem[Kowalczyk(2014)]{svm:006}
+Alexandre Kowalczyk.
+\newblock Linear kernel: Why is it recommended for text classification ?, 2014.
 \newblock URL
-  \url{https://monkeylearn.com/blog/introduction-to-support-vector-machines-svm/}.
-\newblock [Online; accessed 19-Mars 2018].
+  \url{https://www.svm-tutorial.com/2014/10/svm-linear-kernel-good-text-classification/}.
+\newblock [Online; accessed 27-Mars 2018].
 
 \end{thebibliography}
