@@ -8,9 +8,10 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Utv\IeC {\"a}rderingsmetoder f\IeC {\"o}r TSA.}}{14}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Bearbetningstekniker som anv\IeC {\"a}nds f\IeC {\"o}r att bearbeta data vid experimentet.}}{18}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Illustrerar n-grams p\IeC {\r a} en mening.}}{20}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces .}}{24}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces .}}{25}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Illustrerar n-grams p\IeC {\r a} en mening.}}{21}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Exempel p\IeC {\r a} en linj\IeC {\"a}r klassificerare d\IeC {\"a}r de tv\IeC {\r a} kateogrierna \IeC {\"a}r linj\IeC {\"a}rt separabla.}}{25}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Exempel p\IeC {\r a} en linj\IeC {\"a}r klassificerare d\IeC {\"a}r de tv\IeC {\r a} kategorierna inte \IeC {\"a}r linj\IeC {\"a}rt separabla.}}{26}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Exempel p\IeC {\r a} icke-linj\IeC {\"a}r klassificerare, d\IeC {\"a}r hyperplanet har dragits i en h\IeC {\"o}gre dimension.}}{27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 
