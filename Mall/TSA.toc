@@ -7,43 +7,43 @@
 \contentsline {section}{\numberline {2.2}Maskininl\IeC {\"a}rning}{5}
 \contentsline {subsection}{\numberline {2.2.1}Naive Bayes}{7}
 \contentsline {subsection}{\numberline {2.2.2}Support Vector Machine}{7}
-\contentsline {subsection}{\numberline {2.2.3}XXX}{8}
+\contentsline {subsection}{\numberline {2.2.3}Convolutional neural network}{8}
 \contentsline {section}{\numberline {2.3}Datam\IeC {\"a}ngd}{8}
-\contentsline {subsection}{\numberline {2.3.1}SemEval}{8}
+\contentsline {subsection}{\numberline {2.3.1}SemEval}{9}
 \contentsline {subsection}{\numberline {2.3.2}Stanford Twitter Sentiment}{9}
 \contentsline {section}{\numberline {2.4}Twittersentimentanalys}{9}
 \contentsline {subsection}{\numberline {2.4.1}Utmaningar}{11}
-\contentsline {subsection}{\numberline {2.4.2}Problem}{12}
+\contentsline {subsection}{\numberline {2.4.2}Problem}{13}
 \contentsline {section}{\numberline {2.5}Utv\IeC {\"a}rdering}{13}
-\contentsline {section}{\numberline {2.6}Sammanfattning}{14}
-\contentsline {chapter}{\numberline {3}Experiment}{15}
-\contentsline {section}{\numberline {3.1}Bearbetning av datam\IeC {\"a}ngd}{15}
-\contentsline {section}{\numberline {3.2}S\IeC {\"a}rdragsurval}{20}
-\contentsline {section}{\numberline {3.3}Algoritmer}{22}
-\contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{22}
-\contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{24}
-\contentsline {subsection}{\numberline {3.3.3}Convolutional Neural Network}{28}
-\contentsline {section}{\numberline {3.4}Implementation}{28}
-\contentsline {section}{\numberline {3.5}Databearbetning}{28}
-\contentsline {subsection}{\numberline {3.5.1}Lexikon}{28}
-\contentsline {subsection}{\numberline {3.5.2}Naive Bayes}{28}
-\contentsline {subsection}{\numberline {3.5.3}Support Vector Machine}{28}
-\contentsline {subsection}{\numberline {3.5.4}Prediction program.}{28}
-\contentsline {subsection}{\numberline {3.5.5}* ev GUI implementation om tid finns *}{28}
-\contentsline {section}{\numberline {3.6}Sammanfattning}{28}
-\contentsline {chapter}{\numberline {4}Resultat}{29}
-\contentsline {section}{\numberline {4.1}Intro}{29}
-\contentsline {section}{\numberline {4.2}Resultatet mellan modellerna}{29}
-\contentsline {subsection}{\numberline {4.2.1}Dataset 1 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{29}
-\contentsline {subsection}{\numberline {4.2.2}Dataset 2 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{29}
-\contentsline {subsection}{\numberline {4.2.3}Dataset 3 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{29}
-\contentsline {section}{\numberline {4.3}Implementations m\IeC {\"a}ssigt vilken modell \IeC {\"a}r l\IeC {\"a}ttast?}{30}
-\contentsline {section}{\numberline {4.4}implementations j\IeC {\"a}mf\IeC {\"o}relse (resultat VS f\IeC {\"o}rv\IeC {\"a}ntat)}{30}
-\contentsline {section}{\numberline {4.5}Summering}{30}
-\contentsline {chapter}{\numberline {5}Slutsats}{31}
-\contentsline {section}{\numberline {5.1}Sammanfattning}{31}
-\contentsline {section}{\numberline {5.2}Problem}{31}
-\contentsline {section}{\numberline {5.3}Begr\IeC {\"a}nsningar}{31}
-\contentsline {section}{\numberline {5.4}Vidare utveckling}{32}
-\contentsline {section}{\numberline {5.5}Slutord}{32}
+\contentsline {section}{\numberline {2.6}Sammanfattning}{15}
+\contentsline {chapter}{\numberline {3}Experiment}{16}
+\contentsline {section}{\numberline {3.1}Bearbetning av datam\IeC {\"a}ngd}{16}
+\contentsline {section}{\numberline {3.2}S\IeC {\"a}rdragsurval}{21}
+\contentsline {section}{\numberline {3.3}Algoritmer}{23}
+\contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{23}
+\contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{25}
+\contentsline {subsection}{\numberline {3.3.3}Convolutional Neural Network}{29}
+\contentsline {section}{\numberline {3.4}Implementation}{29}
+\contentsline {section}{\numberline {3.5}Databearbetning}{29}
+\contentsline {subsection}{\numberline {3.5.1}Lexikon}{29}
+\contentsline {subsection}{\numberline {3.5.2}Naive Bayes}{29}
+\contentsline {subsection}{\numberline {3.5.3}Support Vector Machine}{29}
+\contentsline {subsection}{\numberline {3.5.4}Prediction program.}{29}
+\contentsline {subsection}{\numberline {3.5.5}* ev GUI implementation om tid finns *}{29}
+\contentsline {section}{\numberline {3.6}Sammanfattning}{29}
+\contentsline {chapter}{\numberline {4}Resultat}{30}
+\contentsline {section}{\numberline {4.1}Intro}{30}
+\contentsline {section}{\numberline {4.2}Resultatet mellan modellerna}{30}
+\contentsline {subsection}{\numberline {4.2.1}Dataset 1 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{30}
+\contentsline {subsection}{\numberline {4.2.2}Dataset 2 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{30}
+\contentsline {subsection}{\numberline {4.2.3}Dataset 3 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{30}
+\contentsline {section}{\numberline {4.3}Implementations m\IeC {\"a}ssigt vilken modell \IeC {\"a}r l\IeC {\"a}ttast?}{31}
+\contentsline {section}{\numberline {4.4}implementations j\IeC {\"a}mf\IeC {\"o}relse (resultat VS f\IeC {\"o}rv\IeC {\"a}ntat)}{31}
+\contentsline {section}{\numberline {4.5}Summering}{31}
+\contentsline {chapter}{\numberline {5}Slutsats}{32}
+\contentsline {section}{\numberline {5.1}Sammanfattning}{32}
+\contentsline {section}{\numberline {5.2}Problem}{32}
+\contentsline {section}{\numberline {5.3}Begr\IeC {\"a}nsningar}{32}
+\contentsline {section}{\numberline {5.4}Vidare utveckling}{33}
+\contentsline {section}{\numberline {5.5}Slutord}{33}
 \contentsfinish 

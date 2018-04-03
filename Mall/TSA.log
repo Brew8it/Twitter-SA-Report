@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  3 APR 2018 15:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  3 APR 2018 16:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,7 +1072,7 @@ File: ../figures/background/oversiktsfigur.png Graphic file (type png)
 
 <use ../figures/background/oversiktsfigur.png>
 Package pdftex.def Info: ../figures/background/oversiktsfigur.png used on input
- line 136.
+ line 135.
 (pdftex.def)             Requested size: 341.43306pt x 108.76376pt.
 
 
@@ -1085,7 +1085,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../figures/background/ml.png Graphic file (type png)
 
 <use ../figures/background/ml.png>
-Package pdftex.def Info: ../figures/background/ml.png used on input line 171.
+Package pdftex.def Info: ../figures/background/ml.png used on input line 170.
 (pdftex.def)             Requested size: 341.43306pt x 293.1499pt.
 
 
@@ -1096,84 +1096,104 @@ File: ../figures/background/klassmodell.png Graphic file (type png)
 
 <use ../figures/background/klassmodell.png>
 Package pdftex.def Info: ../figures/background/klassmodell.png used on input li
-ne 183.
+ne 182.
 (pdftex.def)             Requested size: 341.43306pt x 208.69019pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6 <../figures/background/ml.png>]
-Overfull \hbox (33.80516pt too wide) in paragraph at lines 196--197
+Overfull \hbox (33.80516pt too wide) in paragraph at lines 195--196
 \T1/cmr/m/n/12 SVM är en över-va-kad ma-ski-nin-lär-nings-al-go-ritm som kan an
 -vän-das till bå-de klassificerings-
  []
 
 
-LaTeX Warning: Reference `bac:intro' on page 7 undefined on input line 202.
+Package natbib Warning: Citation `cnn:001' on page 7 undefined on input line 19
+8.
 
-[7 <../figures/background/klassmodell.png>] [8] [9]
-<../figures/background/exempeltweet.png, id=82, 745.78625pt x 61.22874pt>
+
+Package natbib Warning: Citation `wiki:015' on page 7 undefined on input line 1
+98.
+
+[7 <../figures/background/klassmodell.png>]
+
+Package natbib Warning: Citation `cnn:001' on page 8 undefined on input line 20
+0.
+
+
+Package natbib Warning: Citation `cnn:003' on page 8 undefined on input line 20
+0.
+
+
+Package natbib Warning: Citation `cnn:006' on page 8 undefined on input line 20
+0.
+
+
+Package natbib Warning: Citation `cnn:003' on page 8 undefined on input line 20
+0.
+
+
+Package natbib Warning: Citation `cnn:003' on page 8 undefined on input line 20
+0.
+
+
+LaTeX Warning: Reference `bac:intro' on page 8 undefined on input line 204.
+
+[8] [9] [10]
+<../figures/background/exempeltweet.png, id=85, 745.78625pt x 61.22874pt>
 File: ../figures/background/exempeltweet.png Graphic file (type png)
 
 <use ../figures/background/exempeltweet.png>
 Package pdftex.def Info: ../figures/background/exempeltweet.png used on input l
-ine 232.
+ine 234.
 (pdftex.def)             Requested size: 341.43306pt x 28.031pt.
+ [11 <../figures/background/exempeltweet.png>] [12]
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 278.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[10] [11 <../figures/background/exempeltweet.png>] [12]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 276.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<../figures/background/utvardering.png, id=93, 382.42876pt x 382.42876pt>
+[13] <../figures/background/utvardering.png, id=97, 382.42876pt x 382.42876pt>
 File: ../figures/background/utvardering.png Graphic file (type png)
 
 <use ../figures/background/utvardering.png>
 Package pdftex.def Info: ../figures/background/utvardering.png used on input li
-ne 286.
+ne 288.
 (pdftex.def)             Requested size: 284.52756pt x 284.53922pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13] [14 <../figures/background/utvardering.png>]
+ [14 <../figures/background/utvardering.png>] [15]
 Kapitel 3.
-[15
+[16
 
-] [16]
-<../figures/background/dataset.png, id=109, 573.14125pt x 683.55376pt>
+] [17]
+<../figures/background/dataset.png, id=112, 573.14125pt x 683.55376pt>
 File: ../figures/background/dataset.png Graphic file (type png)
 
 <use ../figures/background/dataset.png>
 Package pdftex.def Info: ../figures/background/dataset.png used on input line 3
-18.
+20.
 (pdftex.def)             Requested size: 341.43306pt x 407.21497pt.
- [17] [18 <../figures/background/dataset.png>] [19]
-<../figures/background/grams.png, id=120, 472.76625pt x 338.26375pt>
+ [18] [19 <../figures/background/dataset.png>] [20]
+<../figures/background/grams.png, id=123, 472.76625pt x 338.26375pt>
 File: ../figures/background/grams.png Graphic file (type png)
 
 <use ../figures/background/grams.png>
-Package pdftex.def Info: ../figures/background/grams.png used on input line 372
+Package pdftex.def Info: ../figures/background/grams.png used on input line 374
 .
 (pdftex.def)             Requested size: 256.0748pt x 183.22229pt.
- [20] [21 <../figures/background/grams.png>] [22]
+ [21] [22 <../figures/background/grams.png>] [23]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 404.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 406.
 
 
-Overfull \hbox (14.33116pt too wide) in paragraph at lines 428--429
+Overfull \hbox (14.33116pt too wide) in paragraph at lines 430--431
 \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Positiv\OMS/cmsy/m/n/12 j[]
 \OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 och $\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/
 cmm/m/it/12 Negativ\OMS/cmsy/m/n/12 j[]\OT1/cmr/m/n/12 )$
  []
 
 
-Overfull \hbox (4.87436pt too wide) detected at line 431
+Overfull \hbox (4.87436pt too wide) detected at line 433
  []$[]  \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Positiv\OMS/cmsy/m/
 n/12 j[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
  solen\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Positiv\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n
@@ -1182,7 +1202,7 @@ n/12 j[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
  []
 
 
-Overfull \hbox (10.68231pt too wide) detected at line 434
+Overfull \hbox (10.68231pt too wide) detected at line 436
  []$[]  \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Negativ\OMS/cmsy/m/
 n/12 j[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
  solen\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Negativ\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n
@@ -1190,51 +1210,51 @@ n/12 j[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
 /12 j\OML/cmm/m/it/12 Negativ\OT1/cmr/m/n/12 )$ 
  []
 
-[23] [24]
-<../figures/background/linearsvm_hpwithmargins.png, id=142, 479.7925pt x 482.80
+[24] [25]
+<../figures/background/linearsvm_hpwithmargins.png, id=145, 479.7925pt x 482.80
 376pt>
 File: ../figures/background/linearsvm_hpwithmargins.png Graphic file (type png)
 
  <use ../figures/background/linearsvm_hpwithmargins.png>
 Package pdftex.def Info: ../figures/background/linearsvm_hpwithmargins.png used
- on input line 470.
+ on input line 472.
 (pdftex.def)             Requested size: 256.0748pt x 257.68231pt.
 
-<../figures/background/nonlinearsvm.png, id=143, 467.7475pt x 487.8225pt>
+<../figures/background/nonlinearsvm.png, id=146, 467.7475pt x 487.8225pt>
 File: ../figures/background/nonlinearsvm.png Graphic file (type png)
 
 <use ../figures/background/nonlinearsvm.png>
 Package pdftex.def Info: ../figures/background/nonlinearsvm.png used on input l
-ine 479.
+ine 481.
 (pdftex.def)             Requested size: 256.0748pt x 267.07501pt.
- [25 <../figures/background/linearsvm_hpwithmargins.png>]
-<../figures/background/svm_3d.jpg, id=148, 887.315pt x 783.92876pt>
+ [26 <../figures/background/linearsvm_hpwithmargins.png>]
+<../figures/background/svm_3d.jpg, id=151, 887.315pt x 783.92876pt>
 File: ../figures/background/svm_3d.jpg Graphic file (type jpg)
 
 <use ../figures/background/svm_3d.jpg>
-Package pdftex.def Info: ../figures/background/svm_3d.jpg used on input line 48
-8.
+Package pdftex.def Info: ../figures/background/svm_3d.jpg used on input line 49
+0.
 (pdftex.def)             Requested size: 256.0748pt x 226.23303pt.
- [26 <../figures/background/nonlinearsvm.png>] [27 <../figures/background/svm_3
-d.jpg>] [28]
+ [27 <../figures/background/nonlinearsvm.png>] [28 <../figures/background/svm_3
+d.jpg>] [29]
 Kapitel 4.
-[29
+[30
 
 ]
-Overfull \hbox (1.19798pt too wide) in paragraph at lines 518--518
+Overfull \hbox (1.19798pt too wide) in paragraph at lines 520--520
 []\T1/cmr/bx/n/20.74 Implementations mäs-sigt vil-ken mo-dell
  []
 
 
-Overfull \hbox (14.16211pt too wide) in paragraph at lines 519--519
+Overfull \hbox (14.16211pt too wide) in paragraph at lines 521--521
 []\T1/cmr/bx/n/20.74 implementations jäm-fö-rel-se (re-sul-tat VS
  []
 
-[30]
+[31]
 Kapitel 5.
-[31
+[32
 
-] (./TSA.bbl [32]
+] (./TSA.bbl [33]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 14.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1269,7 +1289,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--15
 ff80 -[] 11e7 -[] 956d -[] 00000aacb362&acdnat =
  []
 
-[33
+[34
 
 ]
 Underfull \hbox (badness 5119) in paragraph at lines 89--94
@@ -1284,7 +1304,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--94
 g / wiki /
  []
 
-[34]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 123--128
 \T1/cmr/m/n/12 URL $\T1/cmtt/m/n/12 https : / / www\OML/cmm/m/it/12 :\T1/cmtt/m
 /n/12 kdnuggets\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 com / 2016 / 07 / support -[] 
@@ -1317,7 +1337,7 @@ Underfull \hbox (badness 1082) in paragraph at lines 173--177
 e en-cyclo-pe-dia,
  []
 
-[35]
+[36]
 Underfull \hbox (badness 2717) in paragraph at lines 186--191
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Ac-cu-ra-cy and pre-ci-sion --- Wi
 -ki-pe-dia, the
@@ -1355,7 +1375,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 241--246
 g / stable / tutorial / text[]analytics /
  []
 
-[36]
+[37]
 Underfull \hbox (badness 6708) in paragraph at lines 266--271
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Di-richlet dis-tri-bu-tion --- Wi-
 ki-pe-dia, the
@@ -1381,7 +1401,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 279--284
 g / wiki /
  []
 
-) [37] (./TSA.aux)
+) [38]
+
+Package natbib Warning: There were undefined citations.
+
+(./TSA.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.88pt have occurred.
@@ -1389,15 +1413,18 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 15687 strings out of 493029
- 291166 string characters out of 6136234
+ 15691 strings out of 493029
+ 291203 string characters out of 6136234
  374180 words of memory out of 5000000
- 18856 multiletter control sequences out of 15000+600000
+ 18860 multiletter control sequences out of 15000+600000
  18699 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,12n,58p,1485b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,12n,58p,1485b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/
@@ -1412,10 +1439,10 @@ fbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/sh
 are/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type
 1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
 ti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on TSA.pdf (47 pages, 522913 bytes).
+Output written on TSA.pdf (48 pages, 523874 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
+ 248 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
