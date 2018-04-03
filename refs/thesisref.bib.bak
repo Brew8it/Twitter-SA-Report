@@ -2,6 +2,17 @@
 % Encoding: UTF-8
 
 
+@Misc{cnn:005,
+  Title                    = {Convolutional neural network --- Wikipedia{,} The Free Encyclopedia},
+
+  Author                   = {Wikipedia contributors},
+  Note                     = {[Online; accessed 3-April-2018]},
+  Year                     = {2018},
+
+  Timestamp                = {2018.04.03},
+  Url                      = {https://en.wikipedia.org/w/index.php?title=Convolutional_neural_network&oldid=832961286}
+}
+
 @Misc{wiki:015,
   Title                    = {Artificial neural network --- Wikipedia{,} The Free Encyclopedia},
 
