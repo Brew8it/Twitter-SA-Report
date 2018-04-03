@@ -384,29 +384,17 @@ I \ref{MLnb} beskrivs det att Naive Bayes algoritmen är baserad på Bayes theor
 P(A|B) = \frac{P(B|A) * P(A)}{P(B)}.
 \end{equation}
 
-För att ekvation \ref{eq:bt} skall vara “Naive” antar vi att varje ord $b_w$ i $B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar $B$ utan $b_w$, $P(B|A) = P(b_{w1}|A) * P(b_{w2}|A) * … * P(b_{wn}|A)$ där $n$ är antalet ord i $B$.
+För att ekvation \ref{eq:bt} skall vara “Naive” antar vi att varje ord $b_w$ i $B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar $B$ utan $b_w$, $P(B|A) = P(b_{w1}|A) * P(b_{w2}|A) * … * P(b_{wn}|A)$, där $n$ är antalet ord i $B$.
 
 För att beräkna sannolikheten att $b_w$ är $A$ används en Dirichlet prior \cite{wiki:012, nb:007} där $N_{b_w}$ är hur många gånger $b_w$ förekommer i delmängden av data för $A$, $N_A$ är summan av alla ord i delmängden för $A$, $\alpha$ och $\alpha_n$ används för att utföra additiv utjämning \cite{wiki:013} där $\alpha = 1$ och $\alpha_n$ är summan antal möjliga ord som existerar i hela datamängden, 
 
-\begin{equation}
+\begin{equation}\label{eq:slut}
 P(w_b|A)= \frac{N_{b_w} + \alpha}{N_A + \alpha_n}.
 \end{equation}
 
-I tabell \ref{tab:dataset} illustreras en datamängd med fyra twitterinlägg och dess märkning, denna datamängden kan användas för att beräkna om twitterinlägget “solen skiner alltid i karlstad” är positiv eller negativ. Genom att räkna ut sannolikheten $P(Positiv|solen skiner alltid i karlstad)$ och $P(Negativ|solen skiner alltid i karlstad)$ kan märkning bestämmas, detta görs genom att jämföra vilken sannolikhet som blir störst. Och eftersom vi ska jämföra uträkningarna mellan varandra kan divisionen med $P(B)$ strykas ur bägge uträkningarna och vi för följande ekvationer,
-
-\begin{equation}\label{eq:nbpos}
-P(Positiv|solen skiner alltid i karlstad) = P(solen|Positiv) * P(skiner|Positiv) * P(alltid|Positiv) * P(i|Positiv) *  P(karlstad|Positiv) * P(Positiv)
-\end{equation}
-
-\begin{equation}\label{eq:nbpos}
-P(Negativ|solen skiner alltid i karlstad) = P(solen|Negativ) * … * P(karlstad|Negativ) * P(Negativ)
-\end{equation}
-
-
-
 \begin{table}
 \centering
-\caption{sätt tabell text!!}
+\caption{Exempel datamängd om ett twitterinlägg är positiv eller negativ}
 \label{tab:dataset}
     \begin{tabular}{ccc}
     \toprule
@@ -420,7 +408,44 @@ P(Negativ|solen skiner alltid i karlstad) = P(solen|Negativ) * … * P(karlstad|
 \end{tabular}
 \end{table}
 
+I tabell \ref{tab:dataset} illustreras en datamängd med fyra twitterinlägg och dess märkning, denna datamängden kan användas för att beräkna om twitterinlägget “solen skiner alltid i karlstad” är positiv eller negativ. Genom att räkna ut sannolikheten $P(Positiv|\textrm{solen skiner alltid i karlstad})$ och $P(Negativ|\textrm{solen skiner alltid i karlstad})$ kan märkning bestämmas, detta görs genom att jämföra vilken sannolikhet som blir störst. Och eftersom vi ska jämföra uträkningarna mellan varandra kan divisionen med $P(B)$ strykas ur bägge uträkningarna och vi för följande ekvationer,
 
+\begin{multline*}
+P(Positiv|\textrm{solen skiner alltid i karlstad}) = P(solen|Positiv)*P(skiner|Positiv)* \\P(alltid|Positiv)*P(i|Positiv)*P(karlstad|Positiv)*P(Positiv)
+\end{multline*}
+
+\begin{multline*}
+P(Negativ|\textrm{solen skiner alltid i karlstad}) = P(solen|Negativ) * P(skiner|Negativ) \\ * P(alltid|Negativ) * P(i|Negativ) *  P(karlstad|Negativ) * P(Negativ)
+\end{multline*}
+
+För att räkna ut exempelvis $P(solen|Positiv)$ används ekvation \ref{eq:slut} där $N_{b_w} = 1$, $N_A= 13$, $\alpha_n = 18$ och $\alpha = 1$ vilket ger oss $P(solen|Positiv) =  \frac{1 + 1}{13 + 18} = 0.0645$. I tabell \ref{tab:ekv} illustreras alla ekvationer för att beräkna om “solen skiner alltid i karlstad” är positiv eller negativ. Ovanstående utförs på varje ord för både positiv och negativ vilket illustreras i tabell \ref{tab:ekv}.  Med hjälp av tabell \ref{tab:ekv} beräknas 
+\begin{multline*}
+P(solen|Positiv) * P(skiner|Positiv) * P(alltid|Positiv) * P(i|Positiv) *  \\P(karlstad|Positiv) * P(Positiv) = 1.363 * 10^{-7}
+\end{multline*}
+och
+\begin{multline*}
+P(solen|Negativ) * P(skiner|Negativ) * P(alltid|Negativ) * P(i|Negativ) *  \\P(karlstad|Negativ) * P(Negativ) = 1.024 * 10^{-7}.
+\end{multline*}
+
+Jämförs dessa resultat kommer twitterinlägget klassificeras som positiv. 
+
+
+\begin{table}
+\centering
+\caption{Beräkningar för om ett ord är positivt eller negativt.}
+\label{tab:ekv}
+    \begin{tabular}{ccc}
+    \toprule
+    \textbf{Ord} & \textbf{P(ord|Positiv)} & \textbf{P(ord|Negativ)} \\
+    \midrule
+    solen & $\frac{1 + 1}{13 + 18} $ & $\frac{0 + 1}{7 + 18} $\\
+    skiner & $\frac{0 + 1}{13 + 18} $ & $\frac{0 + 1}{7 + 18}$ \\
+    alltid & $\frac{0 + 1}{13 + 18}$ & $\frac{0 + 1}{7 + 18}$ \\
+    i & $\frac{1 + 1}{13 + 18} $& $\frac{0 + 1}{7 + 18}$ \\
+karlstad & $\frac{0 + 1}{13 + 18}$ & $\frac{0 + 1}{7 + 18}$ \\
+    \bottomrule
+\end{tabular}
+\end{table}
 
 
 \subsection{Support Vector Machine}
