@@ -283,6 +283,18 @@
   Keywords                 = {learning (artificial intelligence);natural language processing;sentiment analysis;social networking (online);statistical analysis;support vector machines;PMI;POS;SVM;lexicon-based sentiment scoring method;machine learning;natural language processing techniques;negative polarity;part-of-speech tags;point-wise mutual information measure;positive polarity;public sentiment extraction;sentiment analysis;sentiment classification;sentiment mining;supervised statistical learning algorithms;support vector machine classifier;tweets;two-step method;Feature extraction;Labeling;Sentiment analysis;Support vector machines;Tagging;Training;Twitter;Machine learning;Sentiment analysis;Sentiment lexicon;Twitter}
 }
 
+@Misc{cnn:004,
+  Title                    = {Understanding Convolutional Neural Networks for NLP},
+
+  Author                   = {Denny Britz},
+  Year                     = {2015},
+
+  Comment                  = {Last checked 2018-04-03},
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.04.03},
+  Url                      = {http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/}
+}
+
 @Misc{learning:001,
   Title                    = {Supervised and Unsupervised Machine Learning Algorithms},
 
@@ -460,6 +472,13 @@ and Rouveirol, C{\'e}line},
 
   Abstract                 = {This paper explores the use of Support Vector Machines (SVMs) for learning text classifiers from examples. It analyzes the particular properties of learning with text data and identifies why SVMs are appropriate for this task. Empirical results support the theoretical findings. SVMs achieve substantial improvements over the currently best performing methods and behave robustly over a variety of different learning tasks. Furthermore they are fully automatic, eliminating the need for manual parameter tuning.},
   ISBN                     = {978-3-540-69781-7}
+}
+
+@Article{cnn:003,
+  Title                    = {Convolutional neural networks for sentence classification},
+  Author                   = {Kim, Yoon},
+  Journal                  = {arXiv preprint arXiv:1408.5882},
+  Year                     = {2014}
 }
 
 @Article{kolchyna2015twitter,
