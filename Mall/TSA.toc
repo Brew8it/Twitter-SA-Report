@@ -24,13 +24,13 @@
 \contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{25}
 \contentsline {subsection}{\numberline {3.3.3}Convolutional Neural Network}{29}
 \contentsline {section}{\numberline {3.4}Implementation}{29}
-\contentsline {section}{\numberline {3.5}Databearbetning}{29}
-\contentsline {subsection}{\numberline {3.5.1}Lexikon}{29}
-\contentsline {subsection}{\numberline {3.5.2}Naive Bayes}{29}
-\contentsline {subsection}{\numberline {3.5.3}Support Vector Machine}{29}
-\contentsline {subsection}{\numberline {3.5.4}Prediction program.}{29}
-\contentsline {subsection}{\numberline {3.5.5}* ev GUI implementation om tid finns *}{29}
-\contentsline {section}{\numberline {3.6}Sammanfattning}{29}
+\contentsline {subsection}{\numberline {3.4.1}Databearbetning}{29}
+\contentsline {subsection}{\numberline {3.4.2}Lexikon}{29}
+\contentsline {subsection}{\numberline {3.4.3}Naive Bayes}{29}
+\contentsline {subsection}{\numberline {3.4.4}Support Vector Machine}{29}
+\contentsline {subsection}{\numberline {3.4.5}Prediction program.}{29}
+\contentsline {subsection}{\numberline {3.4.6}* ev GUI implementation om tid finns *}{29}
+\contentsline {section}{\numberline {3.5}Sammanfattning}{29}
 \contentsline {chapter}{\numberline {4}Resultat}{30}
 \contentsline {section}{\numberline {4.1}Intro}{30}
 \contentsline {section}{\numberline {4.2}Resultatet mellan modellerna}{30}
