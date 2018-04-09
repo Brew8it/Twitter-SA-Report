@@ -517,7 +517,7 @@ Detta kapitel beskriver detaljer angående implementationen av vår studie och d
 Som beskrivs i avsnitt \ref{exp:pre} är databearbetning ett viktigt steg inom SA och TSA. I detta avsnittet beskrivs implementationen av databearbetningen m.h.a delarna som illustreras i figur \ref{fig:dataset}.
 
 För att avlägsna HTML-kod från twitterinlägg använder vi oss av BeautifulSoup \cite{impl:004}, som är ett Python-paket för att extrahera data från HTML-kod,
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:html]
+\begin{lstlisting}[style=mypython,caption={Avlägsna HTML-kod.},label=pre:html]
 def remove_html_encode(self):
        self.df["tweet"] = self.df["tweet"]./
        apply(lambda x: BeautifulSoup(x, 'lxml').get_text())
@@ -526,13 +526,13 @@ Om HTML-kod finns i twitterinlägg tas det således bort.
 
 
 Omvandling från versaler till gemener utförs på varje twitterinlägg m.h.a den inbyggda Python-funktionen \pyth{str.lower()} som konverterar versaler till gemener.
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:lower]
+\begin{lstlisting}[style=mypython,caption={Omvandla versaler till gemener.},label=pre:lower]
 def to_lower(self):
       self.df["tweet"] = self.df["tweet"].str.lower()
 \end{lstlisting}
 
 *** Skriv om expand cont *****
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:expand]
+\begin{lstlisting}[style=mypython,caption={Expandera sammandragsförkortningar},label=pre:expand]
 cont_dict = {'can\'t': 'cannot', 'won\'t': 'will not', 'n\'t': ' not'}
 cont_re = re.compile('(%s)' % '|'.join(cont_dict.keys()))
 
@@ -548,7 +548,7 @@ def expand_contractions(self):
 Avlägsna accenter utförs genom att använda \pyth{unicodedata.normalize()} \cite{impl:005} som använder “Normalization Form Compatibility Decomposition” (NFKD) parametern,  vilket betyder att \pyth{unicodedata.normalize()} byter ut en bokstav med accent mot sin ASCII-ekvivalenta bokstav. Resterande parametrar säger att om bokstaven redan är ascii eller utf-8 ignoreras dessa bokstäver. 
 
 
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:accent]
+\begin{lstlisting}[style=mypython,caption={Avlägsna accent.},label=pre:accent]
 def remove_accented_chars(self):
 	self.df["tweet"] = self.df["tweet"].apply(lambda x:unicodedata./
 	normalize('NFKD', x).encode('ascii', 'ignore')./
@@ -563,7 +563,7 @@ Avlägsning av “hashtags”, skiljetecken, siffror och emojis görs med det RU
 
 Och slutligen så avlägsnas repeterande mellanslag, vilket utförs med det RU \pyth{' +'}. Ifall det är två eller fler repeterande mellanslag tas dessa bort.
 
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:rem]
+\begin{lstlisting}[style=mypython,caption={Avlägsna URL:er, "mentions", “hashtags”, skiljetecken, siffror, emojis och repeterande mellandlsag.},label=pre:rem]
 def remove_links(self):
        self.df.loc[:, "tweet"] = self.df.loc[:, "tweet"].\
        replace(r'https?://[A-Za-z0-9./]+', '', regex=True)
@@ -582,20 +582,20 @@ def remove_extra_whitepsace(self):
 \end{lstlisting}
 
 För att utföra ordstamsigenkänning och avlägsning av stoppord måste varje twitterinlägg först tokeniseras, vilket betyder att varje ord i ett twitterinlägg blir ett eget element i en lista. Tokeniseringen utförs m.h.a funktionen \pyth{word_tokenize()} \cite{impl:006} från Natural Language Toolkit (NLTK).
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:token]
+\begin{lstlisting}[style=mypython,caption={Tokenisera twitterinlägg till listor av ord.},label=pre:token]
 def tokenize(self):
       self.df["tweet"] = self.df["tweet"].apply(word_tokenize)
 \end{lstlisting}
 
 Ordstamsigenkänning utförs m.h.a \pyth{SnowballStemmer('english').stem()} \cite{impl:008} från NLTK som försöker hitta varje ords ordstam vilket diskuteras i avsnitt \ref{exp:pre}.
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:stem]
+\begin{lstlisting}[style=mypython,caption={Ordstamsigenkänning.},label=pre:stem]
 def word_stemming(self):
        self.df["tweet"] = self.df["tweet"]./
        apply(lambda x: [SnowballStemmer('english').stem(y) for y in x])
 \end{lstlisting}
 
 Avlägsning av stoppord utförs m.h.a \pyth{stopwords.word('english')} \cite{impl:007} från NLTK som är en lista av engelska stoppord. \pyth{remove_stopwords(self)} kontrollerar om något ord i twitterinlägget finns med i listan, om det gör det tas det bort. 
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:stop]
+\begin{lstlisting}[style=mypython,caption={Avlägsna stoppord.},label=pre:stop]
 stop = stopwords.words('english')
 def remove_stopwords(self):
        self.df["tweet"] = self.df["tweet"]./
