@@ -43,6 +43,7 @@
 \usepackage{amsmath}
 
 
+
 % test for code
 \DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
 \DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
@@ -439,7 +440,8 @@ Twitter-specifika särdrag är särdrag som är specifika för Twitters domän s
 
 
 \section{Algoritmer}
-** Skall det skrivas något kort intro här?***
+För att ge en bättre förståelse för hur NB, SVM och CNN kan appliceras på sentimentanalys, kommer detta avsnitt ge en överblick av hur algoritmerna går till väga för att klassificera text och hur de kan anpassas för att uppnå bra resultat vid sentimentanalys.
+
 \subsection{Naive Bayes}
 I \ref{MLnb} beskrivs det att Naive Bayes algoritmen är baserad på Bayes theorem  \cite{wiki:009} vilket för TSA betyder att räkna ut sannolikheten om ett twitterinlägg $B$ är positivt eller negativt $A$. Där $P(A | B)$ är en villkorlig sannolikhet för att $A$ inträffar givet att $B$ är sant, $P(B | A)$ är också en villkorlig sannolikhet för att $B$ inträffar givet att $A$ är sant. $P(A)$ och $P(B)$ är sannolikheten att observera $P(A)$ och $P(B)$ oberoende av varandra,
 \begin{equation}\label{eq:bt}
@@ -545,7 +547,100 @@ På grund av ovanstående anledningar har en linjär klassificerare valts att an
 
 
 \section{Implementation}\label{impl}
+Detta kapitel beskriver detaljer angående implementationen av vår studie och dess flöde som illustrerats i figur \ref{fig:overfig}. Kapitlet beskriver även teknikerna som används för att göra implementationen möjlig. Gemensamma tekniker som används i alla delar av implementation är programmeringsspråket Python3 \cite{impl:001} och Pandas \cite{impl:002}. Pandas är ett Python paket som erbjuder snabba, flexibla datastrukturer som är utformade för att göra arbetet med relation och märkt data smidigare. 
 \subsection{Databearbetning}\label{impl:pre}
+Som beskrivs i avsnitt \ref{exp:pre} är databearbetning ett viktigt steg inom SA och TSA. I detta avsnittet beskrivs implementationen av databearbetningen m.h.a koddelarna som illustreras i figur \ref{fig:dataset}.
+
+För att avlägsna HTML-kod från twitterinlägg använder vi oss utav BeautifulSoup \ref{impl:004}, som är ett Python-paket som extrahera data från HTML-kod.
+Om HTML-kod återfinns i twitterinlägg tas det således bort. 
+\begin{python}
+def remove_html_encode(self):
+       self.df["tweet"] = self.df["tweet"]./
+        apply(lambda x: BeautifulSoup(x, 'lxml').get_text())
+\end{python}
+
+Omvandling från versaler till gemener utförs på varje twitterinlägg m.h.a den inbyggda Python-funktionen \pythoninline{str.lower()} som konverterar versaler till gemener.
+\begin{python}
+def to_lower(self):
+      self.df["tweet"] = self.df["tweet"].str.lower()
+\end{python}
+
+
+
+
+*** Skriv om expand cont *****
+\begin{python}
+cont_dict = {'can\'t': 'cannot', 
+	'won\'t': 'will not', 'n\'t': ' not'}
+cont_re = re.compile('(%s)' % '|'.join(cont_dict.keys()))
+
+def expand_cont(self, s, cont_dict=cont_dict):
+       def replace(match):
+              return cont_dict[match.group(0)]
+        return cont_re.sub(replace, s)
+
+def expand_contractions(self):
+       self.df["tweet"] = self.df["tweet"]./
+       apply(lambda x: self.expand_cont(x))
+\end{python}
+
+Avlägsna accenter utförs genom att använda \pythoninline{unicodedata.normalize()} \cite{impl:005} som använder “Normalization Form Compatibility Decomposition” (NFKD) parametern,  vilket betyder att \pythoninline{unicodedata.normalize()} byter ut en bokstav med accent mot sin ASCII-ekvivalenta bokstav. Resterande parametrar säger att om bokstaven redan är ascii eller utf-8 ignoreras dessa bokstäver. 
+
+
+\begin{python}
+def remove_accented_chars(self):
+	self.df["tweet"] = self.df["tweet"].\
+	apply(lambda x: unicodedata.normalize('NFKD', x).
+	encode('ascii', 'ignore').decode('utf-8', 'ignore'))
+\end{python}
+
+För att avlägsna URL, “mentions”, “hashtags” , skiljetecken, siffror och repeterade mellanslag används fyra reguljära uttryck (RU) \cite{impl:003}. För att avlägsna URL används \pythoninline{r'https?://[A-Za-z0-9./’]+'} vilket betyder att om en URL är http eller https kommer denna avlägsnas, samt om den efterföljs av ännu en URL kommer även den tas bort.
+
+“Mentions” avlägsnas med det RU \pythoninline{r'@[A-Za-z0-9]+'}, d.v.s om en alfanumerisk sträng börjar med ‘@’ avlägsnas den alfanumeriska strängen.
+
+Avlägsning av “hashtags”, skiljetecken och siffror görs med det RU \pythoninline{'[^a-zA-Z]'}, d.v.s en sträng måste börja på bokstäver mellan a-z, om inte tas dessa bort.
+
+Och slutligen så avlägsnas repeterande mellanslag, vilket utförs med det RU \pythoninline{' +'}. Ifall det är två eller fler repeterande mellanslag tas dessa bort.
+
+\begin{python}
+def remove_links(self):
+       self.df.loc[:, "tweet"] = self.df.loc[:, "tweet"].\
+       replace(r'https?://[A-Za-z0-9./]+', '', regex=True)
+
+def remove_twitter_mention(self):
+       self.df.loc[:, "tweet"] = self.df.loc[:, "tweet"].\
+       replace(r'@[A-Za-z0-9]+', '', regex=True)
+
+def remove_hashtag(self):
+       self.df.loc[:, "tweet"] = self.df.loc[:, "tweet"].\
+       replace('[^a-zA-Z]', ' ', regex=True)
+
+def remove_extra_whitepsace(self):
+      self.df.loc[:, "tweet"] = self.df.loc[:, "tweet"].\
+       replace(' +', ' ', regex=True)
+\end{python}
+
+För att utföra ordstamsigenkänning och avlägsning av stoppord måste varje twitterinlägg först tokeniseras, vilket betyder att varje ord i ett twitterinlägg blir ett eget element i en lista. Tokeniseringen utförs m.h.a funktionen \pythoninline{word_tokenize()} \cite{impl:006} från Natural Language Toolkit (NLTK).
+\begin{python}
+def tokenize(self):
+      self.df["tweet"] = self.df["tweet"].apply(word_tokenize)
+\end{python}
+
+Ordstamsigenkänning utförs m.h.a \pythoninline{SnowballStemmer(‘english’).stem()} \cite{impl:008} från NLTK som försöker hitta varje ords ordstam vilket diskuteras i avsnitt \ref{exp:pre}.
+\begin{python}
+def word_stemming(self):
+       self.df["tweet"] = self.df["tweet"].
+       apply(lambda x: [SnowballStemmer(‘english’).
+       stem(y) for y in x])
+\end{python}
+
+Avlägsning av stoppord utförs m.h.a \pythoninline{stopwords.word(‘english’)} \cite{impl:007} från NLTK som är en lista utav engelska stoppord. \pythoninline{remove_stopwords(self)} kollar är om något ord i twitterinlägget finns med i listan, om det gör det tas detta bort. 
+\begin{python}
+stop = stopwords.words('english')
+def remove_stopwords(self):
+       self.df["tweet"] = self.df["tweet"]./
+       apply(lambda x: [word for word in x if word not in stop])
+\end{python}
 
 
 \subsection{Lexikon}\label{impl:lex}
