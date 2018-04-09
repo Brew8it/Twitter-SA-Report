@@ -351,11 +351,11 @@ Kvaliteten på data som ska analyseras är avgörande för vilka resultat som ka
 
 Som nämndes i avsnitt \ref{TSAchall}, innehåller twitterinlägg vanligtvis stora mängder brus på grund av det informella språket som används på Twitter, dvs data som inte är användbar för analysprocessen. Det finns exempelvis många ord som inte har någon påverkan på en texts sentiment och därför är det vanligtvis inte nödvändigt att ta med alla ord från den ursprungliga texten vid maskininlärning \cite{effrosynidis2017comparison, HADDI201326}. Ord som dessa kan tas bort, ersättas eller slås samman med andra. Det är det som kallas för att bearbeta data. Genom att göra det minskas dimensionen på problemet och textklassificeringen blir enklare att utföra , eftersom varje ord behandlas som en dimension \cite{HADDI201326}. 
 
-Det existerar flertalet olika tekniker som kan användas vid bearbetningen av data, vissa mer vanliga än andra. I arbetet med studien har två artiklar återfunnits som undersöker effekten av olika bearbetningstekniker vid TSA, \cite{effrosynidis2017comparison} och \cite{7862202}. Båda artiklarna utvärderar bearbetningsteknikerna utefter hur de påverkar prestandan vid sentimentklassificering.
+Det existerar flertalet olika tekniker som kan användas vid bearbetningen av data, vissa mer vanliga än andra. I arbetet med studien har två artiklar använts som undersöker effekten av olika bearbetningstekniker vid TSA, \cite{effrosynidis2017comparison} och \cite{7862202}. Båda artiklarna utvärderar bearbetningsteknikerna utefter hur de påverkar prestandan vid sentimentklassificering.
 
-\cite{effrosynidis2017comparison} utvärderar 15 olika bearbetningstekniker. Teknikerna utvärderas var för sig och testas mot två olika datamängder, där de för varje datamängd testas med tre olika klassificeringsmodeller.  Några bearbetningstekniker ger bättre noggrannhet för båda datamängderna, andra sämre och resultaten varierar för några. Resultaten varierar inte enbart mellan datamängderna utan de varierar även mellan klassificeringsmodellerna. De tekniker som rekommenderas av författarna och resulterar i hög noggrannhet för alla klassificeringsmodeller och de båda datamängderna är: borttagning av nummer, omvandling av ord till deras ursprungliga form samt ersättning av upprepade skiljetecken. Hantering av negationer, lemmatisering samt ersättning av URL:er och “mentions” av användare påvisar också bra resultat för båda datamängderna men dock inte för alla klassificeringsmodeller. Borttagning av skiljetecken var den bearbetningsteknik som gav sämst resultat. Det som saknas i \cite{effrosynidis2017comparison} är hur de olika förbehandlingsteknikerna presterar i kombination med varandra, vilket enligt författarna själva kan ge andra resultat.
+I \cite{effrosynidis2017comparison} utvärderas 15 olika bearbetningstekniker. Teknikerna utvärderas var för sig och testas mot två olika datamängder, där de för varje datamängd testas med tre olika klassificeringsmodeller.  Några bearbetningstekniker ger bättre noggrannhet för båda datamängderna, andra sämre och resultaten varierar för några. Resultaten varierar inte enbart mellan datamängderna utan de varierar även mellan klassificeringsmodellerna. De tekniker som rekommenderas av författarna och resulterar i hög noggrannhet för alla klassificeringsmodeller och de båda datamängderna är: borttagning av nummer, omvandling av ord till deras ursprungliga form samt ersättning av upprepade skiljetecken. Hantering av negationer, lemmatisering samt ersättning av URL:er och “mentions” av användare påvisar också bra resultat för båda datamängderna men dock inte för alla klassificeringsmodeller. Borttagning av skiljetecken var den bearbetningsteknik som gav sämst resultat. Det som saknas i \cite{effrosynidis2017comparison} är hur de olika förbehandlingsteknikerna presterar i kombination med varandra, vilket enligt författarna själva kan ge andra resultat.
 
-Detta är dock något som görs i \cite{7862202}. Istället för att utvärdera varje teknik isolerat från varandra som i \cite{effrosynidis2017comparison}, utvärderas de istället utifrån hur de presterar i kombination med andra. Dock har de enbart har valt att fokusera på sex olika bearbetningstekniker: expandering av sammandragsförkortningar, expandering av förkortningar, avlägsning av nummer, avlägsning av stoppord, ersättning av förlängda ord och ersättning (borttagning) av URL:er. Bearbetningsteknikerna har utvärderats utefter hur de presterar på fem olika datamängder på fyra klassificeringsmodeller. Vid bedömningen av prestandan vid sentimentklassificeringen har ett basfall använts. Basfallet har använt samtliga sex bearbetningstekniker för bearbetningen av datan vid testningen. När en specifik teknik har utvärderats, har tekniken i fråga exkluderats från mängden av bearbetningstekniker. Därefter har testerna repeteras, med fem bearbetningstekniker istället för sex. Sedan har förändringen av resultatet gentemot basfallet använts för att bedöma hur tekniken påverkar prestandan vid sentimentklassificeringen. Resultaten visar att ersättning av negationer och expandering av förkortningar kan ha positiv påverkan på noggrannheten vid klassificeringen. Avlägsning av URL:er, nummer och stoppord påverkar resultaten för klassificeringen minimalt, men är effektiva för att minska brus. 
+Detta är dock något som görs i \cite{7862202}. Istället för att utvärdera teknikerna isolerade från varandra som i \cite{effrosynidis2017comparison}, utvärderas de istället utifrån hur de presterar i kombination med andra. Dock har de enbart valt att fokusera på sex olika bearbetningstekniker: expandering av sammandragsförkortningar, expandering av förkortningar, avlägsning av nummer, avlägsning av stoppord, ersättning av förlängda ord och avlägsning av URL:er. Bearbetningsteknikerna har utvärderats utefter hur de presterar på fem olika datamängder på fyra klassificeringsmodeller. Vid bedömningen av prestandan vid sentimentklassificeringen har ett basfall använts. Basfallet har använt samtliga sex bearbetningstekniker för bearbetningen av datan vid testningen. När en specifik teknik har utvärderats, har tekniken i fråga exkluderats från mängden av bearbetningstekniker. Därefter har testerna repeterats, med fem bearbetningstekniker istället för sex. Sedan har förändringen av resultatet gentemot basfallet använts för att bedöma hur tekniken påverkar prestandan vid sentimentklassificeringen. Resultaten visar att expandering av sammandragsförkortningar och expandering av förkortningar kan ha positiv påverkan på noggrannheten vid klassificeringen. Avlägsning av URL:er, nummer och stoppord påverkar resultaten för klassificeringen minimalt, men är effektiva för att minska brus. 
 
 Utifrån resultaten som har presenterats i \cite{effrosynidis2017comparison} och \cite{7862202} har bearbetningsteknikerna för experimentet i den här studien valts. 
 Det svåra med att välja bearbetningstekniker, utifrån litteraturen, är att det kan existera flera olika varianter av en viss teknik och att olika namn kan användas för att beskriva en viss teknik. I \cite{effrosynidis2017comparison} hanterar de exempelvis URL:er genom att ersätta varje URL med etiketten “URL”, medan de avlägsnas helt i \cite{7862202}. Eftersom bearbetningsteknikerna uteslutande kommer att användas i kombination med varandra vid det här experimentet har störst vikt lagts på de tekniker som presenteras i \cite{7862202}.
@@ -367,20 +367,19 @@ Det svåra med att välja bearbetningstekniker, utifrån litteraturen, är att d
 \label{fig:dataset}
 \end{figure}
 
-Nedan presenteras och beskrivs de bearbetningstekniker som har valts att användas för experimentet. De valda teknikerna visualiseras i figur \ref{fig:dataset}. För några av bearbetningsteknikerna har ordningen betydelse. Exempelvis kommer inte expanderingen av sammandragsförkortningar kunna genomföras ifall avlägsnandet av accenter sker innan. Totalt har 12 bearbetningstekniker använts. Majoriteten av dessa handlar om att avlägsna text från twitterinläggen. Det som avlägsnas vid bearbetningen av twitterinläggen är: HTML-kod, accenter, URL:er, “mentions”, “hashtags”, skiljetecken, repeterande mellanslag och stoppord. Stoppord, som beskrevs i \ref{TSAchall}, tas bort genom att twitterinläggen söks igenom på stoppord från en fördefinierad lista. Även fast \cite{effrosynidis2017comparison} rapporterar sämre prestanda vid avlägsning av skiljetecken har det valts att användas som en bearbetningsteknik för det här experimentet. Det valet gjordes eftersom att \cite{effrosynidis2017comparison} samtidigt rapporterar att det bidrar till att reducera storleken på klassificeringsproblem. 
+Nedan presenteras och beskrivs de bearbetningstekniker som har valts att användas för experimentet. De valda teknikerna visualiseras i figur \ref{fig:dataset}. För några av bearbetningsteknikerna har ordningen betydelse. Exempelvis kommer inte expanderingen av sammandragsförkortningar kunna genomföras ifall avlägsnandet av accenter sker innan. Totalt har 12 bearbetningstekniker använts. Majoriteten av dessa handlar om att avlägsna text från twitterinläggen. Det som avlägsnas vid bearbetningen av twitterinläggen är: HTML-kod, accenter, URL:er, “mentions”, “hashtags”, skiljetecken, siffror, repeterande mellanslag, emojis och stoppord. Avlägsning av emojis diskuteras i avsnitt \ref{exp:feat}. Stoppord, som beskrevs i \ref{TSAchall}, tas bort genom att twitterinläggen söks igenom på stoppord från en fördefinierad lista. Trots att man i \cite{effrosynidis2017comparison} rapporterar sämre prestanda vid avlägsning av skiljetecken har det valts att användas som en bearbetningsteknik för det här experimentet. Det valet gjordes eftersom att man i  \cite{effrosynidis2017comparison} samtidigt rapporterar att det bidrar till att reducera storleken på klassificeringsproblem. 
 
-De övriga teknikerna som används omvandlar text under bearbetningen av ett twitterinlägg. Ett av de första stegen i den bearbetningsprocess, som har använts för detta experiment, är att omvandla versaler i ett twitterinlägg till gemener. Det gör att ord som är skrivna på flera olika sätt slås samman till ett \cite{effrosynidis2017comparison}. Vokabuläret blir då mindre, vilket gör att storleken på problemet minskas.
+De övriga teknikerna som används omvandlar text under bearbetningen av ett twitterinlägg. Ett av de första stegen i den bearbetningsprocess, som har använts för detta experiment, är att omvandla versaler i ett twitterinlägg till gemener. Det gör att ord som är skrivna på flera olika sätt slås samman till ett \cite{effrosynidis2017comparison}. Vokabulär blir då mindre, vilket gör att storleken på problemet minskas.
 
-En annan teknik som används är att expandera sammandragsförkortningar.  I \ref{TSAchall} diskuterades vikten av att kunna tolka och identifiera negationer för att SA ska bli korrekt. Eftersom sammandragsförkortningar är vanligt förekommande i engelskan fokuserar tekniken på att expandera sammandragsförkortningar med motsägelser. Exempelvis är termen “don’t” exempel på en sammandragsförkortning för motsägelsen “do not”. För experimentet har sammandragsförkortningarna “n’t”, “can’t” och “won’t” omvandlas till “not”, “can not” och “will not”, utefter hur metoden beskrevs i \cite{7862202}.
+En annan teknik som används är att expandera sammandragsförkortningar.  I \ref{TSAchall} diskuterades vikten av att kunna tolka och identifiera negationer för att SA ska bli korrekt. Eftersom sammandragsförkortningar är vanligt förekommande i engelskan fokuserar tekniken på att expandera sammandragsförkortningar med motsägelser. Exempelvis är termen “don’t” exempel på en sammandragsförkortning för motsägelsen “do not”. För experimentet har sammandragsförkortningarna “n’t”, “can’t” och “won’t” omvandlats till “not”, “can not” och “will not”, utefter hur metoden beskrevs i \cite{7862202}.
 
-Slutligen har också ordstamsigenkänning använts vid bearbetningen av ett twitterinlägg. Ordstamsigenkänning går ut på att ta bort ändelser från ord för att omvandla dem till deras ursprungliga form \cite{effrosynidis2017comparison}. Det leder också till att ord slås samman och att storleken på problemet minskar. Tabell \ref{tab:stemming} visar ett exempel på vad som sker då ordstamsigenkänning används på olika böjningar av det engelska ordet "arrive".
+Slutligen har också ordstamsigenkänning använts vid bearbetningen av ett twitterinlägg. Ordstamsigenkänning går ut på att ta bort ändelser från ord för att omvandla dem till deras ursprungliga form \cite{effrosynidis2017comparison}. Det leder också till att ord slås samman och att storleken på problemet minskar. Tabell \ref{tab:stemming} visar ett exempel på vad som sker då ordstamsigenkänning används på olika böjningar av det engelska ordet ''arrive''.
 
 \begin{table}[H]
 \centering
-\caption{Exempel på vad som sker när ordstamsigenkänning används på olika böjningar av det engelska ordet "arrive".}
+\caption{Exempel på vad som sker när ordstamsigenkänning används på olika böjningar av det engelska ordet ''arrive''.}
 \label{tab:stemming}
     \begin{tabular}{cc}
-    \multicolumn{2}{c}{\textbf{Ordstamsigenkänning}} \\
  	\toprule
     \textbf{Före} & \textbf{Efter} \\
     \midrule
@@ -398,8 +397,7 @@ Tabell \ref{tab:preproc} visar ett exempel på vad som sker när ett twitterinl�
 \caption{Exempel på vad som sker med ett twitterinlägg efter det har bearbetas med alla valda bearbetningstekniker.}
 \label{tab:preproc}
     \begin{tabularx}{\textwidth}{cX}
-    \multicolumn{2}{c}{\textbf{Ordstamsigenkänning}} \\
-    \midrule
+    \toprule
     \textbf{Före}&  {@SportsCenter Hands down the Irish amateur, Paul Dunne, thrilled the world. More to come tomorrow!!! \#NICE https://t.co/kTYNkltfl6} \\
 \textbf{Efter}& hand irish amateur paul dunn thrill world come tomorrow nice \\
     \bottomrule
@@ -417,24 +415,24 @@ I \cite{TSAsurvey} presenteras det fyra olika särdragsklasser inom TSA: semanti
 \begin{figure}[H]
 \includegraphics[width=9cm]{grams}
 \centering
-\caption{Illustrerar n-grams på en mening.}
+\caption{Illustration av n-grams på en mening.}
 \label{fig:grams}
 \end{figure}
 
 Semantiska särdrag används mestadels för att ta ut  åsiktsord, sentimentord och negationer. Åsiktsord är ord eller meningar som kan innehålla någon typ av åsikt medan sentimentord är ord som innehåller något positivt eller negativt. Negationer är ett viktigt koncept eftersom en mening som innehåller någon typ av negation kan skifta om twitterinlägget är positivt eller negativt. Studien kommer använda sentimentord i lexikonimplementationen som diskuteras i avsnitt \ref{impl:lex} och negationer som även diskuterats i avsnitt \ref{exp:pre} kommer implementeras i avsnitt \ref{impl:pre}.
 
-Syntaktiska särdrag används för att utforska påverkan av olika termer i SA och TSA, syntaktiska särdrag bryts ner till unigram, bigram, trigrams, n-gram, termfrekvens och “Part of Speech” (POS). Där n-grams är ett samlingsord för uni-, bi- och trigram, i figur \ref{fig:grams} illustreras hur n-gram modellen fungerar på en enkel mening och hur meningens ord grupperas på olika sätta till ett ord eller fras. **ta upp något om varför det används?**
+Syntaktiska särdrag används för att utforska påverkan av olika termer i SA och TSA. Syntaktiska särdrag bryts ner till unigram, bigram, trigram, n-gram, termfrekvens och “Part of Speech” (POS), där n-gram är ett samlingsord för uni-, bi- och trigram. I figur \ref{fig:grams} illustreras hur n-grammodellen fungerar på en enkel mening och hur meningens ord grupperas på olika sätta till ett ord eller fras. **ta upp något om varför det används?**
 
 Termfrekvens kan används i kombination med n-gram. Längre twitterinlägg kan ha ett högre antal förekomster av ett ord än ett kortare twitterinlägg, vilket kan leda till att ord kan få större betydelse för klassificeringen. Genom användandet av termfrekvens delas antalet förekomster av ett ord i ett twitterinlägg med alla ord som finns i twitterinlägget undviks sådana problem \cite{scikit:001}.
 
-POS utförs genom att man räknar hur många substantiv, verb och adjektiv som existerar i ett twitterinlägg. POS kan t.ex användas för att ta redan på åsikter i ett twitterinlägg där antalet adjektiv kan relateras till vilken åsikt ett twitterinlägget har.
+POS utförs genom att man räknar hur många substantiv, verb och adjektiv som existerar i ett twitterinlägg. POS kan t.ex användas för att ta reda på åsikter i ett twitterinlägg där antalet adjektiv kan relateras till vilken åsikt twitterinlägget har.
 
-Studien kommer implementera n-grams och termfrekvens för varje klassificeringsalgoritm i \ref{impl}. POS kommer inte implementeras i studien då \cite{go2009twitter} och \cite{feature:001} rapporterar försämrad precision. Däremot rapporterar \cite{feature:002} små förbättringar vid användning av POS.
+Studien kommer implementera n-gram och termfrekvens för varje klassificeringsalgoritm i avsnitt \ref{impl}. POS kommer inte implementeras i studien då \cite{go2009twitter, feature:001} rapporterar försämrad precision. Däremot rapporteras i \cite{feature:002} små förbättringar vid användning av POS.
 
-Stilistiska särdrag är särdrag som kommer från det informella skrivsättet som används på Twitter där t.ex emojis, förkortningar, slang och skiljetecken används. Enligt \cite{feature:002} kan emojis ha en stor betydelse för TSA. Men eftersom STS datamängden har avlägsnat emojis, då “distant supervision” \cite{sts:001} har använts, kommer inte studiens modeller ta hänsyn till emojis. Därför har även emojis från SemEval-datamängden filtreras bort i \ref{exp:pre}. Studien kommer inte hantera slang eftersom inget större slanglexikon var öppet för användning. 
+Stilistiska särdrag är särdrag som kommer från det informella skrivsättet som används på Twitter där t.ex emojis, förkortningar, slang och skiljetecken används. Enligt \cite{feature:002} kan emojis ha en stor betydelse för TSA. Men eftersom STS-datamängden har avlägsnat emojis, då “distant supervision” \cite{sts:001} har använts, kommer inte studiens modeller ta hänsyn till emojis. Därför har även emojis från SemEval-datamängden filtrerats bort i avsnitt \ref{exp:pre}. Studien kommer inte hantera slang eftersom inget större slanglexikon var öppet för användning. 
 Förkortningar och skiljetecken kommer hanteras i denna studie och har diskuterats i avsnitt \ref{exp:pre} och implementeras i avsnitt \ref{impl:pre}.
 
-Twitter-specifika särdrag är särdrag som är specifika för Twitters domän som t.ex “hashtags” och “mentions” vilket diskuteras i \ref{TSA} och \ref{exp:pre}.
+Twitter-specifika särdrag är särdrag som är specifika för Twitters domän som t.ex “hashtags” och “mentions” vilka diskuterats i \ref{TSA} och \ref{exp:pre}.
 
 
 
@@ -443,14 +441,14 @@ Twitter-specifika särdrag är särdrag som är specifika för Twitters domän s
 För att ge en bättre förståelse för hur NB, SVM och CNN kan appliceras på sentimentanalys, kommer detta avsnitt ge en överblick av hur algoritmerna går till väga för att klassificera text och hur de kan anpassas för att uppnå bra resultat vid sentimentanalys.
 
 \subsection{Naive Bayes}
-I \ref{MLnb} beskrivs det att Naive Bayes algoritmen är baserad på Bayes theorem  \cite{wiki:009} vilket för TSA betyder att räkna ut sannolikheten om ett twitterinlägg $B$ är positivt eller negativt $A$. Där $P(A | B)$ är en villkorlig sannolikhet för att $A$ inträffar givet att $B$ är sant, $P(B | A)$ är också en villkorlig sannolikhet för att $B$ inträffar givet att $A$ är sant. $P(A)$ och $P(B)$ är sannolikheten att observera $P(A)$ och $P(B)$ oberoende av varandra,
+I \ref{MLnb} beskrivs att Naive Bayes-algoritmen är baserad på Bayes theorem  \cite{wiki:009} vilket för TSA betyder att räkna ut sannolikheten att ett twitterinlägg $B$ är positivt eller negativt $A$. Där $P(A | B)$ är en villkorlig sannolikhet för att $A$ inträffar givet att $B$ är sant, $P(B | A)$ är också en villkorlig sannolikhet för att $B$ inträffar givet att $A$ är sant. $P(A)$ och $P(B)$ är sannolikheten att observera $P(A)$ och $P(B)$ oberoende av varandra,
 \begin{equation}\label{eq:bt}
 P(A|B) = \frac{P(B|A) * P(A)}{P(B)}.
 \end{equation}
 
 För att ekvation \ref{eq:bt} skall vara naiv antas att varje ord $b_w$ i $B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar $B$ utan $b_w$, $P(B|A) = P(b_{w1}|A) * P(b_{w2}|A) * … * P(b_{wn}|A)$, där $n$ är antalet ord i $B$.
 
-För att beräkna sannolikheten att $b_w$ är $A$ används Dirichlet prior \cite{wiki:012, nb:007}, där $N_{b_w}$ är hur många gånger $b_w$ förekommer i delmängden av data för $A$, $N_A$ är summan av alla ord i delmängden för $A$, $\alpha$ och $\alpha_n$ används för att utföra additiv utjämning \cite{wiki:013} där $\alpha = 1$ och $\alpha_n$ är summan antal möjliga ord som existerar i hela datamängden, 
+För att beräkna sannolikheten att $b_w$ är $A$ används Dirichlet prior \cite{wiki:012, nb:007}, där $N_{b_w}$ är hur många gånger $b_w$ förekommer i delmängden av data för $A$, $N_A$ är summan av alla ord i delmängden för $A$, $\alpha$ och $\alpha_n$ används för att utföra additiv utjämning \cite{wiki:013} där $\alpha = 1$ och $\alpha_n$ är summan av antal olika ord i datamängden, 
 
 \begin{equation}\label{eq:slut}
 P(w_b|A)= \frac{N_{b_w} + \alpha}{N_A + \alpha_n}.
@@ -458,7 +456,7 @@ P(w_b|A)= \frac{N_{b_w} + \alpha}{N_A + \alpha_n}.
 
 \begin{table}
 \centering
-\caption{Exempel datamängd om ett twitterinlägg är positiv eller negativ}
+\caption{Exempeldatamängd med twitterinlägg som är märkta som positiva eller negativa.}
 \label{tab:dataset}
     \begin{tabular}{ccc}
     \toprule
@@ -472,7 +470,7 @@ P(w_b|A)= \frac{N_{b_w} + \alpha}{N_A + \alpha_n}.
 \end{tabular}
 \end{table}
 
-I tabell \ref{tab:dataset} illustreras en datamängd med fyra twitterinlägg och dess märkning, denna datamängden kan användas för att beräkna om twitterinlägget “solen skiner alltid i karlstad” är positiv eller negativ. Genom att räkna ut sannolikheten $P(Positiv|\textrm{solen skiner alltid i karlstad})$ och $P(Negativ|\textrm{solen skiner alltid i karlstad})$ kan märkning bestämmas, detta görs genom att jämföra vilken sannolikhet som blir störst. Och eftersom vi ska jämföra uträkningarna mellan varandra kan divisionen med $P(B)$ strykas ur bägge uträkningarna och vi för följande ekvationer,
+I tabell \ref{tab:dataset} illustreras en datamängd med fyra twitterinlägg och deras märkning. Denna datamängd kan användas för att beräkna om twitterinlägget “solen skiner alltid i karlstad” är positivt eller negativt. Genom att räkna ut sannolikheten $P(Positiv|\textrm{solen skiner alltid i karlstad})$ och $P(Negativ|\textrm{solen skiner alltid i karlstad})$ kan märkning bestämmas, detta görs genom att jämföra vilken sannolikhet som blir störst. Och eftersom vi ska jämföra uträkningarna mellan varandra kan divisionen med $P(B)$ strykas ur bägge uträkningarna och vi för följande ekvationer,
 \begin{multline*}
 P(Positiv|\textrm{solen skiner alltid i karlstad}) = P(solen|Positiv) * P(skiner|Positiv) * \\P(alltid|Positiv) * P(i|Positiv) * P(karlstad|Positiv)*P(Positiv)
 \end{multline*}
@@ -511,7 +509,7 @@ karlstad & $\frac{0 + 1}{13 + 18}$ & $\frac{0 + 1}{7 + 18}$ \\
 
 
 \subsection{Support Vector Machine}
-I avsnitt \ref{MLsvm} beskrevs SVM kortfattat, i följande avsnitt kommer SVM att beskrivas mer ingående. SVM-algoritmen skapar en modell utifrån en given mängd märkt träningsdata \cite{svm:002}. Modellen som skapas har sedan förmågan att kategorisera ny indata i en av de två kategorierna. Den skapade SVM-modellen representerar träningsdata som punkter i ett koordinatsystem. I koordinatsystemet kartläggs data så att de två kategorierna är tydligt separerade med ett så stort mellanrum som möjligt. När modellen kategoriserar ny indata kartläggs den datan till samma koordinatsystem, för att sedan kategoriseras utefter vilken sida av mellanrummet den hamnar på.  
+I avsnitt \ref{MLsvm} beskrevs SVM kortfattat, i detta avsnitt kommer SVM att beskrivas mer ingående. SVM-algoritmen skapar en modell utifrån en given mängd märkt träningsdata \cite{svm:002}. Modellen som skapas har sedan förmågan att kategorisera ny indata i en av de två kategorierna. Den skapade SVM-modellen representerar träningsdata som punkter i ett koordinatsystem. I koordinatsystemet kartläggs data så att de två kategorierna är tydligt separerade med ett så stort mellanrum som möjligt. När modellen kategoriserar ny indata kartläggs den datan till samma koordinatsystem, för att sedan kategoriseras utefter vilken sida av mellanrummet den hamnar på.  
 
 \begin{figure}[H]
 \includegraphics[width=9cm]{linearsvm_hpwithmargins}
@@ -520,7 +518,7 @@ I avsnitt \ref{MLsvm} beskrevs SVM kortfattat, i följande avsnitt kommer SVM at
 \label{fig:svmmarg}
 \end{figure}  
 
-För att separera kategorierna konstruerar SVM ett hyperplan \cite{svm:003}. I figur \ref{fig:svmmarg} representeras hyperplanet av linjen mellan kategorierna. Datapunkterna som ligger närmast hyperplanet för respektive kategori kallas för stödvektorer och de är utefter de punkterna som hyperplanet positioneras. Det kan finnas flera möjliga hyperplan som kan kategorisera datan. Idén bakom SVM är att hitta hyperplanet som bäst delar upp datamängden i två kategorier. Ju större marginal mellan kategorierna desto mindre känslig blir modellen för generaliseringsfel \cite{svm:002}. Därför anses hyperplanet som har störst marginal till de närmaste stödvektorerna från respektive kategori ge en bra separation av data.
+För att separera kategorierna konstruerar SVM ett hyperplan \cite{svm:003}. I figur \ref{fig:svmmarg} representeras hyperplanet av linjen mellan kategorierna. Datapunkterna som ligger närmast hyperplanet för respektive kategori kallas för stödvektorer och det är utefter de punkterna som hyperplanet positioneras. Det kan finnas flera möjliga hyperplan som kan kategorisera datan. Idén bakom SVM är att hitta hyperplanet som bäst delar upp datamängden i två kategorier. Ju större marginal mellan kategorierna desto mindre känslig blir modellen för generaliseringsfel \cite{svm:002}. Därför anses hyperplanet som har störst marginal till de närmaste stödvektorerna från respektive kategori ge en bra separation av data.
 
 \begin{figure}[H]
 \includegraphics[width=9cm]{nonlinearsvm}
@@ -547,12 +545,12 @@ På grund av ovanstående anledningar har en linjär klassificerare valts att an
 
 
 \section{Implementation}\label{impl}
-Detta kapitel beskriver detaljer angående implementationen av vår studie och dess flöde som illustrerats i figur \ref{fig:overfig}. Kapitlet beskriver även teknikerna som används för att göra implementationen möjlig. Gemensamma tekniker som används i alla delar av implementation är programmeringsspråket Python3 \cite{impl:001} och Pandas \cite{impl:002}. Pandas är ett Python paket som erbjuder snabba, flexibla datastrukturer som är utformade för att göra arbetet med relation och märkt data smidigare. 
+Detta kapitel beskriver detaljer angående implementationen av vår studie och dess flöde som illustrerats i figur \ref{fig:overfig}. Kapitlet beskriver även teknikerna som används för att göra implementationen möjlig. Gemensamma tekniker som används i alla delar av implementation är programmeringsspråket Python3 \cite{impl:001} och Pandas \cite{impl:002}. Pandas är ett Python-paket som erbjuder snabba, flexibla datastrukturer som är utformade för att göra arbetet med relationell och märkt data smidigare. 
 \subsection{Databearbetning}\label{impl:pre}
-Som beskrivs i avsnitt \ref{exp:pre} är databearbetning ett viktigt steg inom SA och TSA. I detta avsnittet beskrivs implementationen av databearbetningen m.h.a koddelarna som illustreras i figur \ref{fig:dataset}.
+Som beskrivs i avsnitt \ref{exp:pre} är databearbetning ett viktigt steg inom SA och TSA. I detta avsnittet beskrivs implementationen av databearbetningen m.h.a delarna som illustreras i figur \ref{fig:dataset}.
 
-För att avlägsna HTML-kod från twitterinlägg använder vi oss utav BeautifulSoup \ref{impl:004}, som är ett Python-paket som extrahera data från HTML-kod.
-Om HTML-kod återfinns i twitterinlägg tas det således bort. 
+För att avlägsna HTML-kod från twitterinlägg använder vi oss av BeautifulSoup \cite{impl:004}, som är ett Python-paket för att extrahera data från HTML-kod.
+Om HTML-kod finns i twitterinlägg tas det således bort. 
 \begin{python}
 def remove_html_encode(self):
        self.df["tweet"] = self.df["tweet"]./
@@ -594,11 +592,11 @@ def remove_accented_chars(self):
 	encode('ascii', 'ignore').decode('utf-8', 'ignore'))
 \end{python}
 
-För att avlägsna URL, “mentions”, “hashtags” , skiljetecken, siffror och repeterade mellanslag används fyra reguljära uttryck (RU) \cite{impl:003}. För att avlägsna URL används \pythoninline{r'https?://[A-Za-z0-9./’]+'} vilket betyder att om en URL är http eller https kommer denna avlägsnas, samt om den efterföljs av ännu en URL kommer även den tas bort.
+För att avlägsna URL, “mentions”, “hashtags” , skiljetecken, siffror, emojis och repeterade mellanslag används fyra reguljära uttryck (RU) \cite{impl:003}. För att avlägsna URL används \pythoninline{'https?://[A-Za-z0-9./]+'} vilket betyder att om en URL är http eller https kommer denna avlägsnas, samt om den efterföljs av ännu en URL kommer även den tas bort.
 
-“Mentions” avlägsnas med det RU \pythoninline{r'@[A-Za-z0-9]+'}, d.v.s om en alfanumerisk sträng börjar med ‘@’ avlägsnas den alfanumeriska strängen.
+“Mentions” avlägsnas med det RU \pythoninline{'@[A-Za-z0-9]+'}, d.v.s om en alfanumerisk sträng börjar med ‘@’ avlägsnas den alfanumeriska strängen.
 
-Avlägsning av “hashtags”, skiljetecken och siffror görs med det RU \pythoninline{'[^a-zA-Z]'}, d.v.s en sträng måste börja på bokstäver mellan a-z, om inte tas dessa bort.
+Avlägsning av “hashtags”, skiljetecken, siffror och emojis görs med det RU \pythoninline{'[^a-zA-Z]'}, d.v.s en sträng måste börja på bokstäver mellan a-z, om inte tas dessa bort.
 
 Och slutligen så avlägsnas repeterande mellanslag, vilket utförs med det RU \pythoninline{' +'}. Ifall det är två eller fler repeterande mellanslag tas dessa bort.
 
@@ -626,15 +624,15 @@ def tokenize(self):
       self.df["tweet"] = self.df["tweet"].apply(word_tokenize)
 \end{python}
 
-Ordstamsigenkänning utförs m.h.a \pythoninline{SnowballStemmer(‘english’).stem()} \cite{impl:008} från NLTK som försöker hitta varje ords ordstam vilket diskuteras i avsnitt \ref{exp:pre}.
+Ordstamsigenkänning utförs m.h.a \pythoninline{SnowballStemmer('english').stem()} \cite{impl:008} från NLTK som försöker hitta varje ords ordstam vilket diskuteras i avsnitt \ref{exp:pre}.
 \begin{python}
 def word_stemming(self):
        self.df["tweet"] = self.df["tweet"].
-       apply(lambda x: [SnowballStemmer(‘english’).
+       apply(lambda x: [SnowballStemmer('english').
        stem(y) for y in x])
 \end{python}
 
-Avlägsning av stoppord utförs m.h.a \pythoninline{stopwords.word(‘english’)} \cite{impl:007} från NLTK som är en lista utav engelska stoppord. \pythoninline{remove_stopwords(self)} kollar är om något ord i twitterinlägget finns med i listan, om det gör det tas detta bort. 
+Avlägsning av stoppord utförs m.h.a \pythoninline{stopwords.word('english')} \cite{impl:007} från NLTK som är en lista av engelska stoppord. \pythoninline{remove_stopwords(self)} kontrollerar om något ord i twitterinlägget finns med i listan, om det gör det tas det bort. 
 \begin{python}
 stop = stopwords.words('english')
 def remove_stopwords(self):

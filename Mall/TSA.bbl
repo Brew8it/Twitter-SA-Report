@@ -1,4 +1,4 @@
-\begin{thebibliography}{53}
+\begin{thebibliography}{54}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -335,6 +335,12 @@ Python 3.0 release, n.d{\natexlab{a}}.
 \bibitem[imp(2017)]{impl:002}
 pandas: powerful python data analysis toolkit¶, 2017.
 \newblock URL \url{https://pandas.pydata.org/pandas-docs/stable/}.
+\newblock [Online; accessed 4-April 2018].
+
+\bibitem[Richardson(2004)]{impl:004}
+Leonard Richardson.
+\newblock Beautiful soup documentation, 2004.
+\newblock URL \url{https://www.crummy.com/software/BeautifulSoup/bs4/doc/#}.
 \newblock [Online; accessed 4-April 2018].
 
 \bibitem[imp(n.d{\natexlab{b}})]{impl:005}
