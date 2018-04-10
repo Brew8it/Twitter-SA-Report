@@ -390,7 +390,7 @@ Termfrekvens kan används i kombination med n-gram. Längre twitterinlägg kan h
 
 POS utförs genom att man räknar hur många substantiv, verb och adjektiv som existerar i ett twitterinlägg. POS kan t.ex användas för att ta reda på åsikter i ett twitterinlägg där antalet adjektiv kan relateras till vilken åsikt twitterinlägget har.
 
-Studien kommer implementera n-gram och termfrekvens för varje klassificeringsalgoritm i avsnitt \ref{impl}. POS kommer inte implementeras i studien då \cite{go2009twitter, feature:001} rapporterar försämrad precision. Däremot rapporteras i \cite{feature:002} små förbättringar vid användning av POS.
+Studien kommer implementera unigram som ett bassärdrag för NB och SVM för att sedan utforska n-grams och termfrekvens för eventuell förhöjd prestanda vilket diskuteras i avsnitt \ref{impl}. POS kommer inte implementeras i studien då \cite{go2009twitter, feature:001} rapporterar försämrad precision. Däremot rapporteras i \cite{feature:002} små förbättringar vid användning av POS.
 
 Stilistiska särdrag är särdrag som kommer från det informella skrivsättet som används på Twitter där t.ex emojis, förkortningar, slang och skiljetecken används. Enligt \cite{feature:002} kan emojis ha en stor betydelse för TSA. Men eftersom STS-datamängden har avlägsnat emojis, då “distant supervision” \cite{sts:001} har använts, kommer inte studiens modeller ta hänsyn till emojis. Därför har även emojis från SemEval-datamängden filtrerats bort i avsnitt \ref{exp:pre}. Studien kommer inte hantera slang eftersom inget större slanglexikon var öppet för användning. 
 Förkortningar och skiljetecken kommer hanteras i denna studie och har diskuterats i avsnitt \ref{exp:pre} och implementeras i avsnitt \ref{impl:pre}.
@@ -404,6 +404,8 @@ Twitter-specifika särdrag är särdrag som är specifika för Twitters domän s
 För att ge en bättre förståelse för hur NB, SVM och CNN kan appliceras på sentimentanalys, kommer detta avsnitt ge en överblick av hur algoritmerna går till väga för att klassificera text och hur de kan anpassas för att uppnå bra resultat vid sentimentanalys.
 
 \subsection{Naive Bayes}
+Det finns tre varianter utav NB nämligen Gaussian, Bernoulli och Multinomial. Gaussian används när attributen är kontinuerligt fördelade och då antas det att attributen förknippade med varje klass fördelas enligt Gaussian d.v.s normalfördelning \cite{nb:002}. Bernoulli användas när attributen är fördelade enligt multivariat Bernoulli \cite{nb:004} och Multinomial NB (MNB) används när attributen är multinomial fördelat. I \cite{nb:003} diskuteras det att MNB är väl lämpad för text klassificering vilket gör att studien kommer använda MNB.
+
 I \ref{MLnb} beskrivs att Naive Bayes-algoritmen är baserad på Bayes theorem  \cite{wiki:009} vilket för TSA betyder att räkna ut sannolikheten att ett twitterinlägg $(B)$ är positivt eller negativt $(A)$ för en mängd $C$, bestående av ett antal $B$ med ett förbestämt $A$. Där $P(A | B)$ är en villkorlig sannolikhet för att $A$ inträffar givet att $B$ är sant, $P(B | A)$ är också en villkorlig sannolikhet för att $B$ inträffar givet att $A$ är sant. $P(A)$ och $P(B)$ är sannolikheten att observera $P(A)$ och $P(B)$ oberoende av varandra,
 
 \begin{equation}\label{eq:bt}
@@ -532,6 +534,7 @@ def to_lower(self):
 \end{lstlisting}
 
 *** Skriv om expand cont *****
+
 \begin{lstlisting}[style=mypython,caption={Expandera sammandragsförkortningar},label=pre:expand]
 cont_dict = {'can\'t': 'cannot', 'won\'t': 'will not', 'n\'t': ' not'}
 cont_re = re.compile('(%s)' % '|'.join(cont_dict.keys()))
@@ -605,6 +608,12 @@ def remove_stopwords(self):
 
 \subsection{Lexikon}\label{impl:lex}
 \subsection{Naive Bayes}\label{impl:nb}
+
+\begin{lstlisting}[style=mypython,caption={Test},label=nb:base]
+X_train, X_test, y_train, y_test = train_test_split(df.tweet,
+			df.lable, test_size=0.2, random_state=0)
+\end{lstlisting}
+
 \subsection{Support Vector Machine}\label{impl:svm}
 \subsection{Prediction program.}
 \subsection{* ev GUI implementation om tid finns *}
