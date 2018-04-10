@@ -36,7 +36,6 @@
 \contentsline {section}{\numberline {4.2}Resultatet mellan modellerna}{33}
 \contentsline {subsection}{\numberline {4.2.1}Dataset 1 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{33}
 \contentsline {subsection}{\numberline {4.2.2}Dataset 2 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{33}
-\contentsline {subsection}{\numberline {4.2.3}Dataset 3 -> j\IeC {\"a}mf\IeC {\"o}r resultat mellan modellerna}{33}
 \contentsline {section}{\numberline {4.3}Implementations m\IeC {\"a}ssigt vilken modell \IeC {\"a}r l\IeC {\"a}ttast?}{34}
 \contentsline {section}{\numberline {4.4}implementations j\IeC {\"a}mf\IeC {\"o}relse (resultat VS f\IeC {\"o}rv\IeC {\"a}ntat)}{34}
 \contentsline {section}{\numberline {4.5}Summering}{34}
