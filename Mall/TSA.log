@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  10 APR 2018 11:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  11 APR 2018 10:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1183,20 +1183,20 @@ Package pdftex.def Info: ../figures/background/grams.png used on input line 379
 .
 (pdftex.def)             Requested size: 256.0748pt x 183.22229pt.
  [21] [22 <../figures/background/grams.png>]
-Overfull \hbox (6.68843pt too wide) in paragraph at lines 395--397
+Overfull \hbox (6.68843pt too wide) in paragraph at lines 396--398
 \T1/cmr/m/n/12 En-ligt [[]] kan emo-jis ha en stor be-ty-del-se för TSA. Men ef
 -tersom STS-datamängden
  []
 
 
-Overfull \hbox (12.73912pt too wide) in paragraph at lines 395--397
+Overfull \hbox (12.73912pt too wide) in paragraph at lines 396--398
 \T1/cmr/m/n/12 ens mo-del-ler ta hän-syn till emo-jis. Där-för har även emo-jis
  från SemEval-datamängden
  []
 
 [23]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 415.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 416.
 
 [24] [25]
 <../figures/background/linearsvm_hpwithmargins.png, id=146, 479.7925pt x 482.80
@@ -1205,49 +1205,49 @@ File: ../figures/background/linearsvm_hpwithmargins.png Graphic file (type png)
 
  <use ../figures/background/linearsvm_hpwithmargins.png>
 Package pdftex.def Info: ../figures/background/linearsvm_hpwithmargins.png used
- on input line 484.
+ on input line 485.
 (pdftex.def)             Requested size: 256.0748pt x 257.68231pt.
-
-<../figures/background/nonlinearsvm.png, id=147, 467.7475pt x 487.8225pt>
+ [26 <../figures/background/linearsvm_hpwithmargins.png>]
+<../figures/background/nonlinearsvm.png, id=151, 467.7475pt x 487.8225pt>
 File: ../figures/background/nonlinearsvm.png Graphic file (type png)
 
 <use ../figures/background/nonlinearsvm.png>
 Package pdftex.def Info: ../figures/background/nonlinearsvm.png used on input l
-ine 493.
+ine 494.
 (pdftex.def)             Requested size: 256.0748pt x 267.07501pt.
- [26 <../figures/background/linearsvm_hpwithmargins.png>]
+
 <../figures/background/svm_3d.jpg, id=152, 887.315pt x 783.92876pt>
 File: ../figures/background/svm_3d.jpg Graphic file (type jpg)
 
 <use ../figures/background/svm_3d.jpg>
 Package pdftex.def Info: ../figures/background/svm_3d.jpg used on input line 50
-2.
+3.
 (pdftex.def)             Requested size: 256.0748pt x 226.23303pt.
  [27 <../figures/background/nonlinearsvm.png>] [28 <../figures/background/svm_3
 d.jpg>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 522.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 523.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 523.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 524.
  [29] [30] [31]
 [32]
 Kapitel 4.
 [33
 
 ]
-Overfull \hbox (1.19798pt too wide) in paragraph at lines 628--628
+Overfull \hbox (1.19798pt too wide) in paragraph at lines 623--623
 []\T1/cmr/bx/n/20.74 Implementations mäs-sigt vil-ken mo-dell
  []
 
 
-Overfull \hbox (14.16211pt too wide) in paragraph at lines 629--629
+Overfull \hbox (14.16211pt too wide) in paragraph at lines 624--624
 []\T1/cmr/bx/n/20.74 implementations jäm-fö-rel-se (re-sul-tat VS
  []
 
@@ -1378,48 +1378,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 273--278
 g / stable / tutorial / text[]analytics /
  []
 
+
+Underfull \hbox (badness 7631) in paragraph at lines 280--285
+[]\T1/cmr/m/n/12 Cambridge Uni-ver-si-ty Press.  In-ver-se docu-ment fre-quen-c
+y, 2009-
+ []
+
+
+Underfull \hbox (badness 4168) in paragraph at lines 280--285
+\T1/cmr/m/n/12 04-07.  URL $\T1/cmtt/m/n/12 https : / / nlp\OML/cmm/m/it/12 :\T
+1/cmtt/m/n/12 stanford\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 edu / IR -[] book / htm
+l / htmledition /
+ []
+
 [41]
-Underfull \hbox (badness 6708) in paragraph at lines 317--322
+Underfull \hbox (badness 6708) in paragraph at lines 324--329
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Di-richlet dis-tri-bu-tion --- Wi-
 ki-pe-dia, the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--322
+Underfull \hbox (badness 10000) in paragraph at lines 324--329
 \T1/cmr/m/n/12 free en-cyclo-pe-dia, 2004.  URL $\T1/cmtt/m/n/12 https : / / en
 \OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
 g / wiki /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--335
+Underfull \hbox (badness 10000) in paragraph at lines 337--342
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Ad-di-ti-ve smoot-hing --- Wi-ki-p
 e-dia, the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--335
+Underfull \hbox (badness 10000) in paragraph at lines 337--342
 \T1/cmr/m/n/12 free en-cyclo-pe-dia, 2008.  URL $\T1/cmtt/m/n/12 https : / / en
 \OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
 g / wiki /
  []
 
 
-Underfull \hbox (badness 4341) in paragraph at lines 350--353
+Underfull \hbox (badness 4341) in paragraph at lines 357--360
 []\T1/cmr/m/n/12 Python 3.0 re-le-a-se, n.d.  URL $\T1/cmtt/m/n/12 https : / / 
 www\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 python\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
 g / download /
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 355.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 362.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 355.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 362.
  [42]
-Underfull \hbox (badness 2707) in paragraph at lines 382--385
+Underfull \hbox (badness 2707) in paragraph at lines 389--392
 []\T1/cmr/m/n/12 nltk.stem pac-kage - nltk 3.2.5 docu-men-ta-tion, n.d.  URL $\
 T1/cmtt/m/n/12 http : / /
  []
@@ -1434,10 +1447,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 17927 strings out of 493029
- 320167 string characters out of 6136234
- 539058 words of memory out of 5000000
- 21074 multiletter control sequences out of 15000+600000
+ 17909 strings out of 493029
+ 319955 string characters out of 6136234
+ 539082 words of memory out of 5000000
+ 21056 multiletter control sequences out of 15000+600000
  18699 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,12n,58p,1482b,1981s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1457,7 +1470,7 @@ xmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200
 .pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/tex
 mf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on TSA.pdf (53 pages, 604808 bytes).
+Output written on TSA.pdf (53 pages, 604890 bytes).
 PDF statistics:
  272 PDF objects out of 1000 (max. 8388607)
  178 compressed objects within 2 object streams

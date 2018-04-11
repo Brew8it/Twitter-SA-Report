@@ -20,7 +20,7 @@
 \contentsline {section}{\numberline {3.1}Bearbetning av datam\IeC {\"a}ngd}{16}
 \contentsline {section}{\numberline {3.2}S\IeC {\"a}rdragsurval}{21}
 \contentsline {section}{\numberline {3.3}Algoritmer}{23}
-\contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{23}
+\contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{24}
 \contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{25}
 \contentsline {subsection}{\numberline {3.3.3}Convolutional Neural Network}{29}
 \contentsline {section}{\numberline {3.4}Implementation}{29}

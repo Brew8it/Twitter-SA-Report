@@ -384,9 +384,10 @@ I \cite{TSAsurvey} presenteras det fyra olika särdragsklasser inom TSA: semanti
 
 Semantiska särdrag används mestadels för att ta ut  åsiktsord, sentimentord och negationer. Åsiktsord är ord eller meningar som kan innehålla någon typ av åsikt medan sentimentord är ord som innehåller något positivt eller negativt. Negationer är ett viktigt koncept eftersom en mening som innehåller någon typ av negation kan skifta om twitterinlägget är positivt eller negativt. Studien kommer använda sentimentord i lexikonimplementationen som diskuteras i avsnitt \ref{impl:lex} och negationer som även diskuterats i avsnitt \ref{exp:pre} kommer implementeras i avsnitt \ref{impl:pre}.
 
-Syntaktiska särdrag används för att utforska påverkan av olika termer i SA och TSA. Syntaktiska särdrag bryts ner till unigram, bigram, trigram, n-gram, termfrekvens och “Part of Speech” (POS), där n-gram är ett samlingsord för uni-, bi- och trigram. I figur \ref{fig:grams} illustreras hur n-grammodellen fungerar på en enkel mening och hur meningens ord grupperas på olika sätta till ett ord eller fras. **ta upp något om varför det används?**
+Syntaktiska särdrag används för att utforska påverkan av olika termer i SA och TSA, syntaktiska särdrag bryts ner till unigram, bigram, trigrams, n-gram, termfrekvens, omvänd dokumentfrekvens (IDF) och “Part of Speech” (POS). Där n-grams är ett samlingsord för uni-, bi- och trigram, i figur \ref{fig:grams} illustreras hur n-gram modellen fungerar på en enkel mening och hur meningens ord grupperas på olika sätta till ett ord eller fras. 
 
-Termfrekvens kan används i kombination med n-gram. Längre twitterinlägg kan ha ett högre antal förekomster av ett ord än ett kortare twitterinlägg, vilket kan leda till att ord kan få större betydelse för klassificeringen. Genom användandet av termfrekvens delas antalet förekomster av ett ord i ett twitterinlägg med alla ord som finns i twitterinlägget undviks sådana problem \cite{scikit:001}.
+Termfrekvens används då längre twitterinlägg kan ha ett högre antal förekomster av ett ord än ett kortare twitterinlägg, vilket kan leda till att ord kan få större betydelse för klassificeringen. Genom användandet av termfrekvens delas antalet förekomster av ett ord i ett twitterinlägg med alla ord som finns i twitterinlägget undviks sådana problem \cite{scikit:001}. IDF \cite{idf:001} används i kombination med termfrekvens eftersom ordet “the” är så pass vanligt, kommer termfrekvens att lägga för stor vikt på ordet “the” som egentligen inte säger något om vilket sentiment twitterinlägget har. Så m.h.a IDF kommer ord som används sällan få större vikt och eventuell högre precision kan uppnås.
+
 
 POS utförs genom att man räknar hur många substantiv, verb och adjektiv som existerar i ett twitterinlägg. POS kan t.ex användas för att ta reda på åsikter i ett twitterinlägg där antalet adjektiv kan relateras till vilken åsikt twitterinlägget har.
 
@@ -608,12 +609,6 @@ def remove_stopwords(self):
 
 \subsection{Lexikon}\label{impl:lex}
 \subsection{Naive Bayes}\label{impl:nb}
-
-\begin{lstlisting}[style=mypython,caption={Test},label=nb:base]
-X_train, X_test, y_train, y_test = train_test_split(df.tweet,
-			df.lable, test_size=0.2, random_state=0)
-\end{lstlisting}
-
 \subsection{Support Vector Machine}\label{impl:svm}
 \subsection{Prediction program.}
 \subsection{* ev GUI implementation om tid finns *}

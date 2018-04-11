@@ -1,4 +1,4 @@
-\begin{thebibliography}{57}
+\begin{thebibliography}{58}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -275,6 +275,13 @@ scikitlearn documentation.
 \newblock URL
   \url{http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html}.
 \newblock [Online; accessed 12-Mars 2018].
+
+\bibitem[Press(2009-04-07)]{idf:001}
+Cambridge~University Press.
+\newblock Inverse document frequency, 2009-04-07.
+\newblock URL
+  \url{https://nlp.stanford.edu/IR-book/html/htmledition/inverse-document-frequency-1.html}.
+\newblock [Online; accessed 11-April 2018].
 
 \bibitem[Go et~al.(2009{\natexlab{b}})Go, Bhayani, and Huang]{go2009twitter}
 Alec Go, Richa Bhayani, and Lei Huang.

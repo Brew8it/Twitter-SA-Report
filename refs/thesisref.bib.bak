@@ -497,6 +497,18 @@ and Rouveirol, C{\'e}line},
   ISBN                     = {978-3-540-69781-7}
 }
 
+@Misc{cnn:007,
+  Title                    = {Understanding how Convolutional Neural Network (CNN) perform text classification with word embeddings},
+
+  Author                   = {Joshua Kim},
+  Year                     = {2017},
+
+  Comment                  = {Last checked 2018-04-03},
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.04.10},
+  Url                      = {https://towardsdatascience.com/understanding-how-convolutional-neural-network-cnn-perform-text-classification-with-word-d2ee64b9dd0b}
+}
+
 @Article{cnn:003,
   Title                    = {Convolutional neural networks for sentence classification},
   Author                   = {Kim, Yoon},
@@ -580,6 +592,18 @@ and Rouveirol, C{\'e}line},
   Pages                    = {1--18}
 }
 
+@Misc{idf:001,
+  Title                    = {Inverse document frequency},
+
+  Author                   = {Cambridge University Press},
+  Note                     = {[Online; accessed 11-April 2018]},
+  Year                     = {2009-04-07},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.11},
+  Url                      = {https://nlp.stanford.edu/IR-book/html/htmledition/inverse-document-frequency-1.html}
+}
+
 @Misc{nb:001,
   Title                    = {6 Easy Steps to Learn Naive Bayes Algorithm (with codes in Python and R)},
 
@@ -652,6 +676,78 @@ and Rouveirol, C{\'e}line},
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.12},
   Url                      = {http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html}
+}
+
+@Misc{scikit:002,
+  Title                    = {sci-kit learn - Machine learning in python.},
+
+  Author                   = {scikitlearn documentation},
+  Note                     = {[Online; accessed 12-April 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.12},
+  Url                      = {http://scikit-learn.org/stable/index.html#}
+}
+
+@Misc{scikit:003,
+  Title                    = {sklearn.model_selection.train_test_split - sk-learn 0.19.1 documentation },
+
+  Author                   = {scikitlearn documentation},
+  Note                     = {[Online; accessed 11-April 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.11},
+  Url                      = {http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html}
+}
+
+@Misc{scikit:004,
+  Title                    = {sklearn.naive_bayes.MultinomialNB - sk-learn 0.19.1 documentation },
+
+  Author                   = {scikitlearn documentation},
+  Note                     = {[Online; accessed 11-April 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.11},
+  Url                      = {http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html}
+}
+
+@Misc{scikit:005,
+  Title                    = {sklearn.feature_extraction.text.CountVectorizer - sk-learn 0.19.1 documentation },
+
+  Author                   = {scikitlearn documentation},
+  Note                     = {[Online; accessed 11-April 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.11},
+  Url                      = {http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html}
+}
+
+@Misc{scikit:006,
+  Title                    = {sklearn.model_selection.GridSearchCV - sk-learn 0.19.1 documentation },
+
+  Author                   = {scikitlearn documentation},
+  Note                     = {[Online; accessed 11-April 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.11},
+  Url                      = {http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html}
+}
+
+@Misc{scikit:007,
+  Title                    = {sklearn.feature_selection.SelectKBest - sk-learn 0.19.1 documentation },
+
+  Author                   = {scikitlearn documentation},
+  Note                     = {[Online; accessed 11-April 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.11},
+  Url                      = {http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html}
 }
 
 @Misc{nb:003,
