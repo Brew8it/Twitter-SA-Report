@@ -330,6 +330,18 @@
   Keywords                 = {Internet;data mining;sentiment analysis;social networking (online);Internet forums;Twitter data;World Wide Web;blogs;discussion groups;negative category;neutral category;online available data;opinion categorization;parametric comparison;positive category;sentiment analysis techniques;sentiment mining;topic opinions;unstructured data classification;user-generated content;Automation;Data mining;Feature extraction;Machine learning algorithms;Sentiment analysis;Support vector machines;Twitter;Sentiment analysis;Twitter;machine learning;opinion mining}
 }
 
+@Misc{cnn:008,
+  Title                    = {A Beginner's Guide To Understanding Convolutional Neural Networks},
+
+  Author                   = {Adit Deshpande},
+  Year                     = {2016},
+
+  Comment                  = {Last checked 2018-04-11},
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.04.11},
+  Url                      = {https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/}
+}
+
 @InProceedings{7784960,
   Title                    = {Twitter sentiment analysis using various classification algorithms},
   Author                   = {A. Deshwal and S. K. Sharma},
@@ -868,6 +880,16 @@ and Rouveirol, C{\'e}line},
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.02.12},
   Url                      = {http://mathworld.wolfram.com/Hyperplane.html}
+}
+
+@Misc{wiki:016,
+  Title                    = {Word embedding --- {Wikipedia}{,} The Free Encyclopedia},
+
+  Author                   = {{Wikipedia contributors}},
+  Note                     = {[Online; accessed 11-April-2018]},
+  Year                     = {2018},
+
+  Url                      = {https://en.wikipedia.org/w/index.php?title=Word_embedding&oldid=835602312}
 }
 
 @InProceedings{7382029,
