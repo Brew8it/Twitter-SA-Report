@@ -684,6 +684,16 @@ and Rouveirol, C{\'e}line},
   Url                      = {https://www.crummy.com/software/BeautifulSoup/bs4/doc/#}
 }
 
+@Misc{gui:002,
+  Title                    = {Welcome - Flask A Python microframework},
+
+  Author                   = {Armin Ronacher},
+  Note                     = {[Online; accessed 16-April-2018]},
+  Year                     = {2010},
+
+  Url                      = {http://flask.pocoo.org/}
+}
+
 @InProceedings{7434400,
   Title                    = {Twitter Sentiment Analysis -- A More Enhanced Way of Classification and Scoring},
   Author                   = {S. Sahu and S. K. Rout and D. Mohanty},
@@ -808,6 +818,18 @@ and Rouveirol, C{\'e}line},
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.11},
   Url                      = {http://scikit-learn.org/stable/modules/svm.html}
+}
+
+@Misc{scikit:009,
+  Title                    = {sklearn.linear_model.SGDClassifier - sk-learn 0.19.1 documentation },
+
+  Author                   = {scikitlearn documentation},
+  Note                     = {[Online; accessed 11-April 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.11},
+  Url                      = {http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html}
 }
 
 @Misc{nb:003,
@@ -957,6 +979,14 @@ and Rouveirol, C{\'e}line},
   Author                   = {Zhang, Ye and Wallace, Byron},
   Journal                  = {arXiv preprint arXiv:1510.03820},
   Year                     = {2015}
+}
+
+@Misc{gui:001,
+  Title                    = {Bootstrap - The most popular HTML, CSS and JS library in the world},
+  Note                     = {[Online; accessed 16-April-2018]},
+  Year                     = {n.d},
+
+  Url                      = {https://getbootstrap.com/}
 }
 
 @Misc{impcnn:004,
