@@ -750,6 +750,18 @@ and Rouveirol, C{\'e}line},
   Url                      = {http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html}
 }
 
+@Misc{scikit:008,
+  Title                    = {1.4. Support Vector Machines - sk-learn 0.19.1 documentation },
+
+  Author                   = {scikitlearn documentation},
+  Note                     = {[Online; accessed 11-April 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.11},
+  Url                      = {http://scikit-learn.org/stable/modules/svm.html}
+}
+
 @Misc{nb:003,
   Title                    = {1.9 Naive Bayes -- scikitlearn documentation},
 

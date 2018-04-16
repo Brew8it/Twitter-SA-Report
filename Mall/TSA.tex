@@ -201,7 +201,7 @@ Exempelvis kan en frukt anses vara ett äpple om det är grönt, runt och är 10
 \subsection{Support Vector Machine} \label{MLsvm}
 SVM är en övervakad maskininlärningsalgoritm som kan användas till både klassificerings- och regressionsproblem, för det mesta används SVM för klassifikationsproblem. SVM är baserat på idén att hitta ett hyperplan \cite{svm:001} som bäst delar upp datamängden i två klasser \cite{svm:003}. Givet en träningsmängd där förväntad utdata är markerad till en av två kategorier bygger SVM-algoritmen upp en klassificeringsmodell som kan användas för att förutse vilken kategori ny indata ger \cite{svm:002}. 
 
-\subsection{Convolutional neural network}
+\subsection{Convolutional neural network}\label{bak:cnn}
 Ett av de snabbast växande områden inom maskininlärning är djup inlärning \cite{TSAsurvey}. Begreppet djup inlärning syftar till artificiella neuronnät (ANN) som är uppbyggda med flera lager  \cite{cnn:001}. ANN är system som försöker ta efter beteende hos biologiska neuronnät för att stegvis bli bättre på att utföra en angiven uppgift genom att studera exempel \cite{wiki:015}. 
 
 CNN är ett av de mest populära neuronnäten  \cite{cnn:001}. Det var ursprungligen framtaget för maskininlärningsproblem som rör datorseende och har tidigare påvisat imponerande resultat för bildigenkänning \cite{cnn:003, cnn:006}. Men på senare tid har det även visat sig att CNN är effektivt att använda för problem som rör sentimentanalys. Med relativt enkla CNN-modeller har imponerande resultat kunnat uppnås inom textklassificering.  I \cite{cnn:003} presenteras en enkel CNN-modell för textklassificering som påvisade goda resultat över flertalet datamängder. CNN-modellen som har använts i den här studien har utgått från den modell som Yoon Kim presenterar i \cite{cnn:003}.
@@ -610,8 +610,29 @@ def remove_stopwords(self):
 \subsection{Lexikon}\label{impl:lex}
 \subsection{Naive Bayes}\label{impl:nb}
 \subsection{Support Vector Machine}\label{impl:svm}
-\subsection{Prediction program.}
+\subsection{Convolutional neural network}
 \subsection{* ev GUI implementation om tid finns *}
+\begin{figure}[H]
+\includegraphics[width=12cm]{GUI_form}
+\centering
+\caption{Illustrerar webb gränssnittets sökformulär.}
+\label{fig:dataset}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=12cm]{GUI_search_graph}
+\centering
+\caption{Illustrerar hur klassificeringsmodellerna har klassificerat 10 stycken twitterinlägg från användaren “realDonaldTrump”.}
+\label{fig:dataset}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=12cm]{GUI_search_table}
+\centering
+\caption{Illustrerar hur klassificeringsmodellerna har klassificerat varje tweet.}
+\label{fig:dataset}
+\end{figure}
+
 \section{Sammanfattning}
 
 \chapter{Resultat} \label{res}
