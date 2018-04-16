@@ -1009,6 +1009,16 @@ and Rouveirol, C{\'e}line},
   Url                      = {https://www.tensorflow.org/}
 }
 
+@Misc{impcnn:006,
+  Title                    = {Core layers - Keras Documentation},
+  Note                     = {[Online; accessed 16-April 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.04.16},
+  Url                      = {https://keras.io/core/}
+}
+
 @Misc{impl:001,
   Title                    = {Python 3.0 release},
   Note                     = {[Online; accessed 4-April 2018]},
@@ -1087,5 +1097,13 @@ and Rouveirol, C{\'e}line},
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.02.12},
   Url                      = {http://alt.qcri.org/semeval2017/task4/}
+}
+
+@Misc{gui:003,
+  Title                    = {About SQLite},
+  Note                     = {[Online; accessed 16-April-2018]},
+  Year                     = {2000},
+
+  Url                      = {http://flask.pocoo.org/}
 }
 
