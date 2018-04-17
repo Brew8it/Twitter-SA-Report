@@ -70,6 +70,9 @@
       tidigare anv\"ants f\"or erh\aa llande av annan examen.}%
 }
 \AtBeginDocument{%
+  \setname{opponent}{Opponent}{Opponent}%
+}
+\AtBeginDocument{%
   \setname{supervisorname}{Supervisor}{Handledare}%
 }
 \AtBeginDocument{%
@@ -94,9 +97,9 @@
     }{%
     }
     \cleardoublepage%
-    %\section*{\@title}%
-    %\textsc{\prettylist{\@author}}\par%
-    %\noindent\textit{\@institute}%
+    \section*{\@title}%
+    \textsc{\prettylist{\@author}}\par%
+    \noindent\textit{\@institute}%
     \section*{\abstractname}%
   }{%
     \cleardoublepage%
@@ -111,6 +114,7 @@
   \\\mbox{}\bigskip\\\mbox{}\bigskip%
   \approvalname,\\\mbox{}\bigskip%
   \begin{quote}%
+    \sig\opponent: \@opponent\\\mbox{}\bigskip\\%
     \sig\supervisorname: \@supervisor\\\mbox{}\bigskip\\%
     \sig\examinername: \@examiner
   \end{quote}%

@@ -28,7 +28,7 @@
 \contentsline {subsection}{\numberline {3.4.2}Lexikon}{32}
 \contentsline {subsection}{\numberline {3.4.3}Naive Bayes}{32}
 \contentsline {subsection}{\numberline {3.4.4}Support Vector Machine}{32}
-\contentsline {subsection}{\numberline {3.4.5}Prediction program.}{32}
+\contentsline {subsection}{\numberline {3.4.5}Convolutional neural network}{32}
 \contentsline {subsection}{\numberline {3.4.6}* ev GUI implementation om tid finns *}{32}
 \contentsline {section}{\numberline {3.5}Sammanfattning}{33}
 \contentsline {chapter}{\numberline {4}Resultat}{34}

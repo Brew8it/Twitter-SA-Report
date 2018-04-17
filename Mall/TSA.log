@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  16 APR 2018 11:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  17 APR 2018 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -929,18 +929,18 @@ LaTeX Warning: Label `fig:dataset' multiply defined.
 )
 \openout1 = `TSA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
  ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1038,7 +1038,7 @@ Runaway argument?
 ! Paragraph ended before \PackageWarning was complete.
 <to be read again> 
                    \par 
-l.109 
+l.110 
       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -1069,11 +1069,11 @@ My plan is to forget the whole thing and hope for the best.
 ]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 123.
+(Font)              size <24.88> substituted on input line 122.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 123.
+(Font)              size <24.88> substituted on input line 122.
 
 (./TSA.toc [9
 
@@ -1105,12 +1105,12 @@ Kapitel 1.
 
 ]
 Kapitel 2.
-<../figures/background/oversiktsfigur.png, id=44, 633.36626pt x 201.75375pt>
+<../figures/background/oversiktsfigur.png, id=46, 633.36626pt x 201.75375pt>
 File: ../figures/background/oversiktsfigur.png Graphic file (type png)
 
 <use ../figures/background/oversiktsfigur.png>
 Package pdftex.def Info: ../figures/background/oversiktsfigur.png used on input
- line 142.
+ line 141.
 (pdftex.def)             Requested size: 341.43306pt x 108.76376pt.
 
 
@@ -1119,154 +1119,154 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [2
 
 ] [3 <../figures/background/oversiktsfigur.png>] [4]
-<../figures/background/ml.png, id=59, 688.5725pt x 591.20876pt>
+<../figures/background/ml.png, id=61, 688.5725pt x 591.20876pt>
 File: ../figures/background/ml.png Graphic file (type png)
 
 <use ../figures/background/ml.png>
-Package pdftex.def Info: ../figures/background/ml.png used on input line 177.
+Package pdftex.def Info: ../figures/background/ml.png used on input line 176.
 (pdftex.def)             Requested size: 341.43306pt x 293.1499pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5] <../figures/background/klassmodell.png, id=66, 573.14125pt x 350.30875pt>
+[5] <../figures/background/klassmodell.png, id=68, 573.14125pt x 350.30875pt>
 File: ../figures/background/klassmodell.png Graphic file (type png)
 
 <use ../figures/background/klassmodell.png>
 Package pdftex.def Info: ../figures/background/klassmodell.png used on input li
-ne 189.
+ne 188.
 (pdftex.def)             Requested size: 341.43306pt x 208.69019pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6 <../figures/background/ml.png>]
-Overfull \hbox (33.80516pt too wide) in paragraph at lines 202--203
+Overfull \hbox (33.80516pt too wide) in paragraph at lines 201--202
 \T1/cmr/m/n/12 SVM är en över-va-kad ma-ski-nin-lär-nings-al-go-ritm som kan an
 -vän-das till bå-de klassificerings-
  []
 
 [7 <../figures/background/klassmodell.png>]
 
-LaTeX Warning: Reference `bac:intro' on page 8 undefined on input line 211.
+LaTeX Warning: Reference `bac:intro' on page 8 undefined on input line 210.
 
 [8] [9] [10]
-<../figures/background/exempeltweet.png, id=85, 745.78625pt x 61.22874pt>
+<../figures/background/exempeltweet.png, id=87, 745.78625pt x 61.22874pt>
 File: ../figures/background/exempeltweet.png Graphic file (type png)
 
 <use ../figures/background/exempeltweet.png>
 Package pdftex.def Info: ../figures/background/exempeltweet.png used on input l
-ine 241.
+ine 240.
 (pdftex.def)             Requested size: 341.43306pt x 28.031pt.
  [11 <../figures/background/exempeltweet.png>] [12]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 285.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 284.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-[13] <../figures/background/utvardering.png, id=97, 382.42876pt x 382.42876pt>
+[13] <../figures/background/utvardering.png, id=99, 382.42876pt x 382.42876pt>
 File: ../figures/background/utvardering.png Graphic file (type png)
 
 <use ../figures/background/utvardering.png>
 Package pdftex.def Info: ../figures/background/utvardering.png used on input li
-ne 295.
+ne 294.
 (pdftex.def)             Requested size: 284.52756pt x 284.53922pt.
  [14 <../figures/background/utvardering.png>] [15]
 Kapitel 3.
 [16
 
 ] [17]
-<../figures/background/dataset.png, id=112, 573.14125pt x 723.70375pt>
+<../figures/background/dataset.png, id=114, 573.14125pt x 723.70375pt>
 File: ../figures/background/dataset.png Graphic file (type png)
 
 <use ../figures/background/dataset.png>
 Package pdftex.def Info: ../figures/background/dataset.png used on input line 3
-27.
+26.
 (pdftex.def)             Requested size: 341.43306pt x 431.1336pt.
  [18] [19 <../figures/background/dataset.png>] [20]
-<../figures/background/grams.png, id=123, 472.76625pt x 338.26375pt>
+<../figures/background/grams.png, id=125, 472.76625pt x 338.26375pt>
 File: ../figures/background/grams.png Graphic file (type png)
 
 <use ../figures/background/grams.png>
-Package pdftex.def Info: ../figures/background/grams.png used on input line 379
+Package pdftex.def Info: ../figures/background/grams.png used on input line 378
 .
 (pdftex.def)             Requested size: 256.0748pt x 183.22229pt.
  [21] [22 <../figures/background/grams.png>]
-Overfull \hbox (6.68843pt too wide) in paragraph at lines 396--398
+Overfull \hbox (6.68843pt too wide) in paragraph at lines 395--397
 \T1/cmr/m/n/12 En-ligt [[]] kan emo-jis ha en stor be-ty-del-se för TSA. Men ef
 -tersom STS-datamängden
  []
 
 
-Overfull \hbox (12.73912pt too wide) in paragraph at lines 396--398
+Overfull \hbox (12.73912pt too wide) in paragraph at lines 395--397
 \T1/cmr/m/n/12 ens mo-del-ler ta hän-syn till emo-jis. Där-för har även emo-jis
  från SemEval-datamängden
  []
 
 [23]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 416.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 415.
 
 [24] [25]
-<../figures/background/linearsvm_hpwithmargins.png, id=146, 479.7925pt x 482.80
+<../figures/background/linearsvm_hpwithmargins.png, id=148, 479.7925pt x 482.80
 376pt>
 File: ../figures/background/linearsvm_hpwithmargins.png Graphic file (type png)
 
  <use ../figures/background/linearsvm_hpwithmargins.png>
 Package pdftex.def Info: ../figures/background/linearsvm_hpwithmargins.png used
- on input line 485.
+ on input line 484.
 (pdftex.def)             Requested size: 256.0748pt x 257.68231pt.
  [26 <../figures/background/linearsvm_hpwithmargins.png>]
-<../figures/background/nonlinearsvm.png, id=151, 467.7475pt x 487.8225pt>
+<../figures/background/nonlinearsvm.png, id=153, 467.7475pt x 487.8225pt>
 File: ../figures/background/nonlinearsvm.png Graphic file (type png)
 
 <use ../figures/background/nonlinearsvm.png>
 Package pdftex.def Info: ../figures/background/nonlinearsvm.png used on input l
-ine 494.
+ine 493.
 (pdftex.def)             Requested size: 256.0748pt x 267.07501pt.
 
-<../figures/background/svm_3d.jpg, id=152, 887.315pt x 783.92876pt>
+<../figures/background/svm_3d.jpg, id=154, 887.315pt x 783.92876pt>
 File: ../figures/background/svm_3d.jpg Graphic file (type jpg)
 
 <use ../figures/background/svm_3d.jpg>
 Package pdftex.def Info: ../figures/background/svm_3d.jpg used on input line 50
-3.
+2.
 (pdftex.def)             Requested size: 256.0748pt x 226.23303pt.
  [27 <../figures/background/nonlinearsvm.png>] [28 <../figures/background/svm_3
 d.jpg>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 523.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 522.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 524.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 523.
  [29] [30] [31]
-<../figures/background/GUI_form.png, id=172, 1896.08376pt x 435.6275pt>
+<../figures/background/GUI_form.png, id=174, 1896.08376pt x 435.6275pt>
 File: ../figures/background/GUI_form.png Graphic file (type png)
 
 <use ../figures/background/GUI_form.png>
 Package pdftex.def Info: ../figures/background/GUI_form.png used on input line 
-616.
+615.
 (pdftex.def)             Requested size: 341.43306pt x 78.4428pt.
 
-<../figures/background/GUI_search_graph.png, id=173, 1887.05pt x 958.58125pt>
+<../figures/background/GUI_search_graph.png, id=175, 1887.05pt x 958.58125pt>
 File: ../figures/background/GUI_search_graph.png Graphic file (type png)
 
 <use ../figures/background/GUI_search_graph.png>
 Package pdftex.def Info: ../figures/background/GUI_search_graph.png used on inp
-ut line 623.
+ut line 622.
 (pdftex.def)             Requested size: 341.43306pt x 173.42941pt.
  [32 <../figures/background/GUI_form.png>]
-<../figures/background/GUI_search_table.png, id=177, 1615.03375pt x 829.0975pt>
+<../figures/background/GUI_search_table.png, id=179, 1615.03375pt x 829.0975pt>
 File: ../figures/background/GUI_search_table.png Graphic file (type png)
 <use ../figures/background/GUI_search_table.png>
 Package pdftex.def Info: ../figures/background/GUI_search_table.png used on inp
-ut line 630.
+ut line 629.
 (pdftex.def)             Requested size: 341.43306pt x 175.27951pt.
  [33 <../figures/background/GUI_search_graph.png> <../figures/background/GUI_se
 arch_table.png>]
@@ -1274,12 +1274,12 @@ Kapitel 4.
 [34
 
 ]
-Overfull \hbox (1.19798pt too wide) in paragraph at lines 644--644
+Overfull \hbox (1.19798pt too wide) in paragraph at lines 643--643
 []\T1/cmr/bx/n/20.74 Implementations mäs-sigt vil-ken mo-dell
  []
 
 
-Overfull \hbox (14.16211pt too wide) in paragraph at lines 645--645
+Overfull \hbox (14.16211pt too wide) in paragraph at lines 644--644
 []\T1/cmr/bx/n/20.74 implementations jäm-fö-rel-se (re-sul-tat VS
  []
 
@@ -1482,11 +1482,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17924 strings out of 493029
- 320536 string characters out of 6136234
- 539121 words of memory out of 5000000
- 21068 multiletter control sequences out of 15000+600000
- 18699 words of font info for 43 fonts, out of 8000000 for 9000
+ 17929 strings out of 493029
+ 320584 string characters out of 6136234
+ 539217 words of memory out of 5000000
+ 21072 multiletter control sequences out of 15000+600000
+ 19374 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,12n,58p,1482b,1981s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
@@ -1500,15 +1500,16 @@ cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/t
 exmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/pub
 lic/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx248
-8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/te
-xmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/publ
-ic/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200
-.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/tex
-mf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on TSA.pdf (54 pages, 981086 bytes).
+8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sftt1200.pfb>
+Output written on TSA.pdf (54 pages, 990319 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
+ 282 PDF objects out of 1000 (max. 8388607)
+ 183 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
