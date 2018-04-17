@@ -1,9 +1,15 @@
-\begin{thebibliography}{58}
+\begin{thebibliography}{57}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Zhang and Wallace(2015)]{cnn:002}
+Ye~Zhang and Byron Wallace.
+\newblock A sensitivity analysis of (and practitioners' guide to) convolutional
+  neural networks for sentence classification.
+\newblock \emph{arXiv preprint arXiv:1510.03820}, 2015.
 
 \bibitem[Walaa~Medhat(2014)]{SAsurvey}
 Hoda~Korashy Walaa~Medhat, Ahmed~Hassan.
@@ -140,10 +146,10 @@ S.~Albawi, T.~A. Mohammed, and S.~Al-Zawi.
   (ICET)}, pages 1--6, Aug 2017.
 \newblock \doi{10.1109/ICEngTechnol.2017.8308186}.
 
-\bibitem[contributors(2018)]{wiki:015}
+\bibitem[contributors(2018{\natexlab{a}})]{wiki:015}
 Wikipedia contributors.
 \newblock Artificial neural network --- wikipedia{,} the free encyclopedia,
-  2018.
+  2018{\natexlab{a}}.
 \newblock URL
   \url{https://en.wikipedia.org/w/index.php?title=Artificial_neural_network&oldid=830851868}.
 \newblock [Online; accessed 28-March-2018].
@@ -353,46 +359,42 @@ Alexandre Kowalczyk.
   \url{https://www.svm-tutorial.com/2014/10/svm-linear-kernel-good-text-classification/}.
 \newblock [Online; accessed 27-Mars 2018].
 
-\bibitem[imp(n.d{\natexlab{a}})]{impl:001}
-Python 3.0 release, n.d{\natexlab{a}}.
+\bibitem[contributors(2018{\natexlab{b}})]{cnn:005}
+Wikipedia contributors.
+\newblock Convolutional neural network --- wikipedia{,} the free encyclopedia,
+  2018{\natexlab{b}}.
+\newblock URL
+  \url{https://en.wikipedia.org/w/index.php?title=Convolutional_neural_network&oldid=832961286}.
+\newblock [Online; accessed 3-April-2018].
+
+\bibitem[Britz(2015)]{cnn:004}
+Denny Britz.
+\newblock Understanding convolutional neural networks for nlp, 2015.
+\newblock URL
+  \url{http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/}.
+
+\bibitem[Deshpande(2016)]{cnn:008}
+Adit Deshpande.
+\newblock A beginner's guide to understanding convolutional neural networks,
+  2016.
+\newblock URL
+  \url{https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/}.
+
+\bibitem[{Wikipedia contributors}(2018)]{wiki:016}
+{Wikipedia contributors}.
+\newblock Word embedding --- {Wikipedia}{,} the free encyclopedia, 2018.
+\newblock URL
+  \url{https://en.wikipedia.org/w/index.php?title=Word_embedding&oldid=835602312}.
+\newblock [Online; accessed 11-April-2018].
+
+\bibitem[imp(n.d)]{impl:001}
+Python 3.0 release, n.d.
 \newblock URL \url{https://www.python.org/download/releases/3.0/}.
 \newblock [Online; accessed 4-April 2018].
 
 \bibitem[imp(2017)]{impl:002}
 pandas: powerful python data analysis toolkit¶, 2017.
 \newblock URL \url{https://pandas.pydata.org/pandas-docs/stable/}.
-\newblock [Online; accessed 4-April 2018].
-
-\bibitem[Richardson(2004)]{impl:004}
-Leonard Richardson.
-\newblock Beautiful soup documentation, 2004.
-\newblock URL \url{https://www.crummy.com/software/BeautifulSoup/bs4/doc/#}.
-\newblock [Online; accessed 4-April 2018].
-
-\bibitem[imp(n.d{\natexlab{b}})]{impl:005}
-6.5. unicodedata — unicode database, n.d{\natexlab{b}}.
-\newblock URL \url{https://www.crummy.com/software/BeautifulSoup/bs4/doc/#}.
-\newblock [Online; accessed 4-April 2018].
-
-\bibitem[Friedl(2009)]{impl:003}
-Jeffrey Friedl.
-\newblock 6.2. re — regular expression operations, 2009.
-\newblock URL \url{https://docs.python.org/3/library/re.html}.
-\newblock [Online; accessed 4-April 2018].
-
-\bibitem[imp(n.d{\natexlab{c}})]{impl:006}
-nltk.tokenize package - nltk 3.2.5 documentation, n.d{\natexlab{c}}.
-\newblock URL \url{http://www.nltk.org/api/nltk.tokenize.html}.
-\newblock [Online; accessed 4-April 2018].
-
-\bibitem[imp(n.d{\natexlab{d}})]{impl:008}
-nltk.stem package - nltk 3.2.5 documentation, n.d{\natexlab{d}}.
-\newblock URL \url{http://www.nltk.org/api/nltk.tokenize.html}.
-\newblock [Online; accessed 4-April 2018].
-
-\bibitem[imp(n.d{\natexlab{e}})]{impl:007}
-Removing stop words with nltk in python - geeksforgeels, n.d{\natexlab{e}}.
-\newblock URL \url{http://www.nltk.org/api/nltk.tokenize.html}.
 \newblock [Online; accessed 4-April 2018].
 
 \end{thebibliography}

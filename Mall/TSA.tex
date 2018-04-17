@@ -509,101 +509,32 @@ Om ett problem kräver en linjär eller en icke-linjär klassificerare beror på
 På grund av ovanstående anledningar har en linjär klassificerare valts att användas vid den här studien. 
 
 \subsection{Convolutional Neural Network}
+I avsnitt \ref{bak:cnn} beskrivs kortfattat vad CNN är och varför det på senare tid har börjat användas för maskininlärningsproblem som rör textbearbetning. I detta avsnitt kommer CNN att beskrivas på en mer teknisk nivå. De olika delarna som ett CNN består av kommer att presenteras, för att sedan beskriva hur ett CNN kan utföra textklassificering utifrån ett exempel. 
 
+CNN är uppbyggt med flera lager \cite{cnn:005}. Det har ett lager för indata, ett för utdata och dessutom ett flertal dolda lager. De dolda lagrena består av konvulsionlager, “pooling”-lager, fullt ansluta lager och normaliseringslager. 
+
+Konvulsionlager utgör den centrala delen av CNN \cite{cnn:005}. Ett konvulsionlager består av ett antal lärbara filter. I \cite{cnn:004} liknas en konvulsion med en funktion där ett fönster förflyttas över den data som ska analyseras, där datan är representerad som en matris. Fönstret som förflyttar sig över matrisen är det som kallas för filter. Vid varje förflyttning beräknas summan efter att filtrets värden har multiplicerat med respektive värde i matrisen. En hel konvulsion ges efter att fönstret har bearbetat hela matrisen.
+
+“Pooling”-lager används vanligtvis efter konvultionslager \cite{cnn:004}. Det “pooling”-lager gör är att de tar ut en delmängd av den data de får in. Detta kan utföras med olika metoder, men en vanlig metod är att ta ut det största värdet från varje filter som bearbetas. Denna strategi kallas för “1-max pooling” \cite{cnn:002}. För klassificering krävs vanligtvis att de matriser som ges av filtrena har samma storlek \cite{cnn:004}. Genom användandet av “pooling” uppfylls det kravet, t.e.x om 100 filter används och “1-max pooling” appliceras på varje lager, kommer det alltid resultera i en vektor på 100 dimensioner. “Pooling” gör det alltså möjligt att skicka in data av varierande storlek och använda olika filterstorlekar, och alltid få ut den data som ska tolkas vid klassificeringen i samma storlek. En annan anledning till att “pooling”-lager används är att det minskar storleken på den data som ska analyseras samtidigt som den försöker behålla den mest relevanta informationen.
+
+Efter att olika särdrag har tagits fram genom konvulsionlager och “pooling”-lager kopplas ett fullt ansluten lager in i slutet av nätverket \cite{cnn:008}. Det fullt anslutna lagret tar in mängden av särdrag från lagret innan och skickar ut en vektor av storleken $N$, där $N$ representerar antalet klasser vid klassificeringen. Värdena i denna vektor representerar sannolikheten för respektive klass. Det fullt anslutna lagret analyserar den data som skickas från lagret innan och gör en bedömning utefter vilken klass särdragen med störst sannolikhet representerar. 
+
+Som nämndes i \ref{bak:cnn}, är CNN ursprungligen framtagen för problem som rör bearbetning av bilder. När bilder bearbetas av CNN representeras bildens pixlar i en matris, som filtrena sedan förflyttar sig över \cite{cnn:004}. Text som ska bearbetas av CNN behöver därför också representeras som en bild. I figur \ref{fig:cnn} illustreras ett exempel av ett CNN för textklassificering. I exemplet ska ett twitterinlägg av längden $l$ klassificeras \cite{cnn:002}. Twitterinlägget som ska klassificeras har konverteras till en twitterinläggmatris. Varje ord i twitterinlägget utgör en rad i matrisen och representeras av en vektor i matrisen, där vektorernas dimension $d$ utgör matrisen bredd.  Matrisens storlek ges således av $l*d$.  Vektorerna som representerar olika ord är antingen ordinbäddningar \cite{wiki:016} eller “one-hot”-vektorer \cite{cnn:004}.  “One-hot”-vektorer är det som har använts för implementationen av CNN i denna studie och där indexeras varje ord i datamängden till ett vokabulär. Efter att twitterinlägget har konverterats till att representeras som en matris, går det att hantera inlägget som en bild och utföra konvulsioner på det genom olika filter \cite{cnn:002}. Eftersom varje rad representerar ett ord i twitterinlägget är det rimligt att använda filter som till bredden är lika stora som dimensionen på vektorerna. Höjden eller regionstorleken på filtren kan däremot varieras och det går att använda flertalet filter med olika regionstorlekar. Regionstorleken anpassas utefter hur många ord ett filter ska omfatta. 
+
+\begin{figure}[H]
+\includegraphics[width=12cm]{cnn_text}
+\centering
+\caption{Exempel på ett CNN som används för textklassificering. Figur inspirerad av \cite{cnn:002}}
+\label{fig:cnntext}
+\end{figure}
+
+I exemplet som illustreras i figur \ref{fig:cnntext} används tre olika regionstorlekar och två filter för varje regionstorlek, totalt används sex filter. Genom användandet av flertalet filter för respektive regionstorlek går det att få ut komplementerande särdrag från samma region \cite{cnn:002}. Från konvulsionerna som utförs på matrisen genereras särdragskartor. Den engelska termen är “feature maps”, men i denna studie har de valt att kallas för särdragskartor.  Storleken på varje särdragskarta som genereras kommer att variera beroende på twitterinläggets längd och regionstorleken på respektive filter. För att omvandla vektorerna till samma längd används en “pooling”-funktion på varje särdragskarta. Dessa vektorer sätts sedan samman till en ny vektor där twitterinläggets särdrag är representerade på en högre nivå. I slutet av nätverket har ett fullt anslutet lager kopplats in. Det fullt anslutna lagret tar slutligen in den sammankopplade vektorn och utför klassificeringen.
 
 
 
 \section{Implementation}\label{impl}
 Detta kapitel beskriver detaljer angående implementationen av vår studie och dess flöde som illustrerats i figur \ref{fig:overfig}. Kapitlet beskriver även teknikerna som används för att göra implementationen möjlig. Gemensamma tekniker som används i alla delar av implementation är programmeringsspråket Python3 \cite{impl:001} och Pandas \cite{impl:002}. Pandas är ett Python-paket som erbjuder snabba, flexibla datastrukturer som är utformade för att göra arbetet med relationell och märkt data smidigare. 
 \subsection{Databearbetning}\label{impl:pre}
-Som beskrivs i avsnitt \ref{exp:pre} är databearbetning ett viktigt steg inom SA och TSA. I detta avsnittet beskrivs implementationen av databearbetningen m.h.a delarna som illustreras i figur \ref{fig:dataset}.
-
-För att avlägsna HTML-kod från twitterinlägg använder vi oss av BeautifulSoup \cite{impl:004}, som är ett Python-paket för att extrahera data från HTML-kod,
-\begin{lstlisting}[style=mypython,caption={Avlägsna HTML-kod.},label=pre:html]
-def remove_html_encode(self):
-       self.df["tweet"] = self.df["tweet"]./
-       apply(lambda x: BeautifulSoup(x, 'lxml').get_text())
-\end{lstlisting}
-Om HTML-kod finns i twitterinlägg tas det således bort.
-
-
-Omvandling från versaler till gemener utförs på varje twitterinlägg m.h.a den inbyggda Python-funktionen \pyth{str.lower()} som konverterar versaler till gemener.
-\begin{lstlisting}[style=mypython,caption={Omvandla versaler till gemener.},label=pre:lower]
-def to_lower(self):
-      self.df["tweet"] = self.df["tweet"].str.lower()
-\end{lstlisting}
-
-*** Skriv om expand cont *****
-
-\begin{lstlisting}[style=mypython,caption={Expandera sammandragsförkortningar},label=pre:expand]
-cont_dict = {'can\'t': 'cannot', 'won\'t': 'will not', 'n\'t': ' not'}
-cont_re = re.compile('(%s)' % '|'.join(cont_dict.keys()))
-
-def expand_cont(self, s, cont_dict=cont_dict):
-       def replace(match):
-              return cont_dict[match.group(0)]
-        return cont_re.sub(replace, s)
-
-def expand_contractions(self):
-       self.df["tweet"] = self.df["tweet"].apply(lambda x: self.expand_cont(x))
-\end{lstlisting}
-
-Avlägsna accenter utförs genom att använda \pyth{unicodedata.normalize()} \cite{impl:005} som använder “Normalization Form Compatibility Decomposition” (NFKD) parametern,  vilket betyder att \pyth{unicodedata.normalize()} byter ut en bokstav med accent mot sin ASCII-ekvivalenta bokstav. Resterande parametrar säger att om bokstaven redan är ascii eller utf-8 ignoreras dessa bokstäver. 
-
-
-\begin{lstlisting}[style=mypython,caption={Avlägsna accent.},label=pre:accent]
-def remove_accented_chars(self):
-	self.df["tweet"] = self.df["tweet"].apply(lambda x:unicodedata./
-	normalize('NFKD', x).encode('ascii', 'ignore')./
-	decode('utf-8', 'ignore'))
-\end{lstlisting}
-
-För att avlägsna URL, “mentions”, “hashtags” , skiljetecken, siffror, emojis och repeterade mellanslag används fyra reguljära uttryck (RU) \cite{impl:003}. För att avlägsna URL används \pyth{'https?://[A-Za-z0-9./]+'} vilket betyder att om en URL är http eller https kommer denna avlägsnas, samt om den efterföljs av ännu en URL kommer även den tas bort.
-
-“Mentions” avlägsnas med det RU \pyth{'@[A-Za-z0-9]+'}, d.v.s om en alfanumerisk sträng börjar med ‘@’ avlägsnas den alfanumeriska strängen.
-
-Avlägsning av “hashtags”, skiljetecken, siffror och emojis görs med det RU \pyth{'[^a-zA-Z]'}, d.v.s en sträng måste börja på bokstäver mellan a-z, om inte tas dessa bort.
-
-Och slutligen så avlägsnas repeterande mellanslag, vilket utförs med det RU \pyth{' +'}. Ifall det är två eller fler repeterande mellanslag tas dessa bort.
-
-\begin{lstlisting}[style=mypython,caption={Avlägsna URL:er, "mentions", “hashtags”, skiljetecken, siffror, emojis och repeterande mellandlsag.},label=pre:rem]
-def remove_links(self):
-       self.df.loc[:, "tweet"] = self.df.loc[:, "tweet"].\
-       replace(r'https?://[A-Za-z0-9./]+', '', regex=True)
-
-def remove_twitter_mention(self):
-       self.df.loc[:, "tweet"] = self.df.loc[:, "tweet"].\
-       replace(r'@[A-Za-z0-9]+', '', regex=True)
-
-def remove_hashtag(self):
-       self.df.loc[:, "tweet"] = self.df.loc[:, "tweet"].\
-       replace('[^a-zA-Z]', ' ', regex=True)
-
-def remove_extra_whitepsace(self):
-      self.df.loc[:, "tweet"] = self.df.loc[:, "tweet"].\
-       replace(' +', ' ', regex=True)
-\end{lstlisting}
-
-För att utföra ordstamsigenkänning och avlägsning av stoppord måste varje twitterinlägg först tokeniseras, vilket betyder att varje ord i ett twitterinlägg blir ett eget element i en lista. Tokeniseringen utförs m.h.a funktionen \pyth{word_tokenize()} \cite{impl:006} från Natural Language Toolkit (NLTK).
-\begin{lstlisting}[style=mypython,caption={Tokenisera twitterinlägg till listor av ord.},label=pre:token]
-def tokenize(self):
-      self.df["tweet"] = self.df["tweet"].apply(word_tokenize)
-\end{lstlisting}
-
-Ordstamsigenkänning utförs m.h.a \pyth{SnowballStemmer('english').stem()} \cite{impl:008} från NLTK som försöker hitta varje ords ordstam vilket diskuteras i avsnitt \ref{exp:pre}.
-\begin{lstlisting}[style=mypython,caption={Ordstamsigenkänning.},label=pre:stem]
-def word_stemming(self):
-       self.df["tweet"] = self.df["tweet"]./
-       apply(lambda x: [SnowballStemmer('english').stem(y) for y in x])
-\end{lstlisting}
-
-Avlägsning av stoppord utförs m.h.a \pyth{stopwords.word('english')} \cite{impl:007} från NLTK som är en lista av engelska stoppord. \pyth{remove_stopwords(self)} kontrollerar om något ord i twitterinlägget finns med i listan, om det gör det tas det bort. 
-\begin{lstlisting}[style=mypython,caption={Avlägsna stoppord.},label=pre:stop]
-stop = stopwords.words('english')
-def remove_stopwords(self):
-       self.df["tweet"] = self.df["tweet"]./
-       apply(lambda x: [word for word in x if word not in stop])
-\end{lstlisting}
 
 
 \subsection{Lexikon}\label{impl:lex}
@@ -611,28 +542,9 @@ def remove_stopwords(self):
 \subsection{Support Vector Machine}\label{impl:svm}
 \subsection{Convolutional neural network}
 \subsection{* ev GUI implementation om tid finns *}
-\begin{figure}[H]
-\includegraphics[width=12cm]{GUI_form}
-\centering
-\caption{Illustrerar webb gränssnittets sökformulär.}
-\label{fig:dataset}
-\end{figure}
-
-\begin{figure}[H]
-\includegraphics[width=12cm]{GUI_search_graph}
-\centering
-\caption{Illustrerar hur klassificeringsmodellerna har klassificerat 10 stycken twitterinlägg från användaren “realDonaldTrump”.}
-\label{fig:dataset}
-\end{figure}
-
-\begin{figure}[H]
-\includegraphics[width=12cm]{GUI_search_table}
-\centering
-\caption{Illustrerar hur klassificeringsmodellerna har klassificerat varje tweet.}
-\label{fig:dataset}
-\end{figure}
 
 \section{Sammanfattning}
+I detta kapitel har tillvägagångssättet för studiens experiment diskuterats. En teknisk fördjupning har presenterats för databearbetning, särdragsurval och de tre algoritmerna, NB, SVM och CNN. Utöver detta presenteras även implementeringen av databearbetning, särdragsurval och de tre algoritmerna, där även ett webbgränssnitt har tagits fram på uppdragsgivarens önskemål.
 
 \chapter{Resultat} \label{res}
 \section{Intro}

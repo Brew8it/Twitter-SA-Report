@@ -12,9 +12,7 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Exempel p\IeC {\r a} en linj\IeC {\"a}r klassificerare d\IeC {\"a}r de tv\IeC {\r a} kateogrierna \IeC {\"a}r linj\IeC {\"a}rt separabla.}}{26}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Exempel p\IeC {\r a} en linj\IeC {\"a}r klassificerare d\IeC {\"a}r de tv\IeC {\r a} kategorierna inte \IeC {\"a}r linj\IeC {\"a}rt separabla.}}{27}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Exempel p\IeC {\r a} icke-linj\IeC {\"a}r klassificerare, d\IeC {\"a}r hyperplanet har dragits i en h\IeC {\"o}gre dimension.}}{28}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Illustrerar webb gr\IeC {\"a}nssnittets s\IeC {\"o}kformul\IeC {\"a}r.}}{32}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Illustrerar hur klassificeringsmodellerna har klassificerat 10 stycken twitterinl\IeC {\"a}gg fr\IeC {\r a}n anv\IeC {\"a}ndaren \IeC {\textquotedblleft }realDonaldTrump\IeC {\textquotedblright }.}}{33}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Illustrerar hur klassificeringsmodellerna har klassificerat varje tweet.}}{33}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Exempel p\IeC {\r a} ett CNN som anv\IeC {\"a}nds f\IeC {\"o}r textklassificering. Figur inspirerad av \cite {cnn:002}}}{31}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 
