@@ -342,6 +342,18 @@
   Url                      = {https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/}
 }
 
+@Misc{svm:007,
+  Title                    = {Overfitting and Underfitting With Machine Learning Algorithms},
+
+  Author                   = {Jason Brownlee},
+  Note                     = {[Online; accessed 16-April 2018]},
+  Year                     = {2016},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.03.11},
+  Url                      = {https://machinelearningmastery.com/overfitting-and-underfitting-with-machine-learning-algorithms/}
+}
+
 @InProceedings{7813707,
   Title                    = {Techniques for sentiment analysis of Twitter data: A comprehensive survey},
   Author                   = {M. Desai and M. A. Mehta},
@@ -844,6 +856,18 @@ and Rouveirol, C{\'e}line},
   Url                      = {http://scikit-learn.org/stable/modules/naive_bayes.html}
 }
 
+@Misc{lex:002,
+  Title                    = {SentiWordNet},
+
+  Author                   = {SentiWordNet},
+  Note                     = {[Online; accessed 17-April 2018]},
+  Year                     = {2010},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.02.05},
+  Url                      = {sentiwordnet.isti.cnr.it}
+}
+
 @Article{DMgo,
   Title                    = {Mastering the game of Go with deep neural networks and tree search},
   Author                   = {Silver, David and Huang, Aja and Maddison, Chris J and Guez, Arthur and Sifre, Laurent and Van Den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and others},
@@ -910,6 +934,18 @@ and Rouveirol, C{\'e}line},
   Year                     = {2013},
   Organization             = {ACM},
   Pages                    = {507--516}
+}
+
+@Misc{lex:001,
+  Title                    = {Princeton University "About WordNet.},
+
+  Author                   = {Princeton University.},
+  Note                     = {[Online; accessed 17-April 2018]},
+  Year                     = {2010},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.02.05},
+  Url                      = {https://wordnet.princeton.edu/}
 }
 
 @Article{SAsurvey,
