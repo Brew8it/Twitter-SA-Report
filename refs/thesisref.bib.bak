@@ -1019,6 +1019,16 @@ and Rouveirol, C{\'e}line},
   Url                      = {https://keras.io/core/}
 }
 
+@Misc{impcnn:007,
+  Title                    = {Sequential - Keras Documentation},
+  Note                     = {[Online; accessed 16-April 2018]},
+  Year                     = {n.d},
+
+  Owner                    = {hpnotiqz},
+  Timestamp                = {2018.04.16},
+  Url                      = {https://keras.io/models/sequential/#sequential-model-methods}
+}
+
 @Misc{impl:001,
   Title                    = {Python 3.0 release},
   Note                     = {[Online; accessed 4-April 2018]},
