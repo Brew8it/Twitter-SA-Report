@@ -509,7 +509,7 @@ Om ett problem kräver en linjär eller en icke-linjär klassificerare beror på
 På grund av ovanstående anledningar har en linjär klassificerare valts att användas vid den här studien. 
 
 
-\subsection{Convolutional Neural Network}
+\subsection{Convolutional Neural Network} \label{exp:cnn}
 I avsnitt \ref{bak:cnn} beskrivs kortfattat vad CNN är och varför det på senare tid har börjat användas för maskininlärningsproblem som rör textbearbetning. I detta avsnitt kommer CNN att beskrivas på en mer teknisk nivå. De olika delarna som ett CNN består av kommer att presenteras, för att sedan beskriva hur ett CNN kan utföra textklassificering utifrån ett exempel. 
 
 CNN är uppbyggt med flera lager \cite{cnn:005}. Det har ett lager för indata, ett för utdata och dessutom ett flertal dolda lager. De dolda lagrena består av konvulsionlager, “pooling”-lager, fullt ansluta lager och normaliseringslager. 
@@ -539,20 +539,20 @@ Detta kapitel beskriver detaljer angående implementationen av vår studie och d
 Som beskrivs i avsnitt \ref{exp:pre} är databearbetning ett viktigt steg inom SA och TSA. I detta avsnittet beskrivs implementationen av databearbetningen m.h.a delarna som illustreras i figur \ref{fig:dataset}.
 
 För att avlägsna HTML-kod från twitterinlägg används BeautifulSoup \cite{impl:004}, som är ett Python-paket för att extrahera data från HTML-kod, om HTML-kod finns i twitterinlägg tas det således bort, se kodavsnitt \ref{pre:html}.
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:html]
+\begin{lstlisting}[style=mypython,caption={Funktion för att avlägsna HTML-kod.},label=pre:html]
 def remove_html_encode(self):
        self.df["tweet"] = self.df["tweet"]./
        apply(lambda x: BeautifulSoup(x, 'lxml').get_text())
 \end{lstlisting}
 
 Omvandling från versaler till gemener utförs på varje twitterinlägg m.h.a den inbyggda Python-funktionen \pyth{str.lower()} som konverterar versaler till gemener, se kodavsnitt \ref{pre:lower}.
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:lower]
+\begin{lstlisting}[style=mypython,caption={Funktion för att omvandla versaler till gemener.},label=pre:lower]
 def to_lower(self):
       self.df["tweet"] = self.df["tweet"].str.lower()
 \end{lstlisting}
 
 Beskrivet i \ref{exp:pre} är expandering av sammandragsförkortningar ett viktigt moment för att kunna hantera negationer. Med  \pyth{cont_dic} kan vi hantera och expandera “can’t”, “won’t” och där ord slutar på “n’t”, se kodavsnitt \ref{pre:expand}
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:expand]
+\begin{lstlisting}[style=mypython,caption={Kod för att expandera sammandragsförkortningar.},label=pre:expand]
 cont_dict = {'can\'t': 'cannot', 'won\'t': 'will not', 'n\'t': ' not'}
 cont_re = re.compile('(%s)' % '|'.join(cont_dict.keys()))
 
@@ -566,7 +566,7 @@ def expand_contractions(self):
 \end{lstlisting}
 
 Avlägsna accenter utförs genom att använda \pyth{unicodedata.normalize()} \cite{impl:005} som använder “Normalization Form Compatibility Decomposition” (NFKD) parametern,  vilket betyder att \pyth{unicodedata.normalize()} byter ut en bokstav med accent mot sin ASCII-ekvivalenta bokstav. Resterande parametrar säger att om bokstaven redan är ASCII eller utf-8 ignoreras dessa bokstäver, se kodavsnitt \ref{pre:accent}.
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:accent]
+\begin{lstlisting}[style=mypython,caption={Funktion för att avlägsna accenter.},label=pre:accent]
 def remove_accented_chars(self):
     self.df["tweet"] = self.df["tweet"].apply(lambda x:unicodedata./
     normalize('NFKD', x).encode('ascii', 'ignore')./
@@ -581,7 +581,7 @@ Avlägsning av “hashtags”, skiljetecken, siffror och emojis görs med det RU
 
 Och slutligen så avlägsnas repeterande mellanslag, vilket utförs med det RU \pyth{' +'}. Ifall det är två eller fler repeterande mellanslag tas dessa bort.
 
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:rem]
+\begin{lstlisting}[style=mypython,caption={Funktioner för att avlägsna URL:er, ''mention'', ''hashtags'', skiljetecken, siffror, emojis och repeterade mellanslag.},label=pre:rem]
 def remove_links(self):
        self.df.loc[:, "tweet"] = self.df.loc[:, "tweet"].\
        replace(r'https?://[A-Za-z0-9./]+', '', regex=True)
@@ -600,20 +600,20 @@ def remove_extra_whitepsace(self):
 \end{lstlisting}
 
 För att utföra ordstamsigenkänning och avlägsning av stoppord måste varje twitterinlägg först tokeniseras, vilket betyder att varje ord i ett twitterinlägg blir ett eget element i en lista. Tokeniseringen utförs m.h.a funktionen \pyth{word_tokenize()} \cite{impl:006} från Natural Language Toolkit (NLTK), se kodavsnitt \ref{pre:token}.
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:token]
+\begin{lstlisting}[style=mypython,caption={Funktion för att tokenisera twitterinlägg.},label=pre:token]
 def tokenize(self):
       self.df["tweet"] = self.df["tweet"].apply(word_tokenize)
 \end{lstlisting}
 
 I kodavsnitt \ref{pre:stem} utförs ordstamsigenkänning m.h.a \pyth{SnowballStemmer('english').stem()} \cite{impl:008} från NLTK som försöker hitta varje ords ordstam vilket diskuteras i avsnitt \ref{exp:pre}.
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:stem]
+\begin{lstlisting}[style=mypython,caption={Funktion för att utföra ordstamsigenkänning.},label=pre:stem]
 def word_stemming(self):
        self.df["tweet"] = self.df["tweet"]./
        apply(lambda x: [SnowballStemmer('english').stem(y) for y in x])
 \end{lstlisting}
 
 Avlägsning av stoppord utförs m.h.a \pyth{stopwords.word('english')} \cite{impl:007} från NLTK som är en lista av engelska stoppord. \pyth{Remove_stopwords()} kontrollerar om något ord i twitterinlägget finns med i listan, om det gör det tas det bort, se kodavsnitt \ref{pre:stop}.
-\begin{lstlisting}[style=mypython,caption={Test},label=pre:stop]
+\begin{lstlisting}[style=mypython,caption={Funktion för att avlägsna stoppord.},label=pre:stop]
 stop = stopwords.words('english')
 def remove_stopwords(self):
        self.df["tweet"] = self.df["tweet"]./
@@ -625,7 +625,7 @@ WordNet är en lexikal databas på engelska som hittar konceptuella relationer m
 
 I kodavsnitt \ref{lex:kod} illustreras implementationen av den lexikonbaserade modellen, som tar ett twitterinlägg som parameter. Twitterinlägget delas sedan ner till en mängd ord med respektive POS-tag. Därefter utförs tre kontroller på respektive ord. Den första kontrollen kontrollerar om ordet är ett substantiv, adjektiv eller ett adverb. Sedan kontrolleras om ordet har en grundform och slutligen kontrolleras om ordet är en synonym. Om ordet inte klarar de tre kontrollerna hoppar vi över ordet, eftersom ordet inte kan klassificeras. Ifall ordet går igenom kontrollerna tas ordets klassificering fram och adderas till en variabel $sentiment$. När alla mängdens ord antingen har klassificerats eller hoppats över används $sentiment$ för att klassificera om twitterinlägget är positivt eller negativt, d.v.s om $sentiment >= 0$ är inlägget positivt annars negativt.
 
-\begin{lstlisting}[style=mypython,caption={Test},label=lex:kod]
+\begin{lstlisting}[style=mypython,caption={Funktion för att klassificera twitterinlägg m.h.a WordNet och SentiWordNet.},label=lex:kod]
 def swn_classifier(tweet):
     sentiment = 0.0
     tokens_count = 0
@@ -668,14 +668,14 @@ Kodavsnitt \ref{lex:kod} körs på både STS- och SemEval-datamängden där resu
 \subsection{Naive Bayes}\label{impl:nb}
 I detta avsnitt diskuteras hur Naive bayes-algoritmen implementerats och hur vi anpassat algoritmens parametrar för att uppnå ett eventuellt förbättrad precision. För implementation av NB har SciKit-learn (sk-learn) \cite{scikit:002} använts, som är ett Python-paket för maskininlärning.
 
-För att implementera och träna Naive bayes-algoritmen måste först datamängden delas in i en tränings- och en testmängd. Delningen utförs för att möjliggöra utvärdering av algoritmens precision, vilket testmängden används för. Delningen utförs m.h.a sk-learn funktionen \pyth{train_test_split()} \cite{scikit:003} där datamängden delas till 20\% testmängd och 80\% träningsmängd, se kodavsnitt \ref{impl:datasplit}.
-\begin{lstlisting}[style=mypython,caption={Test},label=impl:datasplit]
+För att implementera och träna Naive bayes-algoritmen måste först datamängden delas in i en träningsmängd och en testmängd. Delningen utförs för att möjliggöra utvärdering av algoritmens precision, vilket testmängden används för. Delningen utförs m.h.a sk-learn funktionen \pyth{train_test_split()} \cite{scikit:003} där datamängden delas till 20\% testmängd och 80\% träningsmängd, se kodavsnitt \ref{impl:datasplit}.
+\begin{lstlisting}[style=mypython,caption={Kod för att dela upp datamängden i en träningsmängd och en testmängd.},label=impl:datasplit]
 X_train, X_test, y_train, y_test = train_test_split(df.tweet,
             df.lable, test_size=0.2, random_state=0)
 \end{lstlisting}
 
 I kodavsnitt \ref{nb:base} implementeras algoritmen \pyth{MultinomialNB()} med standardparametrar \cite{scikit:004} och unigram som särdrag vilket är standard parameter för \pyth{CountVectorizer()} \cite{scikit:005}. Träningen av algoritmen utförs med \pyth{fit(X_train, y_train)} funktionen som tar träningsmängden som indata. Precisionen tas fram genom att först klassificera vår testmängd på den tränade algoritmen m.h.a \pyth{predict(X_test)} för att sedan använda \pyth{metrics.classification_report()} som presenterar värden som diskuterats i avsnitt \ref{TSAev}.
-\begin{lstlisting}[style=mypython,caption={Test},label=nb:base]
+\begin{lstlisting}[style=mypython,caption={Kod för att skapa och träna NB-klassificeraren.},label=nb:base]
 nb_unigram_clf = Pipeline([('vect', CountVectorizer()), ('clf', MultinomialNB())])
 nb_unigram_clf.fit(X_train, y_train)
 predicted = nb_unigram_clf.predict(X_test)
@@ -683,11 +683,11 @@ print(metrics.classification_report(y_test, predicted, target_names=target_names
 \end{lstlisting}
 Kodavsnitt \ref{nb:base} körs på både STS- och SemEval-datamängden där resultatet presenteras i avsnitt \ref{res}.
 
-I kodavsnitt \ref{nb:grid} används \pyth{GridSearchCV()} \cite{scikit:006} vilket är en sk-learn funktion för att utföra parametersökning för algoritmer och särdragsfunktioner så att optimala parametrar kan hittas. För \pyth{CountVectorizer()} är vi intresserade av $max_df$ och $ngram_range$. $Max_df$ tar emot ett flyttal mellan intervallet $[0.0, 1.0]$ som under uppbyggnaden av vokabuläret ignorerar ord som har en twitterinläggsfrekvens högre än det angivna flyttalet. $Ngram_range$ används för att testa vilken typ av ngram som skall användas, t.e.x (1, 1) betyder unigram och (1, 2) betyder att både uni- och bigrams används.
+I kodavsnitt \ref{nb:grid} används \pyth{GridSearchCV()} \cite{scikit:006} vilket är en sk-learn funktion för att utföra parametersökning för algoritmer och särdragsfunktioner så att optimala parametrar kan hittas. För \pyth{CountVectorizer()} är vi intresserade av \pyth{max_df} och \pyth{ngram_range}. \pyth{Max_df} tar emot ett flyttal mellan intervallet $[0.0, 1.0]$ som under uppbyggnaden av vokabuläret ignorerar ord som har en twitterinläggsfrekvens högre än det angivna flyttalet. \pyth{Ngram_range} används för att testa vilken typ av ngram som skall användas, t.e.x (1, 1) betyder unigram och (1, 2) betyder att både uni- och bigrams används.
 
-För \pyth{TfidfTransformer()} är vi intresserade av \pyth{use_idf} och \pyth{norm}. \pyth{Use_idf} används för att specificera om IDF skall användas eller ej. \pyth{Norm} specificerar vilken typ av normaliserings funktion som används för att normalisera vår ord vektor.\pyth{SelectKBest()} \cite{scikit:007} tar två parametrar, \pyth{score_func} och $k$. För \pyth{score_func} är vi bara intresserade av “chi-squared test” (chi2) och $k$ är ett heltal för hur många av dem  bästa särdrag som tas ut från \pyth{score_func}. Eftersom MNB är en så pass enkel klassificeringsalgoritm finns det inga parametrar att justera.
+För \pyth{TfidfTransformer()} är vi intresserade av \pyth{use_idf} och \pyth{Norm}. \pyth{Use_idf} används för att specificera om IDF skall användas eller ej. \pyth{Norm} specificerar vilken typ av normaliserings funktion som används för att normalisera vår ordvektor. \pyth{SelectKBest()} \cite{scikit:007} tar två parametrar, \pyth{score_func} och $k$. För \pyth{score_func} är vi bara intresserade av “chi-squared test” (chi2) och $k$ är ett heltal för hur många av dem  bästa särdrag som tas ut från \pyth{score_func}. Eftersom MNB är en så pass enkel klassificeringsalgoritm finns det inga parametrar att justera.
 
-\begin{lstlisting}[style=mypython,caption={Test},label=nb:grid]
+\begin{lstlisting}[style=mypython,caption={Kod som används till parametersökning för NB.},label=nb:grid]
 pipeline = Pipeline([
     ('vect', CountVectorizer()),
     ('tfidf', TfidfTransformer()),
@@ -732,7 +732,7 @@ I avsnitt \ref{impl:nb} diskuteras att en datamängd först måste delas in i en
 I kodavsnitt \ref{svm:base} implementeras algoritmen \pyth{SGDClassifier()} med standard parametrar \cite{scikit:009}. \pyth{SGDClassifier()} är en linjär klassificerare baserat på en SVM med “stochastic gradient descent” (SGD) träning. Valet att använda \pyth{SGDClassifier()} istället för en ren linjär SVM är p.g.a att \pyth{SGDClassifier()} är bättre anpassad för stora datamängder \cite{scikit:008}, vilket är fallet för studien då STS-datamängden används. Som särdrag används unigram vilket är standardparametern för \pyth{CountVectorizer()}.
 
 Träningen av algoritmen utförs med funktionen \pyth{fit(X_train, y_train)}, som tar träningsmängden som indata. Precisionen tas fram genom att klassificera testmängden på den tränade algoritmen m.h.a \pyth{predict(X_test)}. Sedan används \pyth{metrics.classification_report()} för att presentera utvärderingsvärdena som diskuteras i avsnitt \ref{TSAev}.
-\begin{lstlisting}[style=mypython,caption={Test},label=svm:base]
+\begin{lstlisting}[style=mypython,caption={Kod för att skapa och träna SVM-klassificeraren.},label=svm:base]
 svm_unigram_clf = Pipeline([
 	('vect', CountVectorizer()), 
 	('clf', SGDClassifier())
@@ -745,7 +745,7 @@ print(metrics.classification_report(y_test, predicted, target_names=target_names
 För parametersökningen som illustreras i kodavsnitt \ref{svm:grid} används \pyth{GridSearchCV()}. Vi är intresserade utav samma parametrar för \pyth{CountVectorizer(), TfidfTransformer()} och \pyth{SelectKBest()} som diskuteras i avsnitt \ref{impl:nb}. För klassificeringsalgoritmen \pyth{SGDClassifier()} är följande parametrar av intresse: \pyth{max_iter}, \pyth{penalty} och \pyth{alpha}. \pyth{Max_iter} är hur många gånger algoritmen går igenom datamängden, \pyth{penalty} specificerar vilken typ av normaliseringsfunktion som används för att undvika överanpassning \cite{svm:007}. Överanpassning är ett fenomen där klassificeringsalgoritmen under träning lär sig detaljerna i datamängden vilket kommer skada precisionen när ny data klassificeras.
 \pyth{Alpha} används för att specificera vilken initial inlärningsfrekvens algoritmen använder.
 
-\begin{lstlisting}[style=mypython,caption={Test},label=svm:grid]
+\begin{lstlisting}[style=mypython,caption={Kod som används till parametersökning för SVM.},label=svm:grid]
 pipeline = Pipeline([
     ('vect', CountVectorizer()),
     ('tfidf', TfidfTransformer()),
@@ -776,7 +776,7 @@ Parametrarna som används i referensimplementationen skiljer sig dock från stan
 
 Parametern \pyth{drop = 0.5} används i “Dropout”-lagret för att bestämma hur stor del av neuronnätets enheter, som slumpmässigt ska kopplas bort vid varje uppdatering under träningen \cite{impcnn:006}. “Dropout”-lagret används för att undvika överanpassning. Vid träningen av en modell anges hur många gånger modellen ska tränas på en given datamängd \cite{impcnn:007}. Detta kallas för epoker och i koden har det angetts genom parametern \pyth{ephocs = 100}. Parametern \pyth{batch_size = 64} anger hur många exempel från träningsdatamängden som ska neuronätet ska tränas på åt gången \cite{impcnn:007}.
 
-\begin{lstlisting}[style=mypython,caption={Test},label=cnn:par]
+\begin{lstlisting}[style=mypython,caption={Parameterurval för CNN.},label=cnn:par]
 sequence_length = x.shape[1]
 vocabulary_size = len(vocabulary_inv)
 embedding_dim = 128
@@ -791,7 +791,7 @@ Databearbetningen som används i referensimplementationen har ändrats till den 
 
 Koden i kodavsnitt \ref{cnn:input} används för att skapa lagret som hanterar data som skickas in och twitterinläggsmatrisen som ska användas för att analysera twitterinläggen.
 
-\begin{lstlisting}[style=mypython,caption={Test},label=cnn:input]
+\begin{lstlisting}[style=mypython,caption={Kod för att skapa indata-lagret och twitterinläggsmatrisen.},label=cnn:input]
 inputs = Input(shape=(sequence_length,), dtype='int32')
 
 embedding = Embedding(input_dim=vocabulary_size, output_dim=embedding_dim,
@@ -800,9 +800,9 @@ embedding = Embedding(input_dim=vocabulary_size, output_dim=embedding_dim,
 reshape = Reshape((sequence_length, embedding_dim, 1))(embedding)
 \end{lstlisting}
 
-I kodavsnitt \ref{cnn:conv} skapas tre konvulsionlager. Arkitekturen är densamma som illustreras i \ref{fig:cnntext}, men istället för att det används enbart två filter för varje filterstorlek används istället \pyth{num_filters = 128} filter för respektive filterstorlek i implementation.
+I kodavsnitt \ref{cnn:conv} skapas tre konvolutionslager. Arkitekturen är densamma som illustreras i \ref{fig:cnntext}, men istället för att det används enbart två filter för varje filterstorlek används istället \pyth{num_filters = 128} filter för respektive filterstorlek i implementation.
 
-\begin{lstlisting}[style=mypython,caption={Test},label=cnn:conv]
+\begin{lstlisting}[style=mypython,caption={Kod för att skapa konvulsionslager.},label=cnn:conv]
 conv_0 = Conv2D(num_filters, kernel_size=(filter_sizes[0], embedding_dim), 
     padding='valid', kernel_initializer='normal', activation='relu')(reshape)
 	
@@ -815,7 +815,7 @@ conv_2 = Conv2D(num_filters, kernel_size=(filter_sizes[2], embedding_dim),
 
 Sedan appliceras “pooling”-lager på respektive konvolutionslager, se kodavsnitt \ref{cnn:pool}. 
 
-\begin{lstlisting}[style=mypython,caption={Test},label=cnn:pool]
+\begin{lstlisting}[style=mypython,caption={Kod för att skapa och applicera ''pooling''-lager på respektive konvolutionslager.},label=cnn:pool]
 maxpool_0 = MaxPool2D(pool_size=(sequence_length - filter_sizes[0] + 1, 1),
     strides=(1,1), padding='valid')(conv_0)
 	
@@ -828,7 +828,7 @@ maxpool_2 = MaxPool2D(pool_size=(sequence_length - filter_sizes[2] + 1, 1),
 
 Det som skickas ut från “pooling”-lagrena sätts samman till en ny särdragsvektor genom \pyth{Concatenate(axis=1)([maxpool_0, maxpool_1, maxpool_2])}. Ett fullt anslutet lager skapas med \pyth{Dense()} \cite{impcnn:006}, som tar in den särdragsvektorn och utför klassificeringen av twitterinlägg. Innan klassificeringen, appliceras först \pyth{Flatten()} \cite{impcnn:006} och sedan \pyth{Dropout()} \cite{impcnn:006} på särdragsvektorn, se kodavsnitt \ref{cnn:output}. \pyth{Flatten()} används för att ändra representationen av särdragsvektorn och \pyth{Dropout()} används för att undvika överanpassning. 
 
-\begin{lstlisting}[style=mypython,caption={Test},label=cnn:output]
+\begin{lstlisting}[style=mypython,caption={Kod för att sätta samman en ny särdragsvektor och koppla in ett fullt anslutet lager.},label=cnn:output]
 concatenated_tensor = Concatenate(axis=1)([maxpool_0, maxpool_1, maxpool_2])
 flatten = Flatten()(concatenated_tensor)
 dropout = Dropout(drop)(flatten)
@@ -837,7 +837,7 @@ output = Dense(units=2, activation='softmax')(dropout)
 
 Modellen skapas med klassen \pyth{Model()} \cite{impcnn:008}. För att konfigurera modellen inför träning används metoden \pyth{compile()} \cite{impcnn:008} och för träna modellen används metoden \pyth{fit()} \cite{impcnn:008}. Skapandet och träningen av modelllen i referensimplementationen illustreras i kodavsnitt \ref{cnn:model}
 
-\begin{lstlisting}[style=mypython,caption={Test},label=cnn:model]
+\begin{lstlisting}[style=mypython,caption={Kod för att skapa och träna CNN-klassificeraren.},label=cnn:model]
 model = Model(inputs=inputs, outputs=output)
 
 checkpoint = ModelCheckpoint('weights.{epoch:03d}-{val_acc:.4f}.hdf5', 

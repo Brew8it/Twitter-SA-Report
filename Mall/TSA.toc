@@ -26,9 +26,9 @@
 \contentsline {section}{\numberline {3.4}Implementation}{33}
 \contentsline {subsection}{\numberline {3.4.1}Databearbetning}{33}
 \contentsline {subsection}{\numberline {3.4.2}Lexikon}{36}
-\contentsline {subsection}{\numberline {3.4.3}Naive Bayes}{37}
+\contentsline {subsection}{\numberline {3.4.3}Naive Bayes}{38}
 \contentsline {subsection}{\numberline {3.4.4}Support Vector Machine}{40}
-\contentsline {subsection}{\numberline {3.4.5}Convolutional neural network}{41}
+\contentsline {subsection}{\numberline {3.4.5}Convolutional neural network}{42}
 \contentsline {subsection}{\numberline {3.4.6}Webbgr\IeC {\"a}nssnitt}{45}
 \contentsline {section}{\numberline {3.5}Sammanfattning}{47}
 \contentsline {chapter}{\numberline {4}Resultat}{48}
