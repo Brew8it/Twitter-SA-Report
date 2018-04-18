@@ -9,10 +9,13 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Bearbetningstekniker som anv\IeC {\"a}nds f\IeC {\"o}r att bearbeta data vid experimentet.}}{19}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Illustration av n-grams p\IeC {\r a} en mening.}}{22}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Exempel p\IeC {\r a} en linj\IeC {\"a}r klassificerare d\IeC {\"a}r de tv\IeC {\r a} kateogrierna \IeC {\"a}r linj\IeC {\"a}rt separabla.}}{26}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Exempel p\IeC {\r a} en linj\IeC {\"a}r klassificerare d\IeC {\"a}r de tv\IeC {\r a} kategorierna inte \IeC {\"a}r linj\IeC {\"a}rt separabla.}}{27}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Exempel p\IeC {\r a} icke-linj\IeC {\"a}r klassificerare, d\IeC {\"a}r hyperplanet har dragits i en h\IeC {\"o}gre dimension.}}{28}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Exempel p\IeC {\r a} ett CNN som anv\IeC {\"a}nds f\IeC {\"o}r textklassificering. Figur inspirerad av \cite {cnn:002}}}{31}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Exempel p\IeC {\r a} en linj\IeC {\"a}r klassificerare d\IeC {\"a}r de tv\IeC {\r a} kateogrierna \IeC {\"a}r linj\IeC {\"a}rt separabla.}}{27}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Exempel p\IeC {\r a} en icke-linj\IeC {\"a}r klassificeringsuppgift, d\IeC {\"a}r de tv\IeC {\r a} kategorierna inte \IeC {\"a}r linj\IeC {\"a}rt separabla.}}{28}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Exemplet fr\IeC {\r a}n figur \ref {fig:svmnonl} ritas om till en h\IeC {\"o}gre dimension.}}{29}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Exempel p\IeC {\r a} ett CNN som anv\IeC {\"a}nds f\IeC {\"o}r textklassificering. Figur inspirerad av \cite {cnn:002}.}}{32}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Illustrerar webbgr\IeC {\"a}nssnittets s\IeC {\"o}kformul\IeC {\"a}r.}}{45}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Illustrerar hur klassificeringsmodellerna har klassificerat 10 stycken twitterinl\IeC {\"a}gg fr\IeC {\r a}n anv\IeC {\"a}ndaren \IeC {\textquotedblleft }realDonaldTrump\IeC {\textquotedblright } som \IeC {\"a}r inh\IeC {\"a}mtade 2018-04-16 11:40.}}{46}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Illustrerar hur klassificeringsmodellerna har klassificerat varje tweet.}}{46}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 
