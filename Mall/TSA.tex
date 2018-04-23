@@ -510,17 +510,17 @@ På grund av ovanstående anledningar har en linjär klassificerare valts att an
 
 
 \subsection{Convolutional Neural Network} \label{exp:cnn}
-I avsnitt \ref{bak:cnn} beskrivs kortfattat vad CNN är och varför det på senare tid har börjat användas för maskininlärningsproblem som rör textbearbetning. I detta avsnitt kommer CNN att beskrivas på en mer teknisk nivå. De olika delarna som ett CNN består av kommer att presenteras, för att sedan beskriva hur ett CNN kan utföra textklassificering utifrån ett exempel. 
+I avsnitt \ref{bak:cnn} beskrivs kortfattat vad CNN är och varför det på senare tid har börjat användas för maskininlärningsproblem som rör textbearbetning. I detta avsnitt kommer CNN att beskrivas på en mer teknisk nivå. De olika delarna som ett CNN består av kommer att presenteras, och därefter beskrivs hur ett CNN kan utföra textklassificering utifrån ett exempel. 
 
-CNN är uppbyggt med flera lager \cite{cnn:005}. Det har ett lager för indata, ett för utdata och dessutom ett flertal dolda lager. De dolda lagrena består av konvulsionlager, “pooling”-lager, fullt ansluta lager och normaliseringslager. 
+CNN är uppbyggt med flera lager \cite{cnn:005}. Det har ett lager för indata, ett för utdata och dessutom ett flertal dolda lager. De dolda lagrena består av konvulsionlager, “pooling”-lager, fullt anslutna lager och normaliseringslager. 
 
-Konvulsionlager utgör den centrala delen av CNN \cite{cnn:005}. Ett konvulsionlager består av ett antal lärbara filter. I \cite{cnn:004} liknas en konvulsion med en funktion där ett fönster förflyttas över den data som ska analyseras, där datan är representerad som en matris. Fönstret som förflyttar sig över matrisen är det som kallas för filter. Vid varje förflyttning beräknas summan efter att filtrets värden har multiplicerat med respektive värde i matrisen. En hel konvulsion ges efter att fönstret har bearbetat hela matrisen.
+Konvulsionlager utgör den centrala delen av CNN \cite{cnn:005}. Ett konvulsionlager består av ett antal lärbara filter. I \cite{cnn:004} liknas en konvulsion med en funktion där ett fönster förflyttas över den data som ska analyseras, där datan är representerad som en matris. Fönstret som förflyttar sig över matrisen är det som kallas för filter. Vid varje förflyttning beräknas summan efter att filtrets värden har multiplicerats med respektive värde i matrisen. En hel konvulsion ges efter att fönstret har bearbetat hela matrisen.
 
-“Pooling”-lager används vanligtvis efter konvultionslager \cite{cnn:004}. Det “pooling”-lager gör är att de tar ut en delmängd av den data de får in. Detta kan utföras med olika metoder, men en vanlig metod är att ta ut det största värdet från varje filter som bearbetas. Denna strategi kallas för “1-max pooling” \cite{cnn:002}. För klassificering krävs vanligtvis att de matriser som ges av filtrena har samma storlek \cite{cnn:004}. Genom användandet av “pooling” uppfylls det kravet, t.e.x om 100 filter används och “1-max pooling” appliceras på varje lager, kommer det alltid resultera i en vektor på 100 dimensioner. “Pooling” gör det alltså möjligt att skicka in data av varierande storlek och använda olika filterstorlekar, och alltid få ut den data som ska tolkas vid klassificeringen i samma storlek. En annan anledning till att “pooling”-lager används är att det minskar storleken på den data som ska analyseras samtidigt som den försöker behålla den mest relevanta informationen.
+“Pooling”-lager används vanligtvis efter konvultionslager \cite{cnn:004}. Det “pooling”-lager gör är att de tar ut en delmängd av den data de får in. Detta kan utföras med olika metoder, men en vanlig metod är att ta ut det största värdet från varje filter som bearbetas. Denna strategi kallas för “1-max pooling” \cite{cnn:002}. För klassificering krävs vanligtvis att de matriser som ges av filtren har samma storlek \cite{cnn:004}. Genom användandet av “pooling” uppfylls det kravet, t.e.x om 100 filter används och “1-max pooling” appliceras på varje lager, kommer det alltid resultera i en vektor på 100 dimensioner. “Pooling” gör det alltså möjligt att skicka in data av varierande storlek och använda olika filterstorlekar, och alltid få ut den data som ska tolkas vid klassificeringen i samma storlek. En annan anledning till att “pooling”-lager används är att det minskar storleken på den data som ska analyseras samtidigt som den försöker behålla den mest relevanta informationen.
 
-Efter att olika särdrag har tagits fram genom konvulsionlager och “pooling”-lager kopplas ett fullt ansluten lager in i slutet av nätverket \cite{cnn:008}. Det fullt anslutna lagret tar in mängden av särdrag från lagret innan och skickar ut en vektor av storleken $N$, där $N$ representerar antalet klasser vid klassificeringen. Värdena i denna vektor representerar sannolikheten för respektive klass. Det fullt anslutna lagret analyserar den data som skickas från lagret innan och gör en bedömning utefter vilken klass särdragen med störst sannolikhet representerar. 
+Efter att olika särdrag har tagits fram genom konvulsionlager och “pooling”-lager kopplas ett fullt anslutet lager in i slutet av nätverket \cite{cnn:008}. Det fullt anslutna lagret tar in mängden av särdrag från lagret innan och skickar ut en vektor av storleken $N$, där $N$ representerar antalet klasser vid klassificeringen. Värdena i denna vektor representerar sannolikheten för respektive klass. Det fullt anslutna lagret analyserar den data som skickas från lagret innan och gör en bedömning utefter vilken klass särdragen med störst sannolikhet representerar. 
 
-Som nämndes i \ref{bak:cnn}, är CNN ursprungligen framtagen för problem som rör bearbetning av bilder. När bilder bearbetas av CNN representeras bildens pixlar i en matris, som filtrena sedan förflyttar sig över \cite{cnn:004}. Text som ska bearbetas av CNN behöver därför också representeras som en bild. I figur \ref{fig:cnntext} illustreras ett exempel av ett CNN för textklassificering. I exemplet ska ett twitterinlägg av längden $l$ klassificeras \cite{cnn:002}. Twitterinlägget som ska klassificeras har konverteras till en twitterinläggmatris. Varje ord i twitterinlägget utgör en rad i matrisen och representeras av en vektor i matrisen, där vektorernas dimension $d$ utgör matrisen bredd.  Matrisens storlek ges således av $l*d$.  Vektorerna som representerar olika ord är antingen ordinbäddningar \cite{wiki:016} eller “one-hot”-vektorer \cite{cnn:004}.  “One-hot”-vektorer är det som har använts för implementationen av CNN i denna studie och där indexeras varje ord i datamängden till ett vokabulär. Efter att twitterinlägget har konverterats till att representeras som en matris, går det att hantera inlägget som en bild och utföra konvulsioner på det genom olika filter \cite{cnn:002}. Eftersom varje rad representerar ett ord i twitterinlägget är det rimligt att använda filter som till bredden är lika stora som dimensionen på vektorerna. Höjden eller regionstorleken på filtren kan däremot varieras och det går att använda flertalet filter med olika regionstorlekar. Regionstorleken anpassas utefter hur många ord ett filter ska omfatta. 
+Som nämndes i \ref{bak:cnn}, är CNN ursprungligen framtagen för problem som rör bearbetning av bilder. När bilder bearbetas av CNN representeras bildens pixlar i en matris, som filtrena sedan förflyttar sig över \cite{cnn:004}. Text som ska bearbetas av CNN behöver därför också representeras som en bild. I figur \ref{fig:cnntext} visas ett exempel av ett CNN för textklassificering. I exemplet ska ett twitterinlägg av längden $l$ klassificeras \cite{cnn:002}. Twitterinlägget som ska klassificeras har konverterats till en twitterinläggmatris. Varje ord i twitterinlägget utgör en rad i matrisen och representeras av en vektor i matrisen, där vektorernas dimension $d$ utgör matrisen bredd.  Matrisens storlek ges således av $l*d$.  Vektorerna som representerar olika ord är antingen ordinbäddningar \cite{wiki:016} eller “one-hot”-vektorer \cite{cnn:004}.  “One-hot”-vektorer är det som har använts för implementationen av CNN i denna studie och där indexeras varje ord i datamängden till ett vokabulär. Efter att twitterinlägget har konverterats till att representeras som en matris, går det att hantera inlägget som en bild och utföra konvulsioner på det genom olika filter \cite{cnn:002}. Eftersom varje rad representerar ett ord i twitterinlägget är det rimligt att använda filter som till bredden är lika stora som dimensionen på vektorerna. Höjden eller regionstorleken på filtren kan däremot varieras och det går att använda flertalet filter med olika regionstorlekar. Regionstorleken anpassas utefter hur många ord ett filter ska omfatta. 
 
 \begin{figure}[H]
 \includegraphics[width=12cm]{cnn_text}
@@ -529,14 +529,14 @@ Som nämndes i \ref{bak:cnn}, är CNN ursprungligen framtagen för problem som r
 \label{fig:cnntext}
 \end{figure}
 
-I exemplet som illustreras i figur \ref{fig:cnntext} används tre olika regionstorlekar och två filter för varje regionstorlek, totalt används sex filter. Genom användandet av flertalet filter för respektive regionstorlek går det att få ut komplementerande särdrag från samma region \cite{cnn:002}. Från konvulsionerna som utförs på matrisen genereras särdragskartor. Den engelska termen är “feature maps”, men i denna studie har de valt att kallas för särdragskartor.  Storleken på varje särdragskarta som genereras kommer att variera beroende på twitterinläggets längd och regionstorleken på respektive filter. För att omvandla vektorerna till samma längd används en “pooling”-funktion på varje särdragskarta. Dessa vektorer sätts sedan samman till en ny vektor där twitterinläggets särdrag är representerade på en högre nivå. I slutet av nätverket har ett fullt anslutet lager kopplats in. Det fullt anslutna lagret tar slutligen in den sammankopplade vektorn och utför klassificeringen.
+I exemplet som finns i figur \ref{fig:cnntext} används tre olika regionstorlekar och två filter för varje regionstorlek, totalt används sex filter. Genom användandet av flertalet filter för respektive regionstorlek går det att få ut komplementerande särdrag från samma region \cite{cnn:002}. Från konvulsionerna som utförs på matrisen genereras särdragskartor. Den engelska termen är “feature maps”, men i denna studie kallas de för särdragskartor.  Storleken på varje särdragskarta som genereras kommer att variera beroende på twitterinläggets längd och regionstorleken på respektive filter. För att omvandla vektorerna till samma längd används en “pooling”-funktion på varje särdragskarta. Dessa vektorer sätts sedan samman till en ny vektor där twitterinläggets särdrag är representerade på en högre nivå. I slutet av nätverket har ett fullt anslutet lager kopplats in. Det fullt anslutna lagret tar slutligen in den sammankopplade vektorn och utför klassificeringen.
 
 
 
 \section{Implementation}\label{impl}
-Detta kapitel beskriver detaljer angående implementationen av vår studie och dess flöde som illustrerats i figur \ref{fig:overfig}. Kapitlet beskriver även teknikerna som används för att göra implementationen möjlig. Gemensamma tekniker som används i alla delar av implementation är programmeringsspråket Python3 \cite{impl:001} och Pandas \cite{impl:002}. Pandas är ett Python-paket som erbjuder snabba, flexibla datastrukturer som är utformade för att göra arbetet med relationell och märkt data smidigare. 
+Detta kapitel beskriver detaljer angående implementationen av vår studie och dess flöde som illustreras i figur \ref{fig:overfig}. Kapitlet beskriver även teknikerna som används för att göra implementationen möjlig. Gemensamma tekniker som används i alla delar av implementation är programmeringsspråket Python3 \cite{impl:001} och Pandas \cite{impl:002}. Pandas är ett Python-paket som erbjuder snabba, flexibla datastrukturer som är utformade för att göra arbetet med relationell och märkt data smidigare. 
 \subsection{Databearbetning}\label{impl:pre}
-Som beskrivs i avsnitt \ref{exp:pre} är databearbetning ett viktigt steg inom SA och TSA. I detta avsnittet beskrivs implementationen av databearbetningen m.h.a delarna som illustreras i figur \ref{fig:dataset}.
+Som beskrivs i avsnitt \ref{exp:pre} är databearbetning ett viktigt steg inom SA och TSA. I detta avsnitt beskrivs implementationen av databearbetningen m.h.a delarna som illustreras i figur \ref{fig:dataset}.
 
 För att avlägsna HTML-kod från twitterinlägg används BeautifulSoup \cite{impl:004}, som är ett Python-paket för att extrahera data från HTML-kod, om HTML-kod finns i twitterinlägg tas det således bort, se kodavsnitt \ref{pre:html}.
 \begin{lstlisting}[style=mypython,caption={Funktion för att avlägsna HTML-kod.},label=pre:html]
@@ -551,7 +551,7 @@ def to_lower(self):
       self.df["tweet"] = self.df["tweet"].str.lower()
 \end{lstlisting}
 
-Beskrivet i \ref{exp:pre} är expandering av sammandragsförkortningar ett viktigt moment för att kunna hantera negationer. Med  \pyth{cont_dic} kan vi hantera och expandera “can’t”, “won’t” och där ord slutar på “n’t”, se kodavsnitt \ref{pre:expand}
+Beskrivet i \ref{exp:pre} är expandering av sammandragsförkortningar ett viktigt moment för att kunna hantera negationer. Med  \pyth{cont_dic} kan vi hantera och expandera “can’t”, “won’t” och andra ord som slutar på “n’t”, exempelvis expanderas "isn't" till "is not". Se kodavsnitt \ref{pre:expand}
 \begin{lstlisting}[style=mypython,caption={Kod för att expandera sammandragsförkortningar.},label=pre:expand]
 cont_dict = {'can\'t': 'cannot', 'won\'t': 'will not', 'n\'t': ' not'}
 cont_re = re.compile('(%s)' % '|'.join(cont_dict.keys()))
@@ -573,13 +573,13 @@ def remove_accented_chars(self):
     decode('utf-8', 'ignore'))
 \end{lstlisting}
 
-I kodavsnitt \ref{pre:rem}  avlägsnas URL:er, “mentions”, “hashtags” , skiljetecken, siffror, emojis och repeterade mellanslag m.h.a fyra reguljära uttryck (RU) \cite{impl:003}. För att avlägsna URL:er används \pyth{'https?://[A-Za-z0-9./]+'} vilket betyder att om en URL är http eller https kommer denna avlägsnas.
+I kodavsnitt \ref{pre:rem}  avlägsnas URL:er, “mentions”, “hashtags” , skiljetecken, siffror, emojis och repeterande mellanslag m.h.a fyra reguljära uttryck (RU) \cite{impl:003}. För att avlägsna URL:er används \pyth{'https?://[A-Za-z0-9./]+'} vilket betyder att om en URL är http eller https kommer denna avlägsnas.
 
-“Mentions” avlägsnas med det RU \pyth{'@[A-Za-z0-9]+'}, d.v.s om en alfanumerisk sträng börjar med ‘@’ avlägsnas den alfanumeriska strängen.
+“Mentions” avlägsnas med RU \pyth{'@[A-Za-z0-9]+'}, d.v.s om en alfanumerisk sträng börjar med ‘@’ avlägsnas den alfanumeriska strängen.
 
-Avlägsning av “hashtags”, skiljetecken, siffror och emojis görs med det RU \pyth{'[^a-zA-Z]'}, d.v.s en sträng måste börja på bokstäver mellan a-z, om inte tas dessa bort.
+Avlägsning av “hashtags”, skiljetecken, siffror och emojis görs med RU \pyth{'[^a-zA-Z]'}, d.v.s en sträng måste börja på bokstäver mellan a-z, om inte tas dessa bort.
 
-Och slutligen så avlägsnas repeterande mellanslag, vilket utförs med det RU \pyth{' +'}. Ifall det är två eller fler repeterande mellanslag tas dessa bort.
+Och slutligen avlägsnas repeterande mellanslag, vilket utförs med RU \pyth{' +'}. Ifall det är två eller fler repeterande mellanslag tas dessa bort.
 
 \begin{lstlisting}[style=mypython,caption={Funktioner för att avlägsna URL:er, ''mention'', ''hashtags'', skiljetecken, siffror, emojis och repeterade mellanslag.},label=pre:rem]
 def remove_links(self):
@@ -663,10 +663,10 @@ def swn_classifier(tweet):
 
     return 0
 \end{lstlisting}
-Kodavsnitt \ref{lex:kod} körs på både STS- och SemEval-datamängden där resultatet presenteras i avsnitt \ref{res}.
+Kodavsnitt \ref{lex:kod} körs på både STS- och SemEval-datamängden och resultatet presenteras i avsnitt \ref{res}.
 
 \subsection{Naive Bayes}\label{impl:nb}
-I detta avsnitt diskuteras hur Naive bayes-algoritmen implementerats och hur vi anpassat algoritmens parametrar för att uppnå ett eventuellt förbättrad precision. För implementation av NB har SciKit-learn (sk-learn) \cite{scikit:002} använts, som är ett Python-paket för maskininlärning.
+I detta avsnitt diskuteras hur Naive bayes-algoritmen implementerats och hur vi anpassat algoritmens parametrar för att uppnå en eventuellt förbättrad precision. För implementation av NB har SciKit-learn (sk-learn) \cite{scikit:002} använts, som är ett Python-paket för maskininlärning.
 
 För att implementera och träna Naive bayes-algoritmen måste först datamängden delas in i en träningsmängd och en testmängd. Delningen utförs för att möjliggöra utvärdering av algoritmens precision, vilket testmängden används för. Delningen utförs m.h.a sk-learn funktionen \pyth{train_test_split()} \cite{scikit:003} där datamängden delas till 20\% testmängd och 80\% träningsmängd, se kodavsnitt \ref{impl:datasplit}.
 \begin{lstlisting}[style=mypython,caption={Kod för att dela upp datamängden i en träningsmängd och en testmängd.},label=impl:datasplit]
@@ -674,18 +674,18 @@ X_train, X_test, y_train, y_test = train_test_split(df.tweet,
             df.lable, test_size=0.2, random_state=0)
 \end{lstlisting}
 
-I kodavsnitt \ref{nb:base} implementeras algoritmen \pyth{MultinomialNB()} med standardparametrar \cite{scikit:004} och unigram som särdrag vilket är standard parameter för \pyth{CountVectorizer()} \cite{scikit:005}. Träningen av algoritmen utförs med \pyth{fit(X_train, y_train)} funktionen som tar träningsmängden som indata. Precisionen tas fram genom att först klassificera vår testmängd på den tränade algoritmen m.h.a \pyth{predict(X_test)} för att sedan använda \pyth{metrics.classification_report()} som presenterar värden som diskuterats i avsnitt \ref{TSAev}.
+I kodavsnitt \ref{nb:base} implementeras algoritmen \pyth{MultinomialNB()} med standardparametrar \cite{scikit:004} och unigram som särdrag vilket är standardparameter för \pyth{CountVectorizer()} \cite{scikit:005}. Träningen av algoritmen utförs med \pyth{fit(X_train, y_train)}-funktionen som tar träningsmängden som indata. Precisionen tas fram genom att först klassificera vår testmängd på den tränade algoritmen m.h.a \pyth{predict(X_test)} för att sedan använda \pyth{metrics.classification_report()} som presenterar värden som diskuterats i avsnitt \ref{TSAev}.
 \begin{lstlisting}[style=mypython,caption={Kod för att skapa och träna NB-klassificeraren.},label=nb:base]
 nb_unigram_clf = Pipeline([('vect', CountVectorizer()), ('clf', MultinomialNB())])
 nb_unigram_clf.fit(X_train, y_train)
 predicted = nb_unigram_clf.predict(X_test)
 print(metrics.classification_report(y_test, predicted, target_names=target_names))
 \end{lstlisting}
-Kodavsnitt \ref{nb:base} körs på både STS- och SemEval-datamängden där resultatet presenteras i avsnitt \ref{res}.
+Kodavsnitt \ref{nb:base} körs på både STS- och SemEval-datamängden och resultatet presenteras i avsnitt \ref{res}.
 
 I kodavsnitt \ref{nb:grid} används \pyth{GridSearchCV()} \cite{scikit:006} vilket är en sk-learn funktion för att utföra parametersökning för algoritmer och särdragsfunktioner så att optimala parametrar kan hittas. För \pyth{CountVectorizer()} är vi intresserade av \pyth{max_df} och \pyth{ngram_range}. \pyth{Max_df} tar emot ett flyttal mellan intervallet $[0.0, 1.0]$ som under uppbyggnaden av vokabuläret ignorerar ord som har en twitterinläggsfrekvens högre än det angivna flyttalet. \pyth{Ngram_range} används för att testa vilken typ av ngram som skall användas, t.e.x (1, 1) betyder unigram och (1, 2) betyder att både uni- och bigrams används.
 
-För \pyth{TfidfTransformer()} är vi intresserade av \pyth{use_idf} och \pyth{Norm}. \pyth{Use_idf} används för att specificera om IDF skall användas eller ej. \pyth{Norm} specificerar vilken typ av normaliserings funktion som används för att normalisera vår ordvektor. \pyth{SelectKBest()} \cite{scikit:007} tar två parametrar, \pyth{score_func} och $k$. För \pyth{score_func} är vi bara intresserade av “chi-squared test” (chi2) och $k$ är ett heltal för hur många av dem  bästa särdrag som tas ut från \pyth{score_func}. Eftersom MNB är en så pass enkel klassificeringsalgoritm finns det inga parametrar att justera.
+För \pyth{TfidfTransformer()} är vi intresserade av \pyth{use_idf} och \pyth{Norm}. \pyth{Use_idf} används för att specificera om IDF skall användas eller ej. \pyth{Norm} specificerar vilken typ av normaliseringsfunktion som används för att normalisera vårt ord. \pyth{SelectKBest()} \cite{scikit:007} tar två parametrar, \pyth{score_func} och $k$. För \pyth{score_func} är vi bara intresserade av “chi-squared test” (chi2) och $k$ är ett heltal för att specificera hur många särdrag som ska tas ut från \pyth{score_func}. Eftersom MNB är en så pass enkel klassificeringsalgoritm finns det inga parametrar att justera.
 
 \begin{lstlisting}[style=mypython,caption={Kod som används till parametersökning för NB.},label=nb:grid]
 pipeline = Pipeline([
@@ -705,15 +705,15 @@ parameters = {
 grid_search = GridSearchCV(pipeline, parameters, n_jobs=-1, verbose=1)
 \end{lstlisting}
 
-Kodavsnitt \ref{nb:grid} kör både STS- och SemEval-datamängderna, där \pyth{'kbest__k': (x)} är den parameter som differentierar mellan datamängderna. I tabell \ref{tab:kbest} illustreras antal särdrag som vardera datamängd har och vilket intervall $x$ sätts till för vardera datamäng. Resultatet av körningarna presenteras i avsnitt \ref{res}
+Kodavsnitt \ref{nb:grid} kör både STS- och SemEval-datamängderna, där \pyth{'kbest__k': (x)} är den parameter som differentierar mellan datamängderna.  I tabell \ref{tab:kbest} finns antal särdrag som vardera datamängd har och vilket intervall (x) sätts till för vardera datamängd. Resultatet av körningarna presenteras i avsnitt \ref{res}.
 
 \begin{table}
 \centering
-\caption{Illustrerar antal särdrag för STS- och SemEval-datamängderna och vilket intervall vi använder för parametersökning.}
+\caption{Antal särdrag för STS- och SemEval-datamängderna och vilket intervall vi använder för parametersökning.}
 \label{tab:kbest}
     \begin{tabular}{ccc}
     \toprule
-     & \textbf{Antal särdrag} & \textbf{x} \\
+     & \textbf{Antal särdrag} & \textbf{Intervall} \\
     \midrule
     \textbf{SemEval} & 10272 & (3000, 6000, 8000, 'all') \\ 
     \textbf{STS} & 200000 & (30000, 50000, 100000, 130000, 'all') \\
@@ -725,11 +725,11 @@ Kodavsnitt \ref{nb:grid} kör både STS- och SemEval-datamängderna, där \pyth{
 
 
 \subsection{Support Vector Machine}\label{impl:svm}
-I detta avsnitt diskuteras hur SVM-algoritmen implementerats och hur vi anpassat algoritmens parametrar för att uppnå ett eventuellt förbättrad precision. SVM har också implementeras m.h.a sk-learn.
+I detta avsnitt diskuteras hur SVM-algoritmen implementerats och hur vi anpassat algoritmens parametrar för att uppnå en eventuellt förbättrad precision. SVM har också implementerats m.h.a sk-learn.
 
 I avsnitt \ref{impl:nb} diskuteras att en datamängd först måste delas in i en test- och träningsmängd, vilket även är fallet för SVM. Uppdelningen sker på samma sätt som illustreras i kodavsnitt \ref{impl:datasplit}. 
 
-I kodavsnitt \ref{svm:base} implementeras algoritmen \pyth{SGDClassifier()} med standard parametrar \cite{scikit:009}. \pyth{SGDClassifier()} är en linjär klassificerare baserat på en SVM med “stochastic gradient descent” (SGD) träning. Valet att använda \pyth{SGDClassifier()} istället för en ren linjär SVM är p.g.a att \pyth{SGDClassifier()} är bättre anpassad för stora datamängder \cite{scikit:008}, vilket är fallet för studien då STS-datamängden används. Som särdrag används unigram vilket är standardparametern för \pyth{CountVectorizer()}.
+I kodavsnitt \ref{svm:base} används algoritmen \pyth{SGDClassifier()} med standardparametrar \cite{scikit:009}. \pyth{SGDClassifier()} är en linjär klassificerare baserat på en SVM med “stochastic gradient descent” (SGD) träning. Valet att använda \pyth{SGDClassifier()} istället för en ren linjär SVM är p.g.a att \pyth{SGDClassifier()} är bättre anpassad för stora datamängder \cite{scikit:008}, vilket är fallet för studien då STS-datamängden används. Som särdrag används unigram vilket är standardparametern för \pyth{CountVectorizer()}.
 
 Träningen av algoritmen utförs med funktionen \pyth{fit(X_train, y_train)}, som tar träningsmängden som indata. Precisionen tas fram genom att klassificera testmängden på den tränade algoritmen m.h.a \pyth{predict(X_test)}. Sedan används \pyth{metrics.classification_report()} för att presentera utvärderingsvärdena som diskuteras i avsnitt \ref{TSAev}.
 \begin{lstlisting}[style=mypython,caption={Kod för att skapa och träna SVM-klassificeraren.},label=svm:base]
@@ -742,8 +742,8 @@ predicted = svm_unigram_clf.predict(X_test)
 print(metrics.classification_report(y_test, predicted, target_names=target_names))
 \end{lstlisting}
 
-För parametersökningen som illustreras i kodavsnitt \ref{svm:grid} används \pyth{GridSearchCV()}. Vi är intresserade utav samma parametrar för \pyth{CountVectorizer(), TfidfTransformer()} och \pyth{SelectKBest()} som diskuteras i avsnitt \ref{impl:nb}. För klassificeringsalgoritmen \pyth{SGDClassifier()} är följande parametrar av intresse: \pyth{max_iter}, \pyth{penalty} och \pyth{alpha}. \pyth{Max_iter} är hur många gånger algoritmen går igenom datamängden, \pyth{penalty} specificerar vilken typ av normaliseringsfunktion som används för att undvika överanpassning \cite{svm:007}. Överanpassning är ett fenomen där klassificeringsalgoritmen under träning lär sig detaljerna i datamängden vilket kommer skada precisionen när ny data klassificeras.
-\pyth{Alpha} används för att specificera vilken initial inlärningsfrekvens algoritmen använder.
+För parametersökningen som illustreras i kodavsnitt \ref{svm:grid} används \pyth{GridSearchCV()}. Vi är intresserade av samma parametrar för \pyth{CountVectorizer(), TfidfTransformer()} och \pyth{SelectKBest()} som diskuteras i avsnitt \ref{impl:nb}. För klassificeringsalgoritmen \pyth{SGDClassifier()} är följande parametrar av intresse: \pyth{max_iter}, \pyth{penalty} och \pyth{alpha}. \pyth{Max_iter} är hur många gånger algoritmen går igenom datamängden, \pyth{penalty} specificerar vilken typ av normaliseringsfunktion som används för att undvika överanpassning \cite{svm:007}. Överanpassning är ett fenomen där klassificeringsalgoritmen under träning lär sig detaljerna i datamängden vilket kommer skada precisionen när ny data klassificeras.
+\pyth{Alpha} används för att specificera vilken initial inlärningsfrekvens algoritmen använder. Resultatet av parametersökningen presenteras i avsnitt \ref{res}.
 
 \begin{lstlisting}[style=mypython,caption={Kod som används till parametersökning för SVM.},label=svm:grid]
 pipeline = Pipeline([
@@ -766,15 +766,14 @@ parameters = {
 grid_search = GridSearchCV(pipeline, parameters, n_jobs=-1, verbose=1)
 \end{lstlisting}
 
-Resultatet av parametersökningen presenteras i avsnitt \ref{res}.
 \subsection{Convolutional neural network}
-För implementationen av CNN har en referensimplementation använts, som har anpassats för att analysera twitterinlägg. Referensimplementationen har implementerades med Keras \cite{impcnn:004}. Keras är ett högnivåbibliotek för djup inlärning skrivet i Python, som utvecklades för att göra det snabbt och enkelt att experimentera med neuronnät. Det kan bland annat köras ovanpå TensorFlow \cite{impcnn:005}, som är ett “open-source”-bibliotek för numerisk beräkning med starkt stöd för maskininlärning och djup inlärning. 
+För implementationen av CNN har en referensimplementation använts, som har anpassats för att analysera twitterinlägg. Referensimplementationen har implementerats med Keras \cite{impcnn:004}. Keras är ett högnivåbibliotek för djupinlärning skrivet i Python, som utvecklades för att göra det snabbt och enkelt att experimentera med neuronnät. Det kan bland annat köras ovanpå TensorFlow \cite{impcnn:005}, som är ett “open-source”-bibliotek för numerisk beräkning med starkt stöd för maskininlärning och djupinlärning. 
 
-I \cite{impcnn:003} presenteras referensimplementationen. Referensimplementationen är en förenklad implementation av Britz implementation \cite{impcnn:002}, som har implementerats med TensorFlow. Britz förklarar och presenterar sin implementation steg för steg i \cite{impcnn:001}. Implementationen är baserad på Kims modell \cite{cnn:003}  som nämndes i avsnitt \ref{bak:cnn}. Men Britz har förenklat modellen något, exempelvis används inte tränande ordinbäddningar utan istället använts “one-hot”-vektorer för att representera ord.
+I \cite{impcnn:003} presenteras referensimplementationen. Referensimplementationen är en förenklad implementation av Britz implementation \cite{impcnn:002}, som har implementerats med TensorFlow. Britz förklarar och presenterar sin implementation steg för steg i \cite{impcnn:001}. Implementationen är baserad på Kims modell \cite{cnn:003}  som nämndes i avsnitt \ref{bak:cnn}. Men Britz har förenklat modellen något, exempelvis används inte tränande ordinbäddningar utan istället används “one-hot”-vektorer för att representera ord.
 
 Parametrarna som används i referensimplementationen skiljer sig dock från standardparametrarna som används i Britz implementation. För implementationen i den här studien har standardparametrarna från Britz implementation använts istället för de som används i referensimplementationen. I kodavsnitt \ref{cnn:par} presenteras parametrar som har använts för denna studie. Parametrarna används bland annat för att bestämma storleken på twitterinläggsmatrisen, storleken på de filter som ska användas och antalet filter för varje regionstorlek. Dessa beskrevs tidigare i avsnitt \ref{exp:cnn}. Höjden och bredden på twitterinläggsmatrisen representeras i kodavsnittet av \pyth{sequence_length = x.shape[1]} och \pyth{embedding_dim = 128}.
 
-Parametern \pyth{drop = 0.5} används i “Dropout”-lagret för att bestämma hur stor del av neuronnätets enheter, som slumpmässigt ska kopplas bort vid varje uppdatering under träningen \cite{impcnn:006}. “Dropout”-lagret används för att undvika överanpassning. Vid träningen av en modell anges hur många gånger modellen ska tränas på en given datamängd \cite{impcnn:007}. Detta kallas för epoker och i koden har det angetts genom parametern \pyth{ephocs = 100}. Parametern \pyth{batch_size = 64} anger hur många exempel från träningsdatamängden som ska neuronätet ska tränas på åt gången \cite{impcnn:007}.
+Parametern \pyth{drop = 0.5} används i “Dropout”-lagret för att bestämma hur stor del av neuronnätets enheter, som slumpmässigt ska kopplas bort vid varje uppdatering under träningen \cite{impcnn:006}. “Dropout”-lagret används för att undvika överanpassning. Vid träningen av en modell anges hur många gånger modellen ska tränas på en given datamängd \cite{impcnn:007}. Detta kallas för epoker och i koden har det angetts genom parametern \pyth{ephocs = 100}. Parametern \pyth{batch_size = 64} anger hur många exempel från träningsdatamängden som neuronätet ska tränas på åt gången \cite{impcnn:007}.
 
 \begin{lstlisting}[style=mypython,caption={Parameterurval för CNN.},label=cnn:par]
 sequence_length = x.shape[1]
@@ -826,7 +825,7 @@ maxpool_2 = MaxPool2D(pool_size=(sequence_length - filter_sizes[2] + 1, 1),
     strides=(1,1), padding='valid')(conv_2)
 \end{lstlisting}
 
-Det som skickas ut från “pooling”-lagrena sätts samman till en ny särdragsvektor genom \pyth{Concatenate(axis=1)([maxpool_0, maxpool_1, maxpool_2])}. Ett fullt anslutet lager skapas med \pyth{Dense()} \cite{impcnn:006}, som tar in den särdragsvektorn och utför klassificeringen av twitterinlägg. Innan klassificeringen, appliceras först \pyth{Flatten()} \cite{impcnn:006} och sedan \pyth{Dropout()} \cite{impcnn:006} på särdragsvektorn, se kodavsnitt \ref{cnn:output}. \pyth{Flatten()} används för att ändra representationen av särdragsvektorn och \pyth{Dropout()} används för att undvika överanpassning. 
+Det som skickas ut från “pooling”-lagrena sätts samman till en ny särdragsvektor genom \pyth{Concatenate(axis=1)([maxpool_0, maxpool_1, maxpool_2])}. Ett fullt anslutet lager skapas med \pyth{Dense()} \cite{impcnn:006}, som tar in den sammansatta särdragsvektorn och utför klassificeringen av twitterinlägg. Innan klassificeringen, appliceras först \pyth{Flatten()} \cite{impcnn:006} och sedan \pyth{Dropout()} \cite{impcnn:006} på särdragsvektorn, se kodavsnitt \ref{cnn:output}. \pyth{Flatten()} används för att ändra representationen av särdragsvektorn och \pyth{Dropout()} används för att undvika överanpassning. 
 
 \begin{lstlisting}[style=mypython,caption={Kod för att sätta samman en ny särdragsvektor och koppla in ett fullt anslutet lager.},label=cnn:output]
 concatenated_tensor = Concatenate(axis=1)([maxpool_0, maxpool_1, maxpool_2])
@@ -861,7 +860,7 @@ Zhang och Wallace förklarar i \cite{cnn:002} att en negativ sida av CNN är att
 \subsection{Webbgränssnitt}
 Som ett alternativ till studiens syfte hade uppdragsgivaren ett önskemål av en webbsida där en dynamisk sökning kunde utföras på en Twitter-användare, för att sedan presentera hur klassiciferingsmodellerna klassificerar Twitter-användarens twitterinlägg.
 Tekniker som valts för webbsidans gränssnitt är Bootstrap \cite{gui:001} och för webbsidans bakände används Flask \cite{gui:002} och SQLite3 \cite{gui:003}.
-Bootstrap är ett “open source” verktyg framtaget av Twitter för att bygga responsiva, mobila projekt på webben med HyperText Markup Language (HTML), Cascading Style Sheets (CSS) och Javascript (JS). Flask är ett mikro webbramverk som används för att prata med bakände funktioner och rendera webbsidans gränssnitt. För att lagra resultaten från sökningen har SQLite3 används som databashanterare.
+Bootstrap är ett “open source” verktyg framtaget av Twitter för att bygga responsiva, mobila projekt på webben med HyperText Markup Language (HTML), Cascading Style Sheets (CSS) och Javascript (JS). Flask är ett mikro webbramverk som används för att prata med bakändefunktioner och rendera webbsidans gränssnitt. För att lagra resultaten från sökningen har SQLite3 används som databashanterare.
 
 I figur \ref{fig:gui_form} illustreras implementationen av webbgränssnittet där användare kan söka på en Twitter-användare och hur många twitterinlägg som ska klassificeras.
 
@@ -890,7 +889,7 @@ Figur \ref{fig:gui_search_t} illustrerar de inhämtade twitterinläggen från an
 \label{fig:gui_search_t}
 \end{figure}
 \section{Sammanfattning}
-I detta kapitel har tillvägagångssättet för studiens experiment diskuterats. En teknisk fördjupning har presenterats för databearbetning, särdragsurval och de tre algoritmerna, NB, SVM och CNN. Utöver detta presenteras även implementeringen av databearbetning, särdragsurval och de tre algoritmerna, där även ett webbgränssnitt har tagits fram på uppdragsgivarens önskemål.
+I detta kapitel har tillvägagångssättet för studiens experiment diskuterats. En teknisk fördjupning har presenterats för databearbetning, särdragsurval och de tre algoritmerna, NB, SVM och CNN. Utöver detta presenteras även implementeringen av databearbetning, särdragsurval och de tre algoritmerna, där även ett webbgränssnitt har tagits fram efter önskemål från uppgradsgivaren.
 
 \chapter{Resultat} \label{res}
 
