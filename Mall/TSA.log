@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  23 APR 2018 08:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  23 APR 2018 10:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1300,32 +1300,32 @@ Kapitel 5.
 [50
 
 ] (./TSA.bbl [51]
-Underfull \hbox (badness 4441) in paragraph at lines 15--21
+Underfull \hbox (badness 4441) in paragraph at lines 9--15
 []\T1/cmr/m/n/12 Hoda Ko-ras-hy Wa-laa Med-hat, Ah-med Has-san.  Sen-ti-ment an
 a-ly-
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 15--21
+Underfull \hbox (badness 2310) in paragraph at lines 9--15
 \T1/cmr/m/n/12 sis al-go-rithms and ap-pli-ca-tions: A sur-vey.  \T1/cmr/m/it/1
 2 Ain Shams Engi-ne-e-ring
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 15--21
+Underfull \hbox (badness 1231) in paragraph at lines 9--15
 \T1/cmr/m/it/12 Jour-nal\T1/cmr/m/n/12 , Vo-lu-me 5(Issue 4):1093--1113, De-cem
 -ber 2014.  URL $\T1/cmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--21
+Underfull \hbox (badness 10000) in paragraph at lines 9--15
 \T1/cmtt/m/n/12 / / ac\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 els -[] cdn\OML/cmm/m/i
 t/12 :\T1/cmtt/m/n/12 com / S2090447914000550 / 1 -[] s2\OML/cmm/m/it/12 :\T1/c
 mtt/m/n/12 0 -[] S2090447914000550 -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--21
+Underfull \hbox (badness 10000) in paragraph at lines 9--15
 \T1/cmtt/m/n/12 main\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 pdf?[]tid = 77d36d1a -[] 
 ff80 -[] 11e7 -[] 956d -[] 00000aacb362&acdnat =
  []
@@ -1333,142 +1333,142 @@ ff80 -[] 11e7 -[] 956d -[] 00000aacb362&acdnat =
 [52
 
 ]
-Underfull \hbox (badness 5119) in paragraph at lines 95--100
+Underfull \hbox (badness 5119) in paragraph at lines 89--94
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Unsu-per-vi-sed le-ar-ning --- Wi-
 ki-pe-dia, the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--100
+Underfull \hbox (badness 10000) in paragraph at lines 89--94
 \T1/cmr/m/n/12 free en-cyclo-pe-dia, 2016.  URL $\T1/cmtt/m/n/12 https : / / en
 \OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
 g / wiki /
  []
 
 [53]
-Underfull \hbox (badness 10000) in paragraph at lines 130--135
+Underfull \hbox (badness 10000) in paragraph at lines 124--129
 \T1/cmr/m/n/12 URL $\T1/cmtt/m/n/12 https : / / www\OML/cmm/m/it/12 :\T1/cmtt/m
 /n/12 kdnuggets\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 com / 2016 / 07 / support -[] 
 vector -[] machines -[]
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 137--142
+Underfull \hbox (badness 2205) in paragraph at lines 131--136
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Sup-port vector machi-ne --- Wi-ki
 -pe-dia, the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--142
+Underfull \hbox (badness 10000) in paragraph at lines 131--136
 \T1/cmr/m/n/12 free en-cyclo-pe-dia, 2002.  URL $\T1/cmtt/m/n/12 https : / / en
 \OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
 g / wiki /
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 151--157
+Underfull \hbox (badness 2088) in paragraph at lines 145--151
 \T1/cmtt/m/n/12 Artificial[]neural[]network&oldid = 830851868$\T1/cmr/m/n/12 . 
  [On-li-ne; ac-ces-sed 28-
  []
 
-[54]
-Underfull \hbox (badness 6001) in paragraph at lines 187--190
+
+Underfull \hbox (badness 6001) in paragraph at lines 181--184
 []\T1/cmr/m/n/12 Sentiment ana-ly-sis in twit-ter, 2016.  URL $\T1/cmtt/m/n/12 
 http : / / alt\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 qcri\OML/cmm/m/it/12 :\T1/cmtt/
 m/n/12 org /
  []
 
-
-Underfull \hbox (badness 1082) in paragraph at lines 212--216
+[54]
+Underfull \hbox (badness 1082) in paragraph at lines 206--210
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Twit-ter --- Wi-ki-pe-dia, the fre
 e en-cyclo-pe-dia,
  []
 
 
-Underfull \hbox (badness 2717) in paragraph at lines 225--230
+Underfull \hbox (badness 2717) in paragraph at lines 219--224
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Ac-cu-ra-cy and pre-ci-sion --- Wi
 -ki-pe-dia, the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
+Underfull \hbox (badness 10000) in paragraph at lines 219--224
 \T1/cmr/m/n/12 free en-cyclo-pe-dia, 2002.  URL $\T1/cmtt/m/n/12 https : / / en
 \OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
 g / wiki /
  []
 
 [55]
-Underfull \hbox (badness 4001) in paragraph at lines 273--278
+Underfull \hbox (badness 4001) in paragraph at lines 267--272
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Fe-a-tu-re (machi-ne le-ar-ning) -
 -- Wi-ki-pe-dia,
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 273--278
+Underfull \hbox (badness 2452) in paragraph at lines 267--272
 \T1/cmr/m/n/12 the free en-cyclo-pe-dia, 2004.  URL $\T1/cmtt/m/n/12 https : / 
 / en\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/1
 2 org / wiki /
  []
 
 
-Underfull \hbox (badness 4341) in paragraph at lines 280--285
+Underfull \hbox (badness 4341) in paragraph at lines 274--279
 []\T1/cmr/m/n/12 scikitlearn docu-men-ta-tion.  Wor-king with text da-ta, n.d. 
  URL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--285
+Underfull \hbox (badness 10000) in paragraph at lines 274--279
 \T1/cmtt/m/n/12 http : / / scikit -[] learn\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
 g / stable / tutorial / text[]analytics /
  []
 
 
-Underfull \hbox (badness 7631) in paragraph at lines 287--292
+Underfull \hbox (badness 7631) in paragraph at lines 281--286
 []\T1/cmr/m/n/12 Cambridge Uni-ver-si-ty Press.  In-ver-se docu-ment fre-quen-c
 y, 2009-
  []
 
 
-Underfull \hbox (badness 4168) in paragraph at lines 287--292
+Underfull \hbox (badness 4168) in paragraph at lines 281--286
 \T1/cmr/m/n/12 04-07.  URL $\T1/cmtt/m/n/12 https : / / nlp\OML/cmm/m/it/12 :\T
 1/cmtt/m/n/12 stanford\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 edu / IR -[] book / htm
 l / htmledition /
  []
 
 [56]
-Underfull \hbox (badness 6708) in paragraph at lines 331--336
+Underfull \hbox (badness 6708) in paragraph at lines 325--330
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Di-richlet dis-tri-bu-tion --- Wi-
 ki-pe-dia, the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--336
+Underfull \hbox (badness 10000) in paragraph at lines 325--330
 \T1/cmr/m/n/12 free en-cyclo-pe-dia, 2004.  URL $\T1/cmtt/m/n/12 https : / / en
 \OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
 g / wiki /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--349
+Underfull \hbox (badness 10000) in paragraph at lines 338--343
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Ad-di-ti-ve smoot-hing --- Wi-ki-p
 e-dia, the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--349
+Underfull \hbox (badness 10000) in paragraph at lines 338--343
 \T1/cmr/m/n/12 free en-cyclo-pe-dia, 2008.  URL $\T1/cmtt/m/n/12 https : / / en
 \OML/cmm/m/it/12 :\T1/cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
 g / wiki /
  []
 
-[57]
-Underfull \hbox (badness 10000) in paragraph at lines 379--384
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--378
 \T1/cmr/m/n/12 URL $\T1/cmtt/m/n/12 http : / / www\OML/cmm/m/it/12 :\T1/cmtt/m/
 n/12 wildml\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 com / 2015 / 11 / understanding -[
 ] convolutional -[]
  []
 
-
+[57]
 Underfull \hbox (badness 1028) in paragraph at lines 393--398
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Word em-bed-ding --- Wi-ki-pe-dia,
  the free en-
@@ -1591,7 +1591,7 @@ lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on TSA.pdf (71 pages, 996562 bytes).
+Output written on TSA.pdf (71 pages, 996706 bytes).
 PDF statistics:
  907 PDF objects out of 1000 (max. 8388607)
  234 compressed objects within 3 object streams

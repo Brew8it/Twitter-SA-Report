@@ -5,12 +5,6 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Zhang and Wallace(2015)]{cnn:002}
-Ye~Zhang and Byron Wallace.
-\newblock A sensitivity analysis of (and practitioners' guide to) convolutional
-  neural networks for sentence classification.
-\newblock \emph{arXiv preprint arXiv:1510.03820}, 2015.
-
 \bibitem[Walaa~Medhat(2014)]{SAsurvey}
 Hoda~Korashy Walaa~Medhat, Ahmed~Hassan.
 \newblock Sentiment analysis algorithms and applications: A survey.
@@ -381,6 +375,12 @@ Denny Britz.
   2015{\natexlab{a}}.
 \newblock URL
   \url{http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/}.
+
+\bibitem[Zhang and Wallace(2015)]{cnn:002}
+Ye~Zhang and Byron Wallace.
+\newblock A sensitivity analysis of (and practitioners' guide to) convolutional
+  neural networks for sentence classification.
+\newblock \emph{arXiv preprint arXiv:1510.03820}, 2015.
 
 \bibitem[Deshpande(2016)]{cnn:008}
 Adit Deshpande.
