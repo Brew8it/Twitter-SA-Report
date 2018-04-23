@@ -13,9 +13,10 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Exempel p\IeC {\r a} en icke-linj\IeC {\"a}r klassificeringsuppgift, d\IeC {\"a}r de tv\IeC {\r a} kategorierna inte \IeC {\"a}r linj\IeC {\"a}rt separabla.}}{28}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Exemplet fr\IeC {\r a}n figur \ref {fig:svmnonl} ritas om till en h\IeC {\"o}gre dimension.}}{29}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Exempel p\IeC {\r a} ett CNN som anv\IeC {\"a}nds f\IeC {\"o}r textklassificering. Figur inspirerad av S\IeC {\"A}TT IN MANUELLT CNN:002.}}{32}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Illustrerar webbgr\IeC {\"a}nssnittets s\IeC {\"o}kformul\IeC {\"a}r.}}{46}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Illustrerar hur klassificeringsmodellerna har klassificerat 10 stycken twitterinl\IeC {\"a}gg fr\IeC {\r a}n anv\IeC {\"a}ndaren \IeC {\textquotedblleft }realDonaldTrump\IeC {\textquotedblright } som \IeC {\"a}r inh\IeC {\"a}mtade 2018-04-16 11:40.}}{46}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Illustrerar hur klassificeringsmodellerna har klassificerat varje tweet.}}{47}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Implementationer och teori som studiens CNN har baserats p\IeC {\r a}.}}{42}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Illustrerar webbgr\IeC {\"a}nssnittets s\IeC {\"o}kformul\IeC {\"a}r.}}{46}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Illustrerar hur klassificeringsmodellerna har klassificerat 10 stycken twitterinl\IeC {\"a}gg fr\IeC {\r a}n anv\IeC {\"a}ndaren \IeC {\textquotedblleft }realDonaldTrump\IeC {\textquotedblright } som \IeC {\"a}r inh\IeC {\"a}mtade 2018-04-16 11:40.}}{47}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Illustrerar hur klassificeringsmodellerna har klassificerat varje tweet.}}{47}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 

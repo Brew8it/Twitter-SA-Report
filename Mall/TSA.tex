@@ -47,7 +47,7 @@
 \usepackage{listings}
 \usepackage{pythonhighlight}
 \renewcommand{\lstlistingname}{Kodavsnitt}% Listing -> Algorithm
-\renewcommand{\lstlistlistingname}{\lstlistingname s avsnitt}% List of Listings ->  Kod avsnitt
+\renewcommand{\lstlistlistingname}{\lstlistingname}% List of Listings ->  Kod avsnitt
 
 
 
@@ -122,6 +122,7 @@
 \tableofcontents{}
 \listoffigures
 \listoftables
+\lstlistoflistings
 
 \mainmatter
 % för att fucka med marginaler
@@ -766,12 +767,21 @@ parameters = {
 grid_search = GridSearchCV(pipeline, parameters, n_jobs=-1, verbose=1)
 \end{lstlisting}
 
-\subsection{Convolutional neural network}
+\subsection{Convolutional neural network}\label{impl:cnn}
 För implementationen av CNN har en referensimplementation använts, som har anpassats för att analysera twitterinlägg. Referensimplementationen har implementerats med Keras \cite{impcnn:004}. Keras är ett högnivåbibliotek för djupinlärning skrivet i Python, som utvecklades för att göra det snabbt och enkelt att experimentera med neuronnät. Det kan bland annat köras ovanpå TensorFlow \cite{impcnn:005}, som är ett “open-source”-bibliotek för numerisk beräkning med starkt stöd för maskininlärning och djupinlärning. 
 
-I \cite{impcnn:003} presenteras referensimplementationen. Referensimplementationen är en förenklad implementation av Britz implementation \cite{impcnn:002}, som har implementerats med TensorFlow. Britz förklarar och presenterar sin implementation steg för steg i \cite{impcnn:001}. Implementationen är baserad på Kims modell \cite{cnn:003}  som nämndes i avsnitt \ref{bak:cnn}. Men Britz har förenklat modellen något, exempelvis används inte tränande ordinbäddningar utan istället används “one-hot”-vektorer för att representera ord.
+\begin{figure}[H]
+\includegraphics[width=12cm]{cnn_imp}
+\centering
+\caption{Implementationer och teori som studiens CNN har baserats på.}
+\label{fig:cnnimpl}
+\end{figure}
 
-Parametrarna som används i referensimplementationen skiljer sig dock från standardparametrarna som används i Britz implementation. För implementationen i den här studien har standardparametrarna från Britz implementation använts istället för de som används i referensimplementationen. I kodavsnitt \ref{cnn:par} presenteras parametrar som har använts för denna studie. Parametrarna används bland annat för att bestämma storleken på twitterinläggsmatrisen, storleken på de filter som ska användas och antalet filter för varje regionstorlek. Dessa beskrevs tidigare i avsnitt \ref{exp:cnn}. Höjden och bredden på twitterinläggsmatrisen representeras i kodavsnittet av \pyth{sequence_length = x.shape[1]} och \pyth{embedding_dim = 128}.
+
+I figur \ref{fig:cnnimpl} visas hur implementationen av studiens CNN har tagits fram. 
+I \cite{impcnn:003} presenteras referensimplementationen, som är implementerad av Oswal. Referensimplementationen är en förenklad implementation baserad på Britz implementation \cite{impcnn:002}. Britz implementation är gjord med TensorFlow, i \cite{impcnn:001} presenteras och förklaras implementationen.  Implementationen är baserad på Kims modell \cite{cnn:003}, som nämndes i avsnitt \ref{bak:cnn}, och det Zhang och Wallace presenterar i \cite{cnn:002}. Britz har förenklat modellen något, exempelvis används inte tränande ordinbäddningar utan istället används “one-hot”-vektorer för att representera ord.
+
+Parametrarna som används i referensimplementationen skiljer sig dock från standardparametrarna som används i Britz implementation. För implementationen i den här studien har standardparametrarna från Britz implementation använts istället för de som används i referensimplementationen av Oswal. I kodavsnitt \ref{cnn:par} presenteras parametrar som har använts för denna studie. Parametrarna används bland annat för att bestämma storleken på twitterinläggsmatrisen, storleken på de filter som ska användas och antalet filter för varje regionstorlek. Dessa beskrevs tidigare i avsnitt \ref{exp:cnn}. Höjden och bredden på twitterinläggsmatrisen representeras i kodavsnittet av \pyth{sequence_length = x.shape[1]} och \pyth{embedding_dim = 128}.
 
 Parametern \pyth{drop = 0.5} används i “Dropout”-lagret för att bestämma hur stor del av neuronnätets enheter, som slumpmässigt ska kopplas bort vid varje uppdatering under träningen \cite{impcnn:006}. “Dropout”-lagret används för att undvika överanpassning. Vid träningen av en modell anges hur många gånger modellen ska tränas på en given datamängd \cite{impcnn:007}. Detta kallas för epoker och i koden har det angetts genom parametern \pyth{ephocs = 100}. Parametern \pyth{batch_size = 64} anger hur många exempel från träningsdatamängden som neuronätet ska tränas på åt gången \cite{impcnn:007}.
 
