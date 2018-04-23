@@ -281,10 +281,9 @@ I \cite{TSAsurvey} listar författarna de problem med TSA som de anser bör utfo
 \end{table}
 
 \section{Utvärdering} \label{TSAev}
-I tabell \ref{tab:fm} ser vi en så kallad förvirringsmatris (FM) som utvärderar en klassificeringsmodell från datamängden där “positivt” eller “negativt” är förbestämt. Matrisen visar antalet sann positiv (SP), sann negativ (SN), falsk positiv (FP) och falsk negativ(FN) \cite{wiki:003}. Med dessa värden kan vi jämföra och analysera modellerna m.h.a följande utvärderingsmetoder: noggrannhet (n) \cite{wiki:011}, precision (p),  återkallelse (å) \cite{wiki:002} och F-Score \cite{wiki:001}.
+I tabell \ref{tab:fm} ser vi en så kallad förvirringsmatris (FM) som utvärderar en klassificeringsmodell från datamängden där “positivt” eller “negativt” är förbestämt. Matrisen visar antalet sann positiv (SP), sann negativ (SN), falsk positiv (FP) och falsk negativ(FN) \cite{wiki:003}. Med dessa värden kan vi jämföra och analysera modellerna m.h.a följande utvärderingsmetoder: precision (p),  återkallelse (å) \cite{wiki:002} och F-Score \cite{wiki:001}.
 
 \begin{labeling}{metrics}
-\item [Noggrannhet] Är modellens förmåga att kunna märka ett twitterinlägg korrekt som antingen positivt eller negativt. Detta görs genom att ta summan av sannmärkta tweets delat på summan av alla märkningar.  
 \item [Precision]  Är förmågan att modellen inte märker ett tweet som positivt när det är negativt. Detta görs genom att ta antalet sann positiva delat på totalt antal positivt märkta tweets. 
 \item [Återkallelse] Är förmågan att modellen märker positiva tweets korrekt. Detta görs genom att ta antalet sann positiva delat på summan av antalet sann positiva och falsk negativa.
 \item [F-Score] Även kallat det harmoniska medelvärdet mellan precision och återkallelse används då inte alltid precision och återkallelse räcker till för att göra en helhetsbedömning. 
@@ -293,7 +292,7 @@ I tabell \ref{tab:fm} ser vi en så kallad förvirringsmatris (FM) som utvärder
 I figur \ref{fig:utv} illustreras hur utvärderingmetoderna hänger ihop.
 
 \begin{figure}[h]
-\includegraphics[width=10cm]{utvardering}
+\includegraphics[width=8cm]{utvardering}
 \centering
 \caption{Utvärderingsmetoder för TSA.}
 \label{fig:utv}

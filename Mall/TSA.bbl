@@ -1,4 +1,4 @@
-\begin{thebibliography}{86}
+\begin{thebibliography}{85}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -214,13 +214,6 @@ Wikipedia contributors.
   2014{\natexlab{b}}.
 \newblock URL \url{https://en.wikipedia.org/wiki/Confusion_matrix}.
 \newblock [Online; accessed 29-January 2018].
-
-\bibitem[contributors(2002{\natexlab{c}})]{wiki:011}
-Wikipedia contributors.
-\newblock Accuracy and precision --- {W}ikipedia{,} the free encyclopedia,
-  2002{\natexlab{c}}.
-\newblock URL \url{https://en.wikipedia.org/wiki/Accuracy_and_precision}.
-\newblock [Online; accessed 5-Februari 2018].
 
 \bibitem[contributors(2016{\natexlab{e}})]{wiki:002}
 Wikipedia contributors.
