@@ -9,17 +9,21 @@
 \contentsline {table}{\numberline {3.4}{\ignorespaces Ber\IeC {\"a}kningar f\IeC {\"o}r om ett ord \IeC {\"a}r positivt eller negativt.}}{26}
 \contentsline {table}{\numberline {3.5}{\ignorespaces Antal s\IeC {\"a}rdrag f\IeC {\"o}r STS- och SemEval-datam\IeC {\"a}ngderna och vilket intervall vi anv\IeC {\"a}nder f\IeC {\"o}r parameters\IeC {\"o}kning.}}{40}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces test.}}{49}
-\contentsline {table}{\numberline {4.2}{\ignorespaces test.}}{50}
-\contentsline {table}{\numberline {4.3}{\ignorespaces test.}}{50}
-\contentsline {table}{\numberline {4.4}{\ignorespaces test.}}{50}
-\contentsline {table}{\numberline {4.5}{\ignorespaces test.}}{50}
-\contentsline {table}{\numberline {4.6}{\ignorespaces test.}}{51}
-\contentsline {table}{\numberline {4.7}{\ignorespaces test.}}{51}
-\contentsline {table}{\numberline {4.8}{\ignorespaces test.}}{51}
-\contentsline {table}{\numberline {4.9}{\ignorespaces test.}}{52}
-\contentsline {table}{\numberline {4.10}{\ignorespaces test.}}{52}
-\contentsline {table}{\numberline {4.11}{\ignorespaces test.}}{52}
-\contentsline {table}{\numberline {4.12}{\ignorespaces test.}}{52}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Prestanda f\IeC {\"o}r lexikonbaserade modellen tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{50}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Prestanda f\IeC {\"o}r NB med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{50}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Resultat efter parameters\IeC {\"o}kning f\IeC {\"o}r NB p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{51}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Prestanda f\IeC {\"o}r NB med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{51}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Prestanda f\IeC {\"o}r SVM med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{52}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r NB p\IeC {\r a} STS.}}{52}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Prestanda f\IeC {\"o}r SVM med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{53}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Prestanda f\IeC {\"o}r CNN tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{53}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Prestanda f\IeC {\"o}r lexikonbaserade modellen tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{54}
+\contentsline {table}{\numberline {4.10}{\ignorespaces Prestanda f\IeC {\"o}r NB med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{54}
+\contentsline {table}{\numberline {4.11}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r NB p\IeC {\r a} SemEval.}}{55}
+\contentsline {table}{\numberline {4.12}{\ignorespaces Prestanda f\IeC {\"o}r NB med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{55}
+\contentsline {table}{\numberline {4.13}{\ignorespaces Prestanda f\IeC {\"o}r SVM med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{56}
+\contentsline {table}{\numberline {4.14}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r SVM p\IeC {\r a} SemEval.}}{56}
+\contentsline {table}{\numberline {4.15}{\ignorespaces Prestanda f\IeC {\"o}r SVM med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{57}
+\contentsline {table}{\numberline {4.16}{\ignorespaces Prestanda f\IeC {\"o}r CNN tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{57}
 \addvspace {10\p@ }
 \contentsfinish 

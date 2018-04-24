@@ -304,7 +304,7 @@ I detta kapitel har bakgrunden till projektet diskuterats och där nyttan av SA 
 
 Detta kapitel ger även en överblick av vad maskininlärning är och hur maskininlärningens viktigaste komponenter hänger ihop samt hur maskininlärning kan appliceras på SA och TSA. Dessutom beskrivs de problem och utmaningar som existerar inom TSA. 
 
-\chapter{Experiment}
+\chapter{Experiment}\label{exp}
 I kapitlet kommer experimentet för studien att presenteras, hur det har utförts och hur de olika delarna har implementeras. Delarna utgörs av bearbetning av datamängderna, vilka särdragsurval som kommer utföras och en fördjupning i hur maskininlärningsalgoritmerna fungerar. Implementationen kommer ske i tre steg där först en lexikonbaserad modell kommer tas fram, för att ge ett basfall för respektive datamängd, för att sedan implementera algoritmerna med standardparametrar och slutligen testa och justera algoritmernas parametrar. Detta för att eventuellt uppnå en högre precision för respektive klassificeringsmodell. 
 De slutgiltliga klassificeringsmodellerna kommer att diskuteras och jämföras i avsnitt \ref{res}.
 \section{Bearbetning av datamängd} \label{exp:pre}
@@ -900,15 +900,22 @@ Figur \ref{fig:gui_search_t} illustrerar de inhämtade twitterinläggen från an
 \section{Sammanfattning}
 I detta kapitel har tillvägagångssättet för studiens experiment diskuterats. En teknisk fördjupning har presenterats för databearbetning, särdragsurval och de tre algoritmerna, NB, SVM och CNN. Utöver detta presenteras även implementeringen av databearbetning, särdragsurval och de tre algoritmerna, där även ett webbgränssnitt har tagits fram efter önskemål från uppgradsgivaren.
 
-\chapter{Resultat} \label{res}
 
-\section{Stanford Twitter Sentiment}
+\chapter{Resultat} \label{res}
+I detta kapitel kommer resultaten från studien att presenteras. Det kommer att presenteras hur lexikon, NB, SVM och CNN presterar när de har tränats med datamängderna som diskuterades i avsnitt \ref{DS}. För lexikon och CNN har en modell tagits fram för respektive datamängd, medan två modeller har tagits fram för NB och SVM. Modellerna som har tagits fram för NB och SVM har tränats med två olika uppsättningar av parametrar. Den ena modellen har tränats med standardparametrar, medan den andra har tränats med parametrar framtagna m.h.a parametersökning. Av den anledningen kommer resultaten för NB och SVM omfatta: prestandan för de två modeller och parametrarna som togs fram genom parametersökningen. Till skillnad från lexikon och CNN där resultaten enbart omfattar en modell. Den lexikonbaserade modellen används som ett basfall för respektive datamängd, vilket diskuterades i kapitel \ref{exp}.
+
+För- och nackdelar med respektive klassificeringsmodell och datamängd kommer att diskuteras med hänsyn till prestanda, hur invecklade de var att implementera och hur lång tid de tog att träna. Värdena som kommer att användas för att jämföra och analysera prestandan av de olika modellerna diskuterades i avsnitt \ref{TSAev}. I avsnitt \ref{res:sts} och \ref{res:se} presenteras resultaten av prestandan för klassificeringsmodellerna, för respektive datamängd. Och i avsnitt \ref{res:utv} utvärderas klassificeringsmodellerna och datamängderna utefter för- och nackdelar.
+
+\section{Stanford Twitter Sentiment}\label{res:sts}
+Detta avsnitt avser att presentera och jämföra klassificeringsmodellerna som är tränade på STS-datamängden.
+
 \subsection{Lexikon}
+I tabell \ref{tab:lexi_sts} presenteras prestandan efter att den lexikonbaserade modellen har tränats på STS-datamängden. Den lexikonbaserade modellen uppnår en precision på 59.6\%, återkallelse på 58.5\% och F-Score på 57.3\%. Med detta i åtanke kan vi konstatera att basfallet precision är 9.6\% bättre än att gissa om ett twitterinlägg är positivt eller negativt.
 
 \begin{table}[H]
 \centering
-\caption{test.}
-\label{tab:lexiSTS}
+\caption{Prestanda för lexikonbaserade modellen tränad på STS-datamängden.}
+\label{tab:lexi_sts}
     \begin{tabular}{ccccc}
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
@@ -921,12 +928,12 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
 \end{tabular}
 \end{table}
 
-
 \subsection{Naive Bayes}
+I tabell \ref{tab:nb_base_sts} presenteras prestandan efter att NB med standardparamterar har tränats på STS-datamängden. Resultatet visar att NB med standardparametrar uppnår 77.1\% i precision, återkallelse och F-Score vilket är en höjning på respektive 17.5\%, 18.6\% och 19.8\% från datamängdens basfall.
 
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Prestanda för NB med standardparametrar tränad på STS-datamängden.}
 \label{tab:nb_base_sts}
     \begin{tabular}{ccccc}
     \toprule
@@ -940,10 +947,30 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
 \end{tabular}
 \end{table}
 
+I tabell \ref{tab:nb_grid_sts} presenteras de parametrar som blivit framtagna m.h.a parametersökningen som kodavsnitt \ref{nb:grid} kör på STS-datamängden. Med de framtagna parametrarna har den andra NB modellen tagits fram. 
 
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Resultat efter parametersökning för NB på STS-datamängden.}
+\label{tab:nb_grid_sts}
+    \begin{tabular}{cc}
+    \toprule
+    \multicolumn{2}{c}{\textbf{Optimala parametrar}} \\
+    \midrule
+    vect\_\_max\_df & 0.5  \\
+    vect\_\_ngram\_range & (1, 3)  \\
+    tfidf\_\_use\_idf & False  \\
+    tfidf\_\_norm & 'l2'  \\
+    kbest\_\_k & 'all' \\
+    \bottomrule
+\end{tabular}
+\end{table}
+
+Tabell \ref{tab:nb_imp_sts} presenterar prestandan efter att den andra NB-modellen har tränats på STS-datamängden. Resultatet visar att den tränade klassificeringsmodellen uppnår en precision på 79.2\%, återkallelse på 79.0\% och en F-Score på 78.9\%. Detta betyder att vi uppnår en ökning på respektive 2.1\%, 1.9\% och 1.8\% gentemot NB med standardparametrar. 
+
+\begin{table}[H]
+\centering
+\caption{Prestanda för NB med optimala parametrar tränad på STS-datamängden.}
 \label{tab:nb_imp_sts}
     \begin{tabular}{ccccc}
     \toprule
@@ -958,10 +985,11 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
 \end{table}
 
 \subsection{Support Vector Machine}
+I tabell \ref{tab:svm_base_sts} presenteras prestandan efter att SVM med standardparamterar har tränats på STS-datamängden. Resultatet visar att den tränade klassificeringsmodellen uppnår en precision på 77.7\%, en återkallelse och F-Score på 77.5\% vilket är en höjning på respektive 18.1\%, 19\% och 20.2\% jämfört med datamängdens basmodell. 
 
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Prestanda för SVM med standardparametrar tränad på STS-datamängden.}
 \label{tab:svm_base_sts}
     \begin{tabular}{ccccc}
     \toprule
@@ -975,9 +1003,33 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
 \end{tabular}
 \end{table}
 
+I tabell \ref{tab:nb_grid_sts} presenteras de parametrar som blivit framtagna m.h.a parametersökningen som kodavsnitt \ref{svm:grid} kör på STS-datamängden. Med de framtagna parametrarna har den andra SVM modellen tagits fram. 
+
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Resultat av parametersökning för NB på STS.}
+\label{tab:svm_grid_sts}
+    \begin{tabular}{cc}
+    \toprule
+    \multicolumn{2}{c}{\textbf{Optimala parametrar}} \\
+    \midrule
+    vect\_\_max\_df & 0.5  \\
+    vect\_\_ngram\_range & (1, 3)  \\
+    tfidf\_\_use\_idf & True  \\
+    tfidf\_\_norm & None  \\
+    kbest\_\_k & 'all' \\
+    clf\_\_alpha & 0.001 \\
+    clf\_\_max\_iter & 1500 \\
+    clf\_\_penalty & 'l2' \\
+    \bottomrule
+\end{tabular}
+\end{table}
+
+Tabell \ref{tab:svm_imp_sts} presenterar prestandan efter att den andra SVM modellen har tränats på STS-datamängden. Resultatet visar att den tränade klassificeringsmodellen uppnår en precision på 78.6\%, återkallelse och F-Score på 78.4\%. Detta betyder att vi uppnår en ökning på 0,9\% för respektive värde gentemot SVM med standardparametrar. 
+
+\begin{table}[H]
+\centering
+\caption{Prestanda för SVM med optimala parametrar tränad på STS-datamängden.}
 \label{tab:svm_imp_sts}
     \begin{tabular}{ccccc}
     \toprule
@@ -991,11 +1043,13 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
 \end{tabular}
 \end{table}
 
+
 \subsection{Convolutional neural network}
+Prestandan för CNN-modellen, som har tränats på STS-datamängden, presenteras i tabell \ref{tab:cnn_sts}. Modellen uppnådde en precision, återkallelse och F-score på 80,4\%. I jämförelse med datamängdens basfall är det en ökning på 20,8\% i precision, 21,9\% i återkallelse och 23,1\% i F-score.
 
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Prestanda för CNN tränad på STS-datamängden.}
 \label{tab:cnn_sts}
     \begin{tabular}{ccccc}
     \toprule
@@ -1009,13 +1063,14 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
 \end{tabular}
 \end{table}
 
-
-\section{SemEval}
+\section{SemEval}\label{res:se}
+I detta avsnitt presenteras och jämförs de klassificeringsmodeller som har tränats på datamängden SemEval. 
 \subsection{Lexikon}
+I tabell \ref{tab:lexi_se} visas prestandan för den lexikonbaserade modellen, som har tränats på SemEval-datamängden. Modellen uppnår en precision på 68,2\%, en återkallelse på 67,1\% och en F-Score på 67,6\%. 
 
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Prestanda för lexikonbaserade modellen tränad på SemEval-datamängden.}
 \label{tab:lexi_se}
     \begin{tabular}{ccccc}
     \toprule
@@ -1028,12 +1083,12 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
     \bottomrule
 \end{tabular}
 \end{table}
-
 \subsection{Naive Bayes}
+Prestandan för  NB-modellen med standardparametrar, som tränats på SemEval-datamängden, visas i tabell \ref{tab:lexi_se}. NB-modellen uppnådde en precision på 85,4\%, en återkallelse på 85,7\% och en F-score på 85,2\%. Det är en ökning på 17,2\% i precision,  18,6\% i återkallelse och 17,6\% i F-score gentemot datamängdens basmodell.
 
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Prestanda för NB med standardparametrar tränad på STS-datamängden.}
 \label{tab:nb_base_se}
     \begin{tabular}{ccccc}
     \toprule
@@ -1047,27 +1102,49 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
 \end{tabular}
 \end{table}
 
+I tabell \ref{tab:nb_grid_se} visas de parametrar som togs fram m.h.a parametersökningen. Parametersökningen utfördes med koden i kodavsnitt \ref{nb:grid}. Dessa parametrar användes för att ta fram den andra NB-modellen för SemEval-datamängden.
+
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Resultat av parametersökning för NB på SemEval.}
+\label{tab:nb_grid_se}
+    \begin{tabular}{cc}
+    \toprule
+    \multicolumn{2}{c}{\textbf{Optimala parametrar}} \\
+    \midrule
+    vect\_\_max\_df & 0.5  \\
+    vect\_\_ngram\_range & (1, 1)  \\
+    tfidf\_\_use\_idf & False  \\
+    tfidf\_\_norm & None  \\
+    kbest\_\_k & '8000' \\
+    \bottomrule
+\end{tabular}
+\end{table}
+
+Den andra NB-modellens prestanda presenteras i tabell \ref{tab:nb_imp_se}. Modellen uppnådde en precision på 85,4\%, återkallelse på 85,7\% och F-Score på 85,2\%. I jämförelse med modellen med standardparametrar resulterade parametersökningen i  en lägre prestanda.  
+
+\begin{table}[H]
+\centering
+\caption{Prestanda för NB med optimala parametrar tränad på SemEval-datamängden.}
 \label{tab:nb_imp_se}
     \begin{tabular}{ccccc}
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.820 & 0.670 & 0.737 & 618 \\
-    \textbf{Negativ} & 0.869 & 0.937 & 0.901 & 1440 \\
+    \textbf{Positiv} & 0.802 & 0.676 & 0.734 & 618 \\
+    \textbf{Negativ} & 0.870 & 0.928 & 0.898 & 1440 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.854 & 0.857 & 0.852  & 2058 \\
+    \textbf{Totalt genomsnitt} & 0.850 & 0.853 & 0.849  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{Support Vector Machine}
+I tabell \ref{tab:svm_base_se} prestenteras prestandan för SVM-modellen med standardparametrar som har tränats på SemEval-datamängden. Modellen uppnådde en precision på 84,9\%, en återkallelse på 84,8\% och en F-Score på 84,9\%. En ökning på 16,7\% i precision, 17,7\% i återkallelse och F-score på 17,3\% gentemot datamängdens basfall.
 
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Prestanda för SVM med standardparametrar tränad på SemEval-datamängden.}
 \label{tab:svm_base_se}
     \begin{tabular}{ccccc}
     \toprule
@@ -1081,9 +1158,33 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
 \end{tabular}
 \end{table}
 
+Parametrarna som togs fram m.h.a parametersökning för den andra SVM-modellen presenteras i tabell \ref{tab:svm_grid_se}. Parametersökningen utfördes med koden i kodavsnitt \ref{svm:grid}. 
+
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Resultat av parametersökning för SVM på SemEval.}
+\label{tab:svm_grid_se}
+    \begin{tabular}{cc}
+    \toprule
+    \multicolumn{2}{c}{\textbf{Optimala parametrar}} \\
+    \midrule
+    vect\_\_max\_df & 0.75  \\
+    vect\_\_ngram\_range & (1, 2)  \\
+    tfidf\_\_use\_idf & True  \\
+    tfidf\_\_norm & 'l2'  \\
+    kbest\_\_k & 'all' \\
+    clf\_\_alpha & 0.0001 \\
+    clf\_\_max\_iter & 1000 \\
+    clf\_\_penalty & 'l2' \\
+    \bottomrule
+\end{tabular}
+\end{table}
+
+Prestandan för den andra SVM-modellen presenteras i tabell \ref{tab:svm_imp_se}. Modellen uppnådde en precision och återkallelse på 87,1\% samt 86,5\% i F-Score. Detta resulterar i en ökning på 2,2\% i precision, 2,3\% i återkallelse och 1,6\% i F-Score gentemot SVM med standardparametrar.
+
+\begin{table}[H]
+\centering
+\caption{Prestanda för SVM med optimala parametrar tränad på SemEval-datamängden.}
 \label{tab:svm_imp_se}
     \begin{tabular}{ccccc}
     \toprule
@@ -1098,9 +1199,11 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
 \end{table}
 
 \subsection{Convolutional neural network}
+Prestandan för CNN-modellen, som har tränats på SemEval-datamängden, presenteras i tabell \ref{tab:cnn_se}. Modellen uppnådde en precision på 86.5\%, återkallelse på 86.7\% och en F-Score på 86.5\% vilket är en höjning på respektive 18.3\%, 19.6\% och  18.9\% gentemot datamängdens basfall. 
+
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Prestanda för CNN tränad på SemEval-datamängden.}
 \label{tab:cnn_se}
     \begin{tabular}{ccccc}
     \toprule
@@ -1114,8 +1217,12 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
 \end{tabular}
 \end{table}
 
+\section{Utvärdering}\label{res:utv}
+\subsection{Prestanda}
+\subsection{Träning}
+\subsection{Implementation}
+\subsection{Helhetsbedömning}
 
-\section{Utvärdering}
 \section{Sammanfattning}
 
 \chapter{Slutsats}
