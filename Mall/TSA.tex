@@ -70,6 +70,9 @@
 
 \usepackage{tabularx}
 
+% Make a new colum type for tables in prestanda and träning
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
 
 \makeatletter
 \renewcommand\scriptsize{\@setfontsize\scriptsize{7}{8}}
@@ -922,7 +925,7 @@ I tabell \ref{tab:lexi_se} visas prestandan för den lexikonbaserade modellen, s
     \textbf{Positiv} & 0.457 & 0.510 & 0.482 & 618 \\
     \textbf{Negativ} & 0.779 & 0.740 & 0.759 & 1440 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.682 & 0.671 & 0.676  & 2058 \\
+    \textbf{Genomsnitt} & 0.682 & 0.671 & 0.676  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -940,7 +943,7 @@ Prestandan för  NB-modellen med standardparametrar, som tränats på SemEval-da
     \textbf{Positiv} & 0.820 & 0.670 & 0.737 & 618 \\
     \textbf{Negativ} & 0.869 & 0.937 & 0.901 & 1440 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.854 & 0.857 & 0.852  & 2058 \\
+    \textbf{Genomsnitt} & 0.854 & 0.857 & 0.852  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -977,7 +980,7 @@ Den andra NB-modellens prestanda presenteras i tabell \ref{tab:nb_imp_se}. Model
     \textbf{Positiv} & 0.802 & 0.676 & 0.734 & 618 \\
     \textbf{Negativ} & 0.870 & 0.928 & 0.898 & 1440 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.850 & 0.853 & 0.849  & 2058 \\
+    \textbf{Genomsnitt} & 0.850 & 0.853 & 0.849  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -996,7 +999,7 @@ I tabell \ref{tab:svm_base_se} prestenteras prestandan för SVM-modellen med sta
     \textbf{Positiv} & 0.742 & 0.759 & 0.750 & 618 \\
     \textbf{Negativ} & 0.896 & 0.887 & 0.891 & 1440 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.849 & 0.848 & 0.849  & 2058 \\
+    \textbf{Genomsnitt} & 0.849 & 0.848 & 0.849  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1036,7 +1039,7 @@ Prestandan för den andra SVM-modellen presenteras i tabell \ref{tab:svm_imp_se}
     \textbf{Positiv} & 0.878 & 0.662 & 0.755 & 618 \\
     \textbf{Negativ} & 0.869 & 0.960 & 0.912 & 1440 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.871 & 0.871 & 0.865  & 2058 \\
+    \textbf{Genomsnitt} & 0.871 & 0.871 & 0.865  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1055,7 +1058,7 @@ Prestandan för CNN-modellen, som har tränats på SemEval-datamängden, present
     \textbf{Positiv} & 0.812 & 0.727 & 0.767 & 618 \\
     \textbf{Negativ} & 0.888 & 0.928 & 0.907 & 1440 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.865 & 0.867 & 0.865  & 2058 \\
+    \textbf{Genomsnitt} & 0.865 & 0.867 & 0.865  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1077,7 +1080,7 @@ I tabell \ref{tab:lexi_sts} presenteras prestandan efter att den lexikonbaserade
     \textbf{Positiv} & 0.628 & 0.415 & 0.500 & 159815 \\
     \textbf{Negativ} & 0.564 & 0.754 & 0.645 & 160185 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.596 & 0.585 & 0.573  & 320000 \\
+    \textbf{Genomsnitt} & 0.596 & 0.585 & 0.573  & 320000 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1096,7 +1099,7 @@ I tabell \ref{tab:nb_base_sts} presenteras prestandan efter att NB med standardp
     \textbf{Positiv} & 0.761 & 0.789 & 0.775 & 159815 \\
     \textbf{Negativ} & 0.781 & 0.753 & 0.767 & 160185 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.771 & 0.771 & 0.771  & 320000 \\
+    \textbf{Genomsnitt} & 0.771 & 0.771 & 0.771  & 320000 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1133,7 +1136,7 @@ Tabell \ref{tab:nb_imp_sts} presenterar prestandan efter att den andra NB-modell
     \textbf{Positiv} & 0.767 & 0.833 & 0.798 & 159435 \\
     \textbf{Negativ} & 0.781 & 0.753 & 0.767 & 159334 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.792 & 0.790 & 0.789  & 318769 \\
+    \textbf{Genomsnitt} & 0.792 & 0.790 & 0.789  & 318769 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1152,7 +1155,7 @@ I tabell \ref{tab:svm_base_sts} presenteras prestandan efter att SVM med standar
     \textbf{Positiv} & 0.801 & 0.732 & 0.765 & 159815 \\
     \textbf{Negativ} & 0.754 & 0.818 & 0.785 & 160185 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.777 & 0.775 & 0.775  & 320000 \\
+    \textbf{Genomsnitt} & 0.777 & 0.775 & 0.775  & 320000 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1192,7 +1195,7 @@ Tabell \ref{tab:svm_imp_sts} presenterar prestandan efter att den andra SVM mode
     \textbf{Positiv} & 0.811 & 0.742 & 0.775 & 159815 \\
     \textbf{Negativ} & 0.764 & 0.828 & 0.795 & 160185 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.786 & 0.784 & 0.784  & 320000 \\
+    \textbf{Genomsnitt} & 0.786 & 0.784 & 0.784  & 320000 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1212,21 +1215,26 @@ Prestandan för CNN-modellen, som har tränats på STS-datamängden, presenteras
     \textbf{Positiv} & 0.812 & 0.790 & 0.801 & 159435 \\
     \textbf{Negativ} & 0.796 & 0.817 & 0.806 & 159334 \\
     \midrule
-    \textbf{Totalt genomsnitt} & 0.804 & 0.804 & 0.804  & 318769 \\
+    \textbf{Genomsnitt} & 0.804 & 0.804 & 0.804  & 318769 \\
     \bottomrule
 \end{tabular}
 \end{table}
 
 \section{Utvärdering}\label{res:utv}
-
+I detta avsnitt utvärderas de datamängder och klassificeringsmodeller som har använts i studien. Klassificeringsmodellerna kommer att utvärderas efter prestandan de uppnår på de två datamängderna, tiden de tar att träna och hur invecklade de är att implementera. Datamängderna kommer att utvärderas efter prestandan de ger till klassificeringsmodellerna och hur genomförbar respektive märkningsmetod är i praktiken
 
 \subsection{Prestanda}\label{res:pres}
+För att utvärdera klassificeringsmodellernas prestanda används modellernas F-Score-värde. F-Score är det harmoniska medelvärdet mellan precision och återkallelse och är lämpligt att använda vid en helhetsbedömning av klassificeringsmodeller, som diskuterades i avsnitt \ref{TSAev}. 
+
+I tabell \ref{tab:clf_sum} presenteras de klassificeringsmodeller med högst prestanda från avsnitt \ref{res:sts} och \ref{res:se}. Samtliga klassificeringsmodeller som har tränats på SemEval-datamängden presterar bättre än de som har tränats på STS-datamängden. Mellan den klassificeringsmodell som presterar sämst på SemEval och bäst på STS skiljer det sig 4,8\%. Sett till de två olika datamängderna presterar CNN och SVM bäst på SemEval med ett F-Score-värde på 86,5\%, medan CNN har bäst resultat på STS-datamängden med ett F-Score-värde på 80,4\%. För NB och SVM varierar resultaten mellan de två datamängderna. NB presterar sämst på SemEval, medan SVM presterar sämst på STS.
+
+Utifrån resultaten kan slutsatsen dras att CNN presterar bäst på båda datamängderna.
 
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Prestanda för de bästa klassificeringsmodellerna på respektive datamängd.}
 \label{tab:clf_sum}
-    \begin{tabular}{cccc}
+    \begin{tabularx}{\textwidth}{YcYc}
     \toprule
     \multicolumn{2}{c}{\textbf{SemEval}} & \multicolumn{2}{c}{\textbf{STS}} \\
     \midrule
@@ -1234,45 +1242,47 @@ Prestandan för CNN-modellen, som har tränats på STS-datamängden, presenteras
     \midrule
     NB med standardparametrar & 85.2\% & NB med optimala parametrar & 78.9\% \\
     SVM med optimala parametrar & 86.5\% & SVM med optimala parametrar & 78.4\% \\
-    CNN med optimala parametrar & 86.5\% & CNN med optimala parametrar & 80.4\% \\
+    CNN  & 86.5\% & CNN & 80.4\% \\
     \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 
 \subsection{Träning}\label{res:train}
+För att träna studiens klassificeringsmodeller har en server med 16 kärnor och 128GB  internminne används. I tabell \ref{tab:clf_train_time} presenteras hur lång tid respektive klassificeringsmodell tog att träna i antingen millisekunder (ms), sekunder (s) eller minuter (min). Modellerna som har tränats på SemEval-datamängden är betydligt snabbare än modellerna tränat på STS-datamängden. Detta p.g.a att STS-datamängden består av 77 gånger fler twitterinlägg än SemEval-datamängden. Utifrån det presenterade resultatet ser vi att träningstiden för de olika klassificeringmodellerna varierar stort, där NB är snabbast och CNN är långsammast för respektive datamängd. 
 
 \begin{table}[H]
 \centering
-\caption{test.}
+\caption{Träningstid för de bästa klassificeringsmodellerna på respektive datamängd.}
 \label{tab:clf_train_time}
-    \begin{tabular}{cccc}
+    \begin{tabularx}{\textwidth}{YcYc}
     \toprule
     \multicolumn{2}{c}{\textbf{SemEval}} & \multicolumn{2}{c}{\textbf{STS}} \\
     \midrule
-    \textbf{Modell} & \textbf{Träningstid} & \textbf{Modell} & \textbf{Träningstid}\\
+    \textbf{Modell} & \textbf{Träning} & \textbf{Modell} & \textbf{Träning}\\
     \midrule
     NB med standardparametrar & 201 ms & NB med optimala parametrar & 3 min 29 s  \\
     SVM med optimala parametrar & 4 s  & SVM med optimala parametrar & 7 min 59 s  \\
-    CNN med optimala parametrar & 1 min 44 s & CNN med optimala parametrar & 173 min \\
+    CNN  & 1 min 44 s & CNN  & 173 min \\
     \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 
-
-
-
 \subsection{Implementation}
+Svårighetsgraden för att implementera klassificeringsmodellerna i studien skiljer sig åt mellan modellerna. I denna studie användes sk-learn för att implementera NB- och SVM-modellerna. Genom användandet av sk-learn behöver utvecklare inte förstå den underliggande arkitekturen för NB och SVM, vilket gör implementeringen av dessa modeller enkel. Däremot krävs det en större kunskap om den underliggande arkitekturen för att implementera ett CNN. Trots att en färdig referensimplementation användes, med en relativt enkel CNN-arkitektur, var det fortfarande svårt att sätta sig in i hur allt fungerade och alla parametrars inverkan på arkitekturens prestanda. Sett till implementeringen i avsnitt \ref{impl} är NB och SVM enklare att implementera och utföra parametersökning på än CNN, vilket diskuterades i avsnitt \ref{impl:cnn}
 \subsection{Helhetsbedömning}
+Utifrån resultaten som har presenterats ovan går det att fastställa att de klassificeringsmodeller som tränades på SemEval-datamängden uppnådde bättre prestanda än de som tränades på STS-datamängden. Det betyder att twitterinlägg som märkts genom mänsklig märkning är att föredra med avseende till prestanda. Dock är det problematiskt att genomföra mänsklig märkning i praktiken på en större skala med hänsyn till metoden som diskuterades i avsnitt \ref{DSse}. Eftersom det dels är människor som måste märka twitterinlägg, men även för att åsikter om vad som är positivt eller negativt kan variera från person till person. Det är dock inte ett problem för “distant supervision”, men där är problematiken istället att det inte ges några garantier för att ett twitterinlägg uttrycker något positivt eller negativt. Eftersom märkningen sker utefter antagandet att exempelvis ett positivt twitterinlägg innehåller positiva emoijs.
 
+Utvärderingen av studiens klassificeringsmodeller visar att CNN presterar bäst på båda datamängderna. Dock är det en stor skillnad på träningstiderna mellan CNN och de klassiska modellerna: NB och SVM. Beroende på tillgänglig beräkningskraft och tid kan det vara svårt att motivera den prestandaökningen som ges av CNN gentemot de klassiska modellerna. Tas även implementationsprocessen i åtanke kan det vara fördelaktigt att använda de klassiska modellerna.
 \section{Sammanfattning}
+I detta kapitel har resultaten från studiens experiment presenteras från avsnitt \ref{impl}. Resultaten har sedan använts för att jämföra och utvärdera studiens datamängder och klassificeringsmodeller. Klassificeringsmodellerna har utvärderats med hänsyn till värdena som presenterades i avsnitt \ref{TSAev}, hur lång tid de tog att träna och hur invecklade de var att implementera. Slutligen presenteras en helhetsbedömning där för- och nackdelar med respektive datamängd och klassificeringsmodell diskuteras.
 
 \chapter{Slutsats}
-\section{Sammanfattning}
-\section{Problem}
+\section{Projektsammanfattning}
+
 \section{Begränsningar}
-\newpage
+\section{Problem}
 \section{Vidare utveckling}
 \section{Slutord}
 

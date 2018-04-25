@@ -42,16 +42,16 @@
 \contentsline {subsection}{\numberline {4.2.2}Naive Bayes}{54}
 \contentsline {subsection}{\numberline {4.2.3}Support Vector Machine}{55}
 \contentsline {subsection}{\numberline {4.2.4}Convolutional neural network}{57}
-\contentsline {section}{\numberline {4.3}Utv\IeC {\"a}rdering}{58}
+\contentsline {section}{\numberline {4.3}Utv\IeC {\"a}rdering}{57}
 \contentsline {subsection}{\numberline {4.3.1}Prestanda}{58}
 \contentsline {subsection}{\numberline {4.3.2}Tr\IeC {\"a}ning}{58}
-\contentsline {subsection}{\numberline {4.3.3}Implementation}{58}
-\contentsline {subsection}{\numberline {4.3.4}Helhetsbed\IeC {\"o}mning}{58}
-\contentsline {section}{\numberline {4.4}Sammanfattning}{58}
-\contentsline {chapter}{\numberline {5}Slutsats}{59}
-\contentsline {section}{\numberline {5.1}Sammanfattning}{59}
-\contentsline {section}{\numberline {5.2}Problem}{59}
-\contentsline {section}{\numberline {5.3}Begr\IeC {\"a}nsningar}{59}
-\contentsline {section}{\numberline {5.4}Vidare utveckling}{60}
-\contentsline {section}{\numberline {5.5}Slutord}{60}
+\contentsline {subsection}{\numberline {4.3.3}Implementation}{59}
+\contentsline {subsection}{\numberline {4.3.4}Helhetsbed\IeC {\"o}mning}{60}
+\contentsline {section}{\numberline {4.4}Sammanfattning}{60}
+\contentsline {chapter}{\numberline {5}Slutsats}{61}
+\contentsline {section}{\numberline {5.1}Projektsammanfattning}{61}
+\contentsline {section}{\numberline {5.2}Begr\IeC {\"a}nsningar}{61}
+\contentsline {section}{\numberline {5.3}Problem}{61}
+\contentsline {section}{\numberline {5.4}Vidare utveckling}{61}
+\contentsline {section}{\numberline {5.5}Slutord}{61}
 \contentsfinish 

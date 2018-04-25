@@ -25,7 +25,7 @@
 \contentsline {table}{\numberline {4.14}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r SVM p\IeC {\r a} STS.}}{56}
 \contentsline {table}{\numberline {4.15}{\ignorespaces Prestanda f\IeC {\"o}r SVM med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{57}
 \contentsline {table}{\numberline {4.16}{\ignorespaces Prestanda f\IeC {\"o}r CNN tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{57}
-\contentsline {table}{\numberline {4.17}{\ignorespaces test.}}{58}
-\contentsline {table}{\numberline {4.18}{\ignorespaces test.}}{58}
+\contentsline {table}{\numberline {4.17}{\ignorespaces Prestanda f\IeC {\"o}r de b\IeC {\"a}sta klassificeringsmodellerna p\IeC {\r a} respektive datam\IeC {\"a}ngd.}}{58}
+\contentsline {table}{\numberline {4.18}{\ignorespaces Tr\IeC {\"a}ningstid f\IeC {\"o}r de b\IeC {\"a}sta klassificeringsmodellerna p\IeC {\r a} respektive datam\IeC {\"a}ngd.}}{59}
 \addvspace {10\p@ }
 \contentsfinish 
