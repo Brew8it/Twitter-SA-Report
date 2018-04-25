@@ -22,7 +22,7 @@
 \contentsline {table}{\numberline {4.11}{\ignorespaces Resultat efter parameters\IeC {\"o}kning f\IeC {\"o}r NB p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{55}
 \contentsline {table}{\numberline {4.12}{\ignorespaces Prestanda f\IeC {\"o}r NB med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{55}
 \contentsline {table}{\numberline {4.13}{\ignorespaces Prestanda f\IeC {\"o}r SVM med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{56}
-\contentsline {table}{\numberline {4.14}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r NB p\IeC {\r a} STS.}}{56}
+\contentsline {table}{\numberline {4.14}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r SVM p\IeC {\r a} STS.}}{56}
 \contentsline {table}{\numberline {4.15}{\ignorespaces Prestanda f\IeC {\"o}r SVM med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{57}
 \contentsline {table}{\numberline {4.16}{\ignorespaces Prestanda f\IeC {\"o}r CNN tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{57}
 \contentsline {table}{\numberline {4.17}{\ignorespaces test.}}{58}
