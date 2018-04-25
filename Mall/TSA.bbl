@@ -573,7 +573,7 @@ Armin Ronacher.
 
 \bibitem[gui(2000)]{gui:003}
 About sqlite, 2000.
-\newblock URL \url{http://flask.pocoo.org/}.
+\newblock URL \url{https://www.sqlite.org/about.html}.
 \newblock [Online; accessed 16-April-2018].
 
 \end{thebibliography}
