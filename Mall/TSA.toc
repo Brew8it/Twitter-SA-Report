@@ -49,9 +49,7 @@
 \contentsline {subsection}{\numberline {4.3.4}Helhetsbed\IeC {\"o}mning}{60}
 \contentsline {section}{\numberline {4.4}Sammanfattning}{60}
 \contentsline {chapter}{\numberline {5}Slutsats}{61}
-\contentsline {section}{\numberline {5.1}Projektsammanfattning}{61}
-\contentsline {section}{\numberline {5.2}Begr\IeC {\"a}nsningar}{61}
-\contentsline {section}{\numberline {5.3}Problem}{61}
-\contentsline {section}{\numberline {5.4}Vidare utveckling}{61}
-\contentsline {section}{\numberline {5.5}Slutord}{61}
+\contentsline {section}{\numberline {5.1}Begr\IeC {\"a}nsningar}{61}
+\contentsline {section}{\numberline {5.2}Vidare utveckling}{61}
+\contentsline {section}{\numberline {5.3}Slutord}{61}
 \contentsfinish 
