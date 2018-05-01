@@ -64,6 +64,9 @@
 \graphicspath{{../figures/background/}}
 \usepackage[numbers]{natbib}
 
+% for pdf front page
+\usepackage{pdfpages}
+
 % clickable
 
 \renewcommand{\baselinestretch}{1.5} 
@@ -94,30 +97,26 @@
 \paragraphfont{\Large}
 
 
-%\pagestyle{fancy}
-%\fancyhf{}
-%\lhead[\texttit{}]{}
-%\rhead[]{}
-%\setlength{\headheight}{15pt}
 
 \title{Twitter Sentiment Analysis}
-\author{Johan Selberg, Johannes Bandgren}
+\author{Johannes Bandgren, Johan Selberg}
 \supervisor{Kerstin Andersson}
-\opponent{Sample Name, Test Fun}
-\examiner{Exam}
+\opponent{Vidar Tengstål, Sigrid Österling Sicking}
+\examiner{Karl-Johan Grinnemo}
 \institute{Department of Computer Science}
 \place{Karlstad Universitet}
 \begin{document}
-
-\maketitle
-
+\includepdf[pages=-]{../Titel/Titelsida.pdf}
 
 \frontmatter
+\approvalpage%
+
 \begin{abstract}
   Abstract.
   \keywords keywords
 \end{abstract}
-\approvalpage%
+
+
 \begin{acknowledgements}
   Thanks.
 \end{acknowledgements}

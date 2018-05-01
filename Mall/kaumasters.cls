@@ -51,7 +51,7 @@
   \setname{keywordname}{Keywords}{Nyckelord}%
 }
 \AtBeginDocument{%
-  \setname{approvalname}{Approved}{Godk\"and}%
+  \setname{approvalname}{Approved}{Godk\"and, 2018-xx-xx}%
 }
 \AtBeginDocument{%
   \setname{examinationname}{Master's degree}{kandidatexamen}%
@@ -97,28 +97,44 @@
     }{%
     }
     \cleardoublepage%
-    \section*{\@title}%
-    \textsc{\prettylist{\@author}}\par%
-    \noindent\textit{\@institute}%
+    %\section*{\@title}%
+    %\textsc{\prettylist{\@author}}\par%
+    %\noindent\textit{\@institute}%
     \section*{\abstractname}%
   }{%
     \cleardoublepage%
   }%
 }
 \newcommand\approvalpage{%
+
   \cleardoublepage%
-  \newcommand\sig{\makebox[7cm]{\hrulefill}\\}%
+  \newcommand\sig{\begin{center}\makebox[7cm]{\hrulefill}\\\end{center}}%
   \newcommand\signer[1]{\begin{quote}\sig ##1\end{quote}\mbox{}}%
-  \noindent\approvaltext\\\mbox{}\bigskip%
-  \foreach \x in \@author {\signer{\x}}%
+  \begin{center}
+  	\noindent\approvaltext\\\mbox{}\bigskip%
+  \end{center}
+  \foreach \x in \@author {\signer{\begin{center}\x \end{center}}}%
   \\\mbox{}\bigskip\\\mbox{}\bigskip%
   \approvalname,\\\mbox{}\bigskip%
   \begin{quote}%
-    \sig\opponent: \@opponent\\\mbox{}\bigskip\\%
-    \sig\supervisorname: \@supervisor\\\mbox{}\bigskip\\%
-    \sig\examinername: \@examiner
+    \sig 
+    \begin{center}
+    \opponent: \@opponent\\\mbox{}\bigskip\\%
+	\end{center}     
+    \sig
+    \begin{center}
+    \supervisorname: \@supervisor\\\mbox{}\bigskip\\%
+    \end{center}     
+    \sig
+    \begin{center}
+    \examinername: \@examiner
+    \end{center}
   \end{quote}%
 }
+
+
+
+
 \newenvironment{acknowledgements}{%
   \cleardoublepage%
   \section*{\acknowledgementname}%
