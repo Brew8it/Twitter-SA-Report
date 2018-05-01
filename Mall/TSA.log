@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  1 MAY 2018 09:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  1 MAY 2018 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -404,6 +404,12 @@ File: babel.def 2016/02/24 3.9q Babel common definitions
 \U@D=\dimen151
 )
 Package babel Info: Making " an active character on input line 90.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
@@ -1071,36 +1077,36 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 File: ../Titel/Titelsida.pdf Graphic file (type pdf)
 
 <use ../Titel/Titelsida.pdf>
-Package pdftex.def Info: ../Titel/Titelsida.pdf used on input line 109.
+Package pdftex.def Info: ../Titel/Titelsida.pdf used on input line 111.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: ../Titel/Titelsida.pdf Graphic file (type pdf)
  <use ../Titel/Titelsida.pdf>
-Package pdftex.def Info: ../Titel/Titelsida.pdf used on input line 109.
+Package pdftex.def Info: ../Titel/Titelsida.pdf used on input line 111.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 <../Titel/Titelsida.pdf, id=7, page=1, 597.55246pt x 845.07718pt>
 File: ../Titel/Titelsida.pdf Graphic file (type pdf)
 
 <use ../Titel/Titelsida.pdf, page 1>
-Package pdftex.def Info: ../Titel/Titelsida.pdf, page1 used on input line 109.
+Package pdftex.def Info: ../Titel/Titelsida.pdf, page1 used on input line 111.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: ../Titel/Titelsida.pdf Graphic file (type pdf)
  <use ../Titel/Titelsida.pdf, page 1>
-Package pdftex.def Info: ../Titel/Titelsida.pdf, page1 used on input line 109.
+Package pdftex.def Info: ../Titel/Titelsida.pdf, page1 used on input line 111.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: ../Titel/Titelsida.pdf Graphic file (type pdf)
 
 <use ../Titel/Titelsida.pdf, page 1>
-Package pdftex.def Info: ../Titel/Titelsida.pdf, page1 used on input line 109.
+Package pdftex.def Info: ../Titel/Titelsida.pdf, page1 used on input line 111.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: ../Titel/Titelsida.pdf Graphic file (type pdf)
  <use ../Titel/Titelsida.pdf, page 1>
-Package pdftex.def Info: ../Titel/Titelsida.pdf, page1 used on input line 109.
+Package pdftex.def Info: ../Titel/Titelsida.pdf, page1 used on input line 111.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: ../Titel/Titelsida.pdf Graphic file (type pdf)
 
 <use ../Titel/Titelsida.pdf, page 1>
-Package pdftex.def Info: ../Titel/Titelsida.pdf, page1 used on input line 109.
+Package pdftex.def Info: ../Titel/Titelsida.pdf, page1 used on input line 111.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
  [1
 
@@ -1109,18 +1115,29 @@ Package pdftex.def Info: ../Titel/Titelsida.pdf, page1 used on input line 109.
 File: ../Titel/Titelsida.pdf Graphic file (type pdf)
 
 <use ../Titel/Titelsida.pdf, page 2>
-Package pdftex.def Info: ../Titel/Titelsida.pdf, page2 used on input line 109.
+Package pdftex.def Info: ../Titel/Titelsida.pdf, page2 used on input line 111.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: ../Titel/Titelsida.pdf Graphic file (type pdf)
  <use ../Titel/Titelsida.pdf, page 2>
-Package pdftex.def Info: ../Titel/Titelsida.pdf, page2 used on input line 109.
+Package pdftex.def Info: ../Titel/Titelsida.pdf, page2 used on input line 111.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: ../Titel/Titelsida.pdf Graphic file (type pdf)
 
 <use ../Titel/Titelsida.pdf, page 2>
-Package pdftex.def Info: ../Titel/Titelsida.pdf, page2 used on input line 109.
+Package pdftex.def Info: ../Titel/Titelsida.pdf, page2 used on input line 111.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
- [2 <../Titel/Titelsida.pdf>] [3
+ [2 <../Titel/Titelsida.pdf>]
+Runaway argument?
+! Paragraph ended before \PackageWarning was complete.
+<to be read again> 
+                   \par 
+l.114 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[3
 
 
 
@@ -1142,15 +1159,24 @@ Package pdftex.def Info: ../Titel/Titelsida.pdf, page2 used on input line 109.
 
 
 ]
+[9
+
+
+
+] [10
+
+
+
+]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 124.
+(Font)              size <24.88> substituted on input line 137.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 124.
+(Font)              size <24.88> substituted on input line 137.
 
-(./TSA.toc [9
+(./TSA.toc [11
 
 
 
@@ -1159,46 +1185,46 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <24> not available
 \tf@toc=\write4
 \openout4 = `TSA.toc'.
 
- [10] (./TSA.lof)
+ [12] (./TSA.lof)
 \tf@lof=\write5
 \openout5 = `TSA.lof'.
 
- [11
+ [13
 
 ] (./TSA.lot
-Overfull \hbox (16.61098pt too wide) in paragraph at lines 12--12
+Overfull \hbox (16.61098pt too wide) in paragraph at lines 15--15
  [][] []\T1/cmr/m/n/12 Prestanda för lex-i-kon-ba-se-ra-de mo-del-len trä-nad p
 å SemEval-datamängden. [][]  
  []
 
 
-Overfull \hbox (11.38467pt too wide) in paragraph at lines 13--13
+Overfull \hbox (11.38467pt too wide) in paragraph at lines 16--16
  [][] []\T1/cmr/m/n/12 Prestanda för NB med stan-dard-pa-ra-met-rar trä-nad på 
 STS-datamängden. [][]  
  []
 
 
-Overfull \hbox (11.38467pt too wide) in paragraph at lines 21--21
+Overfull \hbox (11.38467pt too wide) in paragraph at lines 24--24
  [][] []\T1/cmr/m/n/12 Prestanda för NB med stan-dard-pa-ra-met-rar trä-nad på 
 STS-datamängden. [][]  
  []
 
-[12
+[14
 
 ]
-Overfull \hbox (13.92989pt too wide) in paragraph at lines 23--23
+Overfull \hbox (13.92989pt too wide) in paragraph at lines 26--26
  [][] []\T1/cmr/m/n/12 Prestanda för NB med op-ti-ma-la pa-ra-met-rar trä-nad p
 å STS-datamängden. [][]  
  []
 
 
-Overfull \hbox (20.3561pt too wide) in paragraph at lines 24--24
+Overfull \hbox (20.3561pt too wide) in paragraph at lines 27--27
  [][] []\T1/cmr/m/n/12 Prestanda för SVM med stan-dard-pa-ra-met-rar trä-nad på
  STS-datamängden. [][]  
  []
 
 
-Overfull \hbox (22.9013pt too wide) in paragraph at lines 26--26
+Overfull \hbox (22.9013pt too wide) in paragraph at lines 29--29
  [][] []\T1/cmr/m/n/12 Prestanda för SVM med op-ti-ma-la pa-ra-met-rar trä-nad 
 på STS-datamängden. [][]  
  []
@@ -1207,13 +1233,13 @@ på STS-datamängden. [][]
 \tf@lot=\write6
 \openout6 = `TSA.lot'.
 
- [13] (./TSA.lol)
+ [15] (./TSA.lol)
 \tf@lol=\write7
 \openout7 = `TSA.lol'.
 
- [14
+ [16
 
-] [15] [16
+] [17] [18
 
 
 
@@ -1223,12 +1249,12 @@ Kapitel 1.
 
 ]
 Kapitel 2.
-<../figures/background/oversiktsfigur.png, id=93, 633.36626pt x 201.75375pt>
+<../figures/background/oversiktsfigur.png, id=100, 633.36626pt x 201.75375pt>
 File: ../figures/background/oversiktsfigur.png Graphic file (type png)
 
 <use ../figures/background/oversiktsfigur.png>
 Package pdftex.def Info: ../figures/background/oversiktsfigur.png used on input
- line 145.
+ line 158.
 (pdftex.def)             Requested size: 341.43306pt x 108.76376pt.
 
 
@@ -1237,185 +1263,185 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [2
 
 ] [3 <../figures/background/oversiktsfigur.png>] [4]
-<../figures/background/ml.png, id=108, 688.5725pt x 591.20876pt>
+<../figures/background/ml.png, id=114, 688.5725pt x 591.20876pt>
 File: ../figures/background/ml.png Graphic file (type png)
 
 <use ../figures/background/ml.png>
-Package pdftex.def Info: ../figures/background/ml.png used on input line 180.
+Package pdftex.def Info: ../figures/background/ml.png used on input line 193.
 (pdftex.def)             Requested size: 341.43306pt x 293.1499pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5] <../figures/background/klassmodell.png, id=115, 573.14125pt x 350.30875pt>
+[5] <../figures/background/klassmodell.png, id=121, 573.14125pt x 350.30875pt>
 File: ../figures/background/klassmodell.png Graphic file (type png)
 
 <use ../figures/background/klassmodell.png>
 Package pdftex.def Info: ../figures/background/klassmodell.png used on input li
-ne 192.
+ne 205.
 (pdftex.def)             Requested size: 341.43306pt x 208.69019pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6 <../figures/background/ml.png>]
-Overfull \hbox (33.80516pt too wide) in paragraph at lines 205--206
+Overfull \hbox (33.80516pt too wide) in paragraph at lines 218--219
 \T1/cmr/m/n/12 SVM är en över-va-kad ma-ski-nin-lär-nings-al-go-ritm som kan an
 -vän-das till bå-de klassificerings-
  []
 
 [7 <../figures/background/klassmodell.png>] [8] [9] [10]
-<../figures/background/exempeltweet.png, id=134, 745.78625pt x 61.22874pt>
+<../figures/background/exempeltweet.png, id=140, 745.78625pt x 61.22874pt>
 File: ../figures/background/exempeltweet.png Graphic file (type png)
 
 <use ../figures/background/exempeltweet.png>
 Package pdftex.def Info: ../figures/background/exempeltweet.png used on input l
-ine 244.
+ine 257.
 (pdftex.def)             Requested size: 341.43306pt x 28.031pt.
  [11 <../figures/background/exempeltweet.png>] [12]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 288.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 301.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 [13]
-<../figures/background/utvardering.png, id=146, 251.94125pt x 382.42876pt>
+<../figures/background/utvardering.png, id=153, 251.94125pt x 382.42876pt>
 File: ../figures/background/utvardering.png Graphic file (type png)
 
 <use ../figures/background/utvardering.png>
 Package pdftex.def Info: ../figures/background/utvardering.png used on input li
-ne 297.
+ne 310.
 (pdftex.def)             Requested size: 227.62204pt x 345.51315pt.
  [14 <../figures/background/utvardering.png>] [15]
 Kapitel 3.
 [16
 
 ] [17]
-<../figures/background/dataset.png, id=161, 573.14125pt x 723.70375pt>
+<../figures/background/dataset.png, id=167, 573.14125pt x 723.70375pt>
 File: ../figures/background/dataset.png Graphic file (type png)
 
 <use ../figures/background/dataset.png>
 Package pdftex.def Info: ../figures/background/dataset.png used on input line 3
-29.
+42.
 (pdftex.def)             Requested size: 341.43306pt x 431.1336pt.
  [18] [19 <../figures/background/dataset.png>] [20]
-<../figures/background/grams.png, id=172, 472.76625pt x 338.26375pt>
+<../figures/background/grams.png, id=179, 472.76625pt x 338.26375pt>
 File: ../figures/background/grams.png Graphic file (type png)
 
 <use ../figures/background/grams.png>
-Package pdftex.def Info: ../figures/background/grams.png used on input line 381
+Package pdftex.def Info: ../figures/background/grams.png used on input line 394
 .
 (pdftex.def)             Requested size: 256.0748pt x 183.22229pt.
  [21] [22 <../figures/background/grams.png>]
-Overfull \hbox (6.68843pt too wide) in paragraph at lines 398--400
+Overfull \hbox (6.68843pt too wide) in paragraph at lines 411--413
 \T1/cmr/m/n/12 En-ligt [[]] kan emo-jis ha en stor be-ty-del-se för TSA. Men ef
 -tersom STS-datamängden
  []
 
 
-Overfull \hbox (12.73912pt too wide) in paragraph at lines 398--400
+Overfull \hbox (12.73912pt too wide) in paragraph at lines 411--413
 \T1/cmr/m/n/12 ens mo-del-ler ta hän-syn till emo-jis. Där-för har även emo-jis
  från SemEval-datamängden
  []
 
 [23]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 418.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 431.
 
 [24] [25]
-<../figures/background/linearsvm_hpwithmargins.png, id=195, 479.7925pt x 482.80
+<../figures/background/linearsvm_hpwithmargins.png, id=203, 479.7925pt x 482.80
 376pt>
 File: ../figures/background/linearsvm_hpwithmargins.png Graphic file (type png)
 
  <use ../figures/background/linearsvm_hpwithmargins.png>
 Package pdftex.def Info: ../figures/background/linearsvm_hpwithmargins.png used
- on input line 484.
+ on input line 497.
 (pdftex.def)             Requested size: 256.0748pt x 257.68231pt.
  [26]
-<../figures/background/nonlinearsvm.png, id=199, 467.7475pt x 487.8225pt>
+<../figures/background/nonlinearsvm.png, id=207, 467.7475pt x 487.8225pt>
 File: ../figures/background/nonlinearsvm.png Graphic file (type png)
 
 <use ../figures/background/nonlinearsvm.png>
 Package pdftex.def Info: ../figures/background/nonlinearsvm.png used on input l
-ine 493.
+ine 506.
 (pdftex.def)             Requested size: 256.0748pt x 267.07501pt.
  [27 <../figures/background/linearsvm_hpwithmargins.png>] [28 <../figures/backg
 round/nonlinearsvm.png>]
-<../figures/background/svm_3d.jpg, id=210, 887.315pt x 783.92876pt>
+<../figures/background/svm_3d.jpg, id=216, 887.315pt x 783.92876pt>
 File: ../figures/background/svm_3d.jpg Graphic file (type jpg)
 
 <use ../figures/background/svm_3d.jpg>
-Package pdftex.def Info: ../figures/background/svm_3d.jpg used on input line 50
-4.
+Package pdftex.def Info: ../figures/background/svm_3d.jpg used on input line 51
+7.
 (pdftex.def)             Requested size: 256.0748pt x 226.23303pt.
  [29 <../figures/background/svm_3d.jpg>]
-[30] <../figures/background/cnn_text.png, id=217, 638.385pt x 649.42625pt>
+[30] <../figures/background/cnn_text.png, id=223, 638.385pt x 649.42625pt>
 File: ../figures/background/cnn_text.png Graphic file (type png)
 
 <use ../figures/background/cnn_text.png>
 Package pdftex.def Info: ../figures/background/cnn_text.png used on input line 
-528.
+541.
 (pdftex.def)             Requested size: 341.43306pt x 347.33557pt.
  [31] [32 <../figures/background/cnn_text.png>] (/usr/share/texlive/texmf-dist/
 tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 544.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 557.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 545.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 558.
  [33] [34] [35]
 [36] [37]
-Overfull \hbox (32.17937pt too wide) in paragraph at lines 679--680
+Overfull \hbox (32.17937pt too wide) in paragraph at lines 692--693
 \T1/cmr/m/n/12 ra-met-rar [[]] och uni-gram som sär-drag vil-ket är stan-dard-p
 a-ra-me-ter för []
  []
 
 [38] [39] [40]
-Overfull \hbox (2.58455pt too wide) in paragraph at lines 747--749
+Overfull \hbox (2.58455pt too wide) in paragraph at lines 760--762
 []\T1/cmr/m/n/12 För pa-ra-me-ter-sök-ning-en som il-lu-stre-ras i ko-dav-snitt
  3.14[] an-vänds []
  []
 
 
-Overfull \hbox (36.49727pt too wide) in paragraph at lines 747--749
+Overfull \hbox (36.49727pt too wide) in paragraph at lines 760--762
 [][][][][]\T1/cmr/m/n/12 . Vi är in-tres-se-ra-de av sam-ma pa-ra-met-rar för [
 ][][][][][][][][]
  []
 
-[41] <../figures/background/cnn_imp.png, id=257, 502.87875pt x 543.02875pt>
+[41] <../figures/background/cnn_imp.png, id=263, 502.87875pt x 543.02875pt>
 File: ../figures/background/cnn_imp.png Graphic file (type png)
 
 <use ../figures/background/cnn_imp.png>
 Package pdftex.def Info: ../figures/background/cnn_imp.png used on input line 7
-75.
+88.
 (pdftex.def)             Requested size: 341.43306pt x 368.69121pt.
  [42 <../figures/background/cnn_imp.png>] [43] [44] [45]
-<../figures/background/GUI_form.png, id=272, 1896.08376pt x 435.6275pt>
+<../figures/background/GUI_form.png, id=278, 1896.08376pt x 435.6275pt>
 File: ../figures/background/GUI_form.png Graphic file (type png)
 
 <use ../figures/background/GUI_form.png>
 Package pdftex.def Info: ../figures/background/GUI_form.png used on input line 
-879.
+892.
 (pdftex.def)             Requested size: 341.43306pt x 78.4428pt.
 
-<../figures/background/GUI_search_graph.png, id=273, 1887.05pt x 958.58125pt>
+<../figures/background/GUI_search_graph.png, id=279, 1887.05pt x 958.58125pt>
 File: ../figures/background/GUI_search_graph.png Graphic file (type png)
 
 <use ../figures/background/GUI_search_graph.png>
 Package pdftex.def Info: ../figures/background/GUI_search_graph.png used on inp
-ut line 888.
+ut line 901.
 (pdftex.def)             Requested size: 341.43306pt x 173.42941pt.
  [46 <../figures/background/GUI_form.png>]
-<../figures/background/GUI_search_table.png, id=277, 1615.03375pt x 829.0975pt>
+<../figures/background/GUI_search_table.png, id=283, 1615.03375pt x 829.0975pt>
 File: ../figures/background/GUI_search_table.png Graphic file (type png)
 <use ../figures/background/GUI_search_table.png>
 Package pdftex.def Info: ../figures/background/GUI_search_table.png used on inp
-ut line 897.
+ut line 910.
 (pdftex.def)             Requested size: 341.43306pt x 175.27951pt.
  [47 <../figures/background/GUI_search_graph.png> <../figures/background/GUI_se
 arch_table.png>] [48]
@@ -1423,31 +1449,31 @@ Kapitel 4.
 [49
 
 ]
-Underfull \hbox (badness 3250) in paragraph at lines 918--918
+Underfull \hbox (badness 3250) in paragraph at lines 931--931
 []\T1/cmr/m/n/12 Tabell 4.1: Pre-stan-da för lex-i-kon-ba-se-ra-de mo-del-len t
 rä-nad på SemEval-
  []
 
 
-Underfull \hbox (badness 2865) in paragraph at lines 936--936
+Underfull \hbox (badness 2865) in paragraph at lines 949--949
 []\T1/cmr/m/n/12 Tabell 4.2: Pre-stan-da för NB med stan-dard-pa-ra-met-rar trä
 -nad på STS-
  []
 
 [50] [51] [52] [53]
-Underfull \hbox (badness 2027) in paragraph at lines 1092--1092
+Underfull \hbox (badness 2027) in paragraph at lines 1105--1105
 []\T1/cmr/m/n/12 Tabell 4.10: Pre-stan-da för NB med stan-dard-pa-ra-met-rar tr
 ä-nad på STS-
  []
 
 [54]
-Underfull \hbox (badness 1152) in paragraph at lines 1129--1129
+Underfull \hbox (badness 1152) in paragraph at lines 1142--1142
 []\T1/cmr/m/n/12 Tabell 4.12: Pre-stan-da för NB med op-ti-ma-la pa-ra-met-rar 
 trä-nad på STS-
  []
 
 
-Underfull \hbox (badness 1092) in paragraph at lines 1148--1148
+Underfull \hbox (badness 1092) in paragraph at lines 1161--1161
 []\T1/cmr/m/n/12 Tabell 4.13: Pre-stan-da för SVM med stan-dard-pa-ra-met-rar t
 rä-nad på STS-
  []
@@ -1487,9 +1513,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--15
 ff80 -[] 11e7 -[] 956d -[] 00000aacb362&acdnat =
  []
 
+
+Underfull \hbox (badness 1077) in paragraph at lines 50--55
+\T1/cmr/m/n/12 2016.  URL $\T1/cmtt/m/n/12 https : / / en\OML/cmm/m/it/12 :\T1/
+cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 org / wiki / Lee[]Sedol$
+\T1/cmr/m/n/12 .  [An-vänd 5-
+ []
+
 [62
 
 ]
+Underfull \hbox (badness 1077) in paragraph at lines 57--62
+\T1/cmr/m/n/12 2016.  URL $\T1/cmtt/m/n/12 https : / / en\OML/cmm/m/it/12 :\T1/
+cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 org / wiki / Go[](game)$
+\T1/cmr/m/n/12 .  [An-vänd 5-
+ []
+
+
 Underfull \hbox (badness 5119) in paragraph at lines 89--94
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Unsu-per-vi-sed le-ar-ning --- Wi-
 ki-pe-dia, the
@@ -1523,25 +1563,13 @@ g / wiki /
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 145--151
-\T1/cmtt/m/n/12 Artificial[]neural[]network&oldid = 830851868$\T1/cmr/m/n/12 . 
- [On-li-ne; ac-ces-sed 28-
- []
-
-
 Underfull \hbox (badness 6001) in paragraph at lines 181--184
 []\T1/cmr/m/n/12 Sentiment ana-ly-sis in twit-ter, 2016.  URL $\T1/cmtt/m/n/12 
 http : / / alt\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 qcri\OML/cmm/m/it/12 :\T1/cmtt/
 m/n/12 org /
  []
 
-[64]
-Underfull \hbox (badness 1082) in paragraph at lines 206--210
-[]\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Twit-ter --- Wi-ki-pe-dia, the fre
-e en-cyclo-pe-dia,
- []
-
-[65]
+[64] [65]
 Underfull \hbox (badness 4001) in paragraph at lines 260--265
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Fe-a-tu-re (machi-ne le-ar-ning) -
 -- Wi-ki-pe-dia,
@@ -1579,7 +1607,14 @@ Underfull \hbox (badness 4168) in paragraph at lines 274--279
 l / htmledition /
  []
 
-[66]
+
+Underfull \hbox (badness 1953) in paragraph at lines 306--310
+\T1/cmtt/m/n/12 http : / / www\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 statisticshowto
+\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 com / bernoulli -[] distribution/$\T1/cmr/m/n
+/12 .  [An-vänd
+ []
+
+
 Underfull \hbox (badness 6708) in paragraph at lines 318--323
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Di-richlet dis-tri-bu-tion --- Wi-
 ki-pe-dia, the
@@ -1592,7 +1627,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 318--323
 g / wiki /
  []
 
-
+[66]
 Underfull \hbox (badness 10000) in paragraph at lines 331--336
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Ad-di-ti-ve smoot-hing --- Wi-ki-p
 e-dia, the
@@ -1612,13 +1647,13 @@ n/12 wildml\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 com / 2015 / 11 / understanding -[
 ] convolutional -[]
  []
 
-[67]
+
 Underfull \hbox (badness 1028) in paragraph at lines 386--391
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Word em-bed-ding --- Wi-ki-pe-dia,
  the free en-
  []
 
-
+[67]
 Underfull \hbox (badness 4341) in paragraph at lines 393--396
 []\T1/cmr/m/n/12 Python 3.0 re-le-a-se, n.d.  URL $\T1/cmtt/m/n/12 https : / / 
 www\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 python\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
@@ -1638,7 +1673,7 @@ Underfull \hbox (badness 2707) in paragraph at lines 425--428
 T1/cmtt/m/n/12 http : / /
  []
 
-[68]
+
 Underfull \hbox (badness 2680) in paragraph at lines 453--459
 \T1/cmr/m/n/12 0.19.1 docu-men-ta-tion, n.d.  URL $\T1/cmtt/m/n/12 http : / / s
 cikit -[] learn\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 org / stable /
@@ -1651,7 +1686,7 @@ model[]selection\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 train[]test[]split\OML/cmm/m/
 it/12 :\T1/cmtt/m/n/12 html$\T1/cmr/m/n/12 .
  []
 
-
+[68]
 Underfull \hbox (badness 1092) in paragraph at lines 461--467
 []\T1/cmr/m/n/12 scikitlearn docu-men-ta-tion.  sklearn.naive-bayes.multinomial
 nb - sk-learn
@@ -1685,7 +1720,7 @@ ble / modules / generated /
 Underfull \hbox (badness 10000) in paragraph at lines 469--475
 \T1/cmtt/m/n/12 sklearn\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 feature[]extraction\OM
 L/cmm/m/it/12 :\T1/cmtt/m/n/12 text\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 CountVecto
-rizer\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 html$\T1/cmr/m/n/12 .  [On-li-ne;
+rizer\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 html$\T1/cmr/m/n/12 .  [An-vänd
  []
 
 
@@ -1700,17 +1735,17 @@ Underfull \hbox (badness 2680) in paragraph at lines 485--491
 cikit -[] learn\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 org / stable /
  []
 
-[69] [70]) [71] (./TSA.aux)
+[69]) [70] (./TSA.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.88pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 19175 strings out of 493029
- 340183 string characters out of 6136234
- 549268 words of memory out of 5000000
- 22286 multiletter control sequences out of 15000+600000
+ 19198 strings out of 493029
+ 340665 string characters out of 6136234
+ 549730 words of memory out of 5000000
+ 22305 multiletter control sequences out of 15000+600000
  19014 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,18n,58p,1627b,1988s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1731,10 +1766,10 @@ ic/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfst0800
 .pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/tex
 mf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/publi
 c/cm-super/sftt1200.pfb>
-Output written on TSA.pdf (87 pages, 1226665 bytes).
+Output written on TSA.pdf (88 pages, 1226299 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
+ 426 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

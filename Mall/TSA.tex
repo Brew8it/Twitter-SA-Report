@@ -30,7 +30,7 @@
 %% Copyright (c) 2011-2015 Stefan Berthold <stefan.berthold@kau.se>
 
 \documentclass{kaumasters} % available class options: garamond
-\usepackage[swedish]{babel}
+\usepackage[swedish, english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{titletoc}
@@ -106,7 +106,11 @@
 \institute{Department of Computer Science}
 \place{Karlstad Universitet}
 \begin{document}
+\selectlanguage{swedish}
+
 \includepdf[pages=-]{../Titel/Titelsida.pdf}
+
+\maketitle
 
 \frontmatter
 \approvalpage%
@@ -115,6 +119,15 @@
   Abstract.
   \keywords keywords
 \end{abstract}
+
+\selectlanguage{english}
+\begin{abstract}
+  Abstractasdasd.
+  \keywords keywords
+\end{abstract}
+
+\selectlanguage{swedish}
+
 
 
 \begin{acknowledgements}

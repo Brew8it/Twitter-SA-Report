@@ -54,7 +54,7 @@
   \setname{approvalname}{Approved}{Godk\"and, 2018-xx-xx}%
 }
 \AtBeginDocument{%
-  \setname{examinationname}{Master's degree}{kandidatexamen}%
+  \setname{examinationname}{h\"ogskoleingenj\"orsexamen}{h\"ogskoleingenj\"orsexamen}%
 }
 \AtBeginDocument{%
   \setname{approvaltext}%
@@ -83,6 +83,7 @@
   \PackageWarning{maketitle does not serve any purpose in this class.
     The abstract environment reproduces the title instead.}%
 }
+
 \let\kauths@abstract\abstract%
 \let\kauths@endabstract\endabstract%
 \newcommand*\frontmatter{%
@@ -109,26 +110,22 @@
 
   \cleardoublepage%
   \newcommand\sig{\begin{center}\makebox[7cm]{\hrulefill}\\\end{center}}%
-  \newcommand\signer[1]{\begin{quote}\sig ##1\end{quote}\mbox{}}%
+  
+  \newcommand\signer[1]{\begin{quote}\sig \centerline{##1} \end{quote}\mbox{}}%
   \begin{center}
   	\noindent\approvaltext\\\mbox{}\bigskip%
   \end{center}
-  \foreach \x in \@author {\signer{\begin{center}\x \end{center}}}%
+  \foreach \x in \@author {\signer{\x}}%
   \\\mbox{}\bigskip\\\mbox{}\bigskip%
   \approvalname,\\\mbox{}\bigskip%
-  \begin{quote}%
-    \sig 
-    \begin{center}
-    \opponent: \@opponent\\\mbox{}\bigskip\\%
-	\end{center}     
-    \sig
-    \begin{center}
-    \supervisorname: \@supervisor\\\mbox{}\bigskip\\%
-    \end{center}     
-    \sig
-    \begin{center}
-    \examinername: \@examiner
-    \end{center}
+  \begin{quote}%  
+    \sig\centerline{\opponent: \@opponent \mbox{}\bigskip}% 
+  \end{quote}%
+  \begin{quote}% 
+	\sig\centerline{\supervisorname: \@supervisor \mbox{}\bigskip}%
+  \end{quote}%
+  \begin{quote}% 
+    \sig\centerline{\examinername: \@examiner}
   \end{quote}%
 }
 

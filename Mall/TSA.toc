@@ -1,5 +1,9 @@
+\select@language {english}
 \select@language {swedish}
 \contentsline {paragraph}{Nyckelord:}{v}
+\select@language {english}
+\contentsline {paragraph}{Keywords:}{vii}
+\select@language {swedish}
 \contentsline {chapter}{\numberline {1}Introduktion}{1}
 \contentsline {chapter}{\numberline {2}Bakgrund}{2}
 \contentsline {section}{\numberline {2.1}Sentimentanalys}{3}
