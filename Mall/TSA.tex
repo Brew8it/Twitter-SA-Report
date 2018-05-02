@@ -1291,12 +1291,30 @@ Utvärderingen av studiens klassificeringsmodeller visar att CNN presterar bäst
 I detta kapitel har resultaten från studiens experiment presenteras från avsnitt \ref{impl}. Resultaten har sedan använts för att jämföra och utvärdera studiens datamängder och klassificeringsmodeller. Klassificeringsmodellerna har utvärderats med hänsyn till värdena som presenterades i avsnitt \ref{TSAev}, hur lång tid de tog att träna och hur invecklade de var att implementera. Slutligen presenteras en helhetsbedömning där för- och nackdelar med respektive datamängd och klassificeringsmodell diskuteras.
 
 \chapter{Slutsats}
+TSA används för att analysera åsikter, attityder och känslor som människor uttrycker på Twitter om olika ämnen, individer eller händelser. I denna studie har tre klassificieringsmodeller utvärderats efter hur väl de kan utläsa om ett twitterinlägg uttrycker någonting positivt eller negativt och hur olika typer av märkningstekniker kan påverka en klassificeringsmodells prestanda. För att jämföra hur modellerna presterar på olika typer av märkningstekniker togs modellerna fram med två olika datamängder: SemEval och STS. Där SemEval är märkt genom mänsklig märkning och STS är märkt genom “distant supervision”. Respektive datamängd delades upp i en träningsmängd och en testmängd. Träningsmängden användes för att ta fram modellen och testmängden användes för att testa klassificeringsmodellernas prestanda. 
 
+Utvärderingen av studiens klassificeringsmodeller visar att samtliga modeller som är tränade och testade på SemEval uppnår en högre prestanda, än de som är tränade och testade på STS. CNN var klassificeringsmodellen som uppnådde bäst resultat över båda datamängderna. Resultaten för de klassiska modellerna NB och SVM varierade mellan datamängderna. CNN tog betydligt längre tid att träna än de klassiska modellerna, och var dessutom svårare att implementera. Skillnaden i prestanda mellan CNN och de klassiska modellerna anser vi inte vara tillräckliga för att använda CNN där liknande hårdvara används. Därför rekommenderar vi att någon av de två klassiska modellerna används för uppgifter som liknar TSA, utifrån resultaten som har presenterats i kapitel \ref{res}.
 \section{Begränsningar}
-\section{Vidare utveckling}
+En begränsning med studiens resultat som presenteras i \ref{res} är att klassificeringsmodellerna för respektive datamängd får fram sin precision, återkallelse och F-Score genom datamängdens egna testmängd. Vilket gör det svårt att entydigt säga vilken datamängd som rent prestandamässigt presterar bäst, en framtida lösning till detta presenteras i avsnitt \ref{slut:fw}.
+
+I avsnitt \ref{res:train} och \ref{res:hhb} presenteras samt diskuteras CNN träningstid och att den är väsentligt längre än de klassiska modellerna vilket gör det svårt att motivera användandet av CNN. Grafikkorts leverantören NVIDIA har nyligen släppt ett grafikkort, TESLA V100 \cite{slut:002}, som är ett grafikkort specialgjort för att träna neurala nätverk. Det rapporteras om 47 gånger snabbare träningstid jämfört mot att träna m.h.a en CPU. Med detta i åtanke blir CNN en mycket attraktiv modell att använda. 
+
+Språket som används på Twitter rör sig snabbt framåt t.e.x förkortningar som användes 2008 inte används idag. Detta gör att klassificeringsmodellerna tränade på respektive datamängd kanske inte klassificera ett twitterinlägg skrivet 2018 korrekt. 
+\section{Vidare utveckling} \label{slut:fw}
+En möjlig vidareutveckling skulle kunna vara att använda “distant supervision” och mänsklig märkning tillsammans för att utnyttja respektive märkningsmetods fördelar för att öka ett neuralt nätverks prestanda. En sådan lösning har presenterats i \cite{} där ett CNN först tränats på 90 miljoner twitterinlägg märkta m.h.a “distant supervsion” för att sedan träna vidare på 20632 mänskligt märkta twitterinlägg. Denna lösningen användes för att vinna SemEval-tävlingen 2016. 
+
+Genom att använda en av studiens klassificeringsmodeller skulle en applikation för trendanalys kunna tas fram. Där klassificeringsmodellen får klassificera X antal twitterinlägg per dag och m.h.a av detta skapa en tidslinje över hur positivt eller negativt ett visst ämne är vid en viss tidpunkt. Detta skulle vara en intressant vidareutveckling eftersom företag kan använda applikationen för att analysera ett generellt sentiment värde för företaget och utefter det göra eventuella förändringar i t.e.x pressutlåtanden.
+
+I \cite{slut:001} presenteras en CNN arkitektur för att hantera flerspråkig klassificering. Den föreslagna arkitekturen är baserad på att man analyserar varje bokstav istället för varje ord som studien har implementerat. Arkitekturen har tränats på engelska, tyska, portugisiska och spanska twitterinlägg. En intressant vidareutveckling skulle vara att ta den föreslagna arkitekturen för att klassificera svenska twitterinlägg.
+
+Som diskuterades i \ref{TSAchall} är negationer ett viktigt begrepp för att korrekt klassificera ett twitterinlägg. Studien har endast valt att expandera förkortningar där expanderingen resulterar i att ordet “not” bryts ut. En vidareutveckling skulle vara att bättre hantera negationer som diskuteras i \cite{TSAsurvey, effrosynidis2017comparison}.
+
+Eftersom studien gör så kallad binär klassificering, d.v.s klassificerar något  som positivt eller negativt, skulle en möjlig vidareutveckling vara att använda trevägsklassificering. Trevägsklassificering har även en neutral klass, eftersom varje twitterinlägg i praktiken inte behöver uttrycka någonting positivt eller negativt. 
 \section{Slutord}
+Efter arbetet med studien har vi märkt att det inte är helt trivialt att bedöma om ett twitterinlägg uttrycker någonting positivt eller negativt, även för oss människor. Statistiken från märkningsmetoden som utfördes på SemEval är ett tydligt exempel på det. Under arbetets gång har vi därför fått inse att TSA inte är ett sånt enkelt klassificeringsproblem som vi först trodde. 
 
-
+Vi är ändå nöjda med det vi har fått lära oss under arbetet hos CGI. Ingen av oss har tidigare arbetat med problem som rör maskininlärning. Detta medförde att vi har fått läsa in 
+oss på ett helt nytt ämne. Stora delar av uppstarten spenderades till att läsa många artiklar för att sätta oss in i ämnet, vilket vi tyckte var givande och lärorikt. Det vi i slutändan bär med oss från detta arbete är att ta ett projekt från ax till limpa. 
 
 \bibliographystyle{unsrtnat} 
 \bibliography{../refs/thesisref}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{85}
+\begin{thebibliography}{87}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -60,15 +60,15 @@ Wikipedia contributors.
 \newblock URL \url{https://en.wikipedia.org/wiki/Go_(game)}.
 \newblock [Använd 5-Februari 2018].
 
-\bibitem[Apple(n.d)]{siri}
+\bibitem[Apple(i.d)]{siri}
 Apple.
-\newblock Ios - siri - apple, n.d.
+\newblock Ios - siri - apple, i.d.
 \newblock URL \url{https://www.apple.com/ios/siri/}.
 \newblock [Använd 5-Mars 2018].
 
-\bibitem[Google(n.d)]{google}
+\bibitem[Google(i.d)]{google}
 Google.
-\newblock Google assistant - your own personal google, n.d.
+\newblock Google assistant - your own personal google, i.d.
 \newblock URL \url{https://assistant.google.com/}.
 \newblock [Använd 5-Mars 2018].
 
@@ -114,15 +114,15 @@ Sunil Ray.
   \url{https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/}.
 \newblock [Använd 12-Februari 2018].
 
-\bibitem[Weisstein(n.d)]{svm:001}
+\bibitem[Weisstein(i.d)]{svm:001}
 Eric~W. Weisstein.
-\newblock "hyperplane." from mathworld--a wolfram web resource, n.d.
+\newblock "hyperplane." from mathworld--a wolfram web resource, i.d.
 \newblock URL \url{http://mathworld.wolfram.com/Hyperplane.html}.
 \newblock [Använd 12-Februari 2018].
 
-\bibitem[Bambrick(n.d)]{svm:003}
+\bibitem[Bambrick(i.d)]{svm:003}
 Noel Bambrick.
-\newblock Support vector machines: A simple explanation, n.d.
+\newblock Support vector machines: A simple explanation, i.d.
 \newblock URL
   \url{https://www.kdnuggets.com/2016/07/support-vector-machines-simple-explanation.html}.
 \newblock [Använd 12-Februari 2018].
@@ -182,9 +182,9 @@ Sentiment analysis in twitter, 2016{\natexlab{b}}.
 \newblock URL \url{http://alt.qcri.org/semeval2017/task4/}.
 \newblock [Använd 12-Februari 2018].
 
-\bibitem[Amazon(n.d)]{SemEval:003}
+\bibitem[Amazon(i.d)]{SemEval:003}
 Amazon.
-\newblock Amazon mechanical turk, n.d.
+\newblock Amazon mechanical turk, i.d.
 \newblock URL \url{https://www.mturk.com/product-details}.
 \newblock [Använd 12-Februari 2018].
 
@@ -263,9 +263,9 @@ Wikipedia contributors.
 \newblock URL \url{https://en.wikipedia.org/wiki/Feature_(machine_learning)}.
 \newblock [Använd 12-Mars 2018].
 
-\bibitem[scikitlearn documentation(n.d{\natexlab{a}})]{scikit:001}
+\bibitem[scikitlearn documentation(i.d{\natexlab{a}})]{scikit:001}
 scikitlearn documentation.
-\newblock Working with text data, n.d{\natexlab{a}}.
+\newblock Working with text data, i.d{\natexlab{a}}.
 \newblock URL
   \url{http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html}.
 \newblock [Använd 12-Mars 2018].
@@ -389,8 +389,8 @@ Adit Deshpande.
   \url{https://en.wikipedia.org/w/index.php?title=Word_embedding&oldid=835602312}.
 \newblock [Använd 11-April-2018].
 
-\bibitem[imp(n.d{\natexlab{a}})]{impl:001}
-Python 3.0 release, n.d{\natexlab{a}}.
+\bibitem[imp(i.d{\natexlab{a}})]{impl:001}
+Python 3.0 release, i.d{\natexlab{a}}.
 \newblock URL \url{https://www.python.org/download/releases/3.0/}.
 \newblock [Använd 4-April 2018].
 
@@ -405,8 +405,8 @@ Leonard Richardson.
 \newblock URL \url{https://www.crummy.com/software/BeautifulSoup/bs4/doc/#}.
 \newblock [Använd 4-April 2018].
 
-\bibitem[imp(n.d{\natexlab{b}})]{impl:005}
-6.5. unicodedata — unicode database, n.d{\natexlab{b}}.
+\bibitem[imp(i.d{\natexlab{b}})]{impl:005}
+6.5. unicodedata — unicode database, i.d{\natexlab{b}}.
 \newblock URL \url{https://www.crummy.com/software/BeautifulSoup/bs4/doc/#}.
 \newblock [Använd 4-April 2018].
 
@@ -416,18 +416,18 @@ Jeffrey Friedl.
 \newblock URL \url{https://docs.python.org/3/library/re.html}.
 \newblock [Använd 4-April 2018].
 
-\bibitem[imp(n.d{\natexlab{c}})]{impl:006}
-nltk.tokenize package - nltk 3.2.5 documentation, n.d{\natexlab{c}}.
+\bibitem[imp(i.d{\natexlab{c}})]{impl:006}
+nltk.tokenize package - nltk 3.2.5 documentation, i.d{\natexlab{c}}.
 \newblock URL \url{http://www.nltk.org/api/nltk.tokenize.html}.
 \newblock [Använd 4-April 2018].
 
-\bibitem[imp(n.d{\natexlab{d}})]{impl:008}
-nltk.stem package - nltk 3.2.5 documentation, n.d{\natexlab{d}}.
+\bibitem[imp(i.d{\natexlab{d}})]{impl:008}
+nltk.stem package - nltk 3.2.5 documentation, i.d{\natexlab{d}}.
 \newblock URL \url{http://www.nltk.org/api/nltk.tokenize.html}.
 \newblock [Använd 4-April 2018].
 
-\bibitem[imp(n.d{\natexlab{e}})]{impl:007}
-Removing stop words with nltk in python - geeksforgeels, n.d{\natexlab{e}}.
+\bibitem[imp(i.d{\natexlab{e}})]{impl:007}
+Removing stop words with nltk in python - geeksforgeels, i.d{\natexlab{e}}.
 \newblock URL \url{http://www.nltk.org/api/nltk.tokenize.html}.
 \newblock [Använd 4-April 2018].
 
@@ -443,64 +443,64 @@ SentiWordNet.
 \newblock URL \url{sentiwordnet.isti.cnr.it}.
 \newblock [Använd 17-April 2018].
 
-\bibitem[scikitlearn documentation(n.d{\natexlab{b}})]{scikit:002}
+\bibitem[scikitlearn documentation(i.d{\natexlab{b}})]{scikit:002}
 scikitlearn documentation.
-\newblock sci-kit learn - machine learning in python., n.d{\natexlab{b}}.
+\newblock sci-kit learn - machine learning in python., i.d{\natexlab{b}}.
 \newblock URL \url{http://scikit-learn.org/stable/index.html#}.
 \newblock [Använd 12-April 2018].
 
-\bibitem[scikitlearn documentation(n.d{\natexlab{c}})]{scikit:003}
+\bibitem[scikitlearn documentation(i.d{\natexlab{c}})]{scikit:003}
 scikitlearn documentation.
 \newblock sklearn.model-selection.train-test-split - sk-learn 0.19.1
-  documentation, n.d{\natexlab{c}}.
+  documentation, i.d{\natexlab{c}}.
 \newblock URL
   \url{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html}.
 \newblock [Använd 11-April 2018].
 
-\bibitem[scikitlearn documentation(n.d{\natexlab{d}})]{scikit:004}
+\bibitem[scikitlearn documentation(i.d{\natexlab{d}})]{scikit:004}
 scikitlearn documentation.
 \newblock sklearn.naive-bayes.multinomialnb - sk-learn 0.19.1 documentation,
-  n.d{\natexlab{d}}.
+  i.d{\natexlab{d}}.
 \newblock URL
   \url{http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html}.
 \newblock [Använd 11-April 2018].
 
-\bibitem[scikitlearn documentation(n.d{\natexlab{e}})]{scikit:005}
+\bibitem[scikitlearn documentation(i.d{\natexlab{e}})]{scikit:005}
 scikitlearn documentation.
 \newblock sklearn.feature-extraction.text.countvectorizer - sk-learn 0.19.1
-  documentation, n.d{\natexlab{e}}.
+  documentation, i.d{\natexlab{e}}.
 \newblock URL
   \url{http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html}.
 \newblock [Använd 11-April 2018].
 
-\bibitem[scikitlearn documentation(n.d{\natexlab{f}})]{scikit:006}
+\bibitem[scikitlearn documentation(i.d{\natexlab{f}})]{scikit:006}
 scikitlearn documentation.
 \newblock sklearn.model.selection.gridsearchcv - sk-learn 0.19.1 documentation,
-  n.d{\natexlab{f}}.
+  i.d{\natexlab{f}}.
 \newblock URL
   \url{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html}.
 \newblock [Använd 11-April 2018].
 
-\bibitem[scikitlearn documentation(n.d{\natexlab{g}})]{scikit:007}
+\bibitem[scikitlearn documentation(i.d{\natexlab{g}})]{scikit:007}
 scikitlearn documentation.
 \newblock sklearn.feature-selection.selectkbest - sk-learn 0.19.1
-  documentation, n.d{\natexlab{g}}.
+  documentation, i.d{\natexlab{g}}.
 \newblock URL
   \url{http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html}.
 \newblock [Använd 11-April 2018].
 
-\bibitem[scikitlearn documentation(n.d{\natexlab{h}})]{scikit:009}
+\bibitem[scikitlearn documentation(i.d{\natexlab{h}})]{scikit:009}
 scikitlearn documentation.
 \newblock sklearn.linear-model.sgdclassifier - sk-learn 0.19.1 documentation,
-  n.d{\natexlab{h}}.
+  i.d{\natexlab{h}}.
 \newblock URL
   \url{http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html}.
 \newblock [Använd 11-April 2018].
 
-\bibitem[scikitlearn documentation(n.d{\natexlab{i}})]{scikit:008}
+\bibitem[scikitlearn documentation(i.d{\natexlab{i}})]{scikit:008}
 scikitlearn documentation.
 \newblock 1.4. support vector machines - sk-learn 0.19.1 documentation,
-  n.d{\natexlab{i}}.
+  i.d{\natexlab{i}}.
 \newblock URL \url{http://scikit-learn.org/stable/modules/svm.html}.
 \newblock [Använd 11-April 2018].
 
@@ -512,13 +512,13 @@ Jason Brownlee.
   \url{https://machinelearningmastery.com/overfitting-and-underfitting-with-machine-learning-algorithms/}.
 \newblock [Använd 16-April 2018].
 
-\bibitem[imp(n.d{\natexlab{f}})]{impcnn:004}
-Keras documentation, n.d{\natexlab{f}}.
+\bibitem[imp(i.d{\natexlab{f}})]{impcnn:004}
+Keras documentation, i.d{\natexlab{f}}.
 \newblock URL \url{https://keras.io/}.
 \newblock [Använd 16-April 2018].
 
-\bibitem[imp(n.d{\natexlab{g}})]{impcnn:005}
-Tensorflow, n.d{\natexlab{g}}.
+\bibitem[imp(i.d{\natexlab{g}})]{impcnn:005}
+Tensorflow, i.d{\natexlab{g}}.
 \newblock URL \url{https://www.tensorflow.org/}.
 \newblock [Använd 16-April 2018].
 
@@ -544,24 +544,24 @@ Denny Britz.
   \url{http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/}.
 \newblock [Använd 16-April 2018].
 
-\bibitem[imp(n.d{\natexlab{h}})]{impcnn:006}
-Core layers - keras documentation, n.d{\natexlab{h}}.
+\bibitem[imp(i.d{\natexlab{h}})]{impcnn:006}
+Core layers - keras documentation, i.d{\natexlab{h}}.
 \newblock URL \url{https://keras.io/core/}.
 \newblock [Använd 16-April 2018].
 
-\bibitem[imp(n.d{\natexlab{i}})]{impcnn:007}
-Sequential - keras documentation, n.d{\natexlab{i}}.
+\bibitem[imp(i.d{\natexlab{i}})]{impcnn:007}
+Sequential - keras documentation, i.d{\natexlab{i}}.
 \newblock URL
   \url{https://keras.io/models/sequential/#sequential-model-methods}.
 \newblock [Använd 16-April 2018].
 
-\bibitem[imp(n.d{\natexlab{j}})]{impcnn:008}
-Model (functional api) - keras documentation, n.d{\natexlab{j}}.
+\bibitem[imp(i.d{\natexlab{j}})]{impcnn:008}
+Model (functional api) - keras documentation, i.d{\natexlab{j}}.
 \newblock URL \url{https://keras.io/models/model/}.
 \newblock [Använd 17-April 2018].
 
-\bibitem[gui(n.d)]{gui:001}
-Bootstrap - the most popular html, css and js library in the world, n.d.
+\bibitem[gui(i.d)]{gui:001}
+Bootstrap - the most popular html, css and js library in the world, i.d.
 \newblock URL \url{https://getbootstrap.com/}.
 \newblock [Använd 16-April-2018].
 
@@ -575,5 +575,18 @@ Armin Ronacher.
 About sqlite, 2000.
 \newblock URL \url{https://www.sqlite.org/about.html}.
 \newblock [Använd 16-April-2018].
+
+\bibitem[NVIDIA(2002)]{slut:002}
+NVIDIA.
+\newblock Nvidia tesla v100 | nvidia, 2002.
+\newblock URL \url{https://www.nvidia.com/en-us/data-center/tesla-v100/}.
+\newblock [i.d].
+
+\bibitem[Wehrmann et~al.(2017)Wehrmann, Becker, Cagnini, and Barros]{slut:001}
+Joonatas Wehrmann, Willian Becker, Henry~EL Cagnini, and Rodrigo~C Barros.
+\newblock A character-based convolutional neural network for language-agnostic
+  twitter sentiment analysis.
+\newblock In \emph{Neural Networks (IJCNN), 2017 International Joint Conference
+  on}, pages 2384--2391. IEEE, 2017.
 
 \end{thebibliography}

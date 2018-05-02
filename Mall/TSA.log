@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  1 MAY 2018 12:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  2 MAY 2018 09:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1480,9 +1480,9 @@ rä-nad på STS-
 
 [55] [56] [57] [58] [59] [60]
 Kapitel 5.
-(./TSA.bbl [61
+[61
 
-]
+] [62] (./TSA.bbl [63]
 Underfull \hbox (badness 4441) in paragraph at lines 9--15
 []\T1/cmr/m/n/12 Hoda Ko-ras-hy Wa-laa Med-hat, Ah-med Has-san.  Sen-ti-ment an
 a-ly-
@@ -1520,7 +1520,7 @@ cmtt/m/n/12 wikipedia\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 org / wiki / Lee[]Sedol$
 \T1/cmr/m/n/12 .  [An-vänd 5-
  []
 
-[62
+[64
 
 ]
 Underfull \hbox (badness 1077) in paragraph at lines 57--62
@@ -1542,7 +1542,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--94
 g / wiki /
  []
 
-[63]
+[65]
+Underfull \hbox (badness 1057) in paragraph at lines 124--129
+[]\T1/cmr/m/n/12 Noel Bam-brick.  Sup-port vector machi-nes: A simp-le ex-pla-n
+a-tion, i.d.
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 124--129
 \T1/cmr/m/n/12 URL $\T1/cmtt/m/n/12 https : / / www\OML/cmm/m/it/12 :\T1/cmtt/m
 /n/12 kdnuggets\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 com / 2016 / 07 / support -[] 
@@ -1569,7 +1575,7 @@ http : / / alt\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 qcri\OML/cmm/m/it/12 :\T1/cmtt/
 m/n/12 org /
  []
 
-[64] [65]
+[66] [67]
 Underfull \hbox (badness 4001) in paragraph at lines 260--265
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Fe-a-tu-re (machi-ne le-ar-ning) -
 -- Wi-ki-pe-dia,
@@ -1583,8 +1589,8 @@ Underfull \hbox (badness 2452) in paragraph at lines 260--265
  []
 
 
-Underfull \hbox (badness 4341) in paragraph at lines 267--272
-[]\T1/cmr/m/n/12 scikitlearn docu-men-ta-tion.  Wor-king with text da-ta, n.d. 
+Underfull \hbox (badness 4940) in paragraph at lines 267--272
+[]\T1/cmr/m/n/12 scikitlearn docu-men-ta-tion.  Wor-king with text da-ta, i.d. 
  URL
  []
 
@@ -1627,7 +1633,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 318--323
 g / wiki /
  []
 
-[66]
+[68]
 Underfull \hbox (badness 10000) in paragraph at lines 331--336
 []\T1/cmr/m/n/12 Wikipedia con-tri-bu-tors.  Ad-di-ti-ve smoot-hing --- Wi-ki-p
 e-dia, the
@@ -1653,29 +1659,29 @@ Underfull \hbox (badness 1028) in paragraph at lines 386--391
  the free en-
  []
 
-[67]
-Underfull \hbox (badness 4341) in paragraph at lines 393--396
-[]\T1/cmr/m/n/12 Python 3.0 re-le-a-se, n.d.  URL $\T1/cmtt/m/n/12 https : / / 
-www\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 python\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 or
-g / download /
- []
-
+[69]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 398.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 398.
 
-Underfull \hbox (badness 2707) in paragraph at lines 425--428
-[]\T1/cmr/m/n/12 nltk.stem pac-kage - nltk 3.2.5 docu-men-ta-tion, n.d.  URL $\
+Underfull \hbox (badness 1168) in paragraph at lines 420--423
+[]\T1/cmr/m/n/12 nltk.tokenize pac-kage - nltk 3.2.5 docu-men-ta-tion, i.d.  UR
+L $\T1/cmtt/m/n/12 http : / /
+ []
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 425--428
+[]\T1/cmr/m/n/12 nltk.stem pac-kage - nltk 3.2.5 docu-men-ta-tion, i.d.  URL $\
 T1/cmtt/m/n/12 http : / /
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 453--459
-\T1/cmr/m/n/12 0.19.1 docu-men-ta-tion, n.d.  URL $\T1/cmtt/m/n/12 http : / / s
+Underfull \hbox (badness 3492) in paragraph at lines 453--459
+\T1/cmr/m/n/12 0.19.1 docu-men-ta-tion, i.d.  URL $\T1/cmtt/m/n/12 http : / / s
 cikit -[] learn\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 org / stable /
  []
 
@@ -1686,15 +1692,15 @@ model[]selection\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 train[]test[]split\OML/cmm/m/
 it/12 :\T1/cmtt/m/n/12 html$\T1/cmr/m/n/12 .
  []
 
-[68]
+[70]
 Underfull \hbox (badness 1092) in paragraph at lines 461--467
 []\T1/cmr/m/n/12 scikitlearn docu-men-ta-tion.  sklearn.naive-bayes.multinomial
 nb - sk-learn
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 461--467
-\T1/cmr/m/n/12 0.19.1 docu-men-ta-tion, n.d.  URL $\T1/cmtt/m/n/12 http : / / s
+Underfull \hbox (badness 3492) in paragraph at lines 461--467
+\T1/cmr/m/n/12 0.19.1 docu-men-ta-tion, i.d.  URL $\T1/cmtt/m/n/12 http : / / s
 cikit -[] learn\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 org / stable /
  []
 
@@ -1706,7 +1712,7 @@ Underfull \hbox (badness 1158) in paragraph at lines 469--475
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 469--475
-\T1/cmr/m/n/12 - sk-learn 0.19.1 docu-men-ta-tion, n.d.  URL $\T1/cmtt/m/n/12 h
+\T1/cmr/m/n/12 - sk-learn 0.19.1 docu-men-ta-tion, i.d.  URL $\T1/cmtt/m/n/12 h
 ttp :
  []
 
@@ -1724,28 +1730,34 @@ rizer\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 html$\T1/cmr/m/n/12 .  [An-vänd
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 477--483
-\T1/cmr/m/n/12 0.19.1 docu-men-ta-tion, n.d.  URL $\T1/cmtt/m/n/12 http : / / s
+Underfull \hbox (badness 3492) in paragraph at lines 477--483
+\T1/cmr/m/n/12 0.19.1 docu-men-ta-tion, i.d.  URL $\T1/cmtt/m/n/12 http : / / s
 cikit -[] learn\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 org / stable /
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 485--491
-\T1/cmr/m/n/12 0.19.1 docu-men-ta-tion, n.d.  URL $\T1/cmtt/m/n/12 http : / / s
+Underfull \hbox (badness 3492) in paragraph at lines 485--491
+\T1/cmr/m/n/12 0.19.1 docu-men-ta-tion, i.d.  URL $\T1/cmtt/m/n/12 http : / / s
 cikit -[] learn\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 org / stable /
  []
 
-[69]) [70] (./TSA.aux)
+
+Underfull \hbox (badness 1286) in paragraph at lines 493--499
+\T1/cmr/m/n/12 docu-men-ta-tion, i.d.  URL $\T1/cmtt/m/n/12 http : / / scikit -
+[] learn\OML/cmm/m/it/12 :\T1/cmtt/m/n/12 org / stable / modules /
+ []
+
+[71] [72]) [73] (./TSA.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.88pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 19198 strings out of 493029
- 340665 string characters out of 6136234
- 549730 words of memory out of 5000000
- 22305 multiletter control sequences out of 15000+600000
+ 19205 strings out of 493029
+ 340770 string characters out of 6136234
+ 549839 words of memory out of 5000000
+ 22312 multiletter control sequences out of 15000+600000
  19014 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,18n,58p,1627b,1988s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1766,10 +1778,10 @@ ic/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfst0800
 .pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/tex
 mf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/publi
 c/cm-super/sftt1200.pfb>
-Output written on TSA.pdf (88 pages, 1226299 bytes).
+Output written on TSA.pdf (91 pages, 1232362 bytes).
 PDF statistics:
- 426 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
+ 436 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
