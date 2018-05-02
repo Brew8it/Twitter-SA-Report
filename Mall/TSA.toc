@@ -5,55 +5,55 @@
 \contentsline {paragraph}{Keywords:}{vii}
 \select@language {swedish}
 \contentsline {chapter}{\numberline {1}Introduktion}{1}
-\contentsline {chapter}{\numberline {2}Bakgrund}{3}
-\contentsline {section}{\numberline {2.1}Sentimentanalys}{4}
-\contentsline {subsection}{\numberline {2.1.1}Klassificeringstekniker}{5}
-\contentsline {section}{\numberline {2.2}Maskininl\IeC {\"a}rning}{6}
-\contentsline {subsection}{\numberline {2.2.1}Naive Bayes}{7}
-\contentsline {subsection}{\numberline {2.2.2}Support Vector Machine}{8}
-\contentsline {subsection}{\numberline {2.2.3}Convolutional neural network}{8}
-\contentsline {section}{\numberline {2.3}Datam\IeC {\"a}ngd}{9}
-\contentsline {subsection}{\numberline {2.3.1}SemEval}{9}
-\contentsline {subsection}{\numberline {2.3.2}Stanford Twitter Sentiment}{10}
-\contentsline {section}{\numberline {2.4}Twittersentimentanalys}{10}
-\contentsline {subsection}{\numberline {2.4.1}Utmaningar}{12}
-\contentsline {subsection}{\numberline {2.4.2}Problem}{13}
-\contentsline {section}{\numberline {2.5}Utv\IeC {\"a}rdering}{14}
-\contentsline {section}{\numberline {2.6}Sammanfattning}{15}
-\contentsline {chapter}{\numberline {3}Experiment}{17}
-\contentsline {section}{\numberline {3.1}Bearbetning av datam\IeC {\"a}ngd}{17}
-\contentsline {section}{\numberline {3.2}S\IeC {\"a}rdragsurval}{22}
-\contentsline {section}{\numberline {3.3}Algoritmer}{24}
-\contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{25}
-\contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{27}
-\contentsline {subsection}{\numberline {3.3.3}Convolutional Neural Network}{31}
-\contentsline {section}{\numberline {3.4}Implementation}{34}
-\contentsline {subsection}{\numberline {3.4.1}Databearbetning}{34}
-\contentsline {subsection}{\numberline {3.4.2}Lexikon}{37}
-\contentsline {subsection}{\numberline {3.4.3}Naive Bayes}{39}
-\contentsline {subsection}{\numberline {3.4.4}Support Vector Machine}{41}
-\contentsline {subsection}{\numberline {3.4.5}Convolutional neural network}{43}
-\contentsline {subsection}{\numberline {3.4.6}Webbgr\IeC {\"a}nssnitt}{47}
-\contentsline {section}{\numberline {3.5}Sammanfattning}{49}
-\contentsline {chapter}{\numberline {4}Resultat}{50}
-\contentsline {section}{\numberline {4.1}SemEval}{51}
-\contentsline {subsection}{\numberline {4.1.1}Lexikon}{51}
-\contentsline {subsection}{\numberline {4.1.2}Naive Bayes}{51}
-\contentsline {subsection}{\numberline {4.1.3}Support Vector Machine}{52}
-\contentsline {subsection}{\numberline {4.1.4}Convolutional neural network}{54}
-\contentsline {section}{\numberline {4.2}Stanford Twitter Sentiment}{54}
-\contentsline {subsection}{\numberline {4.2.1}Lexikon}{54}
-\contentsline {subsection}{\numberline {4.2.2}Naive Bayes}{55}
-\contentsline {subsection}{\numberline {4.2.3}Support Vector Machine}{56}
-\contentsline {subsection}{\numberline {4.2.4}Convolutional neural network}{58}
-\contentsline {section}{\numberline {4.3}Utv\IeC {\"a}rdering}{58}
-\contentsline {subsection}{\numberline {4.3.1}Prestanda}{59}
-\contentsline {subsection}{\numberline {4.3.2}Tr\IeC {\"a}ning}{59}
-\contentsline {subsection}{\numberline {4.3.3}Implementation}{60}
-\contentsline {subsection}{\numberline {4.3.4}Helhetsbed\IeC {\"o}mning}{61}
-\contentsline {section}{\numberline {4.4}Sammanfattning}{61}
-\contentsline {chapter}{\numberline {5}Slutsats}{62}
-\contentsline {section}{\numberline {5.1}Begr\IeC {\"a}nsningar}{63}
-\contentsline {section}{\numberline {5.2}Vidareutveckling}{63}
-\contentsline {section}{\numberline {5.3}Slutord}{64}
+\contentsline {chapter}{\numberline {2}Bakgrund}{4}
+\contentsline {section}{\numberline {2.1}Sentimentanalys}{5}
+\contentsline {subsection}{\numberline {2.1.1}Klassificeringstekniker}{6}
+\contentsline {section}{\numberline {2.2}Maskininl\IeC {\"a}rning}{7}
+\contentsline {subsection}{\numberline {2.2.1}Naive Bayes}{8}
+\contentsline {subsection}{\numberline {2.2.2}Support Vector Machine}{9}
+\contentsline {subsection}{\numberline {2.2.3}Convolutional neural network}{9}
+\contentsline {section}{\numberline {2.3}Datam\IeC {\"a}ngd}{10}
+\contentsline {subsection}{\numberline {2.3.1}SemEval}{10}
+\contentsline {subsection}{\numberline {2.3.2}Stanford Twitter Sentiment}{11}
+\contentsline {section}{\numberline {2.4}Twittersentimentanalys}{11}
+\contentsline {subsection}{\numberline {2.4.1}Utmaningar}{13}
+\contentsline {subsection}{\numberline {2.4.2}Problem}{14}
+\contentsline {section}{\numberline {2.5}Utv\IeC {\"a}rdering}{15}
+\contentsline {section}{\numberline {2.6}Sammanfattning}{16}
+\contentsline {chapter}{\numberline {3}Experiment}{18}
+\contentsline {section}{\numberline {3.1}Bearbetning av datam\IeC {\"a}ngd}{18}
+\contentsline {section}{\numberline {3.2}S\IeC {\"a}rdragsurval}{23}
+\contentsline {section}{\numberline {3.3}Algoritmer}{25}
+\contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{26}
+\contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{28}
+\contentsline {subsection}{\numberline {3.3.3}Convolutional Neural Network}{32}
+\contentsline {section}{\numberline {3.4}Implementation}{35}
+\contentsline {subsection}{\numberline {3.4.1}Databearbetning}{35}
+\contentsline {subsection}{\numberline {3.4.2}Lexikon}{38}
+\contentsline {subsection}{\numberline {3.4.3}Naive Bayes}{40}
+\contentsline {subsection}{\numberline {3.4.4}Support Vector Machine}{42}
+\contentsline {subsection}{\numberline {3.4.5}Convolutional neural network}{44}
+\contentsline {subsection}{\numberline {3.4.6}Webbgr\IeC {\"a}nssnitt}{48}
+\contentsline {section}{\numberline {3.5}Sammanfattning}{50}
+\contentsline {chapter}{\numberline {4}Resultat}{51}
+\contentsline {section}{\numberline {4.1}SemEval}{52}
+\contentsline {subsection}{\numberline {4.1.1}Lexikon}{52}
+\contentsline {subsection}{\numberline {4.1.2}Naive Bayes}{52}
+\contentsline {subsection}{\numberline {4.1.3}Support Vector Machine}{53}
+\contentsline {subsection}{\numberline {4.1.4}Convolutional neural network}{55}
+\contentsline {section}{\numberline {4.2}Stanford Twitter Sentiment}{55}
+\contentsline {subsection}{\numberline {4.2.1}Lexikon}{55}
+\contentsline {subsection}{\numberline {4.2.2}Naive Bayes}{56}
+\contentsline {subsection}{\numberline {4.2.3}Support Vector Machine}{57}
+\contentsline {subsection}{\numberline {4.2.4}Convolutional neural network}{59}
+\contentsline {section}{\numberline {4.3}Utv\IeC {\"a}rdering}{59}
+\contentsline {subsection}{\numberline {4.3.1}Prestanda}{60}
+\contentsline {subsection}{\numberline {4.3.2}Tr\IeC {\"a}ning}{60}
+\contentsline {subsection}{\numberline {4.3.3}Implementation}{61}
+\contentsline {subsection}{\numberline {4.3.4}Helhetsbed\IeC {\"o}mning}{62}
+\contentsline {section}{\numberline {4.4}Sammanfattning}{62}
+\contentsline {chapter}{\numberline {5}Slutsats}{63}
+\contentsline {section}{\numberline {5.1}Begr\IeC {\"a}nsningar}{64}
+\contentsline {section}{\numberline {5.2}Vidareutveckling}{64}
+\contentsline {section}{\numberline {5.3}Slutord}{65}
 \contentsfinish 

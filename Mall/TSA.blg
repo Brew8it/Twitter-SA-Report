@@ -1,11 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: TSA.aux
-Case mismatch error between cite keys TSASurvey and TSAsurvey
----line 27 of file TSA.aux
- : \citation{TSASurvey
- :                    }
-I'm skipping whatever remains of this command
 The style file: unsrtnat.bst
 Database file #1: ../refs/thesisref.bib
 Warning--there's a number but no series in slut:004
@@ -50,4 +45,4 @@ warning$ -- 1
 while$ -- 182
 width$ -- 0
 write$ -- 1216
-(There was 1 error message)
+(There was 1 warning)
