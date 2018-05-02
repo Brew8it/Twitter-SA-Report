@@ -54,6 +54,6 @@
 \contentsline {section}{\numberline {4.4}Sammanfattning}{60}
 \contentsline {chapter}{\numberline {5}Slutsats}{61}
 \contentsline {section}{\numberline {5.1}Begr\IeC {\"a}nsningar}{62}
-\contentsline {section}{\numberline {5.2}Vidare utveckling}{62}
+\contentsline {section}{\numberline {5.2}Vidareutveckling}{62}
 \contentsline {section}{\numberline {5.3}Slutord}{63}
 \contentsfinish 

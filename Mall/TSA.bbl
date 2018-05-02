@@ -1,4 +1,4 @@
-\begin{thebibliography}{87}
+\begin{thebibliography}{88}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -581,6 +581,15 @@ NVIDIA.
 \newblock Nvidia tesla v100 | nvidia, 2002.
 \newblock URL \url{https://www.nvidia.com/en-us/data-center/tesla-v100/}.
 \newblock [i.d].
+
+\bibitem[Deriu et~al.(2016)Deriu, Gonzenbach, Uzdilli, Lucchi, Luca, and
+  Jaggi]{slut:004}
+Jan Deriu, Maurice Gonzenbach, Fatih Uzdilli, Aurelien Lucchi, Valeria~De Luca,
+  and Martin Jaggi.
+\newblock Swisscheese at semeval-2016 task 4: Sentiment classification using an
+  ensemble of convolutional neural networks with distant supervision.
+\newblock In \emph{Proceedings of the 10th International Workshop on Semantic
+  Evaluation}, number EPFL-CONF-229234, pages 1124--1128, 2016.
 
 \bibitem[Wehrmann et~al.(2017)Wehrmann, Becker, Cagnini, and Barros]{slut:001}
 Joonatas Wehrmann, Willian Becker, Henry~EL Cagnini, and Rodrigo~C Barros.

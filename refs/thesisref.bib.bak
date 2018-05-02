@@ -251,7 +251,7 @@
 
   Author                   = {Amazon},
   Note                     = {[Använd 12-Februari 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.02.12},
@@ -263,7 +263,7 @@
 
   Author                   = {Apple},
   Note                     = {[Använd 5-Mars 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.05},
@@ -275,7 +275,7 @@
 
   Author                   = {Noel Bambrick},
   Note                     = {[Använd 12-Februari 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.02.12},
@@ -473,7 +473,7 @@
 
   Author                   = {Google},
   Note                     = {[Använd 5-Mars 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.05},
@@ -753,7 +753,7 @@ and Rouveirol, C{\'e}line},
 
   Author                   = {scikitlearn documentation},
   Note                     = {[Använd 12-Mars 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.12},
@@ -765,7 +765,7 @@ and Rouveirol, C{\'e}line},
 
   Author                   = {scikitlearn documentation},
   Note                     = {[Använd 12-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.12},
@@ -777,7 +777,7 @@ and Rouveirol, C{\'e}line},
 
   Author                   = {scikitlearn documentation},
   Note                     = {[Använd 11-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.11},
@@ -789,7 +789,7 @@ and Rouveirol, C{\'e}line},
 
   Author                   = {scikitlearn documentation},
   Note                     = {[Använd 11-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.11},
@@ -801,7 +801,7 @@ and Rouveirol, C{\'e}line},
 
   Author                   = {scikitlearn documentation},
   Note                     = {[Använd 11-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.11},
@@ -813,7 +813,7 @@ and Rouveirol, C{\'e}line},
 
   Author                   = {scikitlearn documentation},
   Note                     = {[Använd 11-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.11},
@@ -825,7 +825,7 @@ and Rouveirol, C{\'e}line},
 
   Author                   = {scikitlearn documentation},
   Note                     = {[Använd 11-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.11},
@@ -837,7 +837,7 @@ and Rouveirol, C{\'e}line},
 
   Author                   = {scikitlearn documentation},
   Note                     = {[Använd 11-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.11},
@@ -849,7 +849,7 @@ and Rouveirol, C{\'e}line},
 
   Author                   = {scikitlearn documentation},
   Note                     = {[Använd 11-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.03.11},
@@ -1002,7 +1002,7 @@ and Rouveirol, C{\'e}line},
 
   Author                   = {Eric W. Weisstein},
   Note                     = {[Använd 12-Februari 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.02.12},
@@ -1041,7 +1041,7 @@ and Rouveirol, C{\'e}line},
 @Misc{gui:001,
   Title                    = {Bootstrap - The most popular HTML, CSS and JS library in the world},
   Note                     = {[Använd 16-April-2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Url                      = {https://getbootstrap.com/}
 }
@@ -1049,7 +1049,7 @@ and Rouveirol, C{\'e}line},
 @Misc{impcnn:004,
   Title                    = {Keras Documentation},
   Note                     = {[Använd 16-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.04.16},
@@ -1059,7 +1059,7 @@ and Rouveirol, C{\'e}line},
 @Misc{impcnn:005,
   Title                    = {TensorFlow},
   Note                     = {[Använd 16-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.04.16},
@@ -1069,7 +1069,7 @@ and Rouveirol, C{\'e}line},
 @Misc{impcnn:006,
   Title                    = {Core layers - Keras Documentation},
   Note                     = {[Använd 16-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.04.16},
@@ -1079,7 +1079,7 @@ and Rouveirol, C{\'e}line},
 @Misc{impcnn:007,
   Title                    = {Sequential - Keras Documentation},
   Note                     = {[Använd 16-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.04.16},
@@ -1089,7 +1089,7 @@ and Rouveirol, C{\'e}line},
 @Misc{impcnn:008,
   Title                    = {Model (functional API) - Keras Documentation},
   Note                     = {[Använd 17-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.04.17},
@@ -1099,7 +1099,7 @@ and Rouveirol, C{\'e}line},
 @Misc{impl:001,
   Title                    = {Python 3.0 release},
   Note                     = {[Använd 4-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.04-04},
@@ -1109,7 +1109,7 @@ and Rouveirol, C{\'e}line},
 @Misc{impl:005,
   Title                    = {6.5. unicodedata — Unicode Database},
   Note                     = {[Använd 4-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.04-04},
@@ -1119,7 +1119,7 @@ and Rouveirol, C{\'e}line},
 @Misc{impl:006,
   Title                    = {nltk.tokenize package - NLTK 3.2.5 documentation},
   Note                     = {[Använd 4-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.04-04},
@@ -1129,7 +1129,7 @@ and Rouveirol, C{\'e}line},
 @Misc{impl:007,
   Title                    = {Removing stop words with NLTK in Python - GeeksforGeels},
   Note                     = {[Använd 4-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.04-04},
@@ -1139,7 +1139,7 @@ and Rouveirol, C{\'e}line},
 @Misc{impl:008,
   Title                    = {nltk.stem package - NLTK 3.2.5 documentation},
   Note                     = {[Använd 4-April 2018]},
-  Year                     = {n.d},
+  Year                     = {i.d},
 
   Owner                    = {hpnotiqz},
   Timestamp                = {2018.04-04},
