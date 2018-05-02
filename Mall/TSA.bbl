@@ -5,14 +5,6 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Walaa~Medhat(2014)]{SAsurvey}
-Hoda~Korashy Walaa~Medhat, Ahmed~Hassan.
-\newblock Sentiment analysis algorithms and applications: A survey.
-\newblock \emph{Ain Shams Engineering Journal}, Volume 5\penalty0 (Issue
-  4):\penalty0 1093--1113, December 2014.
-\newblock URL
-  \url{https://ac.els-cdn.com/S2090447914000550/1-s2.0-S2090447914000550-main.pdf?_tid=77d36d1a-ff80-11e7-956d-00000aacb362&acdnat=1516631469_c14e5bc49162e2b9a4232c2931592298}.
-
 \bibitem[Giachanou and Crestani(2016)]{TSAsurvey}
 Anastasia Giachanou and Fabio Crestani.
 \newblock Like it or not: A survey of twitter sentiment analysis methods.
@@ -21,6 +13,14 @@ Anastasia Giachanou and Fabio Crestani.
 \newblock ISSN 0360-0300.
 \newblock \doi{10.1145/2938640}.
 \newblock URL \url{http://doi.acm.org/10.1145/2938640}.
+
+\bibitem[Walaa~Medhat(2014)]{SAsurvey}
+Hoda~Korashy Walaa~Medhat, Ahmed~Hassan.
+\newblock Sentiment analysis algorithms and applications: A survey.
+\newblock \emph{Ain Shams Engineering Journal}, Volume 5\penalty0 (Issue
+  4):\penalty0 1093--1113, December 2014.
+\newblock URL
+  \url{https://ac.els-cdn.com/S2090447914000550/1-s2.0-S2090447914000550-main.pdf?_tid=77d36d1a-ff80-11e7-956d-00000aacb362&acdnat=1516631469_c14e5bc49162e2b9a4232c2931592298}.
 
 \bibitem[Mnih et~al.(2015)Mnih, Kavukcuoglu, Silver, Rusu, Veness, Bellemare,
   Graves, Riedmiller, Fidjeland, Ostrovski, et~al.]{DMatari00}
