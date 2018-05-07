@@ -42,7 +42,8 @@
 
 \usepackage{amsmath}
 
-
+%\usepackage{footnote}
+\usepackage{tablefootnote}
 
 \usepackage{listings}
 \usepackage{pythonhighlight}
@@ -149,12 +150,12 @@
 \chapter{Introduktion}
 Sociala medier har på senare år ökat i popularitet \cite{TSAsurvey}. Populariteten har gjort att webben har gått från att vara en statisk källa av information till ett dynamiskt forum där informationen ständigt förändras. Användare kan via sociala medier dela sina tankar och åsikter på ett enkelt sätt, vilket har bidragit till en stor ökning av användargenererat innehåll på webben. 
 
-Användargenererat innehåll är en bra källa för åsikter och kan användas för att tolka och förstå allmänhetens åsikter i olika frågor \cite{TSAsurvey}. Företag kan exempelvis använda användargenererat innehåll för att ta reda på vad kunder har för åsikter om företagets egna eller konkurrenters produkter. Genom att analysera användarnas åsikter kan de förbättra sina produkter. 
+Användargenererat innehåll är en bra källa för åsikter och kan användas för att tolka och förstå allmänhetens åsikter i olika frågor \cite{TSAsurvey}. Företag kan exempelvis använda användargenererat innehåll för att ta reda på vad kunder har för åsikter om företagets egna eller konkurrenters produkter. Utifrån den informationen de samlar in kan de sedan förbättra sina produkter.
 
 För enskilda personer är det praktiskt taget omöjligt att analysera den typen av data \cite{TSAsurvey}. Därför har metoder som per automatik kan utläsa vad en text uttrycker för sentiment börjat utvecklas, vilket gör det möjligt att analysera stora mängder av data. Sentimentanalys (SA) är ett område som syftar till att bedöma om en text uttrycker någonting positivt eller negativt. Tidigare har SA använts för att b.l.a analysera blogginlägg, forumdiskussioner och recensioner. På senare tid har forskare även börjat intressera sig för sentiment som uttrycks på mikrobloggar. Twitter är en av de populäraste mikrobloggarna, där användare kan förmedla sina tankar och åsikter om olika ämnen. På grund av Twitters popularitet och tillgänglighet har det blivit populärt att analysera data från Twitter. Sentimentanlays som utförs på data från Twitter benämns Twittersentimentanalys (TSA) och handlar om att bedöma vad för sentiment ett inlägg på Twitter uttrycker.  TSA kan utföras på flera olika sätt, men de vanligaste metoderna använder maskininlärning.
 
 
-Denna studie kommer därför att fokusera på TSA och metoder som använder sig av maskininlärning. Syftet med studien är att utvärdera tre stycken klassificeringsmodeller inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells prestanda. I figur \ref{fig:helhet} visas klassificeringsmodellern som används i studien, vilka är: Naive Bayes (NB), Support Vector Machine (SVM) och Convolutional Neural Network (CNN). De har tränats och utvärderats på två separata datamängder: Stanford Twitter Sentiment (STS) och SemEval. Datamängderna har märkts med två olika märkningsmetoder. Utvärderingen har gjorts utefter vilken prestanda klassificeringsmodellerna uppnår på respektive datamängd, hur lång tid de tar att träna och hur invecklade de var att implementera. 
+Denna studie kommer därför att fokusera på TSA och metoder som använder sig av maskininlärning. Syftet med studien är att utvärdera tre stycken klassificeringsmodeller inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells prestanda. I figur \ref{fig:helhet} visas klassificeringsmodellerna som används i studien, vilka är: Naive Bayes (NB), Support Vector Machine (SVM) och Convolutional Neural Network (CNN). De har tränats och utvärderats på två separata datamängder: Stanford Twitter Sentiment (STS) och SemEval. Datamängderna har märkts med två olika märkningsmetoder. SemEval har märkts genom mänsklig märkning och består av ca 20000 twitterinlägg. STS består av ca 1,6 miljoner twitterinlägg och har märkts genom "distant supervision". Utvärderingen har gjorts utefter vilken prestanda klassificeringsmodellerna uppnår på respektive datamängd, hur lång tid de tar att träna och hur invecklade de var att implementera. 
 
 \begin{figure}[h]
 \includegraphics[width=14cm]{helthetsbild}
@@ -443,22 +444,22 @@ Twitter-specifika särdrag är särdrag som är specifika för Twitters domän s
 För att ge en bättre förståelse för hur NB, SVM och CNN kan appliceras på sentimentanalys, kommer detta avsnitt ge en överblick av hur algoritmerna går till väga för att klassificera text och hur de kan anpassas för att uppnå bra resultat vid sentimentanalys.
 
 \subsection{Naive Bayes}
-Det finns tre varianter utav NB nämligen Gaussian, Bernoulli och Multinomial. Gaussian används när attributen är kontinuerligt fördelade och då antas det att attributen förknippade med varje klass fördelas enligt Gaussian d.v.s normalfördelning \cite{nb:002}. Bernoulli användas när attributen är fördelade enligt multivariat Bernoulli \cite{nb:004} och Multinomial NB (MNB) används när attributen är multinomial fördelat. I \cite{nb:003} diskuteras det att MNB är väl lämpad för text klassificering vilket gör att studien kommer använda MNB.
+Det finns tre varianter utav NB nämligen Gaussian, Bernoulli och Multinomial. Gaussian används när attributen är kontinuerligt fördelade och då antas det att attributen förknippade med varje klass fördelas enligt Gaussian d.v.s normalfördelning \cite{nb:002}. Bernoulli användas när attributen är fördelade enligt multivariat Bernoulli \cite{nb:004} och Multinomial NB (MNB) används när attributen är multinomialt fördelade. I \cite{nb:003} diskuteras det att MNB är väl lämpad för textklassificering vilket gör att studien kommer använda MNB.
 
-I \ref{MLnb} beskrivs att Naive Bayes-algoritmen är baserad på Bayes theorem \cite{wiki:009} vilket för TSA betyder att räkna ut sannolikheten att ett twitterinlägg $(B)$ är positivt eller negativt $(A)$ för en mängd $C$, bestående av ett antal $B$ med ett förbestämt $A$. Där $P(A | B)$ är en villkorlig sannolikhet för att $A$ inträffar givet att $B$ är sant, $P(B | A)$ är också en villkorlig sannolikhet för att $B$ inträffar givet att $A$ är sant. $P(A)$ och $P(B)$ är sannolikheten att observera $P(A)$ och $P(B)$ oberoende av varandra,
+I \ref{MLnb} beskrivs att Naive Bayes-algoritmen är baserad på Bayes theorem \cite{wiki:009} vilket för TSA betyder att räkna ut sannolikheten att ett twitterinlägg $(B)$ är positivt eller negativt $(A)$ för en mängd $C$, bestående av ett antal $B$ med ett förbestämt $A$. $P(A | B)$ är en villkorlig sannolikhet för att $A$ inträffar givet att $B$ är sant, $P(B | A)$ är också en villkorlig sannolikhet för att $B$ inträffar givet att $A$ är sant. $P(A)$ och $P(B)$ är sannolikheten att observera $P(A)$ och $P(B)$ oberoende av varandra,
 
 \begin{equation}\label{eq:bt}
-P(A|B) = \frac{P(B|A) * P(A)}{P(B)}.
+P(A|B) = \frac{P(B|A) * P(A)}{P(B)}, 1 \leq w \leq n,
 \end{equation}
 
-För att ekvation \ref{eq:bt} skall vara “Naive” antas att varje ord $b_w$ i $B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar $B$ utan $b_w$, $P(B|A) = P(b_{w1}|A) * P(b_{w2}|A) * … * P(b_{wn}|A)$, där $n$ är antalet ord i $B$,
+För att ekvation \ref{eq:bt} skall vara “Naive” antas att varje ord $b_w$ i $B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar $B$ utan $b_w$, $P(B|A) = P(b_{w}|A) * P(b_{w}|A) * … * P(b_{w}|A)$,
 
 För att beräkna $P(b_w|A)$ används Dirichlet prior \cite{wiki:012, nb:007}, 
 \begin{equation}\label{eq:slut}
 P(b_w|A)= \frac{N_{b_w} + \alpha}{N_A + \alpha_n}.
 \end{equation}
-Där $N_{b_w}$ är hur många gånger $b_w$ förekommer i delmängden $C_A$, 
-$N_A$ är summan av alla ord i $C_A$, $\alpha$ och $\alpha_n$ används för att utföra additiv utjämning \cite{wiki:013} där $\alpha = 1$ och $\alpha_n$ är summan av antal olika ord i $C$.
+där $N_{b_w}$ är hur många gånger $b_w$ förekommer i delmängden $C_A$, 
+$N_A$ är antal av alla ord i $C_A$ och $\alpha$ och $\alpha_n$ används för att utföra additiv utjämning \cite{wiki:013} där $\alpha = 1$ och $\alpha_n$ är antal olika ord i $C$.
 
 \begin{table}[H]
 \centering
@@ -558,7 +559,7 @@ Konvulsionlager utgör den centrala delen av CNN \cite{cnn:005}. Ett konvulsionl
 
 Efter att olika särdrag har tagits fram genom konvulsionlager och “pooling”-lager kopplas ett fullt anslutet lager in i slutet av nätverket \cite{cnn:008}. Det fullt anslutna lagret tar in mängden av särdrag från lagret innan och skickar ut en vektor av storleken $N$, där $N$ representerar antalet klasser vid klassificeringen. Värdena i denna vektor representerar sannolikheten för respektive klass. Det fullt anslutna lagret analyserar den data som skickas från lagret innan och gör en bedömning utefter vilken klass särdragen med störst sannolikhet representerar. 
 
-Som nämndes i \ref{bak:cnn}, är CNN ursprungligen framtagen för problem som rör bearbetning av bilder. När bilder bearbetas av CNN representeras bildens pixlar i en matris, som filtrena sedan förflyttar sig över \cite{cnn:004}. Text som ska bearbetas av CNN behöver därför också representeras som en bild. I figur \ref{fig:cnntext} visas ett exempel av ett CNN för textklassificering. I exemplet ska ett twitterinlägg av längden $l$ klassificeras \cite{cnn:002}. Twitterinlägget som ska klassificeras har konverterats till en twitterinläggmatris. Varje ord i twitterinlägget utgör en rad i matrisen och representeras av en vektor i matrisen, där vektorernas dimension $d$ utgör matrisen bredd. Matrisens storlek ges således av $l*d$. Vektorerna som representerar olika ord är antingen ordinbäddningar \cite{wiki:016} eller “one-hot”-vektorer \cite{cnn:004}. “One-hot”-vektorer är det som har använts för implementationen av CNN i denna studie och där indexeras varje ord i datamängden till ett vokabulär. Efter att twitterinlägget har konverterats till att representeras som en matris, går det att hantera inlägget som en bild och utföra konvulsioner på det genom olika filter \cite{cnn:002}. Eftersom varje rad representerar ett ord i twitterinlägget är det rimligt att använda filter som till bredden är lika stora som dimensionen på vektorerna. Höjden eller regionstorleken på filtren kan däremot varieras och det går att använda flertalet filter med olika regionstorlekar. Regionstorleken anpassas utefter hur många ord ett filter ska omfatta. 
+Som nämndes i \ref{bak:cnn}, är CNN ursprungligen framtagen för problem som rör bearbetning av bilder. När bilder bearbetas av CNN representeras bildens pixlar i en matris, som filtrena sedan förflyttar sig över \cite{cnn:004}. Text som ska bearbetas av CNN behöver därför också representeras som en bild. I figur \ref{fig:cnntext} visas ett exempel av ett CNN för textklassificering. I exemplet ska ett twitterinlägg av längden $l$ klassificeras \cite{cnn:002}. Twitterinlägget som ska klassificeras har konverterats till en twitterinläggmatris. Varje ord i twitterinlägget utgör en rad i matrisen och representeras av en vektor i matrisen, där vektorernas dimension $d$ utgör matrisen bredd. $d$ sätts efter storleken till det längsta ordet. Matrisens storlek ges således av $l*d$. Vektorerna som representerar olika ord är antingen ordinbäddningar \cite{wiki:016} eller “one-hot”-vektorer \cite{cnn:004}. “One-hot”-vektorer är det som har använts för implementationen av CNN i denna studie och där indexeras varje ord i datamängden till ett vokabulär. Efter att twitterinlägget har konverterats till att representeras som en matris, går det att hantera inlägget som en bild och utföra konvulsioner på det genom olika filter \cite{cnn:002}. Eftersom varje rad representerar ett ord i twitterinlägget är det rimligt att använda filter som till bredden är lika stora som dimensionen på vektorerna. Höjden eller regionstorleken på filtren kan däremot varieras och det går att använda flertalet filter med olika regionstorlekar. Regionstorleken anpassas utefter hur många ord ett filter ska omfatta. 
 
 \begin{figure}[H]
 \includegraphics[width=12cm]{cnn_text}
@@ -897,7 +898,7 @@ model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs, verbose=1,
     callbacks=[checkpoint], validation_data=(X_test, y_test))
 \end{lstlisting}
 
-Zhang och Wallace förklarar i \cite{cnn:002} att en negativ sida av CNN är att utvecklare måste ha kunskap nog att specificera den exakta arkitekturen av modellen och dessutom ställa in alla medföljande parametrar. Parametrarna är så pass många till antalet att det kan vara överväldigande för en utvecklare som nyligen introducerats för tekniken. Att undersöka olika typer av konfigurationer av dessa parametrar är dessutom väldigt kostsamt. Dels för att det tar lång tid att träna den här typen av modeller, men även pga att antalet möjliga inställningar av dessa parametrar är så pass många. Av de anledningarna har ingen parametersökning utförts på CNN. Därför har enbart en CNN-modell tagits fram för detta experiment, med standardparametrarna från Britz implementation \cite{impcnn:002}.
+Zhang och Wallace förklarar i \cite{cnn:002} att en negativ sida av CNN är att utvecklare måste ha kunskap nog för att specificera den exakta arkitekturen av modellen och dessutom ställa in alla medföljande parametrar. Parametrarna är så pass många till antalet att det kan vara överväldigande för en utvecklare som nyligen introducerats för tekniken. Att undersöka olika typer av konfigurationer av dessa parametrar är dessutom väldigt kostsamt. Dels för att det tar lång tid att träna den här typen av modeller, men även pga att antalet möjliga inställningar av dessa parametrar är så pass många. Av de anledningarna har ingen parametersökning utförts på CNN. Därför har enbart en CNN-modell tagits fram för detta experiment, med standardparametrarna från Britz implementation \cite{impcnn:002}.
 
 
 
@@ -907,7 +908,7 @@ Zhang och Wallace förklarar i \cite{cnn:002} att en negativ sida av CNN är att
 \subsection{Webbgränssnitt}
 Som ett alternativ till studiens syfte hade uppdragsgivaren ett önskemål av en webbsida där en dynamisk sökning kunde utföras på en Twitter-användare, för att sedan presentera hur klassiciferingsmodellerna klassificerar Twitter-användarens twitterinlägg.
 Tekniker som valts för webbsidans gränssnitt är Bootstrap \cite{gui:001} och för webbsidans bakände används Flask \cite{gui:002} och SQLite3 \cite{gui:003}.
-Bootstrap är ett “open source” verktyg framtaget av Twitter för att bygga responsiva, mobila projekt på webben med HyperText Markup Language (HTML), Cascading Style Sheets (CSS) och Javascript (JS). Flask är ett mikro webbramverk som används för att prata med bakändefunktioner och rendera webbsidans gränssnitt. För att lagra resultaten från sökningen har SQLite3 används som databashanterare.
+Bootstrap är ett “open source”-verktyg framtaget av Twitter för att bygga responsiva, mobila projekt på webben med HyperText Markup Language (HTML), Cascading Style Sheets (CSS) och Javascript (JS). Flask är ett mikrowebbramverk som används för att prata med bakändefunktioner och rendera webbsidans gränssnitt. För att lagra resultaten från sökningen har SQLite3 används som databashanterare.
 
 I figur \ref{fig:gui_form} illustreras implementationen av webbgränssnittet där användare kan söka på en Twitter-användare och hur många twitterinlägg som ska klassificeras.
 
@@ -1002,7 +1003,7 @@ I tabell \ref{tab:nb_grid_se} visas de parametrar som togs fram m.h.a parameters
 \end{tabular}
 \end{table}
 
-Den andra NB-modellens prestanda presenteras i tabell \ref{tab:nb_imp_se}. Modellen uppnådde en precision på 85,4\%, återkallelse på 85,7\% och F-Score på 85,2\%. I jämförelse med modellen med standardparametrar resulterade parametersökningen i en lägre prestanda.  
+Den andra NB-modellens prestanda presenteras i tabell \ref{tab:nb_imp_se}. Modellen uppnådde en precision på 85,4\%, återkallelse på 85,7\% och F-Score på 85,2\%. I jämförelse med modellen med standardparametrar resulterade parametersökningen i marginella skillnader.  
 
 \begin{table}[H]
 \centering
@@ -1261,7 +1262,7 @@ I detta avsnitt utvärderas de datamängder och klassificeringsmodeller som har 
 \subsection{Prestanda}\label{res:pres}
 För att utvärdera klassificeringsmodellernas prestanda används modellernas F-Score-värde. F-Score är det harmoniska medelvärdet mellan precision och återkallelse och är lämpligt att använda vid en helhetsbedömning av klassificeringsmodeller, som diskuterades i avsnitt \ref{TSAev}. 
 
-I tabell \ref{tab:clf_sum} presenteras de klassificeringsmodeller med högst prestanda från avsnitt \ref{res:sts} och \ref{res:se}. Samtliga klassificeringsmodeller som har tränats på SemEval-datamängden presterar bättre än de som har tränats på STS-datamängden. Mellan den klassificeringsmodell som presterar sämst på SemEval och bäst på STS skiljer det sig 4,8\%. Sett till de två olika datamängderna presterar CNN och SVM bäst på SemEval med ett F-Score-värde på 86,5\%, medan CNN har bäst resultat på STS-datamängden med ett F-Score-värde på 80,4\%. För NB och SVM varierar resultaten mellan de två datamängderna. NB presterar sämst på SemEval, medan SVM presterar sämst på STS.
+I tabell \ref{tab:clf_sum} presenteras de klassificeringsmodeller med högst prestanda från avsnitt \ref{res:sts} och \ref{res:se}. Samtliga klassificeringsmodeller som har tränats på SemEval-datamängden presterar bättre än de som har tränats på STS-datamängden. Mellan den klassificeringsmodell som presterar sämst på SemEval och bäst på STS skiljer det sig 4,8\%. Sett till de två olika datamängderna presterar CNN och SVM bäst på SemEval med ett F-Score-värde på 86,5\%, medan CNN har bäst resultat på STS-datamängden med ett F-Score-värde på 80,4\%. För NB och SVM varierar resultaten mellan de två datamängderna. NB presterar sämre än SVM på SemEval, medan det omvända gäller för STS.
 
 Utifrån resultaten kan slutsatsen dras att CNN presterar bäst på båda datamängderna.
 
@@ -1275,16 +1276,19 @@ Utifrån resultaten kan slutsatsen dras att CNN presterar bäst på båda datam�
     \midrule
     \textbf{Modell} & \textbf{F-Score} & \textbf{Modell} & \textbf{F-Score}\\
     \midrule
-    NB med standardparametrar & 85.2\% & NB med optimala parametrar & 78.9\% \\
-    SVM med optimala parametrar & 86.5\% & SVM med optimala parametrar & 78.4\% \\
+    NB \footnotemark[1] & 85.2\% & NB \footnotemark[2] & 78.9\% \\
+    SVM \footnotemark[3] & 86.5\% & SVM \footnotemark[3] & 78.4\% \\
     CNN  & 86.5\% & CNN & 80.4\% \\
     \bottomrule
 \end{tabularx}
 \end{table}
+\footnotetext[1]{NB med standardparametrar}
+\footnotetext[2]{NB med optimala parametrar} 
+\footnotetext[3]{SVM med optimala parametrar}
 
 
 \subsection{Träning}\label{res:train}
-För att träna studiens klassificeringsmodeller har en server med 16 kärnor och 128GB internminne används. I tabell \ref{tab:clf_train_time} presenteras hur lång tid respektive klassificeringsmodell tog att träna i antingen millisekunder (ms), sekunder (s) eller minuter (min). Modellerna som har tränats på SemEval-datamängden är betydligt snabbare än modellerna tränat på STS-datamängden. Detta p.g.a att STS-datamängden består av 77 gånger fler twitterinlägg än SemEval-datamängden. Utifrån det presenterade resultatet ser vi att träningstiden för de olika klassificeringmodellerna varierar stort, där NB är snabbast och CNN är långsammast för respektive datamängd. 
+För att träna studiens klassificeringsmodeller har en server med 16 kärnor och 128 GB internminne använts. I tabell \ref{tab:clf_train_time} presenteras hur lång tid respektive klassificeringsmodell tog att träna. i antingen sekunder (s) eller minuter (min). Modellerna som har tränats på SemEval-datamängden är betydligt snabbare än modellerna tränade på STS-datamängden. Detta p.g.a att STS-datamängden består av 77 gånger fler twitterinlägg än SemEval-datamängden. Utifrån det presenterade resultatet ser vi att träningstiden för de olika klassificeringmodellerna varierar stort, där NB är snabbast och CNN är långsammast för respektive datamängd. 
 
 \begin{table}[H]
 \centering
@@ -1294,15 +1298,17 @@ För att träna studiens klassificeringsmodeller har en server med 16 kärnor oc
     \toprule
     \multicolumn{2}{c}{\textbf{SemEval}} & \multicolumn{2}{c}{\textbf{STS}} \\
     \midrule
-    \textbf{Modell} & \textbf{Träning} & \textbf{Modell} & \textbf{Träning}\\
+    \textbf{Modell} & \textbf{Träning (s)} & \textbf{Modell} & \textbf{Träning (min)}\\
     \midrule
-    NB med standardparametrar & 201 ms & NB med optimala parametrar & 3 min 29 s  \\
-    SVM med optimala parametrar & 4 s  & SVM med optimala parametrar & 7 min 59 s  \\
-    CNN  & 1 min 44 s & CNN  & 173 min \\
+    NB \footnotemark[1] & 0,2 & NB \footnotemark[2] & 3,5 \\
+    SVM \footnotemark[3] & 4  & SVM \footnotemark[3]  & 8,0 \\
+    CNN  & 104 & CNN  & 173,0\\
     \bottomrule
 \end{tabularx}
 \end{table}
-
+\footnotetext[1]{NB med standardparametrar}
+\footnotetext[2]{NB med optimala parametrar} 
+\footnotetext[3]{SVM med optimala parametrar}
 
 \subsection{Implementation}
 Svårighetsgraden för att implementera klassificeringsmodellerna i studien skiljer sig åt mellan modellerna. I denna studie användes sk-learn för att implementera NB- och SVM-modellerna. Genom användandet av sk-learn behöver utvecklare inte förstå den underliggande arkitekturen för NB och SVM, vilket gör implementeringen av dessa modeller enkel. Däremot krävs det en större kunskap om den underliggande arkitekturen för att implementera ett CNN. Trots att en färdig referensimplementation användes, med en relativt enkel CNN-arkitektur, var det fortfarande svårt att sätta sig in i hur allt fungerade och alla parametrars inverkan på arkitekturens prestanda. Sett till implementeringen i avsnitt \ref{impl} är NB och SVM enklare att implementera och utföra parametersökning på än CNN, vilket diskuterades i avsnitt \ref{impl:cnn}
@@ -1311,33 +1317,35 @@ Utifrån resultaten som har presenterats ovan går det att fastställa att de kl
 
 Utvärderingen av studiens klassificeringsmodeller visar att CNN presterar bäst på båda datamängderna. Dock är det en stor skillnad på träningstiderna mellan CNN och de klassiska modellerna: NB och SVM. Beroende på tillgänglig beräkningskraft och tid kan det vara svårt att motivera den prestandaökningen som ges av CNN gentemot de klassiska modellerna. Tas även implementationsprocessen i åtanke kan det vara fördelaktigt att använda de klassiska modellerna.
 \section{Sammanfattning}
-I detta kapitel har resultaten från studiens experiment presenteras från avsnitt \ref{impl}. Resultaten har sedan använts för att jämföra och utvärdera studiens datamängder och klassificeringsmodeller. Klassificeringsmodellerna har utvärderats med hänsyn till värdena som presenterades i avsnitt \ref{TSAev}, hur lång tid de tog att träna och hur invecklade de var att implementera. Slutligen presenteras en helhetsbedömning där för- och nackdelar med respektive datamängd och klassificeringsmodell diskuteras.
+I detta kapitel har resultaten från studiens experiment presenterats från avsnitt \ref{impl}. Resultaten har sedan använts för att jämföra och utvärdera studiens datamängder och klassificeringsmodeller. Klassificeringsmodellerna har utvärderats med hänsyn till värdena som presenterades i avsnitt \ref{TSAev}, hur lång tid de tog att träna och hur invecklade de var att implementera. Slutligen presenteras en helhetsbedömning där för- och nackdelar med respektive datamängd och klassificeringsmodell diskuteras.
 
 \chapter{Slutsats}
 TSA används för att analysera åsikter, attityder och känslor som människor uttrycker på Twitter om olika ämnen, individer eller händelser. I denna studie har tre klassificieringsmodeller utvärderats efter hur väl de kan utläsa om ett twitterinlägg uttrycker någonting positivt eller negativt och hur olika typer av märkningstekniker kan påverka en klassificeringsmodells prestanda. För att jämföra hur modellerna presterar på olika typer av märkningstekniker togs modellerna fram med två olika datamängder: SemEval och STS. Där SemEval är märkt genom mänsklig märkning och STS är märkt genom “distant supervision”. Respektive datamängd delades upp i en träningsmängd och en testmängd. Träningsmängden användes för att ta fram modellen och testmängden användes för att testa klassificeringsmodellernas prestanda. 
 
 Utvärderingen av studiens klassificeringsmodeller visar att samtliga modeller som är tränade och testade på SemEval uppnår en högre prestanda, än de som är tränade och testade på STS. CNN var klassificeringsmodellen som uppnådde bäst resultat över båda datamängderna. Resultaten för de klassiska modellerna NB och SVM varierade mellan datamängderna. CNN tog betydligt längre tid att träna än de klassiska modellerna, och var dessutom svårare att implementera. Skillnaden i prestanda mellan CNN och de klassiska modellerna anser vi inte vara tillräckliga för att använda CNN där liknande hårdvara används. Därför rekommenderar vi att någon av de två klassiska modellerna används för uppgifter som liknar TSA, utifrån resultaten som har presenterats i kapitel \ref{res}.
 \section{Begränsningar}
-En begränsning med studiens resultat som presenteras i \ref{res} är att klassificeringsmodellerna för respektive datamängd får fram sin precision, återkallelse och F-Score genom datamängdens egna testmängd. Vilket gör det svårt att entydigt säga vilken datamängd som rent prestandamässigt presterar bäst, en framtida lösning till detta presenteras i avsnitt \ref{slut:fw}.
+En begränsning med studiens resultat som presenteras i \ref{res} är att klassificeringsmodellerna för respektive datamängd får fram sin precision, återkallelse och F-Score genom att respektive datamängds klassificeringsmodeller testas mot datamängdens egna testmängd. Vilket gör det svårt att entydigt säga vilken datamängd som rent prestandamässigt presterar bäst, en framtida lösning till detta presenteras i avsnitt \ref{slut:fw}.
 
-I avsnitt \ref{res:train} och \ref{res:hhb} presenteras samt diskuteras CNN träningstid och att den är väsentligt längre än de klassiska modellerna vilket gör det svårt att motivera användandet av CNN. Grafikkorts leverantören NVIDIA har nyligen släppt ett grafikkort, TESLA V100 \cite{slut:002}, som är ett grafikkort specialgjort för att träna neurala nätverk. Det rapporteras om 47 gånger snabbare träningstid jämfört mot att träna m.h.a en CPU. Med detta i åtanke blir CNN en mycket attraktiv modell att använda. 
+I avsnitt \ref{res:train} och \ref{res:hhb} presenteras samt diskuteras CNNs träningstid och att den är väsentligt längre än de klassiska modellerna vilket gör det svårt att motivera användandet av CNN. Grafikkortsleverantören NVIDIA har nyligen släppt ett grafikkort, TESLA V100 \cite{slut:002}, som är ett grafikkort specialgjort för att träna neurala nätverk. Det rapporteras om 47 gånger snabbare träningstid jämfört mot att träna m.h.a en CPU. Med detta i åtanke blir CNN en mycket attraktiv modell att använda. 
 
-Språket som används på Twitter rör sig snabbt framåt t.e.x förkortningar som användes 2008 inte används idag. Detta gör att klassificeringsmodellerna tränade på respektive datamängd kanske inte klassificera ett twitterinlägg skrivet 2018 korrekt. 
+Språket som används på Twitter rör sig snabbt framåt t.e.x förkortningar som användes 2008 inte används idag. Detta gör att klassificeringsmodellerna tränade på respektive datamängd kanske inte klassificerar ett twitterinlägg skrivet 2018 korrekt. 
 \section{Vidareutveckling} \label{slut:fw}
+Genom att använda en separat testmängd som varje klassificeringsmodell hade testas mot hade det gått att entydigt säga vilken datamängd som rent prestandamässigt presterar bäst. Exempelvis skulle STS-gold-datamängden, som diskuterades i \cite{slut:testmangd}, kunna användas som en separat testmängd.
+
 En möjlig vidareutveckling skulle kunna vara att använda “distant supervision” och mänsklig märkning tillsammans för att utnyttja respektive märkningsmetods fördelar för att öka ett neuralt nätverks prestanda. En sådan lösning har presenterats i \cite{slut:004} där ett CNN först tränats på 90 miljoner twitterinlägg märkta m.h.a “distant supervsion” för att sedan träna vidare på 20632 mänskligt märkta twitterinlägg. Denna lösningen användes för att vinna SemEval-tävlingen 2016. 
 
-Genom att använda en av studiens klassificeringsmodeller skulle en applikation för trendanalys kunna tas fram. Där klassificeringsmodellen får klassificera X antal twitterinlägg per dag och m.h.a av detta skapa en tidslinje över hur positivt eller negativt ett visst ämne är vid en viss tidpunkt. Detta skulle vara en intressant vidareutveckling eftersom företag kan använda applikationen för att analysera ett generellt sentiment värde för företaget och utefter det göra eventuella förändringar i t.e.x pressutlåtanden.
+Genom att använda en av studiens klassificeringsmodeller skulle en applikation för trendanalys kunna tas fram. Klassificeringsmodellen får klassificera X antal twitterinlägg per dag och m.h.a av detta skapa en tidslinje över hur positivt eller negativt ett visst ämne är vid en viss tidpunkt. Detta skulle vara en intressant vidareutveckling eftersom företag kan använda applikationen för att analysera ett generellt sentimentvärde för företaget och utefter det göra eventuella förändringar i t.e.x pressutlåtanden.
 
-I \cite{slut:001} presenteras en CNN arkitektur för att hantera flerspråkig klassificering. Den föreslagna arkitekturen är baserad på att man analyserar varje bokstav istället för varje ord som studien har implementerat. Arkitekturen har tränats på engelska, tyska, portugisiska och spanska twitterinlägg. En intressant vidareutveckling skulle vara att ta den föreslagna arkitekturen för att klassificera svenska twitterinlägg.
+I \cite{slut:001} presenteras en CNN-arkitektur för att hantera flerspråkig klassificering. Den föreslagna arkitekturen är baserad på att man analyserar varje bokstav istället för varje ord som studien har implementerat. Arkitekturen har tränats på engelska, tyska, portugisiska och spanska twitterinlägg. En intressant vidareutveckling skulle vara att ta den föreslagna arkitekturen för att klassificera svenska twitterinlägg.
 
 Som diskuterades i \ref{TSAchall} är negationer ett viktigt begrepp för att korrekt klassificera ett twitterinlägg. Studien har endast valt att expandera förkortningar där expanderingen resulterar i att ordet “not” bryts ut. En vidareutveckling skulle vara att bättre hantera negationer som diskuteras i \cite{TSAsurvey, effrosynidis2017comparison}.
 
 Eftersom studien gör så kallad binär klassificering, d.v.s klassificerar något som positivt eller negativt, skulle en möjlig vidareutveckling vara att använda trevägsklassificering. Trevägsklassificering har även en neutral klass, eftersom varje twitterinlägg i praktiken inte behöver uttrycka någonting positivt eller negativt. 
 \section{Slutord}
-Efter arbetet med studien har vi märkt att det inte är helt trivialt att bedöma om ett twitterinlägg uttrycker någonting positivt eller negativt, även för oss människor. Statistiken från märkningsmetoden som utfördes på SemEval är ett tydligt exempel på det. Under arbetets gång har vi därför fått inse att TSA inte är ett sånt enkelt klassificeringsproblem som vi först trodde. 
+Efter arbetet med studien har vi märkt att det inte är helt trivialt att bedöma om ett twitterinlägg uttrycker någonting positivt eller negativt, även för oss människor. Statistiken från märkningsmetoden som utfördes på SemEval är ett tydligt exempel på det. Under arbetets gång har vi därför  insett att TSA inte är ett enkelt klassificeringsproblem, som vi först trodde. 
 
 Vi är ändå nöjda med det vi har fått lära oss under arbetet hos CGI. Ingen av oss har tidigare arbetat med problem som rör maskininlärning. Detta medförde att vi har fått läsa in 
-oss på ett helt nytt ämne. Stora delar av uppstarten spenderades till att läsa många artiklar för att sätta oss in i ämnet, vilket vi tyckte var givande och lärorikt. Det vi i slutändan bär med oss från detta arbete är att ta ett projekt från ax till limpa. 
+oss på ett helt nytt ämne. Stora delar av uppstarten spenderades till att läsa många artiklar för att sätta oss in i ämnet, vilket vi tyckte var givande och lärorikt. Det vi i slutändan bär med oss från detta arbete är hur man tar ett projekt från ax till limpa. 
 
 \bibliographystyle{unsrtnat} 
 \bibliography{../refs/thesisref}

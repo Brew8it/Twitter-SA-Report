@@ -1,4 +1,4 @@
-\begin{thebibliography}{88}
+\begin{thebibliography}{89}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -581,6 +581,12 @@ NVIDIA.
 \newblock Nvidia tesla v100 | nvidia, 2002.
 \newblock URL \url{https://www.nvidia.com/en-us/data-center/tesla-v100/}.
 \newblock [i.d].
+
+\bibitem[Saif et~al.(2013)Saif, Fernandez, He, and Alani]{slut:testmangd}
+Hassan Saif, Miriam Fernandez, Yulan He, and Harith Alani.
+\newblock Evaluation datasets for twitter sentiment analysis: a survey and a
+  new dataset, the sts-gold.
+\newblock 2013.
 
 \bibitem[Deriu et~al.(2016)Deriu, Gonzenbach, Uzdilli, Lucchi, Luca, and
   Jaggi]{slut:004}
