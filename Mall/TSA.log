@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  7 MAY 2018 10:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.24)  7 MAY 2018 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1395,7 +1395,7 @@ File: ../figures/background/svm_3d.jpg Graphic file (type jpg)
 
 <use ../figures/background/svm_3d.jpg>
 Package pdftex.def Info: ../figures/background/svm_3d.jpg used on input line 54
-1.
+3.
 (pdftex.def)             Requested size: 256.0748pt x 226.23303pt.
  [31 <../figures/background/svm_3d.jpg>]
 [32] <../figures/background/cnn_text.png, id=232, 638.385pt x 649.42625pt>
@@ -1403,35 +1403,35 @@ File: ../figures/background/cnn_text.png Graphic file (type png)
 
 <use ../figures/background/cnn_text.png>
 Package pdftex.def Info: ../figures/background/cnn_text.png used on input line 
-565.
+568.
 (pdftex.def)             Requested size: 341.43306pt x 347.33557pt.
  [33] [34 <../figures/background/cnn_text.png>] (/usr/share/texlive/texmf-dist/
 tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 581.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 584.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 582.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 585.
  [35] [36] [37]
 [38] [39]
-Overfull \hbox (32.17937pt too wide) in paragraph at lines 716--717
+Overfull \hbox (32.17937pt too wide) in paragraph at lines 719--720
 \T1/cmr/m/n/12 ra-met-rar [[]] och uni-gram som sär-drag vil-ket är stan-dard-p
 a-ra-me-ter för []
  []
 
 [40] [41] [42]
-Overfull \hbox (2.58455pt too wide) in paragraph at lines 784--786
+Overfull \hbox (2.58455pt too wide) in paragraph at lines 787--789
 []\T1/cmr/m/n/12 För pa-ra-me-ter-sök-ning-en som il-lu-stre-ras i ko-dav-snitt
  3.14[] an-vänds []
  []
 
 
-Overfull \hbox (36.49727pt too wide) in paragraph at lines 784--786
+Overfull \hbox (36.49727pt too wide) in paragraph at lines 787--789
 [][][][][]\T1/cmr/m/n/12 . Vi är in-tres-se-ra-de av sam-ma pa-ra-met-rar för [
 ][][][][][][][][]
  []
@@ -1441,7 +1441,7 @@ File: ../figures/background/cnn_imp.png Graphic file (type png)
 
 <use ../figures/background/cnn_imp.png>
 Package pdftex.def Info: ../figures/background/cnn_imp.png used on input line 8
-12.
+15.
 (pdftex.def)             Requested size: 341.43306pt x 368.69121pt.
  [44 <../figures/background/cnn_imp.png>] [45] [46] [47]
 <../figures/background/GUI_form.png, id=286, 1896.08376pt x 435.6275pt>
@@ -1449,7 +1449,7 @@ File: ../figures/background/GUI_form.png Graphic file (type png)
 
 <use ../figures/background/GUI_form.png>
 Package pdftex.def Info: ../figures/background/GUI_form.png used on input line 
-916.
+919.
 (pdftex.def)             Requested size: 341.43306pt x 78.4428pt.
 
 <../figures/background/GUI_search_graph.png, id=287, 1887.05pt x 958.58125pt>
@@ -1457,14 +1457,14 @@ File: ../figures/background/GUI_search_graph.png Graphic file (type png)
 
 <use ../figures/background/GUI_search_graph.png>
 Package pdftex.def Info: ../figures/background/GUI_search_graph.png used on inp
-ut line 925.
+ut line 928.
 (pdftex.def)             Requested size: 341.43306pt x 173.42941pt.
  [48 <../figures/background/GUI_form.png>]
 <../figures/background/GUI_search_table.png, id=291, 1615.03375pt x 829.0975pt>
 File: ../figures/background/GUI_search_table.png Graphic file (type png)
 <use ../figures/background/GUI_search_table.png>
 Package pdftex.def Info: ../figures/background/GUI_search_table.png used on inp
-ut line 934.
+ut line 937.
 (pdftex.def)             Requested size: 341.43306pt x 175.27951pt.
  [49 <../figures/background/GUI_search_graph.png> <../figures/background/GUI_se
 arch_table.png>] [50]
@@ -1472,31 +1472,31 @@ Kapitel 4.
 [51
 
 ]
-Underfull \hbox (badness 3250) in paragraph at lines 955--955
+Underfull \hbox (badness 3250) in paragraph at lines 958--958
 []\T1/cmr/m/n/12 Tabell 4.1: Pre-stan-da för lex-i-kon-ba-se-ra-de mo-del-len t
 rä-nad på SemEval-
  []
 
 
-Underfull \hbox (badness 2865) in paragraph at lines 973--973
+Underfull \hbox (badness 2865) in paragraph at lines 976--976
 []\T1/cmr/m/n/12 Tabell 4.2: Pre-stan-da för NB med stan-dard-pa-ra-met-rar trä
 -nad på STS-
  []
 
 [52] [53] [54] [55]
-Underfull \hbox (badness 2027) in paragraph at lines 1129--1129
+Underfull \hbox (badness 2027) in paragraph at lines 1132--1132
 []\T1/cmr/m/n/12 Tabell 4.10: Pre-stan-da för NB med stan-dard-pa-ra-met-rar tr
 ä-nad på STS-
  []
 
 [56]
-Underfull \hbox (badness 1152) in paragraph at lines 1166--1166
+Underfull \hbox (badness 1152) in paragraph at lines 1169--1169
 []\T1/cmr/m/n/12 Tabell 4.12: Pre-stan-da för NB med op-ti-ma-la pa-ra-met-rar 
 trä-nad på STS-
  []
 
 
-Underfull \hbox (badness 1092) in paragraph at lines 1185--1185
+Underfull \hbox (badness 1092) in paragraph at lines 1188--1188
 []\T1/cmr/m/n/12 Tabell 4.13: Pre-stan-da för SVM med stan-dard-pa-ra-met-rar t
 rä-nad på STS-
  []
@@ -1803,7 +1803,7 @@ nts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on TSA.pdf (94 pages, 1220829 bytes).
+Output written on TSA.pdf (94 pages, 1221521 bytes).
 PDF statistics:
  1031 PDF objects out of 1200 (max. 8388607)
  304 compressed objects within 4 object streams
