@@ -56,4 +56,6 @@
 \contentsline {section}{\numberline {5.1}Begr\IeC {\"a}nsningar}{65}
 \contentsline {section}{\numberline {5.2}Vidareutveckling}{65}
 \contentsline {section}{\numberline {5.3}Slutord}{66}
+\contentsline {chapter}{Litteraturf\"orteckning}{68}
+\contentsline {chapter}{Bilaga \numberline {A}Kod}{78}
 \contentsfinish 

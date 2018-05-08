@@ -39,6 +39,12 @@
 
 \usepackage{float}
 
+%for appendix
+\usepackage[titletoc]{appendix}
+
+% for ref in ToC
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+
 
 \usepackage{amsmath}
 
@@ -961,10 +967,10 @@ I tabell \ref{tab:lexi_se} visas prestandan för den lexikonbaserade modellen, s
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.457 & 0.510 & 0.482 & 618 \\
-    \textbf{Negativ} & 0.779 & 0.740 & 0.759 & 1440 \\
+    \textbf{Positiv} & 0,457 & 0,510 & 0,482 & 618 \\
+    \textbf{Negativ} & 0,779 & 0,740 & 0,759 & 1440 \\
     \midrule
-    \textbf{Genomsnitt} & 0.682 & 0.671 & 0.676  & 2058 \\
+    \textbf{Genomsnitt} & 0,682 & 0,671 & 0,676  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -979,10 +985,10 @@ Prestandan för NB-modellen med standardparametrar, som tränats på SemEval-dat
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.820 & 0.670 & 0.737 & 618 \\
-    \textbf{Negativ} & 0.869 & 0.937 & 0.901 & 1440 \\
+    \textbf{Positiv} & 0,820 & 0,670 & 0,737 & 618 \\
+    \textbf{Negativ} & 0,869 & 0,937 & 0,901 & 1440 \\
     \midrule
-    \textbf{Genomsnitt} & 0.854 & 0.857 & 0.852  & 2058 \\
+    \textbf{Genomsnitt} & 0,854 & 0,857 & 0,852  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1016,10 +1022,10 @@ Den andra NB-modellens prestanda presenteras i tabell \ref{tab:nb_imp_se}. Model
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.802 & 0.676 & 0.734 & 618 \\
-    \textbf{Negativ} & 0.870 & 0.928 & 0.898 & 1440 \\
+    \textbf{Positiv} & 0,802 & 0,676 & 0,734 & 618 \\
+    \textbf{Negativ} & 0,870 & 0,928 & 0,898 & 1440 \\
     \midrule
-    \textbf{Genomsnitt} & 0.850 & 0.853 & 0.849  & 2058 \\
+    \textbf{Genomsnitt} & 0,850 & 0,853 & 0,849  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1035,10 +1041,10 @@ I tabell \ref{tab:svm_base_se} prestenteras prestandan för SVM-modellen med sta
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.742 & 0.759 & 0.750 & 618 \\
-    \textbf{Negativ} & 0.896 & 0.887 & 0.891 & 1440 \\
+    \textbf{Positiv} & 0,742 & 0,759 & 0,750 & 618 \\
+    \textbf{Negativ} & 0,896 & 0,887 & 0,891 & 1440 \\
     \midrule
-    \textbf{Genomsnitt} & 0.849 & 0.848 & 0.849  & 2058 \\
+    \textbf{Genomsnitt} & 0,849 & 0,848 & 0,849  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1075,10 +1081,10 @@ Prestandan för den andra SVM-modellen presenteras i tabell \ref{tab:svm_imp_se}
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.878 & 0.662 & 0.755 & 618 \\
-    \textbf{Negativ} & 0.869 & 0.960 & 0.912 & 1440 \\
+    \textbf{Positiv} & 0,878 & 0,662 & 0,755 & 618 \\
+    \textbf{Negativ} & 0,869 & 0,960 & 0,912 & 1440 \\
     \midrule
-    \textbf{Genomsnitt} & 0.871 & 0.871 & 0.865  & 2058 \\
+    \textbf{Genomsnitt} & 0,871 & 0,871 & 0,865  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1094,10 +1100,10 @@ Prestandan för CNN-modellen, som har tränats på SemEval-datamängden, present
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.812 & 0.727 & 0.767 & 618 \\
-    \textbf{Negativ} & 0.888 & 0.928 & 0.907 & 1440 \\
+    \textbf{Positiv} & 0,812 & 0,727 & 0,767 & 618 \\
+    \textbf{Negativ} & 0,888 & 0,928 & 0,907 & 1440 \\
     \midrule
-    \textbf{Genomsnitt} & 0.865 & 0.867 & 0.865  & 2058 \\
+    \textbf{Genomsnitt} & 0,865 & 0,867 & 0,865  & 2058 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1116,10 +1122,10 @@ I tabell \ref{tab:lexi_sts} presenteras prestandan efter att den lexikonbaserade
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.628 & 0.415 & 0.500 & 159815 \\
-    \textbf{Negativ} & 0.564 & 0.754 & 0.645 & 160185 \\
+    \textbf{Positiv} & 0,628 & 0,415 & 0,500 & 159815 \\
+    \textbf{Negativ} & 0,564 & 0,754 & 0,645 & 160185 \\
     \midrule
-    \textbf{Genomsnitt} & 0.596 & 0.585 & 0.573  & 320000 \\
+    \textbf{Genomsnitt} & 0,596 & 0,585 & 0,573  & 320000 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1135,10 +1141,10 @@ I tabell \ref{tab:nb_base_sts} presenteras prestandan efter att NB med standardp
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.761 & 0.789 & 0.775 & 159815 \\
-    \textbf{Negativ} & 0.781 & 0.753 & 0.767 & 160185 \\
+    \textbf{Positiv} & 0,761 & 0,789 & 0,775 & 159815 \\
+    \textbf{Negativ} & 0,781 & 0,753 & 0,767 & 160185 \\
     \midrule
-    \textbf{Genomsnitt} & 0.771 & 0.771 & 0.771  & 320000 \\
+    \textbf{Genomsnitt} & 0,771 & 0,771 & 0,771  & 320000 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1172,10 +1178,10 @@ Tabell \ref{tab:nb_imp_sts} presenterar prestandan efter att den andra NB-modell
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.767 & 0.833 & 0.798 & 159435 \\
-    \textbf{Negativ} & 0.781 & 0.753 & 0.767 & 159334 \\
+    \textbf{Positiv} & 0,767 & 0,833 & 0,798 & 159435 \\
+    \textbf{Negativ} & 0,781 & 0,753 & 0,767 & 159334 \\
     \midrule
-    \textbf{Genomsnitt} & 0.792 & 0.790 & 0.789  & 318769 \\
+    \textbf{Genomsnitt} & 0,792 & 0,790 & 0,789  & 318769 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1191,10 +1197,10 @@ I tabell \ref{tab:svm_base_sts} presenteras prestandan efter att SVM med standar
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.801 & 0.732 & 0.765 & 159815 \\
-    \textbf{Negativ} & 0.754 & 0.818 & 0.785 & 160185 \\
+    \textbf{Positiv} & 0,801 & 0,732 & 0,765 & 159815 \\
+    \textbf{Negativ} & 0,754 & 0,818 & 0,785 & 160185 \\
     \midrule
-    \textbf{Genomsnitt} & 0.777 & 0.775 & 0.775  & 320000 \\
+    \textbf{Genomsnitt} & 0,777 & 0,775 & 0,775  & 320000 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1231,10 +1237,10 @@ Tabell \ref{tab:svm_imp_sts} presenterar prestandan efter att den andra SVM mode
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.811 & 0.742 & 0.775 & 159815 \\
-    \textbf{Negativ} & 0.764 & 0.828 & 0.795 & 160185 \\
+    \textbf{Positiv} & 0,811 & 0,742 & 0,775 & 159815 \\
+    \textbf{Negativ} & 0,764 & 0,828 & 0,795 & 160185 \\
     \midrule
-    \textbf{Genomsnitt} & 0.786 & 0.784 & 0.784  & 320000 \\
+    \textbf{Genomsnitt} & 0,786 & 0,784 & 0,784  & 320000 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1251,10 +1257,10 @@ Prestandan för CNN-modellen, som har tränats på STS-datamängden, presenteras
     \toprule
      & \textbf{Precision} & \textbf{Återkallelse} & \textbf{F-Score} & \textbf{Antal twitterinlägg}  \\
     \midrule
-    \textbf{Positiv} & 0.812 & 0.790 & 0.801 & 159435 \\
-    \textbf{Negativ} & 0.796 & 0.817 & 0.806 & 159334 \\
+    \textbf{Positiv} & 0,812 & 0,790 & 0,801 & 159435 \\
+    \textbf{Negativ} & 0,796 & 0,817 & 0,806 & 159334 \\
     \midrule
-    \textbf{Genomsnitt} & 0.804 & 0.804 & 0.804  & 318769 \\
+    \textbf{Genomsnitt} & 0,804 & 0,804 & 0,804  & 318769 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -1279,9 +1285,9 @@ Utifrån resultaten kan slutsatsen dras att CNN presterar bäst på båda datam�
     \midrule
     \textbf{Modell} & \textbf{F-Score} & \textbf{Modell} & \textbf{F-Score}\\
     \midrule
-    NB \footnotemark[1] & 85.2\% & NB \footnotemark[2] & 78.9\% \\
-    SVM \footnotemark[3] & 86.5\% & SVM \footnotemark[3] & 78.4\% \\
-    CNN  & 86.5\% & CNN & 80.4\% \\
+    NB \footnotemark[1] & 85,2\% & NB \footnotemark[2] & 78,9\% \\
+    SVM \footnotemark[3] & 86,5\% & SVM \footnotemark[3] & 78,4\% \\
+    CNN  & 86,5\% & CNN & 80,4\% \\
     \bottomrule
 \end{tabularx}
 \end{table}
@@ -1365,6 +1371,14 @@ oss på ett helt nytt ämne. Stora delar av uppstarten spenderades till att läs
 
 \bibliographystyle{unsrtnat} 
 \bibliography{../refs/thesisref}
+
+\begin{appendices}
+\chapter{Kod}
+Kod som tagits fram för studiens experiment och resultat hittas på: 
+
+https://github.com/Brew8it/Twitter-SA-Project
+
+\end{appendices}
 
 
 \restoregeometry%
