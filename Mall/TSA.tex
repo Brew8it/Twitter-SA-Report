@@ -191,7 +191,7 @@ Denna studie kommer därför att fokusera på TSA och metoder som använder sig 
 Tidigare forskning har visat att klassificeringsmodeller som har tränats på större datamängder tenderar att uppnå högre prestanda \cite{TSAsurvey}. Resultatet av studien visar att märkningsmetod av en datamängd har en större betydelse för klassificeringsmodellens prestanda än storleken på datamängden.
 
 \section*{Disposition} \label{int:dis} 
-Kapitel 2 presenterar studiens syfte, vilka klassificeringsmodeller och datamängder som studien kommer använda. Kapitlet introducerar även viktiga begrepp och metoder som används i studien.
+Kapitel 2 presenterar studiens syfte, vilka klassificeringsalgoritmer och datamängder som studien kommer använda. Kapitlet introducerar även viktiga begrepp och metoder som används i studien.
 
 Kapitel 3 presenterar hur studiens experiment kommer utföras och ger en djupare förståelse för hur alla studiens delar hänger ihop. Kapitlet presenterar även implementationen för att utföra studiens experiment. 
 
@@ -200,7 +200,8 @@ Kapitel 4 presenterar resultatet av studiens experiment. Klassificeringsmodeller
 Kapitel 5 sammanfattar projektet, presenterar begränsningar med studien och eventuella vidareutvecklingar.
 
 \chapter{Bakgrund}\label{bak}
-Studien kommer att utvärdera tre stycken klassificeringsmodeller inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells prestanda. Maskininlärningsalgoritmerna som kommer att användas för att få fram klassiciferingsmodellerna är NB och SVM. Den tredje klassificeringsmodellen som tas fram kommer att vara en djuplärande modell som representeras av ett neuronnät, mer specifikt ett CNN. Figur \ref{fig:overfig} visar en förenklad bild av hur processen för att utvärdera klassificeringsmodellerna kommer att se ut. Datamängden består av en mängd indata som är märkt med förväntad utdata, som går igenom en bearbetningsprocess där t.ex. data som inte tillför något värde tas bort och där mängden av data delas upp i tränings- och testdata.  Bearbetningsprocessen diskuteras mer ingående i \ref{exp:pre}. På den bearbetade datan utförs ett särdragsurval, där dataspecifika särdrag plockas ut som diskuteras vidare i \ref{exp:feat}. Träningsmängden används av maskininlärningsalgoritmen för att skapa klassiciferingsmodellen. När klassificeringsmodellen är framtagen används testmängden för att utvärdera prestandan av modellen.
+Studien kommer att utvärdera tre stycken klassificeringsalgoritmer inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells prestanda. Maskininlärningsalgoritmerna som kommer att användas för att få fram klassiciferingsmodellerna är NB, SVM  och CNN. I den litteratur som har använts för studien benämns NB och SVM som klassificeringsalgoritmer, medan CNN benämns som ett neuronnät. För enkelhetens skull benämner studien även CNN som en klassificeringsalgoritm. Figur \ref{fig:overfig} visar en förenklad bild av hur processen för att utvärdera klassificeringsmodellerna kommer att se ut. Datamängden består av en mängd indata som är märkt med förväntad utdata, som går igenom en bearbetningsprocess där t.ex. data som inte tillför något värde tas bort och där mängden av data delas upp i tränings- och testdata.  Bearbetningsprocessen diskuteras mer ingående i \ref{exp:pre}. På den bearbetade datan utförs ett särdragsurval, där dataspecifika särdrag plockas ut som diskuteras vidare i \ref{exp:feat}. Träningsmängden används av maskininlärningsalgoritmen för att skapa klassiciferingsmodellen. När klassificeringsmodellen är framtagen används testmängden för att utvärdera prestandan av modellen.
+
 
 \begin{figure}[h]
 \includegraphics[width=12cm]{oversiktsfigur}
@@ -221,7 +222,7 @@ Inom SA appliceras klassificeringen på 3 olika nivåer: dokument-, menings- och
 \subsection{Klassificeringstekniker} \label{SAkt}
 De olika klassificeringsteknikerna som i nuläget används för SA delas upp i 3 olika kategorier: maskininlärningsmetoder, lexikonbaserade metoder samt hybrida metoder \cite{SAsurvey}. 
 
-Maskininlärningsmetoder använder etablerade maskininlärningsalgoritmer tillsammans med språkliga särdrag för att konstruera klassificerare som kan avgöra om en text uttrycker någonting positivt eller negativt [ref=Sentiment analysis a survey]. Prestandan för maskininlärningsmetoder är beroende av mängden träningsdata, större mängder data ger vanligtvis bättre resultat \cite{TSAsurvey}. Maskininlärningsmetoder är dessutom domänberoende, vilket gör att de inte presterar bra när de används på andra domäner än det de har tränats på. 
+Maskininlärningsmetoder använder etablerade maskininlärningsalgoritmer tillsammans med språkliga särdrag för att konstruera klassificerare som kan avgöra om en text uttrycker någonting positivt eller negativt \cite{SAsurvey}. Prestandan för maskininlärningsmetoder är beroende av mängden träningsdata, större mängder data ger vanligtvis bättre resultat \cite{TSAsurvey}. Maskininlärningsmetoder är dessutom domänberoende, vilket gör att de inte presterar bra när de används på andra domäner än det de har tränats på. 
 
 Lexikonbaserade metoder använder sig av ordlistor för att analysera text \cite{SAsurvey}. Ordlistorna består av positiva och negativa termer som används för att beräkna vad en given text uttrycker för sentiment.
 Fördelen med lexikonbaserade metoder är att de inte kräver någon  träningsdata \cite{TSAsurvey}. Men faktumet att de är beroende av statiska ordlistor betyder att de inte tar hänsyn till termer som inte finns i ordlistorna. Det betyder att ordlistor måste uppdateras kontinuerligt för innehåll som är dynamiskt och ständigt under utveckling, vilket är särskilt problematiskt för texter som förekommer på sociala medier. 
@@ -276,8 +277,8 @@ Som är beskrivit i kapitel \ref{bak} är ett delsytfte med denna studie att utv
 
 \subsection{SemEval} \label{DSse}
 SemEval-datamängden består av 20633 twitterinlägg och är framtagen till en årlig TSA-tävling som har gått sedan 2013 \cite{SemEval:002}. 
-För datamängden har mänsklig märkning tillämpats, där fem personer manuellt märker varje tweet via Amazon Mechanical Turk \cite{SemEval:003}.
-I \cite{SemEval:004} beskrivs metoden för hur märkningen utförs, varje person markerar varje tweet antingen som mycket positivt, positivt, neutralt, negativt eller mycket negativt. Efter att alla twitterinlägg är märkta kartläggs alla twitterinlägg till kategorierna positivt, neutralt eller negativt utefter tre kriterier. Antingen att alla personer har märkt en tweet samma, en majoritet har märkt samma eller genom att ta ut ett medelvärde. Medelvärdet räknas ut genom att kartlägga de fem kategorierna till heltal mellan 2 och -2, medelvärdet räknas sedan ut och kartläggs till den närmsta kategorin. För SemEval-datamängden blev utfallet 2760 twitterinlägg där alla personer gjort samma märkning, 9944 twitterinlägg är där majoritet har märkt samma och för resterande 7928 twitterinlägg har medelvärdet räknats ut. 
+För datamängden har mänsklig märkning tillämpats, där fem personer manuellt märker varje twitterinlägg via Amazon Mechanical Turk \cite{SemEval:003}.
+I \cite{SemEval:004} beskrivs metoden för hur märkningen utförs, varje person markerar varje twitterinlägg antingen som mycket positivt, positivt, neutralt, negativt eller mycket negativt. Efter att alla twitterinlägg är märkta kartläggs alla twitterinlägg till kategorierna positivt, neutralt eller negativt utefter tre kriterier. Antingen att alla personer har märkt en twitterinlägg samma, en majoritet har märkt samma eller genom att ta ut ett medelvärde. Medelvärdet räknas ut genom att kartlägga de fem kategorierna till heltal mellan 2 och -2, medelvärdet räknas sedan ut och kartläggs till den närmsta kategorin. För SemEval-datamängden blev utfallet 2760 twitterinlägg där alla personer gjort samma märkning, 9944 twitterinlägg är där majoritet har märkt samma och för resterande 7928 twitterinlägg har medelvärdet räknats ut. 
 
 \subsection{Stanford Twitter Sentiment} \label{DSsts}
 STS-datamängden består av 1,6 miljoner twitterinlägg och är framtagen mellan April 2009 och Juni 2009 av Alec Go, Richa Bhayani och Lei Huang. STS-datamängden är märkt med hjälp av ''distant supervision'' där märkningen bestäms av vilken typ av emoji \cite{wiki:010} ett twitterinlägg innehåller, exempelvis märks ett twitterinlägg positivt om det innehåller “:), :-),: ), :D, =)” och negativt om det innehåller “:(, :-(, : (“ \cite{sts:001}. 
@@ -299,7 +300,7 @@ När användare svarar på andras twitterinlägg benämns det som “replies” 
 
 Användare behöver inte göra alla sina inlägg offentliga för alla användare, de kan begränsa synligheten för deras twitterinlägg att enbart synas för deras egna följare. 
 
-I figur \ref{fig:tweet} presenteras ett exempel på hur ett twitterinlägg kan se ut. Twitterinlägget är en “retweet som ursprungligen har skrivits av användaren johanselberg. Det innehåller en “hashtag” med etiketten exempel och en “mention” av användaren KAU. Twitterinlägget innehåller även en extern länk.
+I figur \ref{fig:tweet} presenteras ett exempel på hur ett twitterinlägg kan se ut. Twitterinlägget är en ''retweet'' som ursprungligen har skrivits av användaren johanselberg. Det innehåller en “hashtag” med etiketten exempel och en “mention” av användaren KAU. Twitterinlägget innehåller även en extern länk.
 
 \begin{figure}[h]
 \includegraphics[width=12cm]{exempeltweet}
@@ -347,7 +348,7 @@ I \cite{TSAsurvey} listar författarna de problem med TSA som de anser bör utfo
 I tabell \ref{tab:fm} ser vi en så kallad förvirringsmatris (FM) som utvärderar en klassificeringsmodell från datamängden där “positivt” eller “negativt” är förbestämt. Matrisen visar antalet sann positiv (SP), sann negativ (SN), falsk positiv (FP) och falsk negativ(FN) \cite{wiki:003}. Med dessa värden kan vi jämföra och analysera modellerna m.h.a följande utvärderingsmetoder: precision (p), återkallelse (å) \cite{wiki:002} och F-Score \cite{wiki:001}.
 
 \begin{labeling}{metrics}
-\item [Precision] Är förmågan att modellen inte märker ett tweet som positivt när det är negativt. Detta görs genom att ta antalet sann positiva delat på totalt antal positivt märkta twitterinlägg. 
+\item [Precision] Är förmågan att modellen inte märker ett twitterinlägg som positivt när det är negativt. Detta görs genom att ta antalet sann positiva delat på totalt antal positivt märkta twitterinlägg. 
 \item [Återkallelse] Är förmågan att modellen märker positiva twitterinlägg korrekt. Detta görs genom att ta antalet sann positiva delat på summan av antalet sann positiva och falsk negativa.
 \item [F-Score] Även kallat det harmoniska medelvärdet mellan precision och återkallelse används då inte alltid precision och återkallelse räcker till för att göra en helhetsbedömning. 
 \end{labeling}
@@ -591,7 +592,7 @@ Som nämndes i \ref{bak:cnn}, är CNN ursprungligen framtagen för problem som r
 \begin{figure}[H]
 \includegraphics[width=12cm]{cnn_text}
 \centering
-\caption{Exempel på ett CNN som används för textklassificering. Figur inspirerad av SÄTT IN MANUELLT CNN:002.}
+\caption{Exempel på ett CNN som används för textklassificering. Figur inspirerad av [53].}
 \label{fig:cnntext}
 \end{figure}
 
@@ -960,7 +961,7 @@ Figur \ref{fig:gui_search_t} illustrerar de inhämtade twitterinläggen från an
 \begin{figure}[H]
 \includegraphics[width=12cm]{GUI_search_table}
 \centering
-\caption{Illustrerar hur klassificeringsmodellerna har klassificerat varje tweet.}
+\caption{Illustrerar hur klassificeringsmodellerna har klassificerat varje twitterinlägg.}
 \label{fig:gui_search_t}
 \end{figure}
 \section{Sammanfattning}
@@ -1362,7 +1363,7 @@ I detta kapitel har resultaten från studiens experiment presenterats från avsn
 \chapter{Slutsats}
 TSA används för att analysera åsikter, attityder och känslor som människor uttrycker på Twitter om olika ämnen, individer eller händelser. I denna studie har tre klassificieringsmodeller utvärderats efter hur väl de kan utläsa om ett twitterinlägg uttrycker någonting positivt eller negativt och hur olika typer av märkningstekniker kan påverka en klassificeringsmodells prestanda. För att jämföra hur modellerna presterar på olika typer av märkningstekniker togs modellerna fram med två olika datamängder: SemEval och STS. Där SemEval är märkt genom mänsklig märkning och STS är märkt genom ''distant supervision''. Respektive datamängd delades upp i en träningsmängd och en testmängd. Träningsmängden användes för att ta fram modellen och testmängden användes för att testa klassificeringsmodellernas prestanda. 
 
-Utvärderingen av studiens klassificeringsmodeller visar att samtliga modeller som är tränade och testade på SemEval uppnår en högre prestanda, än de som är tränade och testade på STS. CNN var klassificeringsmodellen som uppnådde bäst resultat över båda datamängderna. Resultaten för de klassiska modellerna NB och SVM varierade mellan datamängderna. CNN tog betydligt längre tid att träna än de klassiska modellerna, och var dessutom svårare att implementera. Skillnaden i prestanda mellan CNN och de klassiska modellerna anser vi inte vara tillräckliga för att använda CNN där liknande hårdvara används. Därför rekommenderar vi att någon av de två klassiska modellerna används för uppgifter som liknar TSA, utifrån resultaten som har presenterats i kapitel \ref{res}.
+Utvärderingen av studiens klassificeringsmodeller visar att samtliga modeller som är tränade och testade på SemEval uppnår en högre prestanda, än de som är tränade och testade på STS. Modellerna som uppnådde bäst resultat över båda datamängderna, var modellerna framtagna med CNN. Resultaten för de klassiska modellerna NB och SVM varierade mellan datamängderna. CNN tog betydligt längre tid att träna än de klassiska modellerna, och var dessutom svårare att implementera. Skillnaden i prestanda mellan CNN och de klassiska modellerna anser vi inte vara tillräckliga för att använda CNN där liknande hårdvara används. Därför rekommenderar vi att någon av de två klassiska modellerna används för uppgifter som liknar TSA, utifrån resultaten som har presenterats i kapitel \ref{res}.
 \section{Begränsningar}
 En begränsning med studiens resultat som presenteras i \ref{res} är att klassificeringsmodellerna för respektive datamängd får fram sin precision, återkallelse och F-Score genom att respektive datamängds klassificeringsmodeller testas mot datamängdens egna testmängd. Vilket gör det svårt att entydigt säga vilken datamängd som rent prestandamässigt presterar bäst, en framtida lösning till detta presenteras i avsnitt \ref{slut:fw}.
 
