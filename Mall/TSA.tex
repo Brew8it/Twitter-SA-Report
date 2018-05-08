@@ -1316,7 +1316,20 @@ För att träna studiens klassificeringsmodeller har en server med 16 kärnor oc
 \subsection{Implementation}
 Svårighetsgraden för att implementera klassificeringsmodellerna i studien skiljer sig åt mellan modellerna. I denna studie användes sk-learn för att implementera NB- och SVM-modellerna. Genom användandet av sk-learn behöver utvecklare inte förstå den underliggande arkitekturen för NB och SVM, vilket gör implementeringen av dessa modeller enkel. Däremot krävs det en större kunskap om den underliggande arkitekturen för att implementera ett CNN. Trots att en färdig referensimplementation användes, med en relativt enkel CNN-arkitektur, var det fortfarande svårt att sätta sig in i hur allt fungerade och alla parametrars inverkan på arkitekturens prestanda. Sett till implementeringen i avsnitt \ref{impl} är NB och SVM enklare att implementera och utföra parametersökning på än CNN, vilket diskuterades i avsnitt \ref{impl:cnn}
 \subsection{Helhetsbedömning} \label{res:hhb}
-Utifrån resultaten som har presenterats ovan går det att fastställa att de klassificeringsmodeller som tränades på SemEval-datamängden uppnådde bättre prestanda än de som tränades på STS-datamängden. Det betyder att twitterinlägg som märkts genom mänsklig märkning är att föredra med avseende till prestanda. Dock är det problematiskt att genomföra mänsklig märkning i praktiken på en större skala med hänsyn till metoden som diskuterades i avsnitt \ref{DSse}. Eftersom det dels är människor som måste märka twitterinlägg, men även för att åsikter om vad som är positivt eller negativt kan variera från person till person. Det är dock inte ett problem för “distant supervision”, men där är problematiken istället att det inte ges några garantier för att ett twitterinlägg uttrycker något positivt eller negativt. Eftersom märkningen sker utefter antagandet att exempelvis ett positivt twitterinlägg innehåller positiva emoijs.
+Utifrån resultaten som har presenterats ovan går det att fastställa att de klassificeringsmodeller som tränades på SemEval-datamängden uppnådde bättre prestanda än de som tränades på STS-datamängden. Det betyder att twitterinlägg som märkts genom mänsklig märkning är att föredra med avseende till prestanda. Dock är det problematiskt att genomföra mänsklig märkning i praktiken på en större skala med hänsyn till metoden som diskuterades i avsnitt \ref{DSse}. Eftersom det dels är människor som måste märka twitterinlägg, men även för att åsikter om vad som är positivt eller negativt kan variera från person till person. Det är dock inte ett problem för “distant supervision”, men där är problematiken istället att det inte ges några garantier för att ett twitterinlägg uttrycker något positivt eller negativt. Eftersom märkningen sker utefter antagandet att exempelvis ett negativt twitterinlägg innehåller negativa emojis. I tabell \ref{tab:exp_mark} visas ett exempel på ett twitterinlägg, som av en människa troligtvis hade märkts som positivt. Men enligt “distant supervisions” märkningsmetod  hade twitterinlägget märkts som negativt, eftersom det innehåller en negativ emoji.
+
+\begin{table}[H]
+\centering
+\caption{Exempel på ett twitterinlägg som märks olika av de två märkningsmetoderna.}
+\label{tab:exp_mark}
+  \begin{tabular}{ccc}
+  \toprule
+  \textbf{Twitterinlägg} & \textbf{''Distant supervision''}  & \textbf{Mänsklig märkning} \\
+  \midrule
+  I love you too… :( & Negativ & Positiv \\
+  \bottomrule
+\end{tabular}
+\end{table}
 
 Utvärderingen av studiens klassificeringsmodeller visar att CNN presterar bäst på båda datamängderna. Dock är det en stor skillnad på träningstiderna mellan CNN och de klassiska modellerna: NB och SVM. Beroende på tillgänglig beräkningskraft och tid kan det vara svårt att motivera den prestandaökningen som ges av CNN gentemot de klassiska modellerna. Tas även implementationsprocessen i åtanke kan det vara fördelaktigt att använda de klassiska modellerna.
 \section{Sammanfattning}

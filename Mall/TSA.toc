@@ -51,9 +51,9 @@
 \contentsline {subsection}{\numberline {4.3.2}Tr\IeC {\"a}ning}{60}
 \contentsline {subsection}{\numberline {4.3.3}Implementation}{61}
 \contentsline {subsection}{\numberline {4.3.4}Helhetsbed\IeC {\"o}mning}{62}
-\contentsline {section}{\numberline {4.4}Sammanfattning}{62}
-\contentsline {chapter}{\numberline {5}Slutsats}{63}
-\contentsline {section}{\numberline {5.1}Begr\IeC {\"a}nsningar}{64}
-\contentsline {section}{\numberline {5.2}Vidareutveckling}{64}
-\contentsline {section}{\numberline {5.3}Slutord}{65}
+\contentsline {section}{\numberline {4.4}Sammanfattning}{63}
+\contentsline {chapter}{\numberline {5}Slutsats}{64}
+\contentsline {section}{\numberline {5.1}Begr\IeC {\"a}nsningar}{65}
+\contentsline {section}{\numberline {5.2}Vidareutveckling}{65}
+\contentsline {section}{\numberline {5.3}Slutord}{66}
 \contentsfinish 
