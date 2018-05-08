@@ -45,7 +45,6 @@
 % for ref in ToC
 \usepackage[nottoc,notlot,notlof]{tocbibind}
 
-
 \usepackage{amsmath}
 
 %\usepackage{footnote}
@@ -55,6 +54,17 @@
 \usepackage{pythonhighlight}
 \renewcommand{\lstlistingname}{Kodavsnitt}% Listing -> Algorithm
 \renewcommand{\lstlistlistingname}{\lstlistingname}% List of Listings ->  Kod avsnitt
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
 
 
 
@@ -103,8 +113,6 @@
 \subsubsectionfont{\Large}
 \paragraphfont{\Large}
 
-
-
 \title{Twitter Sentiment Analysis}
 \author{Johannes Bandgren, Johan Selberg}
 \supervisor{Kerstin Andersson}
@@ -112,12 +120,11 @@
 \examiner{Karl-Johan Grinnemo}
 \institute{Department of Computer Science}
 \place{Karlstad Universitet}
+
 \begin{document}
 \selectlanguage{swedish}
 
 \includepdf[pages=-]{../Titel/Titelsida.pdf}
-
-\maketitle
 
 \frontmatter
 \approvalpage%

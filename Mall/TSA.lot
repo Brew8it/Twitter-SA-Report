@@ -4,33 +4,33 @@
 \select@language {swedish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces F\IeC {\"o}rvirringsmatris}}{15}
+\contentsline {table}{\numberline {2.1}{\ignorespaces F\IeC {\"o}rvirringsmatris}}{15}{table.2.1}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Exempel p\IeC {\r a} vad som sker n\IeC {\"a}r ordstamsigenk\IeC {\"a}nning anv\IeC {\"a}nds p\IeC {\r a} olika b\IeC {\"o}jningar av det engelska ordet ''arrive''.}}{23}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Exempel p\IeC {\r a} vad som sker med ett twitterinl\IeC {\"a}gg efter det har bearbetas med alla valda bearbetningstekniker.}}{23}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Exempeldatam\IeC {\"a}ngd med twitterinl\IeC {\"a}gg som \IeC {\"a}r m\IeC {\"a}rkta som positiva eller negativa.}}{27}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Ber\IeC {\"a}kningar f\IeC {\"o}r om ett ord \IeC {\"a}r positivt eller negativt.}}{28}
-\contentsline {table}{\numberline {3.5}{\ignorespaces Antal s\IeC {\"a}rdrag f\IeC {\"o}r STS- och SemEval-datam\IeC {\"a}ngderna och vilket intervall vi anv\IeC {\"a}nder f\IeC {\"o}r parameters\IeC {\"o}kning.}}{42}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Exempel p\IeC {\r a} vad som sker n\IeC {\"a}r ordstamsigenk\IeC {\"a}nning anv\IeC {\"a}nds p\IeC {\r a} olika b\IeC {\"o}jningar av det engelska ordet ''arrive''.}}{23}{table.3.1}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Exempel p\IeC {\r a} vad som sker med ett twitterinl\IeC {\"a}gg efter det har bearbetas med alla valda bearbetningstekniker.}}{23}{table.3.2}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Exempeldatam\IeC {\"a}ngd med twitterinl\IeC {\"a}gg som \IeC {\"a}r m\IeC {\"a}rkta som positiva eller negativa.}}{27}{table.3.3}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Ber\IeC {\"a}kningar f\IeC {\"o}r om ett ord \IeC {\"a}r positivt eller negativt.}}{28}{table.3.4}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Antal s\IeC {\"a}rdrag f\IeC {\"o}r STS- och SemEval-datam\IeC {\"a}ngderna och vilket intervall vi anv\IeC {\"a}nder f\IeC {\"o}r parameters\IeC {\"o}kning.}}{42}{table.3.5}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Prestanda f\IeC {\"o}r lexikonbaserade modellen tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{52}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Prestanda f\IeC {\"o}r NB med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{52}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r NB p\IeC {\r a} SemEval.}}{53}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Prestanda f\IeC {\"o}r NB med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{53}
-\contentsline {table}{\numberline {4.5}{\ignorespaces Prestanda f\IeC {\"o}r SVM med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{54}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r SVM p\IeC {\r a} SemEval.}}{54}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Prestanda f\IeC {\"o}r SVM med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{55}
-\contentsline {table}{\numberline {4.8}{\ignorespaces Prestanda f\IeC {\"o}r CNN tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{55}
-\contentsline {table}{\numberline {4.9}{\ignorespaces Prestanda f\IeC {\"o}r lexikonbaserade modellen tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{56}
-\contentsline {table}{\numberline {4.10}{\ignorespaces Prestanda f\IeC {\"o}r NB med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{56}
-\contentsline {table}{\numberline {4.11}{\ignorespaces Resultat efter parameters\IeC {\"o}kning f\IeC {\"o}r NB p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{57}
-\contentsline {table}{\numberline {4.12}{\ignorespaces Prestanda f\IeC {\"o}r NB med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{57}
-\contentsline {table}{\numberline {4.13}{\ignorespaces Prestanda f\IeC {\"o}r SVM med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{58}
-\contentsline {table}{\numberline {4.14}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r SVM p\IeC {\r a} STS.}}{58}
-\contentsline {table}{\numberline {4.15}{\ignorespaces Prestanda f\IeC {\"o}r SVM med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{59}
-\contentsline {table}{\numberline {4.16}{\ignorespaces Prestanda f\IeC {\"o}r CNN tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{59}
-\contentsline {table}{\numberline {4.17}{\ignorespaces Prestanda f\IeC {\"o}r de b\IeC {\"a}sta klassificeringsmodellerna p\IeC {\r a} respektive datam\IeC {\"a}ngd.}}{60}
-\contentsline {table}{\numberline {4.18}{\ignorespaces Tr\IeC {\"a}ningstid f\IeC {\"o}r de b\IeC {\"a}sta klassificeringsmodellerna p\IeC {\r a} respektive datam\IeC {\"a}ngd.}}{61}
-\contentsline {table}{\numberline {4.19}{\ignorespaces Exempel p\IeC {\r a} ett twitterinl\IeC {\"a}gg som m\IeC {\"a}rks olika av de tv\IeC {\r a} m\IeC {\"a}rkningsmetoderna.}}{62}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Prestanda f\IeC {\"o}r lexikonbaserade modellen tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{52}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Prestanda f\IeC {\"o}r NB med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{52}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r NB p\IeC {\r a} SemEval.}}{53}{table.4.3}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Prestanda f\IeC {\"o}r NB med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{53}{table.4.4}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Prestanda f\IeC {\"o}r SVM med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{54}{table.4.5}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r SVM p\IeC {\r a} SemEval.}}{54}{table.4.6}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Prestanda f\IeC {\"o}r SVM med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{55}{table.4.7}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Prestanda f\IeC {\"o}r CNN tr\IeC {\"a}nad p\IeC {\r a} SemEval-datam\IeC {\"a}ngden.}}{55}{table.4.8}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Prestanda f\IeC {\"o}r lexikonbaserade modellen tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{56}{table.4.9}
+\contentsline {table}{\numberline {4.10}{\ignorespaces Prestanda f\IeC {\"o}r NB med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{56}{table.4.10}
+\contentsline {table}{\numberline {4.11}{\ignorespaces Resultat efter parameters\IeC {\"o}kning f\IeC {\"o}r NB p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{57}{table.4.11}
+\contentsline {table}{\numberline {4.12}{\ignorespaces Prestanda f\IeC {\"o}r NB med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{57}{table.4.12}
+\contentsline {table}{\numberline {4.13}{\ignorespaces Prestanda f\IeC {\"o}r SVM med standardparametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{58}{table.4.13}
+\contentsline {table}{\numberline {4.14}{\ignorespaces Resultat av parameters\IeC {\"o}kning f\IeC {\"o}r SVM p\IeC {\r a} STS.}}{58}{table.4.14}
+\contentsline {table}{\numberline {4.15}{\ignorespaces Prestanda f\IeC {\"o}r SVM med optimala parametrar tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{59}{table.4.15}
+\contentsline {table}{\numberline {4.16}{\ignorespaces Prestanda f\IeC {\"o}r CNN tr\IeC {\"a}nad p\IeC {\r a} STS-datam\IeC {\"a}ngden.}}{59}{table.4.16}
+\contentsline {table}{\numberline {4.17}{\ignorespaces Prestanda f\IeC {\"o}r de b\IeC {\"a}sta klassificeringsmodellerna p\IeC {\r a} respektive datam\IeC {\"a}ngd.}}{60}{table.4.17}
+\contentsline {table}{\numberline {4.18}{\ignorespaces Tr\IeC {\"a}ningstid f\IeC {\"o}r de b\IeC {\"a}sta klassificeringsmodellerna p\IeC {\r a} respektive datam\IeC {\"a}ngd.}}{61}{table.4.18}
+\contentsline {table}{\numberline {4.19}{\ignorespaces Exempel p\IeC {\r a} ett twitterinl\IeC {\"a}gg som m\IeC {\"a}rks olika av de tv\IeC {\r a} m\IeC {\"a}rkningsmetoderna.}}{62}{table.4.19}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 

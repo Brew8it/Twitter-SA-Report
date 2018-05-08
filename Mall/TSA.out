@@ -1,0 +1,54 @@
+\BOOKMARK [0][-]{chapter.1}{Introduktion}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Bakgrund}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Sentimentanalys}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Klassificeringstekniker}{section.2.1}% 4
+\BOOKMARK [1][-]{section.2.2}{Maskininl\344rning}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.1}{Naive Bayes}{section.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.2}{Support Vector Machine}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.3}{Convolutional neural network}{section.2.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Datam\344ngd}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.3.1}{SemEval}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.2}{Stanford Twitter Sentiment}{section.2.3}% 11
+\BOOKMARK [1][-]{section.2.4}{Twittersentimentanalys}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.4.1}{Utmaningar}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.2}{Problem}{section.2.4}% 14
+\BOOKMARK [1][-]{section.2.5}{Utv\344rdering}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.6}{Sammanfattning}{chapter.2}% 16
+\BOOKMARK [0][-]{chapter.3}{Experiment}{}% 17
+\BOOKMARK [1][-]{section.3.1}{Bearbetning av datam\344ngd}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{S\344rdragsurval}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{Algoritmer}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.3.1}{Naive Bayes}{section.3.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.2}{Support Vector Machine}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.3}{Convolutional Neural Network}{section.3.3}% 23
+\BOOKMARK [1][-]{section.3.4}{Implementation}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.4.1}{Databearbetning}{section.3.4}% 25
+\BOOKMARK [2][-]{subsection.3.4.2}{Lexikon}{section.3.4}% 26
+\BOOKMARK [2][-]{subsection.3.4.3}{Naive Bayes}{section.3.4}% 27
+\BOOKMARK [2][-]{subsection.3.4.4}{Support Vector Machine}{section.3.4}% 28
+\BOOKMARK [2][-]{subsection.3.4.5}{Convolutional neural network}{section.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.4.6}{Webbgr\344nssnitt}{section.3.4}% 30
+\BOOKMARK [1][-]{section.3.5}{Sammanfattning}{chapter.3}% 31
+\BOOKMARK [0][-]{chapter.4}{Resultat}{}% 32
+\BOOKMARK [1][-]{section.4.1}{SemEval}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.1.1}{Lexikon}{section.4.1}% 34
+\BOOKMARK [2][-]{subsection.4.1.2}{Naive Bayes}{section.4.1}% 35
+\BOOKMARK [2][-]{subsection.4.1.3}{Support Vector Machine}{section.4.1}% 36
+\BOOKMARK [2][-]{subsection.4.1.4}{Convolutional neural network}{section.4.1}% 37
+\BOOKMARK [1][-]{section.4.2}{Stanford Twitter Sentiment}{chapter.4}% 38
+\BOOKMARK [2][-]{subsection.4.2.1}{Lexikon}{section.4.2}% 39
+\BOOKMARK [2][-]{subsection.4.2.2}{Naive Bayes}{section.4.2}% 40
+\BOOKMARK [2][-]{subsection.4.2.3}{Support Vector Machine}{section.4.2}% 41
+\BOOKMARK [2][-]{subsection.4.2.4}{Convolutional neural network}{section.4.2}% 42
+\BOOKMARK [1][-]{section.4.3}{Utv\344rdering}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.3.1}{Prestanda}{section.4.3}% 44
+\BOOKMARK [2][-]{subsection.4.3.2}{Tr\344ning}{section.4.3}% 45
+\BOOKMARK [2][-]{subsection.4.3.3}{Implementation}{section.4.3}% 46
+\BOOKMARK [2][-]{subsection.4.3.4}{Helhetsbed\366mning}{section.4.3}% 47
+\BOOKMARK [1][-]{section.4.4}{Sammanfattning}{chapter.4}% 48
+\BOOKMARK [0][-]{chapter.5}{Slutsats}{}% 49
+\BOOKMARK [1][-]{section.5.1}{Begr\344nsningar}{chapter.5}% 50
+\BOOKMARK [1][-]{section.5.2}{Vidareutveckling}{chapter.5}% 51
+\BOOKMARK [1][-]{section.5.3}{Slutord}{chapter.5}% 52
+\BOOKMARK [0][-]{chapter*.11}{Litteraturf\366rteckning}{}% 53
+\BOOKMARK [0][-]{Bilaga.a.A}{Bilaga Kod}{}% 54
