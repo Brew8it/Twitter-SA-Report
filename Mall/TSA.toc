@@ -24,38 +24,38 @@
 \contentsline {section}{\numberline {3.1}Bearbetning av datam\IeC {\"a}ngd}{17}{section.3.1}
 \contentsline {section}{\numberline {3.2}S\IeC {\"a}rdragsurval}{22}{section.3.2}
 \contentsline {section}{\numberline {3.3}Algoritmer}{24}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{25}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{27}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Convolutional Neural Network}{31}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Implementation}{34}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Databearbetning}{34}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Lexikon}{37}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Naive Bayes}{39}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Support Vector Machine}{41}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Convolutional neural network}{43}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}Webbgr\IeC {\"a}nssnitt}{47}{subsection.3.4.6}
-\contentsline {section}{\numberline {3.5}Sammanfattning}{49}{section.3.5}
-\contentsline {chapter}{\numberline {4}Resultat}{50}{chapter.4}
-\contentsline {section}{\numberline {4.1}SemEval}{51}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Lexikon}{51}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Naive Bayes}{51}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Support Vector Machine}{52}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Convolutional neural network}{54}{subsection.4.1.4}
-\contentsline {section}{\numberline {4.2}Stanford Twitter Sentiment}{54}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Lexikon}{54}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Naive Bayes}{55}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Support Vector Machine}{56}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Convolutional neural network}{58}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Utv\IeC {\"a}rdering}{58}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Prestanda}{59}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Tr\IeC {\"a}ning}{59}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Implementation}{60}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Helhetsbed\IeC {\"o}mning}{61}{subsection.4.3.4}
-\contentsline {section}{\numberline {4.4}Sammanfattning}{62}{section.4.4}
-\contentsline {chapter}{\numberline {5}Slutsats}{63}{chapter.5}
-\contentsline {section}{\numberline {5.1}Begr\IeC {\"a}nsningar}{64}{section.5.1}
-\contentsline {section}{\numberline {5.2}Vidareutveckling}{64}{section.5.2}
-\contentsline {section}{\numberline {5.3}Slutord}{65}{section.5.3}
-\contentsline {chapter}{Litteraturf\"orteckning}{67}{chapter*.11}
-\contentsline {chapter}{Bilaga \numberline {A}Kod}{77}{Bilaga.a.A}
+\contentsline {subsection}{\numberline {3.3.1}Naive Bayes}{24}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Support Vector Machine}{26}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Convolutional Neural Network}{30}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Implementation}{33}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Databearbetning}{33}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Lexikon}{36}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Naive Bayes}{38}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Support Vector Machine}{40}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Convolutional neural network}{42}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Webbgr\IeC {\"a}nssnitt}{46}{subsection.3.4.6}
+\contentsline {section}{\numberline {3.5}Sammanfattning}{48}{section.3.5}
+\contentsline {chapter}{\numberline {4}Resultat}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}SemEval}{50}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Lexikon}{50}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Naive Bayes}{50}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Support Vector Machine}{51}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Convolutional neural network}{53}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Stanford Twitter Sentiment}{53}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Lexikon}{53}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Naive Bayes}{54}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Support Vector Machine}{55}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Convolutional neural network}{57}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Utv\IeC {\"a}rdering}{57}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Prestanda}{58}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Tr\IeC {\"a}ning}{58}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Implementation}{59}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Helhetsbed\IeC {\"o}mning}{60}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Sammanfattning}{61}{section.4.4}
+\contentsline {chapter}{\numberline {5}Slutsats}{62}{chapter.5}
+\contentsline {section}{\numberline {5.1}Begr\IeC {\"a}nsningar}{63}{section.5.1}
+\contentsline {section}{\numberline {5.2}Vidareutveckling}{63}{section.5.2}
+\contentsline {section}{\numberline {5.3}Slutord}{64}{section.5.3}
+\contentsline {chapter}{Litteraturf\"orteckning}{66}{chapter*.11}
+\contentsline {chapter}{Bilaga \numberline {A}Kod}{76}{Bilaga.a.A}
 \contentsfinish 
