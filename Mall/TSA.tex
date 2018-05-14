@@ -37,6 +37,8 @@
 \usepackage{geometry}
 \usepackage{booktabs}
 
+\usepackage[shortcuts]{extdash}
+
 \usepackage{float}
 
 %for appendix
@@ -63,6 +65,7 @@
     linkcolor=black,
     urlcolor=black
 }
+
 
 
 
@@ -116,8 +119,8 @@
 \title{Twitter Sentiment Analysis}
 \author{Johannes Bandgren, Johan Selberg}
 \supervisor{Kerstin Andersson}
-\opponent{Vidar Tengstål, Sigrid Österling Sicking}
-\examiner{Karl-Johan Grinnemo}
+\opponent{Jonas Arvidsson}
+\examiner{Per Hurtig}
 \institute{Department of Computer Science}
 \place{Karlstad Universitet}
 
@@ -132,7 +135,7 @@
 \begin{abstract}
 Twitter är en av de populäraste mikrobloggarna, som används för att uttrycka tankar och åsikter om olika ämnen. Ett område som har dragit till sig mycket intresse under de senaste åren är twittersentimentanalys. Twittersentimentanalys handlar om att bedöma vad för sentiment ett inlägg på Twitter uttrycker, om det uttrycker någonting positivt eller negativt. Olika metoder kan användas för att utföra twittersentimentanalys, där vissa lämpar sig bättre än andra. De vanligaste metoderna för twittersentimentanalys använder maskininlärning. 
 
-Syftet med denna studie är att utvärdera tre stycken klassificeringsalgoritmer inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells prestanda för twittersentimentanalys. Naive Bayes, Support Vector Machine och Convolutional Neural Network är klassificeringsalgoritmerna som har utvärderats. För varje klassificeringsalgoritm har två klassificeringsmodeller tagits fram, som har tränats och testats på två separata datamängder: Stanford Twitter Sentiment och SemEval. Det som skiljer de två datamängderna åt är märkningsmetoden och mängden twitterinlägg. Utvärderingen har gjorts utefter vilken prestanda de framtagna klassificeringmodellerna uppnår på respektive datamängd, hur lång tid de tar att träna och hur invecklade de var att implementera. 
+Syftet med denna studie är att utvärdera tre stycken klassificeringsalgoritmer inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells prestanda för twittersentimentanalys. Naive Bayes, Support Vector Machine och Convolutional Neural Network är klassificeringsalgoritmerna som har utvärderats. För varje klassificeringsalgoritm har två klassificeringsmodeller tagits fram, som har tränats och testats på två separata datamängder: Stanford Twitter Sentiment och SemEval. Det som skiljer de två datamängderna åt, utöver innehållet i twitterinläggen, är märkningsmetoden och mängden twitterinlägg. Utvärderingen har gjorts utefter vilken prestanda de framtagna klassificeringmodellerna uppnår på respektive datamängd, hur lång tid de tar att träna och hur invecklade de var att implementera. 
 
 Resultaten av studien visar att samtliga modeller som tränades och testades på SemEval uppnådde en högre prestanda än de som tränades och testades på Stanford Twitter Sentiment. Klassificeringsmodellerna som var framtagna med Convolutional Neural Network uppnådde bäst resultat över båda datamängderna. Dock är ett Convolutional Neural Network mer invecklad att implementera och träningstiden är betydligt längre än Naive Bayes och Support Vector Machine.
 
@@ -141,9 +144,9 @@ Resultaten av studien visar att samtliga modeller som tränades och testades på
 
 \selectlanguage{english}
 \begin{abstract}
-Twitter is one of the most popular microblogs, which is used to express thoughts and opinions on different topics. An area that has attracted much interest in recent years is Twitter sentiment analysis. Twitter sentiment analysis is about assessing what sentiment an Twitter post expresses, whether it expresses something positive or negative. Different methods can be used to perform Twitter sentiment analysis. The most common methods of Twitter sentiment analysis uses machine learning.
+Twitter is one of the most popular microblogs, which is used to express thoughts and opinions on different topics. An area that has attracted much interest in recent years is Twitter sentiment analysis. Twitter sentiment analysis is about assessing what sentiment a Twitter post expresses, whether it expresses something positive or negative. Different methods can be used to perform Twitter sentiment analysis. The most common methods of Twitter sentiment analysis use machine learning.
 
-The purpose of this study is to evaluate three classification algorithms in machine learning and how the labeling of a data set affects classification models performance for Twitter sentiment analysis. Naive Bayes, Support Vector Machine and Convolutional Neural Network are the classification algorithms that has been evaluated. For each classification algorithm, two classification models have been trained and tested on two separate data sets: Stanford Twitter Sentiment and SemEval. What separates the two data sets is the labeling method and the amount of twitter posts. The evaluation has been done according to the performance of the classification models on the respective data sets, training time and how complicated they were to implement.
+The purpose of this study is to evaluate three classification algorithms in machine learning and how the labeling of a data set affects classification models performance for Twitter sentiment analysis. Naive Bayes, Support Vector Machine and Convolutional Neural Network are the classification algorithms that have been evaluated. For each classification algorithm, two classification models have been trained and tested on two separate data sets: Stanford Twitter Sentiment and SemEval. What separates the two data sets, in addition to the content of the twitter posts, is the labeling method and the amount of twitter posts. The evaluation has been done according to the performance of the classification models on the respective data sets, training time and how complicated they were to implement.
 
 The results show that all models trained and tested on SemEval achieved a higher performance than those trained and tested on Stanford Twitter Sentiment. The Convolutional Neural Network models achieved the best results over both data sets. However, a Convolutional Neural Network is more complicated to implement and the training time is significantly longer than Naive Bayes and Support Vector Machine.
 
@@ -179,7 +182,7 @@ Användargenererat innehåll är en bra källa för åsikter och kan användas f
 För enskilda personer är det praktiskt taget omöjligt att analysera den typen av data \cite{TSAsurvey}. Därför har metoder som per automatik kan utläsa vad en text uttrycker för sentiment börjat utvecklas, vilket gör det möjligt att analysera stora mängder av data. Sentimentanalys (SA) är ett område som syftar till att bedöma om en text uttrycker någonting positivt eller negativt. Tidigare har SA använts för att bl.a. analysera blogginlägg, forumdiskussioner och recensioner. På senare tid har forskare även börjat intressera sig för sentiment som uttrycks på mikrobloggar. Twitter är en av de populäraste mikrobloggarna, där användare kan förmedla sina tankar och åsikter om olika ämnen. På grund av Twitters popularitet och tillgänglighet har det blivit populärt att analysera data från Twitter. Sentimentanlays som utförs på data från Twitter benämns Twittersentimentanalys (TSA) och handlar om att bedöma vad för sentiment ett inlägg på Twitter uttrycker.  TSA kan utföras på flera olika sätt, men de vanligaste metoderna använder maskininlärning.
 
 
-Denna studie kommer därför att fokusera på TSA och metoder som använder sig av maskininlärning. Syftet med studien är att utvärdera tre stycken klassificeringsmodeller inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells prestanda. I figur \ref{fig:helhet} visas klassificeringsmodellerna som används i studien, vilka är: Naive Bayes (NB), Support Vector Machine (SVM) och Convolutional Neural Network (CNN). De har tränats och utvärderats på två separata datamängder: Stanford Twitter Sentiment (STS) och SemEval. Datamängderna har märkts med två olika märkningsmetoder. SemEval har märkts genom mänsklig märkning och består av ca 20000 twitterinlägg. STS består av ca 1,6 miljoner twitterinlägg och har märkts genom ''distant supervision''. Utvärderingen har gjorts utefter vilken prestanda klassificeringsmodellerna uppnår på respektive datamängd, hur lång tid de tar att träna och hur invecklade de var att implementera. 
+Denna studie kommer därför att fokusera på TSA och metoder som använder sig av maskininlärning. Syftet med studien är att utvärdera tre stycken klassificeringsmodeller inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells prestanda. I figur \ref{fig:helhet} visas klassificeringsmodellerna som används i studien, vilka är: Naive Bayes (NB), Support Vector Machine (SVM) och Convolutional Neural Network (CNN). De har tränats och utvärderats på två separata datamängder: Stanford Twitter Sentiment (STS) och SemEval. Datamängderna har märkts med olika märkningsmetoder. SemEval har märkts genom mänsklig märkning och består av ca 20000 twitterinlägg. STS består av ca 1,6 miljoner twitterinlägg och har märkts genom maskinell märkning, även kallat ''distant supervision''. Utvärderingen har gjorts utefter vilken prestanda klassificeringsmodellerna uppnår på respektive datamängd, hur lång tid de tar att träna och hur invecklade de var att implementera. 
 
 \begin{figure}[h]
 \includegraphics[width=14cm]{helthetsbild}
@@ -188,14 +191,14 @@ Denna studie kommer därför att fokusera på TSA och metoder som använder sig 
 \label{fig:helhet}
 \end{figure}
 
-Tidigare forskning har visat att klassificeringsmodeller som har tränats på större datamängder tenderar att uppnå högre prestanda \cite{TSAsurvey}. Resultatet av studien visar att märkningsmetod av en datamängd har en större betydelse för klassificeringsmodellens prestanda än storleken på datamängden.
+Tidigare forskning har visat att klassificeringsmodeller som har tränats på större datamängder tenderar att uppnå högre prestanda \cite{TSAsurvey}. Resultatet av studien visar att även märkningsmetoden kan ha betydelse för prestandan.
 
 \section*{Disposition} \label{int:dis} 
-Kapitel 2 presenterar studiens syfte och vilka klassificeringsalgoritmer samt datamängder som studien kommer använda. Kapitlet introducerar även viktiga begrepp och metoder som används i studien.
+Kapitel 2 presenterar studiens syfte och vilka klassificeringsalgoritmer samt datamängder som studien använder. Kapitlet introducerar även viktiga begrepp och metoder som används i studien.
 
-Kapitel 3 presenterar hur studiens experiment kommer utföras och ger en djupare förståelse för hur alla studiens delar hänger ihop. Kapitlet presenterar även implementationen för att utföra studiens experiment. 
+Kapitel 3 presenterar hur studiens experiment utförs och ger en djupare förståelse för hur alla studiens delar hänger ihop. Kapitlet presenterar även implementationen för att utföra studiens experiment. 
 
-Kapitel 4 presenterar resultatet av studiens experiment. Klassificeringsmodellernas prestanda på respektive datamängd kommer presenteras tillsammans med hur lång tid de tog att träna och hur svåra de var att implementera. Slutligen presenteras en helhetsbedömning där syftet för studien besvaras.
+Kapitel 4 presenterar resultatet av studiens experiment. Klassificeringsmodellernas prestanda på respektive datamängd presenteras tillsammans med hur lång tid de tog att träna och hur svåra de var att implementera. Slutligen presenteras en helhetsbedömning där studiens syfte besvaras.
 
 Kapitel 5 sammanfattar projektet, presenterar begränsningar med studien och eventuella vidareutvecklingar.
 
@@ -212,7 +215,7 @@ Studien kommer att utvärdera tre stycken klassificeringsalgoritmer inom maskini
 
 Studien kommer att använda maskininlärning för att utföra SA d.v.s. utläsa huruvida en text uttrycker någonting positivt eller negativt. Uppdragsgivaren, CGI, betraktar SA som en viktig pusselbit för framtida lösningar man vill erbjuda sina kunder. En lösning skulle kunna vara chatbotar, där SA används så att chatboten ändrar sitt språk utefter svaren från slutanvändare. En annan lösning skulle vara att använda SA för trendanalys, där ett företag vill veta vad allmänheten tycker före och efter att man har släppt en ny produkt eller efter att en kvartalsrapport har släppts.
 
-I avsnitt \ref{SA} förklaras vad SA är och olika klassificeringstekniker inom SA berskrivs kortfattat. I avsnitt \ref{ML} ges en kort introduktion till maskininlärning och framstegen som gjorts under den senaste tiden. Dessutom beskrivs NB, SVM och CNN samt hur inlärningsprocessen ser ut. I avsnitt \ref{DS} ges en överblick över hur datamängderna ser ut och vilka märkningsmetoder som används för TSA. Avsnittet beskriver även de valda datamängderna. I avsnitt \ref{TSA} ges en introduktion till TSA och vilka utmaning samt problem TSA har. Slutligen i avsnitt \ref{TSAev} förklaras vilka hjälpmedel som kommer att användas för att utvärdera algoritmernas prestanda.
+I avsnitt \ref{SA} förklaras vad SA är och olika klassificeringstekniker inom SA berskrivs kortfattat. I avsnitt \ref{ML} ges en kort introduktion till maskininlärning och framstegen som gjorts under den senaste tiden. Dessutom beskrivs NB, SVM och CNN samt hur inlärningsprocessen ser ut. I avsnitt \ref{DS} ges en överblick över hur datamängderna ser ut och vilka märkningsmetoder som används för TSA. Avsnittet beskriver även de valda datamängderna. I avsnitt \ref{TSA} ges en introduktion till TSA och vilka utmaningar samt problem TSA har. Slutligen i avsnitt \ref{TSAev} förklaras vilka hjälpmedel som kommer att användas för att utvärdera algoritmernas prestanda.
 
 
 \section{Sentimentanalys} \label{SA}
@@ -222,7 +225,7 @@ Inom SA appliceras klassificeringen på 3 olika nivåer: dokument-, menings- och
 \subsection{Klassificeringstekniker} \label{SAkt}
 De olika klassificeringsteknikerna som i nuläget används för SA delas upp i 3 olika kategorier: maskininlärningsmetoder, lexikonbaserade metoder samt hybrida metoder \cite{SAsurvey}. 
 
-Maskininlärningsmetoder använder etablerade maskininlärningsalgoritmer tillsammans med språkliga särdrag för att konstruera klassificeringsmodeller, som kan avgöra om en text uttrycker någonting positivt eller negativt \cite{SAsurvey}. Prestandan för maskininlärningsmetoder är beroende av mängden träningsdata, större mängder data ger vanligtvis bättre resultat \cite{TSAsurvey}. Maskininlärningsmetoder är dessutom domänberoende, vilket gör att de inte presterar bra när de används på andra domäner än de har tränats på. 
+Maskininlärningsmetoder använder etablerade maskininlärningsalgoritmer tillsammans med språkliga särdrag för att konstruera klassificeringsmodeller, som kan avgöra om en text uttrycker någonting positivt eller negativt \cite{SAsurvey}. Prestandan för maskininlärningsmetoder är beroende av mängden träningsdata, större mängder data ger vanligtvis bättre resultat \cite{TSAsurvey}. Maskininlärningsmetoder är dessutom domänberoende, vilket gör att de inte presterar bra när de används på andra domäner än dem har tränats på. 
 
 Lexikonbaserade metoder använder sig av ordlistor för att analysera text \cite{SAsurvey}. Ordlistorna består av positiva och negativa termer som används för att beräkna vad en given text uttrycker för sentiment.
 Fördelen med lexikonbaserade metoder är att de inte kräver någon  träningsdata \cite{TSAsurvey}. Men faktumet att de är beroende av statiska ordlistor betyder att de inte tar hänsyn till termer som inte finns i ordlistorna. Det betyder att ordlistor måste uppdateras kontinuerligt för innehåll som är dynamiskt och ständigt under utveckling, vilket är särskilt problematiskt för texter som förekommer på sociala medier. 
@@ -248,7 +251,7 @@ Figur \ref{fig:ml} illustrerar att maskininlärning delas upp i två typer av in
 Oövervakad inlärning används när datamängden bara består av indata och inget förväntat resultat. Målet med oövervakad inlärning är att algoritmen själv lär sig att modellera den underliggande strukturen så att den kan lära sig mer om datan och själv komma fram till ett resultat \cite{wiki:007}. Exempelvis kan en oövervakad klusteralgoritm användas för att hitta likheter i bilder och följaktligen gruppera dem.
 Övervakad inlärning används när datamängden består av både indata och dess förväntade utdata. Den övervakade algoritmen använder datamängden för att lära sig hur utdata beror på indata genom att skapa en klassificeringsmodell som används för att förutse utdata från ny indata som illustreras i figur \ref{fig:kl}. 
 
-Övervakad inlärning kan beskrivas som att en lärare övervakar programmets inlärningsprocess. Under inlärningsprocessen försöker algoritmen iterativt förutse utdata från datamängden och blir rättad av läraren vid fel förutsägelse \cite{learning:001}.
+Övervakad inlärning kan beskrivas som att en lärare övervakar programmets inlärningsprocess. Under inlärningsprocessen försöker algoritmen iterativt förutsäga utdata från datamängden och blir rättad av läraren vid fel förutsägelse \cite{learning:001}.
 
 \begin{figure}[h]
 \includegraphics[width=12cm]{klassmodell}
@@ -264,7 +267,7 @@ NB är en klassificeringsalgoritm som är baserad på Bayes theorem \cite{wiki:0
 Exempelvis kan en frukt anses vara ett äpple om det är grönt, runt och är 10 cm i diameter. Även om särdragen grönt, runt och diameter kan bero på varandra så bidrar alla särdragen självständigt till sannolikheten att frukten är ett äpple, det är därför algoritmen kallas naiv \cite{nb:001}.
 
 \subsection{Support Vector Machine} \label{MLsvm}
-SVM är en övervakad maskininlärningsalgoritm som kan användas till både klassificerings- och regressionsproblem, för det mesta används SVM för klassificeringsproblem. SVM är baserat på idén att hitta ett hyperplan \cite{svm:001} som bäst delar upp datamängden i två klasser \cite{svm:003}. Givet en träningsmängd där förväntad utdata är markerad till en av två kategorier bygger SVM-algoritmen upp en klassificeringsmodell som kan användas för att förutse vilken kategori ny indata ger \cite{svm:002}. 
+SVM är en övervakad maskininlärningsalgoritm som kan användas till både klass\-ificerings- och regressionsproblem, för det mesta används SVM för klassificeringsproblem. SVM är baserat på idén att hitta ett hyperplan \cite{svm:001} som bäst delar upp datamängden i två klasser \cite{svm:003}. Givet en träningsmängd där förväntad utdata är markerad till en av två kategorier bygger SVM-algoritmen upp en klassificeringsmodell som kan användas för att förutse vilken kategori ny indata ger \cite{svm:002}. 
 
 \subsection{Convolutional neural network}\label{bak:cnn}
 Ett av de snabbast växande områden inom maskininlärning är djup inlärning \cite{TSAsurvey}. Begreppet djup inlärning syftar till artificiella neuronnät (ANN) som är uppbyggda med flera lager  \cite{cnn:001}. ANN är system som försöker ta efter beteende hos biologiska neuronnät för att stegvis bli bättre på att utföra en angiven uppgift genom att studera exempel \cite{wiki:015}. 
@@ -272,13 +275,13 @@ Ett av de snabbast växande områden inom maskininlärning är djup inlärning \
 CNN är ett av de mest populära neuronnäten  \cite{cnn:001}. Det var ursprungligen framtaget för maskininlärningsproblem som rör datorseende och har tidigare påvisat imponerande resultat för bildigenkänning \cite{cnn:003, cnn:006}. Men på senare tid har det även visat sig att CNN är effektivt för problem som rör SA. Med relativt enkla CNN-modeller har imponerande resultat kunnat uppnås inom textklassificering.  I \cite{cnn:003} presenteras en enkel CNN-modell för textklassificering som påvisade goda resultat över flertalet datamängder. CNN-modellen som har använts i den här studien har utgått från den modell som Yoon Kim presenterar i \cite{cnn:003}.
 
 \section{Datamängd} \label{DS}
-En datamängd för övervakad inlärning består av en mängd in- och utdata som diskuteras i sektion \ref{ML}. Processen för hur rätt utdata (positiv/negativ) märks kan utföras på två olika sätt, antingen genom så kallad mänsklig märkning där människor markerar indata som positiv/negativ eller genom ''distant supervision'' där en dator märker indata som positiv/negativ utefter någon parameter. Den stora skillnaden mellan mänsklig märkning och ''distant supervision'' är att ''distant supervision'' kan generera en mycket större datamängd än mänsklig märkning men risken är större att märkningen blir felaktig \cite{TSAsurvey}. 
+En datamängd för övervakad inlärning består av en mängd in- och utdata som diskuteras i sektion \ref{ML}. Processen för hur indata märks kan utföras på två olika sätt, antingen genom så kallad mänsklig märkning där människor markerar indata som positiv/negativ eller genom ''distant supervision'' där en dator märker indata som positiv/negativ utefter någon parameter. Den stora skillnaden mellan mänsklig märkning och ''distant supervision'' är att ''distant supervision'' kan generera en mycket större datamängd än mänsklig märkning men risken är större att märkningen blir felaktig \cite{TSAsurvey}. 
 Som beskrevs i kapitel \ref{bak} är ett delsytfte med denna studie att utvärdera hur de olika märkningsmodellerna påverkar maskininlärningsalgoritmernas precision. Det finns ett urval med publika twitterdatamängder där både mänsklig märkning och “distant supervison” används \cite{TSAsurvey}. Vi har valt att använda datamängderna STS \cite{sts:001} och SemEval \cite{SemEval:001} eftersom de är de största publika datamängderna inom respektive märkningsmetod.
 
 \subsection{SemEval} \label{DSse}
 SemEval-datamängden består av 20633 twitterinlägg och är framtagen till en årlig TSA-tävling som har gått sedan 2013 \cite{SemEval:002}. 
 Datamängden har märkts genom mänsklig märkning, där fem personer manuellt har märkt varje twitterinlägg via Amazon Mechanical Turk \cite{SemEval:003}.
-I \cite{SemEval:004} beskrivs metoden för hur märkningen utförs, varje person markerar varje twitterinlägg antingen som mycket positivt, positivt, neutralt, negativt eller mycket negativt. Efter att alla twitterinlägg är märkta kartläggs alla twitterinlägg till kategorierna positivt, neutralt eller negativt utefter tre kriterier. Antingen att alla personer har märkt ett twitterinlägg samma, en majoritet har märkt samma eller genom att ta ut ett medelvärde. Medelvärdet räknas ut genom att kartlägga de fem kategorierna till heltal mellan 2 och -2, medelvärdet räknas sedan ut och kartläggs till den närmsta kategorin. För SemEval-datamängden blev utfallet 2760 twitterinlägg där alla personer gjort samma märkning, 9944 twitterinlägg är där majoritet har märkt samma och för resterande 7928 twitterinlägg har medelvärdet räknats ut. 
+I \cite{SemEval:004} beskrivs metoden för hur märkningen utförs, varje person markerar varje twitterinlägg antingen som mycket positivt, positivt, neutralt, negativt eller mycket negativt. Efter att alla twitterinlägg är märkta kartläggs alla twitterinlägg till kategorierna positivt, neutralt eller negativt utefter tre kriterier. Antingen att alla personer har märkt ett twitterinlägg samma, en majoritet har märkt samma eller genom att ta ut ett medelvärde. Medelvärdet räknas ut genom att omvandla de fem kategorierna till heltal mellan 2 och -2, medelvärdet räknas sedan ut och sätts till den närmsta kategorin. För SemEval-datamängden blev utfallet 2760 twitterinlägg där alla personer gjort samma märkning, 9944 twitterinlägg är där majoritet har märkt samma och för resterande 7928 twitterinlägg har medelvärdet räknats ut. 
 
 \subsection{Stanford Twitter Sentiment} \label{DSsts}
 STS-datamängden består av 1,6 miljoner twitterinlägg och är framtagen mellan April 2009 och Juni 2009 av Alec Go, Richa Bhayani och Lei Huang  \cite{sts:001}. STS-datamängden är märkt med hjälp av ''distant supervision'' där märkningen bestäms av vilken typ av emoji \cite{wiki:010} ett twitterinlägg innehåller, exempelvis märks ett twitterinlägg positivt om det innehåller “:), :-),: ), :D, =)” och negativt om det innehåller “:(, :-(, : (“. 
@@ -980,7 +983,7 @@ I tabell \ref{tab:lexi_se} visas prestandan för den lexikonbaserade modellen, s
 
 \begin{table}[H]
 \centering
-\caption{Prestanda för lexikonbaserade modellen tränad på SemEval-datamängden.}
+\caption{Prestanda för lexikonbaserade modellen tränad på SemEval-\newline datamängden.}
 \label{tab:lexi_se}
     \begin{tabular}{ccccc}
     \toprule
@@ -998,7 +1001,7 @@ Prestandan för NB-modellen med standardparametrar, som tränats på SemEval-dat
 
 \begin{table}[H]
 \centering
-\caption{Prestanda för NB med standardparametrar tränad på STS-datamängden.}
+\caption{Prestanda för NB med standardparametrar tränad på STS-\newline datamängden.}
 \label{tab:nb_base_se}
     \begin{tabular}{ccccc}
     \toprule
@@ -1135,7 +1138,7 @@ I tabell \ref{tab:lexi_sts} presenteras prestandan efter att den lexikonbaserade
 
 \begin{table}[H]
 \centering
-\caption{Prestanda för lexikonbaserade modellen tränad på STS-datamängden.}
+\caption{Prestanda för lexikonbaserade modellen tränad på STS-\newline datamängden.}
 \label{tab:lexi_sts}
     \begin{tabular}{ccccc}
     \toprule
@@ -1154,7 +1157,7 @@ I tabell \ref{tab:nb_base_sts} presenteras prestandan efter att NB med standardp
 
 \begin{table}[H]
 \centering
-\caption{Prestanda för NB med standardparametrar tränad på STS-datamängden.}
+\caption{Prestanda för NB med standardparametrar tränad på STS- \newline datamängden.}
 \label{tab:nb_base_sts}
     \begin{tabular}{ccccc}
     \toprule
@@ -1191,7 +1194,7 @@ Tabell \ref{tab:nb_imp_sts} presenterar prestandan efter att den andra NB-modell
 
 \begin{table}[H]
 \centering
-\caption{Prestanda för NB med optimala parametrar tränad på STS-datamängden.}
+\caption{Prestanda för NB med optimala parametrar tränad på STS-\newline datamängden.}
 \label{tab:nb_imp_sts}
     \begin{tabular}{ccccc}
     \toprule
@@ -1210,7 +1213,7 @@ I tabell \ref{tab:svm_base_sts} presenteras prestandan efter att SVM med standar
 
 \begin{table}[H]
 \centering
-\caption{Prestanda för SVM med standardparametrar tränad på STS-datamängden.}
+\caption{Prestanda för SVM med standardparametrar tränad på STS-\newline datamängden.}
 \label{tab:svm_base_sts}
     \begin{tabular}{ccccc}
     \toprule
@@ -1250,7 +1253,7 @@ Tabell \ref{tab:svm_imp_sts} presenterar prestandan efter att den andra SVM mode
 
 \begin{table}[H]
 \centering
-\caption{Prestanda för SVM med optimala parametrar tränad på STS-datamängden.}
+\caption{Prestanda för SVM med optimala parametrar tränad på STS-\newline datamängden.}
 \label{tab:svm_imp_sts}
     \begin{tabular}{ccccc}
     \toprule
