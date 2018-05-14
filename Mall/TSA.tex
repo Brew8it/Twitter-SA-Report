@@ -281,16 +281,16 @@ Som beskrevs i kapitel \ref{bak} är ett delsytfte med denna studie att utvärde
 \subsection{SemEval} \label{DSse}
 SemEval-datamängden består av 20633 twitterinlägg och är framtagen till en årlig TSA-tävling som har gått sedan 2013 \cite{SemEval:002}. 
 Datamängden har märkts genom mänsklig märkning, där fem personer manuellt har märkt varje twitterinlägg via Amazon Mechanical Turk \cite{SemEval:003}.
-I \cite{SemEval:004} beskrivs metoden för hur märkningen utförs, varje person markerar varje twitterinlägg antingen som mycket positivt, positivt, neutralt, negativt eller mycket negativt. Efter att alla twitterinlägg är märkta kartläggs alla twitterinlägg till kategorierna positivt, neutralt eller negativt utefter tre kriterier. Antingen att alla personer har märkt ett twitterinlägg samma, en majoritet har märkt samma eller genom att ta ut ett medelvärde. Medelvärdet räknas ut genom att omvandla de fem kategorierna till heltal mellan 2 och -2, medelvärdet räknas sedan ut och sätts till den närmsta kategorin. För SemEval-datamängden blev utfallet 2760 twitterinlägg där alla personer gjort samma märkning, 9944 twitterinlägg är där majoritet har märkt samma och för resterande 7928 twitterinlägg har medelvärdet räknats ut. 
+I \cite{SemEval:004} beskrivs metoden för hur märkningen utförs, varje person markerar varje twitterinlägg antingen som mycket positivt, positivt, neutralt, negativt eller mycket negativt. Efter att alla twitterinlägg är märkta kartläggs alla twitterinlägg till kategorierna positivt, neutralt eller negativt utefter tre kriterier. Antingen att alla personer har märkt ett twitterinlägg samma, en majoritet har märkt samma eller genom att ta ut ett medelvärde. Medelvärdet räknas ut genom att omvandla de fem kategorierna representeras som heltal mellan 2 och -2, medelvärdet räknas sedan ut och sätts till den närmsta kategorin. För SemEval-datamängden blev utfallet 2760 twitterinlägg där alla personer gjort samma märkning, 9944 twitterinlägg är där majoritet har märkt samma och för resterande 7928 twitterinlägg har medelvärdet räknats ut. 
 
 \subsection{Stanford Twitter Sentiment} \label{DSsts}
-STS-datamängden består av 1,6 miljoner twitterinlägg och är framtagen mellan April 2009 och Juni 2009 av Alec Go, Richa Bhayani och Lei Huang  \cite{sts:001}. STS-datamängden är märkt med hjälp av ''distant supervision'' där märkningen bestäms av vilken typ av emoji \cite{wiki:010} ett twitterinlägg innehåller, exempelvis märks ett twitterinlägg positivt om det innehåller “:), :-),: ), :D, =)” och negativt om det innehåller “:(, :-(, : (“. 
+STS-datamängden består av 1,6 miljoner twitterinlägg och är framtagen mellan april 2009 och juni 2009 av Alec Go, Richa Bhayani och Lei Huang  \cite{sts:001}. STS-datamängden är märkt med hjälp av ''distant supervision'' där märkningen bestäms av vilken typ av emoji \cite{wiki:010} ett twitterinlägg innehåller, exempelvis märks ett twitterinlägg positivt om det innehåller “:), :-),: ), :D, =)” och negativt om det innehåller “:(, :-(, : (“. 
 
 \section{Twittersentimentanalys} \label{TSA}
 TSA är den del av SA som specifikt handlar om att analysera inlägg som användare gör på Twitter. Twitter är en av de populäraste mikrobloggarna där användare kan skriva och kommunicera med varandra genom twitterinlägg \cite{wiki:008}. 2013 var Twitter en av de tio mest besökta sidorna på internet och 2016 uppmättes antalet aktiva användare per månad till 319 miljoner. Twitter är definierat som en mikroblogg på grund av det låga antalet tecken som är tillåtet för ett inlägg. Tidigare var antalet tillåtna tecken i ett twitterinlägg 140, men i November 2017 fördubblades antalet tillåtna tecken till 280. Eftersom studiens datamängder skapades innan November 2017 tränas modellerna på twitterinlägg med maximalt 140 tecken.
 
 
-Det finns en rad olika begrepp som kännetecknar Twitter och som är viktiga att känna till. I \cite{TSAsurvey} beskrivs dessa begrepp och som även kommer diskuteras här.
+Det finns en rad olika begrepp som kännetecknar Twitter och som är viktiga att känna till. I \cite{TSAsurvey} beskrivs dessa begrepp och de kommer även att diskuteras här.
 
 En “tweet” är vad som tidigare benämnts som ett twitterinlägg. Det är ett inlägg från en användare som är begränsat till 280 tecken, där användaren exempelvis kan delge sina åsikter i olika ämnen eller dela med sig av personliga upplevelser. En “tweet” behöver inte enbart innehålla ren text utan kan även innehålla länkar, bilder och videor. I fortsättningen av rapporten kommer en “tweet” att benämnas twitterinlägg.
 
@@ -298,7 +298,7 @@ När ett twitterinlägg innehåller “mentions” betyder det att andra använd
 
 På Twitter har användare möjligheten att följa andra användare. Det betyder att användare kan följa andra användares aktivitet i deras egna twitterflöden och dela med sig av sin egen aktivitet till sina följares twitterflöden. En användare som följer en annan benämns på Twitter som en “follower”. Att följa andra är det primära tillvägagångssättet för att skapa kontakter med andra användare på Twitter. 
 
-Användare har möjlighet att kategorisera twitterinlägg och det är vad “hashtags” används för. Genom att använda “hashtags” kan användare märka sina twitterinlägg med etiketter för att knyta inlägget till ett specifikt ämne, vilket gör det enekelt för användare att följa ett ämne. De behöver enbart söka på en specifik “hashtag” för att få fram alla twitterinlägg i ämnet. För att skapa en “hashtag” skrivs symbolen \# före namnet på etiketten.
+Användare har möjlighet att kategorisera twitterinlägg och det är vad “hashtags” används för. Genom att använda “hashtags” kan användare märka sina twitterinlägg med etiketter för att knyta inlägget till ett specifikt ämne, vilket gör det enkelt för användare att följa ett ämne. De behöver enbart söka på en specifik “hashtag” för att få fram alla twitterinlägg i ämnet. För att skapa en “hashtag” skrivs symbolen \# före namnet på etiketten.
 
 Det är även möjligt att dela andra användares twitterinlägg till ens egna följare. Den funktionen kallas för “retweet” och ett sådant twitterinlägg startar vanligtvis med förkortningen RT följt av en “mention” av den ursprungliga författaren av twitterinlägget. Det kan exempelvis vara användbart för att sprida information till följare eller för att skapa en diskussion om innehållet i twitterinlägget med sina egna följare. 
 
@@ -343,7 +343,7 @@ I \cite{TSAsurvey} listar författarna de problem med TSA som de anser bör utfo
 	 & \textbf{Förustspådd positiv} & \textbf{Förutspådd negativ} \\
 	\midrule
 	\textbf{Positiv} & Sann positiv & Falsk negativ \\
-	\textbf{Negativ} & Falsk positv & Sann negativ \\
+	\textbf{Negativ} & Falsk positiv & Sann negativ \\
 	\bottomrule
 \end{tabular}
 \end{table}
@@ -352,9 +352,9 @@ I \cite{TSAsurvey} listar författarna de problem med TSA som de anser bör utfo
 I tabell \ref{tab:fm} ser vi en så kallad förvirringsmatris (FM) som utvärderar en klassificeringsmodell från datamängden där “positivt” eller “negativt” är förbestämt. Matrisen visar antalet sann positiv (SP), sann negativ (SN), falsk positiv (FP) och falsk negativ(FN) \cite{wiki:003}. Med dessa värden kan vi jämföra och analysera modellerna m.h.a. följande utvärderingsmetoder: precision (p), återkallelse (å) \cite{wiki:002} och F-Score \cite{wiki:001}.
 
 \begin{labeling}{metrics}
-\item [Precision] Är förmågan att modellen inte märker ett twitterinlägg som positivt när det är negativt. Detta görs genom att ta antalet sann positiva delat på totalt antal positivt märkta twitterinlägg. 
-\item [Återkallelse] Är förmågan att modellen märker positiva twitterinlägg korrekt. Detta görs genom att ta antalet sann positiva delat på summan av antalet sann positiva och falsk negativa.
-\item [F-Score] Även kallat det harmoniska medelvärdet mellan precision och återkallelse används då inte alltid precision och återkallelse räcker till för att göra en helhetsbedömning. 
+\item [Precision] är förmågan att modellen inte märker ett twitterinlägg som positivt när det är negativt. Detta görs genom att ta antalet sann positiva delat på totalt antal positivt märkta twitterinlägg. 
+\item [Återkallelse] är förmågan att modellen märker positiva twitterinlägg korrekt. Detta görs genom att ta antalet sann positiva delat på summan av antalet sann positiva och falsk negativa.
+\item [F-Score] även kallat det harmoniska medelvärdet mellan precision och återkallelse används då inte alltid precision och återkallelse räcker till för att göra en helhetsbedömning. 
 \end{labeling}
 
 I figur \ref{fig:utv} illustreras hur utvärderingmetoderna hänger ihop.
