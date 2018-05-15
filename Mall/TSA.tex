@@ -228,7 +228,12 @@ De olika klassificeringsteknikerna som i nuläget används för SA delas upp i 3
 Maskininlärningsmetoder använder etablerade maskininlärningsalgoritmer tillsammans med språkliga särdrag för att konstruera klassificeringsmodeller, som kan avgöra om en text uttrycker någonting positivt eller negativt \cite{SAsurvey}. Prestandan för maskininlärningsmetoder är beroende av mängden träningsdata, större mängder data ger vanligtvis bättre resultat \cite{TSAsurvey}. Maskininlärningsmetoder är dessutom domänberoende, vilket gör att de inte presterar bra när de används på andra domäner än dem har tränats på. 
 
 Lexikonbaserade metoder använder sig av ordlistor för att analysera text \cite{SAsurvey}. Ordlistorna består av positiva och negativa termer som används för att beräkna vad en given text uttrycker för sentiment.
-Fördelen med lexikonbaserade metoder är att de inte kräver någon  träningsdata \cite{TSAsurvey}. Men faktumet att de är beroende av statiska ordlistor betyder att de inte tar hänsyn till termer som inte finns i ordlistorna. Det betyder att ordlistor måste uppdateras kontinuerligt för innehåll som är dynamiskt och ständigt under utveckling, vilket är särskilt problematiskt för texter som förekommer på sociala medier. 
+Fördelen med lexikonbaserade metoder är att de inte kräver någon  träningsdata \cite{TSAsurvey}. 
+
+
+
+
+Men faktumet att de är beroende av statiska ordlistor betyder att de inte tar hänsyn till termer som inte finns i ordlistorna. Det betyder att ordlistor måste uppdateras kontinuerligt för innehåll som är dynamiskt och ständigt under utveckling, vilket är särskilt problematiskt för texter som förekommer på sociala medier. 
 
 Hybrida metoder kombinerar lexikonbaserade metoder med maskininlärningsmetoder \cite{TSAsurvey}. Genom att kombinera metoderna med varandra kan de väga upp för varandras svagheter. Nackdelen med hybrida metoder är dock att de kräver en hög beräkningskomplexitet.
 
@@ -452,7 +457,7 @@ I \cite{TSAsurvey} presenteras det fyra olika särdragsklasser inom TSA: semanti
 
 Semantiska särdrag används mestadels för att ta ut åsiktsord, sentimentord och negationer. Åsiktsord är ord eller meningar som kan innehålla någon typ av åsikt medan sentimentord är ord som innehåller något positivt eller negativt. Hantering av negationer är viktigt vid TSA, eftersom en mening som innehåller någon typ av negation kan exempelvis skifta om twitterinlägget från positivt till negativt. Studien kommer använda sentimentord i lexikonimplementationen som diskuteras i avsnitt \ref{impl:lex} och negationer som även diskuterats i avsnitt \ref{exp:pre} kommer implementeras i avsnitt \ref{impl:pre}.
 
-Syntaktiska särdrag används för att utforska påverkan av olika termer i SA och TSA, syntaktiska särdrag bryts ner till unigram, bigram, trigrams, n-gram, termfrekvens, omvänd dokumentfrekvens (IDF) och “Part of Speech” (POS). Där n-grams är ett samlingsord för uni-, bi- och trigram, i figur \ref{fig:grams} illustreras hur n-gram modellen fungerar på en enkel mening och hur meningens ord grupperas på olika sätta till ett ord eller fras. 
+Syntaktiska särdrag används för att utforska påverkan av olika termer i SA och TSA. Syntaktiska särdrag bryts ner till unigram, bigram, trigram, n-gram, termfrekvens, omvänd dokumentfrekvens (IDF) och “Part of Speech” (POS), där n-gram är ett samlingsord för uni-, bi- och trigram. I figur \ref{fig:grams} illustreras hur n-grammodellen fungerar på en enkel mening och hur meningens ord grupperas på olika sätt till ett ord eller fras. 
 
 Termfrekvens används då längre twitterinlägg kan ha ett högre antal förekomster av ett ord än ett kortare twitterinlägg, vilket kan leda till att ord kan få större betydelse för klassificeringen. M.h.a. termfrekvens undviks detta problem, genom att dela antalet förekomster av ett ord i ett twitterinlägg med alla ord som finns i twitterinlägget \cite{scikit:001}. IDF \cite{idf:001} används i kombination med termfrekvens. Eftersom ordet “the” är så pass vanligt, kommer termfrekvens att lägga för stor vikt på ordet “the” som egentligen inte säger något om vilket sentiment twitterinlägget har. M.h.a. IDF kommer ord som används sällan få större vikt och eventuellt kan en högre precision uppnås.
 
@@ -461,7 +466,7 @@ POS utförs genom att man räknar hur många substantiv, verb och adjektiv som e
 
 Studien kommer implementera unigram som ett bassärdrag för NB och SVM för att sedan utforska n-grams och termfrekvens för eventuell förhöjd prestanda vilket diskuteras i avsnitt \ref{impl}. POS kommer inte implementeras i studien då \cite{go2009twitter, feature:001} rapporterar försämrad precision. Däremot rapporterar \cite{feature:002} små förbättringar vid användning av POS.
 
-Stilistiska särdrag är särdrag som kommer från det informella skrivsättet som används på Twitter där t.ex emojis, förkortningar, slang och skiljetecken används. Enligt \cite{feature:002} kan emojis ha en stor betydelse för TSA. Men eftersom STS-datamängden har avlägsnat emojis, då ''distant supervision'' har använts, kommer inte studiens modeller ta hänsyn till emojis \cite{sts:001}. Därför har även emojis från SemEval-datamängden filtrerats bort i avsnitt \ref{exp:pre}. Studien kommer inte hantera slang eftersom inget större slanglexikon var öppet för användning. 
+Stilistiska särdrag är särdrag som kommer från det informella skrivsättet som används på Twitter där t.ex emojis, förkortningar, slang och skiljetecken används. Enligt \cite{feature:002} kan emojis ha en stor betydelse för TSA. Men eftersom STS-data\-mängden har avlägsnat emojis, då ''distant supervision'' har använts, kommer inte studiens modeller ta hänsyn till emojis \cite{sts:001}. Därför har även emojis från SemEval-datamängden filtrerats bort i avsnitt \ref{exp:pre}. Studien kommer inte hantera slang eftersom inget större slanglexikon var öppet för användning. 
 Sammandragsförkortningar och skiljetecken kommer hanteras i denna studie och har diskuterats i avsnitt \ref{exp:pre} och implementeras i avsnitt \ref{impl:pre}.
 
 Twitter-specifika särdrag är särdrag som är specifika för Twitters domän som t.ex “hashtags” och “mentions” vilka diskuterats i \ref{TSA} och \ref{exp:pre}.
@@ -478,17 +483,17 @@ Det finns tre varianter av NB nämligen Gaussian, Bernoulli och Multinomial. Gau
 I \ref{MLnb} beskrivs att Naive Bayes-algoritmen är baserad på Bayes theorem \cite{wiki:009} vilket för TSA betyder att räkna ut sannolikheten att ett twitterinlägg $(B)$ är positivt eller negativt $(A)$ för en mängd $C$, bestående av ett antal $B$ med ett förbestämt $A$. $P(A | B)$ är en villkorlig sannolikhet för att $A$ inträffar givet att $B$ är sant, $P(B | A)$ är också en villkorlig sannolikhet för att $B$ inträffar givet att $A$ är sant. $P(A)$ och $P(B)$ är sannolikheten att observera $P(A)$ och $P(B)$ oberoende av varandra,
 
 \begin{equation}\label{eq:bt}
-P(A|B) = \frac{P(B|A) * P(A)}{P(B)}, 1 \leq w \leq n.
+P(A|B) = \frac{P(B|A) * P(A)}{P(B)}, B \in C.
 \end{equation}
 
-För att ekvation \ref{eq:bt} skall vara naiv antas att varje ord $b_w$ i $B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar $B$ utan $b_w$, $P(B|A) = P(b_{w}|A) * P(b_{w}|A) * … * P(b_{w}|A)$,
+För att ekvation \ref{eq:bt} skall vara naiv antas att varje ord $b \in B$ är oberoende av varandra vilket betyder att vi inte längre klassificerar $B$ utan $b$, $P(B|A) = \prod\limits_{b \in B} P(b|A)$
 
-För att beräkna $P(b_w|A)$ används Dirichlet prior \cite{wiki:012, nb:007}, 
+För att beräkna $P(b|A)$ används Dirichlet prior \cite{wiki:012, nb:007}, 
 \begin{equation}\label{eq:slut}
-P(b_w|A)= \frac{N_{b_w} + \alpha}{N_A + \alpha_n},
+P(b|A)= \frac{N_{b} + \alpha}{N_A + \alpha_c},
 \end{equation}
-där $N_{b_w}$ är hur många gånger $b_w$ förekommer i delmängden $C_A$, 
-$N_A$ är antal ord i $C_A$ och $\alpha$ och $\alpha_n$ används för att utföra additiv utjämning \cite{wiki:013} där $\alpha = 1$ och $\alpha_n$ är antal unika ord i $C$.
+där $N_{b_w}$ är hur många gånger $b$ förekommer i delmängden $C_A$, 
+$N_A$ är antal ord i $C_A$ och $\alpha$ och $\alpha_c$ används för att utföra additiv utjämning \cite{wiki:013} där $\alpha = 1$ och $\alpha_c$ är antal unika ord i $C$.
 
 \begin{table}[H]
 \centering
@@ -509,7 +514,7 @@ $N_A$ är antal ord i $C_A$ och $\alpha$ och $\alpha_n$ används för att utför
 I tabell \ref{tab:dataset} illustreras en datamängd $C$ med fyra twitterinlägg och deras märkning. Denna datamängd kan användas för att beräkna om twitterinlägget “solen skiner alltid i karlstad” $(B)$ är positivt eller negativt $(A)$ . Genom att räkna ut sannolikheten $P(Positiv|B)$ och $P(Negativ|B)$ kan märkning bestämmas, detta görs genom att jämföra vilken sannolikhet som blir störst och vi får följande ekvation,
 
 \begin{equation}\label{eq:prodsum}
-P(A|B) = \prod\limits_{i \epsilon B} \frac{P(i|A)}{P(B)}.
+P(A|B) = \prod\limits_{i \in B} \frac{P(i|A)}{P(B)} * P(A).
 \end{equation}
 
 Eftersom nämnaren är lika i bägge uträkningarna kommer enbart täljaren vara relevant vid beräkning.
@@ -517,11 +522,11 @@ Eftersom nämnaren är lika i bägge uträkningarna kommer enbart täljaren vara
 För att räkna ut exempelvis $P(solen|Positiv)$ används ekvation \ref{eq:slut} där $N_{b_w} = 1$, $N_A= 13$, $\alpha_n = 17$ och $\alpha = 1$ vilket ger oss $P(solen|Positiv) = \frac{1 + 1}{13 + 17} = 0,0667$. I tabell \ref{tab:ekv} illustreras alla ekvationer för att beräkna om “solen skiner alltid i karlstad” är positiv eller negativ. Ovanstående utförs på varje ord för både positiv och negativ vilket illustreras i tabell \ref{tab:ekv}. Med hjälp av tabell \ref{tab:ekv} och ekvation \ref{eq:prodsum} beräknas, 
 
 \begin{equation}
-P(Positiv|\textrm{solen skiner alltid i karlstad}) = \frac{1.6428 * 10^-7}{P(B)},
+P(Positiv|\textrm{solen skiner alltid i karlstad}) = \frac{1.6428 * 10^-7}{P(B)} * P(A),
 \end{equation}
 och
 \begin{equation}
-P(Negativ|\textrm{solen skiner alltid i karlstad}) = \frac{1.5576 * 10^-7}{P(B)}.
+P(Negativ|\textrm{solen skiner alltid i karlstad}) = \frac{1.5576 * 10^-7}{P(B)} * P(A).
 \end{equation}
 
 Jämförs dessa resultat kommer twitterinlägget klassificeras som positivt.
@@ -532,7 +537,7 @@ Jämförs dessa resultat kommer twitterinlägget klassificeras som positivt.
 \label{tab:ekv}
     \begin{tabular}{ccc}
     \toprule
-    \textbf{Ord} & \textbf{P(ord|Positiv)} & \textbf{P(ord|Negativ)} \\
+    \textbf{Ord} & \textbf{P(Ord|Positiv)} & \textbf{P(Ord|Negativ)} \\
     \midrule
     solen & $\frac{1 + 1}{13 + 17} $ & $\frac{0 + 1}{6 + 17} $\\
     skiner & $\frac{0 + 1}{13 + 17} $ & $\frac{0 + 1}{6 + 17}$ \\
@@ -580,7 +585,7 @@ Om ett problem kräver en linjär eller en icke-linjär klassificerare beror på
 
 
 \subsection{Convolutional Neural Network} \label{exp:cnn}
-I avsnitt \ref{bak:cnn} beskrevs kortfattat vad CNN är och varför det på senare tid har börjat användas för maskininlärningsproblem som rör textklassificering. I detta avsnitt kommer CNN att beskrivas på en mer teknisk nivå. De olika delarna som ett CNN består av kommer att presenteras, för att därefter beskrivs hur ett CNN kan utföra textklassificering utifrån ett exempel. 
+I avsnitt \ref{bak:cnn} beskrevs kortfattat vad CNN är och varför det på senare tid har börjat användas för maskininlärningsproblem som rör textklassificering. I detta avsnitt kommer CNN att beskrivas på en mer teknisk nivå. De olika delarna som ett CNN består av kommer att presenteras, därefter beskrivs hur ett CNN kan utföra textklassificering utifrån ett exempel. 
 
 CNN är uppbyggt med flera lager \cite{cnn:005}. Det har ett lager för indata, ett för utdata och dessutom ett flertal dolda lager. De dolda lagrena består av konvulsionlager, “pooling”-lager, fullt anslutna lager och normaliseringslager. 
 
@@ -590,7 +595,7 @@ Konvulsionlager utgör den centrala delen av CNN \cite{cnn:005}. Ett konvulsionl
 
 Efter att olika särdrag har tagits fram genom konvulsionlager och “pooling”-lager kopplas ett fullt anslutet lager in i slutet av nätverket \cite{cnn:008}. Det fullt anslutna lagret tar in mängden av särdrag från lagret innan och skickar ut en vektor av storleken $N$, där $N$ representerar antalet klasser vid klassificeringen. Värdena i denna vektor representerar sannolikheten för respektive klass. Det fullt anslutna lagret analyserar den data som skickas från lagret innan och gör en bedömning utefter vilken klass särdragen med störst sannolikhet representerar. 
 
-Som nämndes i \ref{bak:cnn}, är CNN ursprungligen framtagen för problem som rör bearbetning av bilder. När bilder bearbetas av CNN representeras bildens pixlar i en matris, som filtrena sedan förflyttar sig över \cite{cnn:004}. Text som ska bearbetas av CNN behöver därför också representeras som en bild. I figur \ref{fig:cnntext} visas ett exempel av ett CNN som används för textklassificering. I exemplet ska ett twitterinlägg av längden $l$ klassificeras \cite{cnn:002}. Twitterinlägget som ska klassificeras har konverterats till en twitterinläggmatris. Varje ord i twitterinlägget utgör en rad i matrisen och representeras av en vektor i matrisen, där vektorernas dimension $d$ utgör matrisen bredd. $d$ representerar den maximala längden för ett ord.  Matrisens storlek ges således av $l*d$. Vektorerna som representerar olika ord är antingen ordinbäddningar \cite{wiki:016} eller “one-hot”-vektorer \cite{cnn:004}. “One-hot”-vektorer är det som har använts för implementationen av CNN i denna studie och där indexeras varje ord i datamängden till ett vokabulär. Efter att twitterinlägget har konverterats till att representeras som en matris, går det att hantera inlägget som en bild och utföra konvulsioner på det genom olika filter \cite{cnn:002}. Eftersom varje rad representerar ett ord i twitterinlägget är det rimligt att använda filter som till bredden är lika stora som dimensionen på vektorerna. Höjden eller regionstorleken på filtren kan däremot varieras och det går att använda flertalet filter med olika regionstorlekar. Regionstorleken anpassas utefter hur många ord ett filter ska omfatta. 
+Som nämndes i \ref{bak:cnn}, är CNN ursprungligen framtagen för problem som rör bearbetning av bilder. När bilder bearbetas av CNN representeras bildens pixlar i en matris, som filtrena sedan förflyttar sig över \cite{cnn:004}. Text som ska bearbetas av CNN behöver därför också representeras som en bild. I figur \ref{fig:cnntext} visas ett exempel av ett CNN som används för textklassificering. I exemplet ska ett twitterinlägg av längden $l$ klassificeras \cite{cnn:002}. Twitterinlägget som ska klassificeras har konverterats till en twitterinläggmatris. Varje ord i twitterinlägget utgör en rad i matrisen och representeras av en vektor i matrisen, där vektorernas dimension $d$ utgör matrisen bredd. $d$ representerar den maximala längden för ett ord.  Matrisens storlek ges således av $l*d$. Vektorerna som representerar olika ord är antingen ordinbäddningar \cite{wiki:016} eller “one-hot”-vektorer \cite{cnn:004}. “One-hot”-vektorer är det som har använts för implementationen av CNN i denna studie och där indexeras varje ord i datamängden till ett vokabulär, d.v.s. ord representeras som nummer istället för text \cite{cnn:009}. Efter att twitterinlägget har konverterats till att representeras som en matris, går det att hantera inlägget som en bild och utföra konvulsioner på det genom olika filter \cite{cnn:002}. Eftersom varje rad representerar ett ord i twitterinlägget är det rimligt att använda filter som till bredden är lika stora som dimensionen på vektorerna. Höjden eller regionstorleken på filtren kan däremot varieras och det går att använda flertalet filter med olika regionstorlekar. Regionstorleken anpassas utefter hur många ord ett filter ska omfatta. 
 
 \begin{figure}[H]
 \includegraphics[width=12cm]{cnn_text}
@@ -690,10 +695,10 @@ def remove_stopwords(self):
        apply(lambda x: [word for word in x if word not in stop])
 \end{lstlisting}
 \subsection{Lexikon}\label{impl:lex}
-I detta avsnitt diskuteras hur den lexikonbaserade modellen implementeras som blir basfallet för STS- och SemEval-datamängden. Tekniker som använts för implementationen är WordNet \cite{lex:001} och SentiWordNet \cite{lex:002} från Python-paketet NLTK.
+I detta avsnitt diskuteras hur den lexikonbaserade modellen implementeras som blir basfallet för STS- och SemEval-datamängden. Tekniker som använts för implementationen är WordNet \cite{lex:001} och SentiWordNet \cite{lex:002} från NLTK.
 WordNet är en lexikal databas på engelska som hittar konceptuella relationer mellan ord där substantiv, verb, adjektiv och adverb grupperas till mängder av kognitiva synonymer. SentiWordNet använder sedan de kognitiva synonymerna för att klassificera om de är positiva eller negativa.
 
-I kodavsnitt \ref{lex:kod} illustreras implementationen av den lexikonbaserade modellen, som tar ett twitterinlägg som inparameter. Twitterinlägget delas sedan ner till en mängd ord med respektive POS-tag. Därefter utförs tre kontroller på respektive ord. Den första kontrollen kontrollerar om ordet är ett substantiv, adjektiv eller ett adverb. Sedan kontrolleras om ordet har en grundform och slutligen kontrolleras om ordet är en synonym. Om ordet inte klarar de tre kontrollerna hoppar vi över ordet, eftersom ordet inte kan klassificeras. Ifall ordet går igenom kontrollerna tas ordets klassificering fram och adderas till en variabel $sentiment$. När twitterinläggets ord antingen har klassificerats eller hoppats över används $sentiment$ för att klassificera om twitterinlägget är positivt eller negativt, d.v.s. om $sentiment >= 0$ är inlägget positivt annars negativt.
+I kodavsnitt \ref{lex:kod} illustreras implementationen av den lexikonbaserade modellen, som tar ett twitterinlägg som inparameter. Twitterinlägget delas sedan ner till en mängd ord med respektive POS-tag. Därefter utförs tre kontroller på respektive ord. Den första kontrollen kontrollerar om ordet är ett substantiv, adjektiv eller ett adverb. Sedan kontrolleras om ordet har en grundform och slutligen kontrolleras om ordet är en synonym. Om ordet inte klarar de tre kontrollerna hoppar vi över ordet, eftersom ordet inte kan klassificeras. Och om alla ord i ett twitterinlägg inte kan klassificeras bedöms twitterinlägget som negativt. Ifall ordet går igenom kontrollerna tas ordets klassificering fram och adderas till variabeln, \pyth{sentiment}. När twitterinläggets ord antingen har klassificerats eller hoppats över används \pyth{sentiment} för att klassificera om twitterinlägget är positivt eller negativt, d.v.s. om \pyth{sentiment} $>= 0$ är inlägget positivt annars negativt.
 
 \begin{lstlisting}[style=mypython,caption={Funktion för att klassificera twitterinlägg m.h.a. WordNet och SentiWordNet.},label=lex:kod]
 def swn_classifier(tweet):
@@ -744,7 +749,7 @@ X_train, X_test, y_train, y_test = train_test_split(df.tweet,
             df.lable, test_size=0.2, random_state=0)
 \end{lstlisting}
 
-I kodavsnitt \ref{nb:base} implementeras algoritmen \pyth{MultinomialNB()} med standardparametrar \cite{scikit:004} och unigram som särdrag vilket är standardparameter för \pyth{CountVectorizer()} \cite{scikit:005}. Träningen av algoritmen utförs med \pyth{fit(X_train, y_train)}-funktionen som tar träningsmängden som indata. Precisionen tas fram genom att först klassificera vår testmängd på den tränade algoritmen m.h.a. \pyth{predict(X_test)} för att sedan använda \pyth{metrics.classification_report()} som presenterar värden som diskuterats i avsnitt \ref{TSAev}.
+I kodavsnitt \ref{nb:base} implementeras algoritmen \pyth{MultinomialNB()} med standardparametrar \cite{scikit:004} och unigram som särdrag vilket är standardparameter för \newline\pyth{CountVectorizer()} \cite{scikit:005}. Träningen av algoritmen utförs med \pyth{fit(X_train, y_train)}-funktionen som tar träningsmängden som indata. Precisionen tas fram genom att först klassificera vår testmängd på den tränade algoritmen m.h.a. \pyth{predict(X_test)} för att sedan använda \pyth{metrics.classification_report()} som presenterar värden som diskuterats i avsnitt \ref{TSAev}.
 \begin{lstlisting}[style=mypython,caption={Kod för att skapa och träna NB-klassificeraren.},label=nb:base]
 nb_unigram_clf = Pipeline([('vect', CountVectorizer()), ('clf', MultinomialNB())])
 nb_unigram_clf.fit(X_train, y_train)
@@ -753,9 +758,9 @@ print(metrics.classification_report(y_test, predicted, target_names=target_names
 \end{lstlisting}
 Kodavsnitt \ref{nb:base} körs på både STS- och SemEval-datamängden och resultatet presenteras i avsnitt \ref{res}.
 
-I kodavsnitt \ref{nb:grid} används \pyth{GridSearchCV()} \cite{scikit:006} vilket är en sk-learn funktion som utför parametersökning för algoritmer och särdragsfunktioner, så att optimala parametrar kan hittas. För \pyth{CountVectorizer()} är vi intresserade av \pyth{max_df} och \pyth{ngram_range}. \pyth{Max_df} tar emot ett flyttal mellan intervallet $[0.0, 1.0]$ som under uppbyggnaden av vokabuläret ignorerar ord som har en twitterinläggsfrekvens högre än det angivna flyttalet. \pyth{Ngram_range} används för att testa vilken typ av ngram som skall användas, t.ex. (1, 1) betyder unigram och (1, 2) betyder att både uni- och bigrams används.
+I kodavsnitt \ref{nb:grid} används \pyth{GridSearchCV()} \cite{scikit:006} vilket är en sk-learn funktion som utför parametersökning för algoritmer och särdragsfunktioner, så att optimala parametrar kan hittas. För \pyth{CountVectorizer()} är vi intresserade av \pyth{max_df} och \pyth{ngram_range}. \pyth{Max_df} tar emot ett flyttal mellan intervallet $[0.0, 1.0]$ som under uppbyggnaden av vokabuläret ignorerar ord som har en twitterinläggsfrekvens högre än det angivna flyttalet. \pyth{Ngram_range} används för att testa vilken typ av n-gram som skall användas, t.ex. (1, 1) betyder unigram och (1, 2) betyder att både uni- och bigrams används.
 
-För \pyth{TfidfTransformer()} är vi intresserade av \pyth{use_idf} och \pyth{Norm}. \pyth{Use_idf} används för att specificera om IDF skall användas eller ej. \pyth{Norm} specificerar vilken typ av normaliseringsfunktion som används för att normalisera ord. \pyth{SelectKBest()} \cite{scikit:007} tar två parametrar, \pyth{score_func} och $k$. För \pyth{score_func} är vi bara intresserade av “chi-squared test” (chi2) och $k$ är ett heltal för att specificera hur många särdrag som ska tas ut från \pyth{score_func}. Eftersom MNB är en så pass enkel klassificeringsalgoritm finns det inga parametrar att justera.
+För \pyth{TfidfTransformer()} är vi intresserade av \pyth{use_idf} och \pyth{Norm}. \pyth{Use_idf} används för att specificera om IDF skall användas eller ej. \pyth{Norm} specificerar vilken typ av normaliseringsfunktion som används för att normalisera ord. \pyth{SelectKBest()} \cite{scikit:007} tar två parametrar, \pyth{score_func} och $k$. För \pyth{score_func} är vi bara intresserade av “chi-squared test” (chi2) och $k$ är ett heltal för att specificera hur många särdrag som ska tas ut från \pyth{score_func}. \pyth{MultinomialNB()} har inga parametrar att justera p.g.a. att den är en så pass enkel klassificeringsalgoritm.
 
 \begin{lstlisting}[style=mypython,caption={Kod som används till parametersökning för NB.},label=nb:grid]
 pipeline = Pipeline([
@@ -797,7 +802,7 @@ Kodavsnitt \ref{nb:grid} kör både STS- och SemEval-datamängderna, där \pyth{
 \subsection{Support Vector Machine}\label{impl:svm}
 I detta avsnitt diskuteras hur SVM-algoritmen implementerats och hur vi anpassat algoritmens parametrar för att uppnå en eventuellt förbättrad precision. SVM har också implementerats m.h.a. sk-learn.
 
-I avsnitt \ref{impl:nb} diskuteras att en datamängd först måste delas in i en test- och träningsmängd, vilket även är fallet för SVM. Uppdelningen sker på samma sätt som illustreras i kodavsnitt \ref{impl:datasplit}. 
+I avsnitt \ref{impl:nb} diskuteras att en datamängd först måste delas in i tränings- och testmängder, vilket även är fallet för SVM. Uppdelningen sker på samma sätt som illustreras i kodavsnitt \ref{impl:datasplit}. 
 
 I kodavsnitt \ref{svm:base} används algoritmen \pyth{SGDClassifier()} med standardparametrar \cite{scikit:009}. \pyth{SGDClassifier()} är en linjär klassificerare baserat på en SVM med “stochastic gradient descent” (SGD) träning. Valet att använda \pyth{SGDClassifier()} istället för en ren linjär SVM är p.g.a att \pyth{SGDClassifier()} är bättre anpassad för stora datamängder \cite{scikit:008}, vilket är fallet för studien då STS-datamängden används. Som särdrag används unigram vilket är standardparametern för \pyth{CountVectorizer()}.
 
@@ -812,7 +817,7 @@ predicted = svm_unigram_clf.predict(X_test)
 print(metrics.classification_report(y_test, predicted, target_names=target_names))
 \end{lstlisting}
 
-För parametersökningen som illustreras i kodavsnitt \ref{svm:grid} används \pyth{GridSearchCV()}. Vi är intresserade av samma parametrar för \pyth{CountVectorizer(), TfidfTransformer()} och \pyth{SelectKBest()} som diskuteras i avsnitt \ref{impl:nb}. För klassificeringsalgoritmen \pyth{SGDClassifier()} är följande parametrar av intresse: \pyth{max_iter}, \pyth{penalty} och \pyth{alpha}. \pyth{Max_iter} är hur många gånger algoritmen går igenom datamängden, \pyth{penalty} specificerar vilken typ av normaliseringsfunktion som används för att undvika överanpassning \cite{svm:007}. Överanpassning är ett fenomen där klassificeringsalgoritmen under träning lär sig detaljerna i datamängden vilket kommer skada precisionen när ny data klassificeras.
+För parametersökningen som illustreras i kodavsnitt \ref{svm:grid} används \pyth{GridSearchCV()}. Vi är intresserade av samma parametrar för \pyth{CountVectorizer()}, \newline \pyth{TfidfTransformer()} och \pyth{SelectKBest()} som diskuteras i avsnitt \ref{impl:nb}. För klassificeringsalgoritmen \pyth{SGDClassifier()} är följande parametrar av intresse: \pyth{max_iter}, \pyth{penalty} och \pyth{alpha}. \pyth{Max_iter} är hur många gånger algoritmen går igenom datamängden, \pyth{penalty} specificerar vilken typ av normaliseringsfunktion som används för att undvika överanpassning \cite{svm:007}. Överanpassning är ett fenomen där klassificeringsalgoritmen under träning lär sig detaljerna i datamängden vilket kommer skada precisionen när ny data klassificeras.
 \pyth{Alpha} används för att specificera vilken initial inlärningsfrekvens algoritmen använder. Resultatet av parametersökningen presenteras i avsnitt \ref{res}.
 
 \begin{lstlisting}[style=mypython,caption={Kod som används till parametersökning för SVM.},label=svm:grid]
@@ -848,7 +853,7 @@ För implementationen av CNN har en referensimplementation använts, som har anp
 
 
 I figur \ref{fig:cnnimpl} visas hur implementationen av studiens CNN har tagits fram. 
-I \cite{impcnn:003} presenteras referensimplementationen, som är implementerad av Oswal. Referensimplementationen är en förenklad implementation baserad på Britz implementation \cite{impcnn:002}. Britz implementation är gjord med TensorFlow, i \cite{impcnn:001} presenteras och förklaras implementationen. Implementationen är baserad på Kims modell \cite{cnn:003}, som nämndes i avsnitt \ref{bak:cnn}, och det Zhang och Wallace presenterar i \cite{cnn:002}. Britz har förenklat modellen något, exempelvis används inte tränande ordinbäddningar utan istället används “one-hot”-vektorer för att representera ord.
+I \cite{impcnn:003} presenteras referensimplementationen, som är implementerad av Oswal. Referensimplementationen är en förenklad implementation baserad på Britz implementation \cite{impcnn:002}. Britz implementation är gjord med TensorFlow, i \cite{impcnn:001} presenteras och förklaras implementationen. Implementationen är baserad på Kims modell \cite{cnn:003}, som nämndes i avsnitt \ref{bak:cnn}, och de praktiska råd Zhang och Wallace presenterar i \cite{cnn:002}. Britz har förenklat modellen något, exempelvis används inte tränande ordinbäddningar utan istället används “one-hot”-vektorer för att representera ord.
 
 Parametrarna som används i referensimplementationen skiljer sig dock från standardparametrarna som används i Britz implementation. För implementationen i den här studien har standardparametrarna från Britz implementation använts istället för de som används i referensimplementationen av Oswal. I kodavsnitt \ref{cnn:par} presenteras parametrar som har använts för denna studie. Parametrarna används bland annat för att bestämma storleken på twitterinläggsmatrisen, storleken på de filter som ska användas och antalet filter för varje regionstorlek. Dessa beskrevs tidigare i avsnitt \ref{exp:cnn}. Höjden och bredden på twitterinläggsmatrisen representeras i kodavsnittet av \pyth{sequence_length = x.shape[1]} och \pyth{embedding_dim = 128}.
 
@@ -946,25 +951,25 @@ I figur \ref{fig:gui_form} illustreras implementationen av webbgränssnittet dä
 \begin{figure}[H]
 \includegraphics[width=12cm]{GUI_form}
 \centering
-\caption{Illustrerar webbgränssnittets sökformulär.}
+\caption{Webbgränssnittets sökformulär.}
 \label{fig:gui_form}
 \end{figure}
 
-I figur \ref{fig:gui_search_g} illustreras en pajgraf för vardera klassificeringsmodell som visar hur många av de inhämtade twitterinläggen från Twitter-användaren “realDonaldTrump” som är positiva eller negativa.
+I figur \ref{fig:gui_search_g} visas resultatet från sökningen i form av en pajgraf för vardera klassificeringsmodell, som visar hur många av de inhämtade twitterinläggen från Twitter-användaren “realDonaldTrump” som är positiva eller negativa.
 
 \begin{figure}[H]
 \includegraphics[width=12cm]{GUI_search_graph}
 \centering
-\caption{Illustrerar hur klassificeringsmodellerna har klassificerat 10 stycken twitterinlägg från användaren “realDonaldTrump” som är inhämtade 2018-04-16 11:40.}
+\caption{Klassificeringsmodellerna har klassificerat 10 stycken twitterinlägg från användaren “realDonaldTrump” som är inhämtade 2018-04-16 11:40.}
 \label{fig:gui_search_g}
 \end{figure}
 
-Figur \ref{fig:gui_search_t} illustrerar de inhämtade twitterinläggen från användaren “realDonaldTrump” i en tabell där användare kan analysera hur varje klassificeringsmodell har klassificerat varje twitterinlägg.
+Figur \ref{fig:gui_search_t} visar de inhämtade twitterinläggen från användaren “realDonaldTrump”, där användare kan analysera hur varje klassificeringsmodell har klassificerat varje twitterinlägg.
 
 \begin{figure}[H]
 \includegraphics[width=12cm]{GUI_search_table}
 \centering
-\caption{Illustrerar hur klassificeringsmodellerna har klassificerat varje twitterinlägg.}
+\caption{Illustration av hur klassificeringsmodellerna har klassificerat  twitterinlägg.}
 \label{fig:gui_search_t}
 \end{figure}
 \section{Sammanfattning}
@@ -972,14 +977,14 @@ I detta kapitel har tillvägagångssättet för studiens experiment diskuterats.
 
 
 \chapter{Resultat} \label{res}
-I detta kapitel kommer resultaten från studien att presenteras. Det kommer att presenteras hur lexikon, NB, SVM och CNN presterar när de har tränats med datamängderna som diskuterades i avsnitt \ref{DS}. För lexikon och CNN har en modell tagits fram för respektive datamängd, medan två modeller har tagits fram för NB och SVM. Modellerna som har tagits fram för NB och SVM har tränats med två olika uppsättningar av parametrar. Den ena modellen har tränats med standardparametrar, medan den andra har tränats med parametrar framtagna m.h.a. parametersökning. Av den anledningen kommer resultaten för NB och SVM omfatta: prestandan för de två modeller och parametrarna som togs fram genom parametersökningen. Till skillnad från lexikon och CNN där resultaten enbart omfattar en modell. Den lexikonbaserade modellen används som ett basfall för respektive datamängd, vilket diskuterades i kapitel \ref{exp}.
+I detta kapitel kommer resultaten från studien att presenteras. Det kommer att presenteras hur lexikon, NB, SVM och CNN presterar när de har tränats med datamängderna som diskuterades i avsnitt \ref{DS}. För lexikon och CNN har en modell tagits fram för respektive datamängd, medan två modeller har tagits fram för NB och SVM. Modellerna som har tagits fram för NB och SVM har tränats med två olika uppsättningar av parametrar. Den ena modellen har tränats med standardparametrar, medan den andra har tränats med parametrar framtagna m.h.a. parametersökning. Av den anledningen kommer resultaten för NB och SVM omfatta: prestandan för de två modellerna och parametrarna som togs fram genom parametersökningen, till skillnad från lexikon och CNN där resultaten enbart omfattar en modell. Den lexikonbaserade modellen används som ett basfall för respektive datamängd, vilket diskuterades i kapitel \ref{exp}.
 
 För- och nackdelar med respektive klassificeringsmodell och datamängd kommer att diskuteras med hänsyn till prestanda, hur invecklade de var att implementera och hur lång tid de tog att träna. Värdena som kommer att användas för att jämföra och analysera prestandan av de olika modellerna diskuterades i avsnitt \ref{TSAev}. I avsnitt \ref{res:se} och \ref{res:sts} presenteras resultaten av prestandan för klassificeringsmodellerna, för respektive datamängd. Och i avsnitt \ref{res:utv} utvärderas klassificeringsmodellerna och datamängderna utefter för- och nackdelar.
 
 \section{SemEval}\label{res:se}
-I detta avsnitt presenteras och jämförs de klassificeringsmodeller som har tränats på datamängden SemEval. 
+I detta avsnitt presenteras och jämförs de klassificeringsmodeller som har tränats på datamängden SemEval. Den lexikonbaserade modellen utgör basmodellen för SemEval.
 \subsection{Lexikon}
-I tabell \ref{tab:lexi_se} visas prestandan för den lexikonbaserade modellen, som har tränats på SemEval-datamängden. Modellen uppnår en precision på 68,2\%, en återkallelse på 67,1\% och en F-Score på 67,6\%. 
+I tabell \ref{tab:lexi_se} visas prestandan för den lexikonbaserade modellen, som har tränats på SemEval-datamängden. Modellen uppnår en precision på 68,2\%, en återkallelse på 67,1\% och en F-Score på 67,6\%. Detta kan jämföras med gissning, där en prestanda på 50\% uppnås. 
 
 \begin{table}[H]
 \centering
@@ -1131,7 +1136,7 @@ Prestandan för CNN-modellen, som har tränats på SemEval-datamängden, present
 \end{table}
 
 \section{Stanford Twitter Sentiment}\label{res:sts}
-Detta avsnitt avser att presentera och jämföra klassificeringsmodellerna som är tränade på STS-datamängden.
+Detta avsnitt avser att presentera och jämföra klassificeringsmodellerna som är tränade på STS-datamängden. Den lexikonbaserade modellen utgör basmodellen för STS.
 
 \subsection{Lexikon}
 I tabell \ref{tab:lexi_sts} presenteras prestandan efter att den lexikonbaserade modellen har tränats på STS-datamängden. Den lexikonbaserade modellen uppnår en precision på 59,6\%, återkallelse på 58,5\% och F-Score på 57,3\%. Med detta i åtanke kan vi konstatera att basfallet precision är 9,6\% bättre än att gissa om ett twitterinlägg är positivt eller negativt.
@@ -1319,7 +1324,7 @@ Utifrån resultaten kan slutsatsen dras att CNN presterar bäst på båda datam�
 
 
 \subsection{Träning}\label{res:train}
-För att träna studiens klassificeringsmodeller har en server med 16 kärnor och 128 GB internminne använts. I tabell \ref{tab:clf_train_time} presenteras hur lång tid respektive klassificeringsmodell tog att träna. i antingen sekunder (s) eller minuter (min). Modellerna som har tränats på SemEval-datamängden är betydligt snabbare än modellerna tränade på STS-datamängden. Detta p.g.a att STS-datamängden består av 77 gånger fler twitterinlägg än SemEval-datamängden. Utifrån det presenterade resultatet ser vi att träningstiden för de olika klassificeringmodellerna varierar stort, där NB är snabbast och CNN är långsammast för respektive datamängd. 
+För att träna studiens klassificeringsmodeller har en server med 16 kärnor och 128 GB internminne använts. I tabell \ref{tab:clf_train_time} presenteras hur lång tid respektive klassificeringsmodell tog att träna, i antingen sekunder (s) eller minuter (min). Modellerna som har tränats på SemEval-datamängden är betydligt snabbare än modellerna tränade på STS-datamängden. Detta p.g.a att STS-datamängden består av 77 gånger fler twitterinlägg än SemEval-datamängden. Utifrån det presenterade resultatet ser vi att träningstiden för de olika klassificeringmodellerna varierar stort, där NB är snabbast och CNN är långsammast för respektive datamängd. 
 
 \begin{table}[H]
 \centering
@@ -1344,7 +1349,7 @@ För att träna studiens klassificeringsmodeller har en server med 16 kärnor oc
 \subsection{Implementation}
 Svårighetsgraden för att implementera klassificeringsmodellerna i studien skiljer sig åt mellan modellerna. I denna studie användes sk-learn för att implementera NB- och SVM-modellerna. Genom användandet av sk-learn behöver utvecklare inte förstå den underliggande arkitekturen för NB och SVM, vilket gör implementeringen av dessa modeller enkel. Däremot krävs det en större kunskap om den underliggande arkitekturen för att implementera ett CNN. Trots att en färdig referensimplementation användes, med en relativt enkel CNN-arkitektur, var det fortfarande svårt att sätta sig in i hur allt fungerade och alla parametrars inverkan på arkitekturens prestanda. Sett till implementeringen i avsnitt \ref{impl} är NB och SVM enklare att implementera och utföra parametersökning på än CNN, vilket diskuterades i avsnitt \ref{impl:cnn}
 \subsection{Helhetsbedömning} \label{res:hhb}
-Utifrån resultaten som har presenterats ovan går det att fastställa att de klassificeringsmodeller som tränades på SemEval-datamängden uppnådde bättre prestanda än de som tränades på STS-datamängden. Det betyder att twitterinlägg som märkts genom mänsklig märkning är att föredra med avseende till prestanda. Dock är det problematiskt att genomföra mänsklig märkning i praktiken på en större skala med hänsyn till metoden som diskuterades i avsnitt \ref{DSse}. Eftersom det dels är människor som måste märka twitterinlägg, men även för att åsikter om vad som är positivt eller negativt kan variera från person till person. Det är dock inte ett problem för ''distant supervision'', men där är problematiken istället att det inte ges några garantier för att ett twitterinlägg uttrycker något positivt eller negativt. Eftersom märkningen sker utefter antagandet att exempelvis ett negativt twitterinlägg innehåller negativa emojis. I tabell \ref{tab:exp_mark} visas ett exempel på ett twitterinlägg, som av en människa troligtvis hade märkts som positivt. Men enligt ''distant supervisions'' märkningsmetod  hade twitterinlägget märkts som negativt, eftersom det innehåller en negativ emoji.
+Utifrån resultaten som har presenterats ovan går det att fastställa att de klassificeringsmodeller som tränades på SemEval-datamängden uppnådde bättre prestanda än de som tränades på STS-datamängden. Det betyder att twitterinlägg som märkts genom mänsklig märkning är att föredra med avseende på prestanda. Dock är det problematiskt att genomföra mänsklig märkning i praktiken i en större skala med hänsyn till metoden som diskuterades i avsnitt \ref{DSse}. Dels p.g.a. tidsaspekten, men även för att åsikter om vad som är positivt eller negativt kan variera från person till person. Detta utgör inte bara ett problem för märkningen utan även för TSA som analysmetod. Tidsaspekten och att åsikter skiljer sig åt är dock inte ett problem för ''distant supervision'', men där är problematiken istället att det inte ges några garantier för att ett twitterinlägg uttrycker något positivt eller negativt. Eftersom märkningen sker utefter antagandet att exempelvis ett negativt twitterinlägg innehåller negativa emojis. I tabell \ref{tab:exp_mark} visas ett exempel på ett twitterinlägg, som av en människa troligtvis hade märkts som positivt. Men enligt ''distant supervisions'' märkningsmetod  hade twitterinlägget märkts som negativt, eftersom det innehåller en negativ emoji.
 
 \begin{table}[H]
 \centering
@@ -1361,7 +1366,7 @@ Utifrån resultaten som har presenterats ovan går det att fastställa att de kl
 
 Utvärderingen av studiens klassificeringsmodeller visar att CNN presterar bäst på båda datamängderna. Dock är det en stor skillnad på träningstiderna mellan CNN och de klassiska modellerna: NB och SVM. Beroende på tillgänglig beräkningskraft och tid kan det vara svårt att motivera den prestandaökningen som ges av CNN gentemot de klassiska modellerna. Tas även implementationsprocessen i åtanke kan det vara fördelaktigt att använda de klassiska modellerna.
 \section{Sammanfattning}
-I detta kapitel har resultaten från studiens experiment presenterats från avsnitt \ref{impl}. Resultaten har sedan använts för att jämföra och utvärdera studiens datamängder och klassificeringsmodeller. Klassificeringsmodellerna har utvärderats med hänsyn till värdena som presenterades i avsnitt \ref{TSAev}, hur lång tid de tog att träna och hur invecklade de var att implementera. Slutligen har en helhetsbedömning presenterats där för- och nackdelar med respektive datamängd och klassificeringsmodell diskuteras.
+I detta kapitel har resultaten från studiens experiment från avsnitt \ref{impl} presenterats. Resultaten har sedan använts för att jämföra och utvärdera studiens datamängder och klassificeringsmodeller. Klassificeringsmodellerna har utvärderats med hänsyn till värdena som presenterades i avsnitt \ref{TSAev}, hur lång tid de tog att träna och hur invecklade de var att implementera. Slutligen har en helhetsbedömning presenterats där för- och nackdelar med respektive datamängd och klassificeringsmodell diskuteras.
 
 \chapter{Slutsats}
 TSA används för att analysera åsikter, attityder och känslor som människor uttrycker på Twitter om olika ämnen, individer eller händelser. I denna studie har tre klassificieringsmodeller utvärderats efter hur väl de kan utläsa om ett twitterinlägg uttrycker någonting positivt eller negativt och hur olika typer av märkningsmetoder kan påverka en klassificeringsmodells prestanda. För att jämföra hur modellerna presterar på olika typer av märkningstekniker togs modellerna fram med två olika datamängder: SemEval och STS. SemEval är märkt genom mänsklig märkning och STS är märkt genom ''distant supervision''. Respektive datamängd delades upp i en träningsmängd och en testmängd. Träningsmängden användes för att ta fram modellen och testmängden användes för att testa klassificeringsmodellernas prestanda. 

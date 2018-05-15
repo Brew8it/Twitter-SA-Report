@@ -5,45 +5,45 @@ The style file: unsrtnat.bst
 Database file #1: ../refs/thesisref.bib
 Warning--empty journal in slut:testmangd
 Warning--there's a number but no series in slut:004
-You've used 89 entries,
+You've used 90 entries,
             2481 wiz_defined-function locations,
-            952 strings with 17541 characters,
-and the built_in function-call counts, 27542 in all, are:
-= -- 2450
-> -- 928
-< -- 69
-+ -- 481
-- -- 272
-* -- 1639
-:= -- 4054
-add.period$ -- 336
-call.type$ -- 89
-change.case$ -- 178
-chr.to.int$ -- 58
-cite$ -- 106
-duplicate$ -- 1456
-empty$ -- 2939
-format.name$ -- 354
-if$ -- 6135
+            955 strings with 17678 characters,
+and the built_in function-call counts, 27799 in all, are:
+= -- 2472
+> -- 935
+< -- 70
++ -- 485
+- -- 274
+* -- 1650
+:= -- 4093
+add.period$ -- 339
+call.type$ -- 90
+change.case$ -- 180
+chr.to.int$ -- 59
+cite$ -- 107
+duplicate$ -- 1470
+empty$ -- 2969
+format.name$ -- 357
+if$ -- 6192
 int.to.chr$ -- 32
-int.to.str$ -- 90
+int.to.str$ -- 91
 missing$ -- 22
-newline$ -- 517
-num.names$ -- 222
-pop$ -- 1009
+newline$ -- 522
+num.names$ -- 225
+pop$ -- 1021
 preamble$ -- 1
-purify$ -- 89
+purify$ -- 90
 quote$ -- 0
-skip$ -- 1019
+skip$ -- 1031
 stack$ -- 0
-substring$ -- 643
-swap$ -- 308
+substring$ -- 645
+swap$ -- 310
 text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 623
+type$ -- 630
 warning$ -- 2
-while$ -- 184
+while$ -- 186
 width$ -- 0
-write$ -- 1227
+write$ -- 1239
 (There were 2 warnings)

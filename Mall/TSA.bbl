@@ -1,4 +1,4 @@
-\begin{thebibliography}{89}
+\begin{thebibliography}{90}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -44,7 +44,7 @@ David Silver, Aja Huang, Chris~J Maddison, Arthur Guez, Laurent Sifre, George
   Van Den~Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda
   Panneershelvam, Marc Lanctot, et~al.
 \newblock Mastering the game of go with deep neural networks and tree search.
-\newblock \emph{nature}, 529\penalty0 (7587):\penalty0 484--489, 2016.
+\newblock \emph{Nature}, 529\penalty0 (7587):\penalty0 484--489, 2016.
 
 \bibitem[contributors(2016{\natexlab{b}})]{wiki:005}
 Wikipedia contributors.
@@ -388,6 +388,12 @@ Adit Deshpande.
 \newblock URL
   \url{https://en.wikipedia.org/w/index.php?title=Word_embedding&oldid=835602312}.
 \newblock [Använd 11-April-2018].
+
+\bibitem[Shwartz(2016)]{cnn:009}
+Vered Shwartz.
+\newblock Probably approximately a scientific blog: Representing words, 2016.
+\newblock URL
+  \url{http://veredshwartz.blogspot.se/2016/01/representing-words.html}.
 
 \bibitem[imp(i.d{\natexlab{a}})]{impl:001}
 Python 3.0 release, i.d{\natexlab{a}}.
