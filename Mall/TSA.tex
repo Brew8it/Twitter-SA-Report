@@ -228,12 +228,7 @@ De olika klassificeringsteknikerna som i nuläget används för SA delas upp i 3
 Maskininlärningsmetoder använder etablerade maskininlärningsalgoritmer tillsammans med språkliga särdrag för att konstruera klassificeringsmodeller, som kan avgöra om en text uttrycker någonting positivt eller negativt \cite{SAsurvey}. Prestandan för maskininlärningsmetoder är beroende av mängden träningsdata, större mängder data ger vanligtvis bättre resultat \cite{TSAsurvey}. Maskininlärningsmetoder är dessutom domänberoende, vilket gör att de inte presterar bra när de används på andra domäner än dem har tränats på. 
 
 Lexikonbaserade metoder använder sig av ordlistor för att analysera text \cite{SAsurvey}. Ordlistorna består av positiva och negativa termer som används för att beräkna vad en given text uttrycker för sentiment.
-Fördelen med lexikonbaserade metoder är att de inte kräver någon  träningsdata \cite{TSAsurvey}. 
-
-
-
-
-Men faktumet att de är beroende av statiska ordlistor betyder att de inte tar hänsyn till termer som inte finns i ordlistorna. Det betyder att ordlistor måste uppdateras kontinuerligt för innehåll som är dynamiskt och ständigt under utveckling, vilket är särskilt problematiskt för texter som förekommer på sociala medier. 
+Fördelen med lexikonbaserade metoder är att de inte kräver någon träningsdata \cite{TSAsurvey}. Men faktumet att de är beroende av statiska ordlistor betyder att de inte tar hänsyn till sammanhanget termerna används i, vilket försvårar en korrekt klassificering. Ett exempel på det är den engelska termen ''small''. I meningen ''The size of the phone is small and fits in my pocket'' uttrycker ''small'' någonting positivt, medan i meningen ''The buttons on the keyboard are very small'' uttrycker ''small'' någonting negativt. 
 
 Hybrida metoder kombinerar lexikonbaserade metoder med maskininlärningsmetoder \cite{TSAsurvey}. Genom att kombinera metoderna med varandra kan de väga upp för varandras svagheter. Nackdelen med hybrida metoder är dock att de kräver en hög beräkningskomplexitet.
 
