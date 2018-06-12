@@ -15,11 +15,11 @@
 \contentsline {section}{\numberline {2.3}Datam\IeC {\"a}ngd}{10}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}SemEval}{11}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Stanford Twitter Sentiment}{11}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Twittersentimentanalys}{11}{section.2.4}
+\contentsline {section}{\numberline {2.4}Twittersentimentanalys}{12}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Utmaningar}{13}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Problem}{15}{subsection.2.4.2}
 \contentsline {section}{\numberline {2.5}Utv\IeC {\"a}rdering}{15}{section.2.5}
-\contentsline {section}{\numberline {2.6}Sammanfattning}{16}{section.2.6}
+\contentsline {section}{\numberline {2.6}Sammanfattning}{17}{section.2.6}
 \contentsline {chapter}{\numberline {3}Experiment}{18}{chapter.3}
 \contentsline {section}{\numberline {3.1}Bearbetning av datam\IeC {\"a}ngd}{18}{section.3.1}
 \contentsline {section}{\numberline {3.2}S\IeC {\"a}rdragsurval}{23}{section.3.2}

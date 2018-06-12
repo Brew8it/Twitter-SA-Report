@@ -135,7 +135,7 @@
 \begin{abstract}
 Twitter är en av de populäraste mikrobloggarna, som används för att uttrycka tankar och åsikter om olika ämnen. Ett område som har dragit till sig mycket intresse under de senaste åren är twittersentimentanalys. Twittersentimentanalys handlar om att bedöma vad för sentiment ett inlägg på Twitter uttrycker, om det uttrycker någonting positivt eller negativt. Olika metoder kan användas för att utföra twittersentimentanalys, där vissa lämpar sig bättre än andra. De vanligaste metoderna för twittersentimentanalys använder maskininlärning. 
 
-Syftet med denna studie är att utvärdera tre stycken klassificeringsalgoritmer inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells prestanda för twittersentimentanalys. Naive Bayes, Support Vector Machine och Convolutional Neural Network är klassificeringsalgoritmerna som har utvärderats. För varje klassificeringsalgoritm har två klassificeringsmodeller tagits fram, som har tränats och testats på två separata datamängder: Stanford Twitter Sentiment och SemEval. Det som skiljer de två datamängderna åt, utöver innehållet i twitterinläggen, är märkningsmetoden och mängden twitterinlägg. Utvärderingen har gjorts utefter vilken prestanda de framtagna klassificeringmodellerna uppnår på respektive datamängd, hur lång tid de tar att träna och hur invecklade de var att implementera. 
+Syftet med denna studie är att utvärdera tre stycken klassificeringsalgoritmer inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells förmåga att märka ett twitterinlägg korrekt för twittersentimentanalys. Naive Bayes, Support Vector Machine och Convolutional Neural Network är klassificeringsalgoritmerna som har utvärderats. För varje klassificeringsalgoritm har två klassificeringsmodeller tagits fram, som har tränats och testats på två separata datamängder: Stanford Twitter Sentiment och SemEval. Det som skiljer de två datamängderna åt, utöver innehållet i twitterinläggen, är märkningsmetoden och mängden twitterinlägg. Utvärderingen har gjorts utefter vilken prestanda de framtagna klassificeringmodellerna uppnår på respektive datamängd, hur lång tid de tar att träna och hur invecklade de var att implementera. 
 
 Resultaten av studien visar att samtliga modeller som tränades och testades på SemEval uppnådde en högre prestanda än de som tränades och testades på Stanford Twitter Sentiment. Klassificeringsmodellerna som var framtagna med Convolutional Neural Network uppnådde bäst resultat över båda datamängderna. Dock är ett Convolutional Neural Network mer invecklad att implementera och träningstiden är betydligt längre än Naive Bayes och Support Vector Machine.
 
@@ -146,7 +146,7 @@ Resultaten av studien visar att samtliga modeller som tränades och testades på
 \begin{abstract}
 Twitter is one of the most popular microblogs, which is used to express thoughts and opinions on different topics. An area that has attracted much interest in recent years is Twitter sentiment analysis. Twitter sentiment analysis is about assessing what sentiment a Twitter post expresses, whether it expresses something positive or negative. Different methods can be used to perform Twitter sentiment analysis. The most common methods of Twitter sentiment analysis use machine learning.
 
-The purpose of this study is to evaluate three classification algorithms in machine learning and how the labeling of a data set affects classification models performance for Twitter sentiment analysis. Naive Bayes, Support Vector Machine and Convolutional Neural Network are the classification algorithms that have been evaluated. For each classification algorithm, two classification models have been trained and tested on two separate data sets: Stanford Twitter Sentiment and SemEval. What separates the two data sets, in addition to the content of the twitter posts, is the labeling method and the amount of twitter posts. The evaluation has been done according to the performance of the classification models on the respective data sets, training time and how complicated they were to implement.
+The purpose of this study is to evaluate three classification algorithms in machine learning and how the labeling of a data set affects classification models ability to classify a Twitter post correctly for Twitter sentiment analysis. Naive Bayes, Support Vector Machine and Convolutional Neural Network are the classification algorithms that have been evaluated. For each classification algorithm, two classification models have been trained and tested on two separate data sets: Stanford Twitter Sentiment and SemEval. What separates the two data sets, in addition to the content of the twitter posts, is the labeling method and the amount of twitter posts. The evaluation has been done according to the performance of the classification models on the respective data sets, training time and how complicated they were to implement.
 
 The results show that all models trained and tested on SemEval achieved a higher performance than those trained and tested on Stanford Twitter Sentiment. The Convolutional Neural Network models achieved the best results over both data sets. However, a Convolutional Neural Network is more complicated to implement and the training time is significantly longer than Naive Bayes and Support Vector Machine.
 
@@ -182,7 +182,7 @@ Användargenererat innehåll är en bra källa för åsikter och kan användas f
 För enskilda personer är det praktiskt taget omöjligt att analysera den typen av data \cite{TSAsurvey}. Därför har metoder som per automatik kan utläsa vad en text uttrycker för sentiment börjat utvecklas, vilket gör det möjligt att analysera stora mängder av data. Sentimentanalys (SA) är ett område som syftar till att bedöma om en text uttrycker någonting positivt eller negativt. Tidigare har SA använts för att bl.a. analysera blogginlägg, forumdiskussioner och recensioner. På senare tid har forskare även börjat intressera sig för sentiment som uttrycks på mikrobloggar. Twitter är en av de populäraste mikrobloggarna, där användare kan förmedla sina tankar och åsikter om olika ämnen. På grund av Twitters popularitet och tillgänglighet har det blivit populärt att analysera data från Twitter. Sentimentanlays som utförs på data från Twitter benämns Twittersentimentanalys (TSA) och handlar om att bedöma vad för sentiment ett inlägg på Twitter uttrycker.  TSA kan utföras på flera olika sätt, men de vanligaste metoderna använder maskininlärning.
 
 
-Denna studie kommer därför att fokusera på TSA och metoder som använder sig av maskininlärning. Syftet med studien är att utvärdera tre stycken klassificeringsmodeller inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells prestanda. I figur \ref{fig:helhet} visas klassificeringsmodellerna som används i studien, vilka är: Naive Bayes (NB), Support Vector Machine (SVM) och Convolutional Neural Network (CNN). De har tränats och utvärderats på två separata datamängder: Stanford Twitter Sentiment (STS) och SemEval. Datamängderna har märkts med olika märkningsmetoder. SemEval har märkts genom mänsklig märkning och består av ca 20000 twitterinlägg. STS består av ca 1,6 miljoner twitterinlägg och har märkts genom maskinell märkning, även kallat ''distant supervision''. Utvärderingen har gjorts utefter vilken prestanda klassificeringsmodellerna uppnår på respektive datamängd, hur lång tid de tar att träna och hur invecklade de var att implementera. 
+Denna studie kommer därför att fokusera på TSA och metoder som använder sig av maskininlärning. Syftet med studien är att utvärdera tre stycken klassificeringsmodeller inom maskininlärning och hur märkningen av en datamängd påverkar en klassificeringsmodells prestanda, d.v.s. dess förmåga att märka ett twitterinlägg korrekt beroende på om twitterinlägget uttrycker någonting positivt eller negativt. I figur \ref{fig:helhet} visas klassificeringsmodellerna som används i studien, vilka är: Naive Bayes (NB), Support Vector Machine (SVM) och Convolutional Neural Network (CNN). De har tränats och utvärderats på två separata datamängder: Stanford Twitter Sentiment (STS) och SemEval. Datamängderna har märkts med olika märkningsmetoder. SemEval har märkts genom mänsklig märkning och består av ca 20000 twitterinlägg. STS består av ca 1,6 miljoner twitterinlägg och har märkts genom maskinell märkning, även kallat ''distant supervision''. Utvärderingen har gjorts utefter vilken prestanda klassificeringsmodellerna uppnår på respektive datamängd, hur lång tid de tar att träna och hur invecklade de var att implementera. 
 
 \begin{figure}[h]
 \includegraphics[width=14cm]{helthetsbild}
@@ -285,7 +285,7 @@ Datamängden har märkts genom mänsklig märkning, där fem personer manuellt h
 I \cite{SemEval:004} beskrivs metoden för hur märkningen utförs, varje person markerar varje twitterinlägg antingen som mycket positivt, positivt, neutralt, negativt eller mycket negativt. Efter att alla twitterinlägg är märkta kartläggs alla twitterinlägg till kategorierna positivt, neutralt eller negativt utefter tre kriterier. Antingen att alla personer har märkt ett twitterinlägg samma, en majoritet har märkt samma eller genom att ta ut ett medelvärde. Medelvärdet räknas ut genom att omvandla de fem kategorierna representeras som heltal mellan 2 och -2, medelvärdet räknas sedan ut och sätts till den närmsta kategorin. För SemEval-datamängden blev utfallet 2760 twitterinlägg där alla personer gjort samma märkning, 9944 twitterinlägg är där majoritet har märkt samma och för resterande 7928 twitterinlägg har medelvärdet räknats ut. 
 
 \subsection{Stanford Twitter Sentiment} \label{DSsts}
-STS-datamängden består av 1,6 miljoner twitterinlägg och är framtagen mellan april 2009 och juni 2009 av Alec Go, Richa Bhayani och Lei Huang  \cite{sts:001}. STS-datamängden är märkt med hjälp av ''distant supervision'' där märkningen bestäms av vilken typ av emoji \cite{wiki:010} ett twitterinlägg innehåller, exempelvis märks ett twitterinlägg positivt om det innehåller “:), :-),: ), :D, =)” och negativt om det innehåller “:(, :-(, : (“. Datamängden har tagits fram genom att söka efter twitterinlägg som innehåller antingen positiva eller negativa emojis.
+STS-datamängden består av 1,6 miljoner twitterinlägg och är framtagen mellan april 2009 och juni 2009 av Alec Go, Richa Bhayani och Lei Huang  \cite{sts:001}. STS-datamängden är märkt med hjälp av ''distant supervision'' där märkningen bestäms av vilken typ av emoji \cite{wiki:010} ett twitterinlägg innehåller, exempelvis märks ett twitterinlägg positivt om det innehåller “:), :-),: ), :D, =)” och negativt om det innehåller “:(, :-(, : (“. Datamängden har tagits fram genom att söka efter twitterinlägg som innehåller antingen positiva eller negativa emojis \cite{sts:001}. Dessa emojis har därefter filtrerats bort från datamängden för att de inte ska ha för stor påverkan vid klassificeringen.
 
 
 \section{Twittersentimentanalys} \label{TSA}
@@ -322,7 +322,7 @@ Restriktionen av antalet tillåtna tecken utgör den stora skillnaden mellan TSA
 
 I \cite{TSAsurvey} tar författarna upp de viktigaste utmaningar med TSA. För att bra resultat ska uppnås med TSA måste dessa utmaningar hanteras. Det som ligger till grund för utmaningarna med TSA är huvudsakligen restriktionen av antalet tillåtna tecken, att det är en informell typ av medium samt att innehållet på Twitter är dynamiskt och ständigt utvecklas.
 
-Det låga antalet tillåtna tecken och att det är en informell typ av medium, gör att språket som används på Twitter skiljer sig från språket som används i vanlig text. Twitterinlägg innehåller ofta felaktigt språkbruk. Det är vanligt förekommande att Twitterinlägg innehåller förkortningar, slang, nybildade ord och att ord betonas genom att de förlängs eller att de skrivs med versaler. 
+Det låga antalet tillåtna tecken och att det är en informell typ av medium, gör att språket som används på Twitter skiljer sig från språket som används i vanlig text. Twitterinlägg innehåller ofta felaktigt språkbruk. Det är vanligt förekommande att twitterinlägg innehåller förkortningar, slang, nybildade ord och att ord betonas genom att de förlängs eller att de skrivs med versaler. 
 
 P.g.a. att användandet av felaktigt språkbruk är så pass vanligt på Twitter, innehåller twitterinlägg en hel del brus. Felstavade termer gör att antalet gånger en specifik term förekommer i en mängd av text blir mindre. Det resulterar i datagleshet och har en negativ påverkan på resultatet vid SA. För att minska dataglesheten omvandlas vanligtvis felstavade termer till den korrekta stavningen eller en mer korrekt stavning.
 
@@ -999,11 +999,11 @@ I tabell \ref{tab:lexi_se} visas prestandan för den lexikonbaserade modellen, s
 \end{tabular}
 \end{table}
 \subsection{Naive Bayes}
-Prestandan för NB-modellen med standardparametrar, som tränats på SemEval-datamängden, visas i tabell \ref{tab:nb_base_se}. NB-modellen uppnådde en precision på 85,4\%, en återkallelse på 85,7\% och en F-score på 85,2\%. Det är en ökning på 17,2\% i precision, 18,6\% i återkallelse och 17,6\% i F-score gentemot datamängdens basmodell.
+Prestandan för NB-modellen med standardparametrar, som tränats på SemEval-datamängden, visas i tabell \ref{tab:nb_base_se}. NB-modellen uppnådde en precision på 85,4\%, en återkallelse på 85,7\% och en F-score på 85,2\%. Det är en ökning på 17,2 procentenheter i precision, 18,6 procentenheter i återkallelse och 17,6 procentenheter i F-score gentemot datamängdens basmodell.
 
 \begin{table}[H]
 \centering
-\caption{Prestanda för NB med standardparametrar tränad på STS-\newline datamängden.}
+\caption{Prestanda för NB med standardparametrar tränad på SemEval-\newline datamängden.}
 \label{tab:nb_base_se}
     \begin{tabular}{ccccc}
     \toprule
@@ -1055,7 +1055,7 @@ Den andra NB-modellens prestanda presenteras i tabell \ref{tab:nb_imp_se}. Model
 \end{table}
 
 \subsection{Support Vector Machine}
-I tabell \ref{tab:svm_base_se} prestenteras prestandan för SVM-modellen med standardparametrar som har tränats på SemEval-datamängden. Modellen uppnådde en precision på 84,9\%, en återkallelse på 84,8\% och en F-Score på 84,9\%. En ökning på 16,7\% i precision, 17,7\% i återkallelse och F-score på 17,3\% gentemot datamängdens basfall.
+I tabell \ref{tab:svm_base_se} prestenteras prestandan för SVM-modellen med standardparametrar som har tränats på SemEval-datamängden. Modellen uppnådde en precision på 84,9\%, en återkallelse på 84,8\% och en F-Score på 84,9\%. En ökning på 16,7 procentenheter i precision, 17,7 procentenheter i återkallelse och F-score på 17,3 procentenheter gentemot datamängdens basfall.
 
 \begin{table}[H]
 \centering
@@ -1095,7 +1095,7 @@ Parametrarna som togs fram m.h.a. parametersökning för den andra SVM-modellen 
 \end{tabular}
 \end{table}
 
-Prestandan för den andra SVM-modellen presenteras i tabell \ref{tab:svm_imp_se}. Modellen uppnådde en precision och återkallelse på 87,1\% samt 86,5\% i F-Score. Detta resulterar i en ökning på 2,2\% i precision, 2,3\% i återkallelse och 1,6\% i F-Score gentemot SVM med standardparametrar.
+Prestandan för den andra SVM-modellen presenteras i tabell \ref{tab:svm_imp_se}. Modellen uppnådde en precision och återkallelse på 87,1\% samt 86,5\% i F-Score. Detta resulterar i en ökning på 2,2 procentenheter i precision, 2,3 procentenheter i återkallelse och 1,6 procentenheter i F-Score gentemot SVM med standardparametrar.
 
 \begin{table}[H]
 \centering
@@ -1114,7 +1114,7 @@ Prestandan för den andra SVM-modellen presenteras i tabell \ref{tab:svm_imp_se}
 \end{table}
 
 \subsection{Convolutional neural network}
-Prestandan för CNN-modellen, som har tränats på SemEval-datamängden, presenteras i tabell \ref{tab:cnn_se}. Modellen uppnådde en precision på 86,5\%, återkallelse på 86,7\% och en F-Score på 86,5\% vilket är en höjning på respektive 18,3\%, 19,6\% och 18,9\% gentemot datamängdens basfall. 
+Prestandan för CNN-modellen, som har tränats på SemEval-datamängden, presenteras i tabell \ref{tab:cnn_se}. Modellen uppnådde en precision på 86,5\%, återkallelse på 86,7\% och en F-Score på 86,5\% vilket är en höjning på respektive 18,3, 19,6 och 18,9 procentenheter gentemot datamängdens basfall. 
 
 \begin{table}[H]
 \centering
@@ -1136,7 +1136,7 @@ Prestandan för CNN-modellen, som har tränats på SemEval-datamängden, present
 Detta avsnitt avser att presentera och jämföra klassificeringsmodellerna som är tränade på STS-datamängden. Den lexikonbaserade modellen utgör basmodellen för STS.
 
 \subsection{Lexikon}
-I tabell \ref{tab:lexi_sts} presenteras prestandan efter att den lexikonbaserade modellen har tränats på STS-datamängden. Den lexikonbaserade modellen uppnår en precision på 59,6\%, återkallelse på 58,5\% och F-Score på 57,3\%. Med detta i åtanke kan vi konstatera att basfallet precision är 9,6\% bättre än att gissa om ett twitterinlägg är positivt eller negativt.
+I tabell \ref{tab:lexi_sts} presenteras prestandan efter att den lexikonbaserade modellen har tränats på STS-datamängden. Den lexikonbaserade modellen uppnår en precision på 59,6\%, återkallelse på 58,5\% och F-Score på 57,3\%. Med detta i åtanke kan vi konstatera att basfallet precision är 9,6 procentenheter bättre än att gissa om ett twitterinlägg är positivt eller negativt.
 
 \begin{table}[H]
 \centering
@@ -1155,7 +1155,7 @@ I tabell \ref{tab:lexi_sts} presenteras prestandan efter att den lexikonbaserade
 \end{table}
 
 \subsection{Naive Bayes}
-I tabell \ref{tab:nb_base_sts} presenteras prestandan efter att NB med standardparamterar har tränats på STS-datamängden. Resultatet visar att NB med standardparametrar uppnår 77,1\% i precision, återkallelse och F-Score vilket är en höjning på respektive 17,5\%, 18,6\% och 19,8\% från datamängdens basfall.
+I tabell \ref{tab:nb_base_sts} presenteras prestandan efter att NB med standardparamterar har tränats på STS-datamängden. Resultatet visar att NB med standardparametrar uppnår 77,1\% i precision, återkallelse och F-Score vilket är en höjning på respektive 17,5, 18,6 och 19,8 procentenheter från datamängdens basfall.
 
 \begin{table}[H]
 \centering
@@ -1192,7 +1192,7 @@ I tabell \ref{tab:nb_grid_sts} presenteras de parametrar som blivit framtagna m.
 \end{tabular}
 \end{table}
 
-Tabell \ref{tab:nb_imp_sts} presenterar prestandan efter att den andra NB-modellen har tränats på STS-datamängden. Resultatet visar att den tränade klassificeringsmodellen uppnår en precision på 79,2\%, återkallelse på 79,0\% och en F-Score på 78,9\%. Detta betyder att vi uppnår en ökning på respektive 2,1\%, 1,9\% och 1,8\% gentemot NB med standardparametrar. 
+Tabell \ref{tab:nb_imp_sts} presenterar prestandan efter att den andra NB-modellen har tränats på STS-datamängden. Resultatet visar att den tränade klassificeringsmodellen uppnår en precision på 79,2\%, återkallelse på 79,0\% och en F-Score på 78,9\%. Detta betyder att vi uppnår en ökning på respektive 2,1, 1,9 och 1,8 procentenheter gentemot NB med standardparametrar. 
 
 \begin{table}[H]
 \centering
@@ -1211,7 +1211,7 @@ Tabell \ref{tab:nb_imp_sts} presenterar prestandan efter att den andra NB-modell
 \end{table}
 
 \subsection{Support Vector Machine}
-I tabell \ref{tab:svm_base_sts} presenteras prestandan efter att SVM med standardparamterar har tränats på STS-datamängden. Resultatet visar att den tränade klassificeringsmodellen uppnår en precision på 77,7\%, en återkallelse och F-Score på 77,5\% vilket är en höjning på respektive 18,1\%, 19\% och 20,2\% jämfört med datamängdens basmodell. 
+I tabell \ref{tab:svm_base_sts} presenteras prestandan efter att SVM med standardparamterar har tränats på STS-datamängden. Resultatet visar att den tränade klassificeringsmodellen uppnår en precision på 77,7\%, en återkallelse och F-Score på 77,5\% vilket är en höjning på respektive 18,1, 19 och 20,2 procentenheter jämfört med datamängdens basmodell. 
 
 \begin{table}[H]
 \centering
@@ -1251,7 +1251,7 @@ I tabell \ref{tab:svm_grid_sts} presenteras de parametrar som blivit framtagna m
 \end{tabular}
 \end{table}
 
-Tabell \ref{tab:svm_imp_sts} presenterar prestandan efter att den andra SVM modellen har tränats på STS-datamängden. Resultatet visar att den tränade klassificeringsmodellen uppnår en precision på 78,6\%, återkallelse och F-Score på 78,4\%. Detta betyder att vi uppnår en ökning på 0,9\% för respektive värde gentemot SVM med standardparametrar. 
+Tabell \ref{tab:svm_imp_sts} presenterar prestandan efter att den andra SVM modellen har tränats på STS-datamängden. Resultatet visar att den tränade klassificeringsmodellen uppnår en precision på 78,6\%, återkallelse och F-Score på 78,4\%. Detta betyder att vi uppnår en ökning på 0,9 procentenheter för respektive värde gentemot SVM med standardparametrar. 
 
 \begin{table}[H]
 \centering
@@ -1271,7 +1271,7 @@ Tabell \ref{tab:svm_imp_sts} presenterar prestandan efter att den andra SVM mode
 
 
 \subsection{Convolutional neural network}
-Prestandan för CNN-modellen, som har tränats på STS-datamängden, presenteras i tabell \ref{tab:cnn_sts}. Modellen uppnådde en precision, återkallelse och F-score på 80,4\%. I jämförelse med datamängdens basfall är det en ökning på 20,8\% i precision, 21,9\% i återkallelse och 23,1\% i F-score.
+Prestandan för CNN-modellen, som har tränats på STS-datamängden, presenteras i tabell \ref{tab:cnn_sts}. Modellen uppnådde en precision, återkallelse och F-score på 80,4\%. I jämförelse med datamängdens basfall är det en ökning på 20,8 procentenheter i precision, 21,9 procentenheter i återkallelse och 23,1 procentenheter i F-score.
 
 \begin{table}[H]
 \centering
@@ -1295,7 +1295,7 @@ I detta avsnitt utvärderas de datamängder och klassificeringsmodeller som har 
 \subsection{Prestanda}\label{res:pres}
 För att utvärdera klassificeringsmodellernas prestanda används modellernas F-Score-värde. F-Score är det harmoniska medelvärdet mellan precision och återkallelse och är lämpligt att använda vid en helhetsbedömning av klassificeringsmodeller, som diskuterades i avsnitt \ref{TSAev}. 
 
-I tabell \ref{tab:clf_sum} presenteras de klassificeringsmodeller med högst prestanda från avsnitt \ref{res:se} och \ref{res:sts}. Samtliga klassificeringsmodeller som har tränats på SemEval-datamängden presterar bättre än de som har tränats på STS-datamängden. Mellan den klassificeringsmodell som presterar sämst på SemEval och bäst på STS skiljer det sig 4,8\%. Sett till de två olika datamängderna presterar CNN och SVM bäst på SemEval med ett F-Score-värde på 86,5\%, medan CNN har bäst resultat på STS-datamängden med ett F-Score-värde på 80,4\%. För NB och SVM varierar resultaten mellan de två datamängderna. NB presterar sämre än SVM på SemEval, medan det omvända gäller för STS.
+I tabell \ref{tab:clf_sum} presenteras de klassificeringsmodeller med högst prestanda från avsnitt \ref{res:se} och \ref{res:sts}. Samtliga klassificeringsmodeller som har tränats på SemEval-datamängden presterar bättre än de som har tränats på STS-datamängden. Mellan den klassificeringsmodell som presterar sämst på SemEval och bäst på STS skiljer det sig 4,8 procentenheter. Sett till de två olika datamängderna presterar CNN och SVM bäst på SemEval med ett F-Score-värde på 86,5\%, medan CNN har bäst resultat på STS-datamängden med ett F-Score-värde på 80,4\%. För NB och SVM varierar resultaten mellan de två datamängderna. NB presterar sämre än SVM på SemEval, medan det omvända gäller för STS.
 
 Utifrån resultaten kan slutsatsen dras att CNN presterar bäst på båda datamängderna.
 
@@ -1346,7 +1346,7 @@ För att träna studiens klassificeringsmodeller har en server med 16 kärnor oc
 \subsection{Implementation}
 Svårighetsgraden för att implementera klassificeringsmodellerna i studien skiljer sig åt mellan modellerna. I denna studie användes sk-learn för att implementera NB- och SVM-modellerna. Genom användandet av sk-learn behöver utvecklare inte förstå den underliggande arkitekturen för NB och SVM, vilket gör implementeringen av dessa modeller enkel. Däremot krävs det en större kunskap om den underliggande arkitekturen för att implementera ett CNN. Trots att en färdig referensimplementation användes, med en relativt enkel CNN-arkitektur, var det fortfarande svårt att sätta sig in i hur allt fungerade och alla parametrars inverkan på arkitekturens prestanda. Sett till implementeringen i avsnitt \ref{impl} är NB och SVM enklare att implementera och utföra parametersökning på än CNN, vilket diskuterades i avsnitt \ref{impl:cnn}
 \subsection{Helhetsbedömning} \label{res:hhb}
-Utifrån resultaten som har presenterats ovan går det att fastställa att de klassificeringsmodeller som tränades på SemEval-datamängden uppnådde bättre prestanda än de som tränades på STS-datamängden. Det betyder att twitterinlägg som märkts genom mänsklig märkning är att föredra med avseende på prestanda. Dock är det problematiskt att genomföra mänsklig märkning i praktiken i en större skala med hänsyn till metoden som diskuterades i avsnitt \ref{DSse}. Dels p.g.a. tidsaspekten, men även för att åsikter om vad som är positivt eller negativt kan variera från person till person. Detta utgör inte bara ett problem för märkningen utan även för TSA som analysmetod. Tidsaspekten och att åsikter skiljer sig åt är dock inte ett problem för ''distant supervision'', men där är problematiken istället att det inte ges några garantier för att ett twitterinlägg uttrycker något positivt eller negativt. Eftersom märkningen sker utefter antagandet att exempelvis ett negativt twitterinlägg innehåller negativa emojis. I tabell \ref{tab:exp_mark} visas ett exempel på ett twitterinlägg, som av en människa troligtvis hade märkts som positivt. Men enligt ''distant supervisions'' märkningsmetod  hade twitterinlägget märkts som negativt, eftersom det innehåller en negativ emoji.
+Utifrån resultaten som har presenterats ovan går det att fastställa att de klassificeringsmodeller som tränades på SemEval-datamängden uppnådde bättre prestanda än de som tränades på STS-datamängden. Det betyder att twitterinlägg som märkts genom mänsklig märkning är att föredra med avseende på prestanda. Dock är det problematiskt att genomföra mänsklig märkning i praktiken i en större skala med hänsyn till metoden som diskuterades i avsnitt \ref{DSse}. Dels p.g.a. tidsaspekten, men även för att åsikter om vad som är positivt eller negativt kan variera från person till person. Detta utgör inte bara ett problem för märkningen utan även för TSA som analysmetod. Tidsaspekten och att åsikter skiljer sig åt är dock inte ett problem för ''distant supervision'', men där är problematiken istället att det inte ges några garantier för att ett twitterinlägg uttrycker något positivt eller negativt. Eftersom märkningen sker utefter antagandet att exempelvis ett negativt twitterinlägg innehåller negativa emojis. I tabell \ref{tab:exp_mark} visas ett exempel på ett twitterinlägg, som av en människa troligtvis hade märkts som positivt. Men enligt ''distant supervisions'' märkningsmetod  hade twitterinlägget märkts som negativt, eftersom det innehåller en negativ emoji. Som nämndes i avsnitt \ref{DSsts}, tas emojis bort från STS-datamängden. Om en emoji är det enda som avgör om ett twitterinlägg är positivt eller negativt och den tas bort, kan det påverka modellerna att utföra en felaktig klassificering.
 
 \begin{table}[H]
 \centering

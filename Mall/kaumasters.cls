@@ -51,7 +51,7 @@
   \setname{keywordname}{Keywords}{Nyckelord}%
 }
 \AtBeginDocument{%
-  \setname{approvalname}{Approved}{Godk\"and, 2018-xx-xx}%
+  \setname{approvalname}{Approved}{Godk\"and}%
 }
 \AtBeginDocument{%
   \setname{examinationname}{h\"ogskoleingenj\"orsexamen}{h\"ogskoleingenj\"orsexamen}%
