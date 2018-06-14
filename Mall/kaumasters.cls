@@ -76,7 +76,7 @@
   \setname{supervisorname}{Supervisor}{Handledare}%
 }
 \AtBeginDocument{%
-  \setname{examinername}{Examiner}{Examinator}%
+  \setname{examinername}{Examiner}{Examinerande l\"arare}%
 }
 \let\kauths@maketitle\maketitle
 \renewcommand\maketitle{%
